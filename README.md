@@ -2,14 +2,6 @@
 
 A custom character mod for Slay the Spire 2, inspired by Portalcraft from Shadowverse.
 
-### Archetype Implementation
-
-**Constructs** — Token merge system. `ConstructCard` base class with `ConstructTier` (T0-T3) and `MergeRecipes` defining upgrade paths. `IMergeListener` interface allows cards to react to merge events.
-
-**Puppets** — Expendable token generation. `PuppetTag` identifies tokens, `PuppetHelper` handles creation. Powers like `LiamCrazedCreatorPower` and `ReplayNextPuppetPower` provide scaling.
-
-**Omen of Destruction** — Exhaust-driven Talisman cycle. `TalismanPower` (hidden, `PowerStackType.Single`) manages all Psalm end-of-turn effects, transformation, and exhaust triggers via `BeforeTurnEnd` and `AfterCardExhausted` hooks. `OmenTag.Talisman` and `OmenTag.WastelandToken` are custom `CardTag`s. Psalms use `CardKeyword.Retain` + `CardKeyword.Unplayable`. `BeelzebubSupremeKingPower` is a marker power checked by `TalismanPower` to double outputs. `AxiaHeirToDestructionPower` exhausts all Talismans at end of turn via `CardCmd.Exhaust`, which triggers `AfterCardExhausted` hooks for double activation.
-
 ### Project Structure
 
 ```

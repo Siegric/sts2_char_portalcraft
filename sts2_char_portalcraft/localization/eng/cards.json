@@ -201,5 +201,62 @@
   "STS2_CHAR_PORTALCRAFT-BIOFABRICATION.description": "Select an [gold]Artifact[/gold] in your hand. Subtract 1 from its cost. Put 3 copies of it into your draw pile.",
 
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.title": "Ralmia, Sonic Racer",
-  "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.description": "For every 4 [gold]Fusions[/gold], gain 1 Energy."
+  "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.description": "For every 4 [gold]Fusions[/gold], gain 1 Energy.",
+
+  "STS2_CHAR_PORTALCRAFT-LIGHT_OF_THE_DEWDROP.title": "Light of the Dewdrop",
+  "STS2_CHAR_PORTALCRAFT-LIGHT_OF_THE_DEWDROP.description": "Draw {Cards:diff} cards.",
+
+  "STS2_CHAR_PORTALCRAFT-STREAM_OF_LIFE.title": "Stream of Life",
+  "STS2_CHAR_PORTALCRAFT-STREAM_OF_LIFE.description": "Deal {Damage:diff} damage. Add a [gold]Gear of Remembrance[/gold] to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-ELECTRIC_WHIP_LASS.title": "Electric Whip Lass",
+  "STS2_CHAR_PORTALCRAFT-ELECTRIC_WHIP_LASS.description": "Gain {Block:diff} Block. Add a [gold]Gear of Remembrance[/gold] to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-ADVENT_OF_THE_ELD_AXE.title": "Advent of the Eld Axe",
+  "STS2_CHAR_PORTALCRAFT-ADVENT_OF_THE_ELD_AXE.description": "Deal {Damage:diff} damage. If a card in your hand has a base cost of 2 or more, draw {Cards:diff} cards.",
+
+  "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST.title": "Mechanized Beast",
+  "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST.description": "Gain {Block:diff} Block. Whenever you are attacked this turn, deal {MagicNumber:diff} damage back.",
+
+  "STS2_CHAR_PORTALCRAFT-KITTY_CANNONEER.title": "Kitty Cannoneer",
+  "STS2_CHAR_PORTALCRAFT-KITTY_CANNONEER.description": "Deal {Damage:diff} damage. Apply {MagicNumber:diff} [gold]Weak[/gold]. Apply {MagicNumber:diff} [gold]Vulnerable[/gold]. Add a [gold]Gear of Ambition[/gold] to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-SINCERITY_OF_THE_DEWDROP.title": "Sincerity of the Dewdrop",
+  "STS2_CHAR_PORTALCRAFT-SINCERITY_OF_THE_DEWDROP.description": "Transform a card in your hand into [gold]Imari's Little Buddies[/gold].",
+
+  "STS2_CHAR_PORTALCRAFT-ILSA_BRUTAL_DRILL_SERGEANT.title": "Ilsa, Brutal Drill Sergeant",
+  "STS2_CHAR_PORTALCRAFT-ILSA_BRUTAL_DRILL_SERGEANT.description": "Select a Mode to activate.\n1. Do this 3 times: \"Deal 12 damage to a random enemy.\"\n2. Deal 16 damage to All enemies.",
+
+  "STS2_CHAR_PORTALCRAFT-ILSA_BARRAGE_CHOICE.title": "Barrage",
+  "STS2_CHAR_PORTALCRAFT-ILSA_BARRAGE_CHOICE.description": "Deal {Damage:diff} damage to a random enemy 3 times.",
+
+  "STS2_CHAR_PORTALCRAFT-ILSA_SWEEP_CHOICE.title": "Sweep",
+  "STS2_CHAR_PORTALCRAFT-ILSA_SWEEP_CHOICE.description": "Deal {Damage:diff} damage to ALL enemies.",
+
+  "STS2_CHAR_PORTALCRAFT-ISAAC_CONGENIAL_ENGINEER.title": "Isaac, Congenial Engineer",
+  "STS2_CHAR_PORTALCRAFT-ISAAC_CONGENIAL_ENGINEER.description": "Add a [gold]Striker Artifact[/gold] to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-DIRK_METAL_MERCENARY.title": "Dirk, Metal Mercenary",
+  "STS2_CHAR_PORTALCRAFT-DIRK_METAL_MERCENARY.description": "Add a [gold]Fortifier Artifact[/gold] to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-STONE_BREAKER.title": "Stone Breaker",
+  "STS2_CHAR_PORTALCRAFT-STONE_BREAKER.description": "Deal 1 damage to a random enemy {MagicNumber:diff} times.",
+
+  "STS2_CHAR_PORTALCRAFT-CASSIUS_SKY_YEARNING_ARRIVAL.title": "Cassius, Sky-Yearning Arrival",
+  "STS2_CHAR_PORTALCRAFT-CASSIUS_SKY_YEARNING_ARRIVAL.description": "Select an [gold]Artifact[/gold] in your hand. Deal {MagicNumber:diff}X damage to ALL enemies. X = the cost of that [gold]Artifact[/gold]. Add a [gold]Fortifier Artifact[/gold] to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-MYRIAD_DESIGNS.title": "Myriad Designs",
+  "STS2_CHAR_PORTALCRAFT-MYRIAD_DESIGNS.description": "Add a [gold]Ludicrous Ordnance[/gold], [gold]Shoddy Plaything[/gold], and [gold]Substandard Puppet[/gold] to your hand. They cost 0 this turn.",
+
+  "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP.title": "Imari, Dewdrop",
+  "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP.description": "Discard a card. Search your draw pile for a [gold]Skill[/gold] and add it to your hand. This turn, whenever you play a [gold]Skill[/gold], add [gold]Imari's Little Buddies[/gold] to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-UNFEELING_ELD_AXE.title": "Unfeeling Eld Axe",
+  "STS2_CHAR_PORTALCRAFT-UNFEELING_ELD_AXE.description": "[gold]In hand[/gold]: Whenever a card with base cost 2 or more is played, reduce this card's cost by 1 this turn.\nUpgrade a random unupgraded card in your hand. Deal {MagicNumber:diff} damage to a random enemy.",
+
+  "STS2_CHAR_PORTALCRAFT-SUPERSONIC_FIGHTER.title": "Supersonic Fighter",
+  "STS2_CHAR_PORTALCRAFT-SUPERSONIC_FIGHTER.description": "Add an [gold]Ominous Artifact γ[/gold] to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-IMARIS_LITTLE_BUDDIES.title": "Imari's Little Buddies",
+  "STS2_CHAR_PORTALCRAFT-IMARIS_LITTLE_BUDDIES.description": "Deal {Damage:diff} damage. Gain {Block:diff} Block."
 }

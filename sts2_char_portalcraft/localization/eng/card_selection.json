@@ -14,5 +14,8 @@
   "SUPPLICANT_PROMPT": "Select a card to exhaust",
   "WASTELAND_PROMPT": "Select a card to exhaust",
   "DEVASTATING_SOPRANO_PROMPT": "Select a card to exhaust",
-  "BIOFABRICATION_PROMPT": "Select an Artifact to mass-produce"
+  "BIOFABRICATION_PROMPT": "Select an Artifact to mass-produce",
+  "SINCERITY_PROMPT": "Select a card to transform into Imari's Little Buddies",
+  "CASSIUS_PROMPT": "Select an Artifact to determine damage",
+  "IMARI_DISCARD_PROMPT": "Select a card to discard"
 }

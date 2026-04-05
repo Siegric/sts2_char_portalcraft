@@ -15,5 +15,10 @@ packages/
 # Compiled mod
 *.pck
 
+# Resource directory
+sts2_char_portalcraft/
+!sts2_char_portalcraft/localization/
+!sts2_char_portalcraft/localization/**
+
 # NuGet
 *.nupkg

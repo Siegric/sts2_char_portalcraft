@@ -11,26 +11,33 @@ using sts2_char_portalcraft.sts2_char_portalcraftCode.Character;
 namespace sts2_char_portalcraft.sts2_char_portalcraftCode.Cards;
 
 /// <summary>
-/// Sylvia, Garden Executioner — 1 cost Skill.
-/// Choose a Draw Cards or Heal card to add to your hand. Upgrade: cost -1.
+/// Ilsa, Brutal Drill Sergeant — 3 cost Uncommon Attack.
+/// Select a mode: 3x12 random damage OR 16 AoE damage.
+/// Upgrade: +4 base damage to both modes.
 /// </summary>
 [Pool(typeof(sts2_char_portalcraftCardPool))]
-public sealed class SylviaGardenExecutioner : sts2_char_portalcraftCard
+public sealed class IlsaBrutalDrillSergeant : sts2_char_portalcraftCard
 {
     protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
     {
-        HoverTipFactory.FromCard<SylviaDrawChoice>(),
-        HoverTipFactory.FromCard<SylviaHealChoice>(),
+        HoverTipFactory.FromCard<IlsaBarrageChoice>(),
+        HoverTipFactory.FromCard<IlsaSweepChoice>(),
     };
 
-    public SylviaGardenExecutioner() : base(1, CardType.Skill, CardRarity.Rare, TargetType.Self) { }
+    public IlsaBrutalDrillSergeant() : base(3, CardType.Attack, CardRarity.Uncommon, TargetType.Self) { }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        var drawCard = CombatState.CreateCard<SylviaDrawChoice>(Owner);
-        var healCard = CombatState.CreateCard<SylviaHealChoice>(Owner);
+        var barrage = CombatState.CreateCard<IlsaBarrageChoice>(Owner);
+        var sweep = CombatState.CreateCard<IlsaSweepChoice>(Owner);
 
-        var cards = new List<CardModel> { drawCard, healCard };
+        if (IsUpgraded)
+        {
+            barrage.DynamicVars.Damage.UpgradeValueBy(4m);
+            sweep.DynamicVars.Damage.UpgradeValueBy(4m);
+        }
+
+        var cards = new List<CardModel> { barrage, sweep };
         var chosen = await CardSelectCmd.FromChooseACardScreen(choiceContext, cards, Owner);
 
         if (chosen != null)
@@ -38,10 +45,5 @@ public sealed class SylviaGardenExecutioner : sts2_char_portalcraftCard
             await CardPileCmd.AddGeneratedCardToCombat(chosen, PileType.Hand, addedByPlayer: true);
             await CardCmd.AutoPlay(choiceContext, chosen, null);
         }
-    }
-
-    protected override void OnUpgrade()
-    {
-        EnergyCost.UpgradeBy(-1);
     }
 }

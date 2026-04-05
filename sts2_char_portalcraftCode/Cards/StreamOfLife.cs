@@ -12,41 +12,39 @@ using sts2_char_portalcraft.sts2_char_portalcraftCode.Character;
 
 namespace sts2_char_portalcraft.sts2_char_portalcraftCode.Cards;
 
+/// <summary>
+/// Stream of Life — 1 cost Common Attack.
+/// Deal 6 damage. Add a Gear of Remembrance to your hand.
+/// Upgrade: +3 damage.
+/// </summary>
 [Pool(typeof(sts2_char_portalcraftCardPool))]
-public sealed class RukinaResistanceLeader : sts2_char_portalcraftCard
+public sealed class StreamOfLife : sts2_char_portalcraftCard
 {
-    public override bool GainsBlock => true;
-
     protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]
     {
-        new BlockVar(8m, ValueProp.Move),
+        new DamageVar(6m, ValueProp.Move),
     };
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
     {
-        HoverTipFactory.FromCard<GearOfAmbition>(),
         HoverTipFactory.FromCard<GearOfRemembrance>(),
-        HoverTipFactory.FromCard<StrikerArtifact>(),
     };
 
-    public RukinaResistanceLeader() : base(2, CardType.Skill, CardRarity.Uncommon, TargetType.Self) { }
+    public StreamOfLife() : base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy) { }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, cardPlay);
+        await DamageCmd.Attack(DynamicVars.Damage.BaseValue)
+            .FromCard(this)
+            .Targeting(cardPlay.Target!)
+            .Execute(choiceContext);
 
-        var gear1 = CombatState.CreateCard<GearOfAmbition>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(gear1, PileType.Hand, addedByPlayer: true);
-
-        var gear2 = CombatState.CreateCard<GearOfRemembrance>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(gear2, PileType.Hand, addedByPlayer: true);
-
-        var striker = CombatState.CreateCard<StrikerArtifact>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(striker, PileType.Hand, addedByPlayer: true);
+        var gear = CombatState.CreateCard<GearOfRemembrance>(Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(gear, PileType.Hand, addedByPlayer: true);
     }
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Block.UpgradeValueBy(4m);
+        DynamicVars.Damage.UpgradeValueBy(3m);
     }
 }

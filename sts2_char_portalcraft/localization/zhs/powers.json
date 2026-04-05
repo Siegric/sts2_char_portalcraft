@@ -33,5 +33,13 @@
 
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER_POWER.title": "音速机关",
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER_POWER.description": "每融合4次，获得 {Amount} 点能量。",
-  "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER_POWER.smartDescription": "每融合4次，获得 {Amount} 点能量。"
+  "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER_POWER.smartDescription": "每融合4次，获得 {Amount} 点能量。",
+
+  "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST_POWER.title": "兽性铁人",
+  "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST_POWER.description": "被攻击时反弹 {Amount} 点伤害。下回合开始时消失。",
+  "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST_POWER.smartDescription": "被攻击时反弹 {Amount} 点伤害。下回合开始时消失。",
+
+  "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_POWER.title": "尽小花的祝福",
+  "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_POWER.description": "本回合每使用1张技能牌，将伊鞠的小鬼加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_POWER.smartDescription": "本回合每使用1张技能牌，将伊鞠的小鬼加入手牌。"
 }

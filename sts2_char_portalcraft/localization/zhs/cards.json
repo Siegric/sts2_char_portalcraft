@@ -201,5 +201,62 @@
   "STS2_CHAR_PORTALCRAFT-BIOFABRICATION.description": "选择手牌中1个[gold]创造物[/gold]，将其费用减少1。将3份复制品加入抽牌堆。",
 
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.title": "音速机关·洛拉米亚",
-  "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.description": "每[gold]融合[/gold]4次，获得1点能量。"
+  "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.description": "每[gold]融合[/gold]4次，获得1点能量。",
+
+  "STS2_CHAR_PORTALCRAFT-LIGHT_OF_THE_DEWDROP.title": "尽小花的临照",
+  "STS2_CHAR_PORTALCRAFT-LIGHT_OF_THE_DEWDROP.description": "抽 {Cards:diff} 张牌。",
+
+  "STS2_CHAR_PORTALCRAFT-STREAM_OF_LIFE.title": "生命的奔流",
+  "STS2_CHAR_PORTALCRAFT-STREAM_OF_LIFE.description": "造成 {Damage:diff} 点伤害。将1个[gold]过往核心[/gold]加入手牌。",
+
+  "STS2_CHAR_PORTALCRAFT-ELECTRIC_WHIP_LASS.title": "电鞭手",
+  "STS2_CHAR_PORTALCRAFT-ELECTRIC_WHIP_LASS.description": "获得 {Block:diff} 点格挡。将1个[gold]过往核心[/gold]加入手牌。",
+
+  "STS2_CHAR_PORTALCRAFT-ADVENT_OF_THE_ELD_AXE.title": "天斧授予",
+  "STS2_CHAR_PORTALCRAFT-ADVENT_OF_THE_ELD_AXE.description": "造成 {Damage:diff} 点伤害。若手牌中有基础费用2或以上的卡牌，抽 {Cards:diff} 张卡牌。",
+
+  "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST.title": "兽性铁人",
+  "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST.description": "获得 {Block:diff} 点格挡。本回合每次被攻击时，反弹 {MagicNumber:diff} 点伤害。",
+
+  "STS2_CHAR_PORTALCRAFT-KITTY_CANNONEER.title": "炮击猫兽人",
+  "STS2_CHAR_PORTALCRAFT-KITTY_CANNONEER.description": "造成 {Damage:diff} 点伤害。施加 {MagicNumber:diff} 层[gold]虚弱[/gold]。施加 {MagicNumber:diff} 层[gold]易伤[/gold]。将1个[gold]未来核心[/gold]加入手牌。",
+
+  "STS2_CHAR_PORTALCRAFT-SINCERITY_OF_THE_DEWDROP.title": "诚心的尽小花",
+  "STS2_CHAR_PORTALCRAFT-SINCERITY_OF_THE_DEWDROP.description": "将手牌中1张牌变形为[gold]伊鞠的小鬼[/gold]。",
+
+  "STS2_CHAR_PORTALCRAFT-ILSA_BRUTAL_DRILL_SERGEANT.title": "严厉的教官·伊尔莎",
+  "STS2_CHAR_PORTALCRAFT-ILSA_BRUTAL_DRILL_SERGEANT.description": "选择一个模式发动。\n1. 以下效果重复3次：「对随机1个敌人造成12点伤害。」\n2. 对所有敌人造成16点伤害。",
+
+  "STS2_CHAR_PORTALCRAFT-ILSA_BARRAGE_CHOICE.title": "连射",
+  "STS2_CHAR_PORTALCRAFT-ILSA_BARRAGE_CHOICE.description": "对随机敌人造成 {Damage:diff} 点伤害，共3次。",
+
+  "STS2_CHAR_PORTALCRAFT-ILSA_SWEEP_CHOICE.title": "横扫",
+  "STS2_CHAR_PORTALCRAFT-ILSA_SWEEP_CHOICE.description": "对所有敌人造成 {Damage:diff} 点伤害。",
+
+  "STS2_CHAR_PORTALCRAFT-ISAAC_CONGENIAL_ENGINEER.title": "报恩工匠·艾萨克",
+  "STS2_CHAR_PORTALCRAFT-ISAAC_CONGENIAL_ENGINEER.description": "将1个[gold]打击创造物[/gold]加入手牌。",
+
+  "STS2_CHAR_PORTALCRAFT-DIRK_METAL_MERCENARY.title": "钢铁佣兵·迪尔克",
+  "STS2_CHAR_PORTALCRAFT-DIRK_METAL_MERCENARY.description": "将1个[gold]城堡创造物[/gold]加入手牌。",
+
+  "STS2_CHAR_PORTALCRAFT-STONE_BREAKER.title": "身无长物唯有石",
+  "STS2_CHAR_PORTALCRAFT-STONE_BREAKER.description": "对随机敌人造成1点伤害，共 {MagicNumber:diff} 次。",
+
+  "STS2_CHAR_PORTALCRAFT-CASSIUS_SKY_YEARNING_ARRIVAL.title": "向往天空的回归者·卡西乌斯",
+  "STS2_CHAR_PORTALCRAFT-CASSIUS_SKY_YEARNING_ARRIVAL.description": "选择手牌中1个[gold]创造物[/gold]。对所有敌人造成 {MagicNumber:diff}X 点伤害。X = 该创造物的费用。将1个[gold]城堡创造物[/gold]加入手牌。",
+
+  "STS2_CHAR_PORTALCRAFT-MYRIAD_DESIGNS.title": "平庸的制图",
+  "STS2_CHAR_PORTALCRAFT-MYRIAD_DESIGNS.description": "将[gold]愚劣的兵器[/gold]、[gold]低劣的玩具[/gold]、[gold]拙劣的人偶[/gold]各1张加入手牌。本回合其费用变为0。",
+
+  "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP.title": "尽小花·伊鞠",
+  "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP.description": "弃1张牌。从抽牌堆中检索1张[gold]技能[/gold]牌加入手牌。本回合每使用1张[gold]技能[/gold]牌，将[gold]伊鞠的小鬼[/gold]加入手牌。",
+
+  "STS2_CHAR_PORTALCRAFT-UNFEELING_ELD_AXE.title": "恶劣的天斧",
+  "STS2_CHAR_PORTALCRAFT-UNFEELING_ELD_AXE.description": "[gold]手牌效果[/gold]：每打出1张基础费用2或以上的牌，本回合此牌费用减少1。\n升级手牌中1张随机未升级的牌。对随机敌人造成 {MagicNumber:diff} 点伤害。",
+
+  "STS2_CHAR_PORTALCRAFT-SUPERSONIC_FIGHTER.title": "音速飞行兵",
+  "STS2_CHAR_PORTALCRAFT-SUPERSONIC_FIGHTER.description": "将1个[gold]毁灭创造物 γ[/gold]加入手牌。",
+
+  "STS2_CHAR_PORTALCRAFT-IMARIS_LITTLE_BUDDIES.title": "伊鞠的小鬼",
+  "STS2_CHAR_PORTALCRAFT-IMARIS_LITTLE_BUDDIES.description": "造成 {Damage:diff} 点伤害。获得 {Block:diff} 点格挡。"
 }

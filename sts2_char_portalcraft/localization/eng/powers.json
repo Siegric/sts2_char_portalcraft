@@ -33,5 +33,13 @@
 
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER_POWER.title": "Sonic Racer",
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER_POWER.description": "For every 4 Fusions, gain {Amount} Energy.",
-  "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER_POWER.smartDescription": "For every 4 Fusions, gain {Amount} Energy."
+  "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER_POWER.smartDescription": "For every 4 Fusions, gain {Amount} Energy.",
+
+  "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST_POWER.title": "Mechanized Beast",
+  "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST_POWER.description": "When attacked, deal {Amount} damage back. Expires next turn.",
+  "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST_POWER.smartDescription": "When attacked, deal {Amount} damage back. Expires next turn.",
+
+  "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_POWER.title": "Dewdrop's Blessing",
+  "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_POWER.description": "This turn, whenever you play a Skill, add Imari's Little Buddies to your hand.",
+  "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_POWER.smartDescription": "This turn, whenever you play a Skill, add Imari's Little Buddies to your hand."
 }

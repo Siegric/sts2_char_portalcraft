@@ -7,8 +7,8 @@ position = Vector2(525, 157)
 metadata/_edit_group_ = true
 
 [node name="Visuals" type="Sprite2D" parent="."]
-position = Vector2(0, -150)
-scale = Vector2(0.4, 0.4)
+position = Vector2(0, -200)
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("1_j185a")
 
 [node name="Bounds" type="Control" parent="."]
