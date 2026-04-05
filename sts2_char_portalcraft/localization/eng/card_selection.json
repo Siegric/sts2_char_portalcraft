@@ -1,0 +1,18 @@
+{
+  "ARTIFACT_MERGE_PROMPT": "Select Artifacts to merge (or confirm to play raw)",
+  "CATALYST_PROMPT": "Choose a T2 Artifact to add to your hand",
+  "CARNELIA_PROMPT": "Select an Artifact to exhaust for energy",
+  "ALOUETTE_PROMPT": "Select an Artifact to make free this turn",
+  "FLIGHT_OF_ICARUS_PROMPT": "Select an Artifact to empower",
+  "ARTIFACT_CATAPULT_PROMPT": "Select an Artifact to copy",
+  "FIELD_SCIENTIST_PROMPT": "Select a card to discard",
+  "DOOMWRIGHT_RESURGENCE_PROMPT": "Select Artifacts to copy (cost 1 or less)",
+  "RALMIA_PROMPT": "Select Artifacts to activate (cost 2 or less)",
+  "VIER_HEART_SLAYER_PROMPT": "Select Puppet(s) to transform into Doll Slayers",
+  "PUPPET_SHIELD_PROMPT": "Select Puppets to exhaust for Block",
+  "RESURRECTION_TUNER_EXHAUST_PROMPT": "Select a card to exhaust",
+  "SUPPLICANT_PROMPT": "Select a card to exhaust",
+  "WASTELAND_PROMPT": "Select a card to exhaust",
+  "DEVASTATING_SOPRANO_PROMPT": "Select a card to exhaust",
+  "BIOFABRICATION_PROMPT": "Select an Artifact to mass-produce"
+}

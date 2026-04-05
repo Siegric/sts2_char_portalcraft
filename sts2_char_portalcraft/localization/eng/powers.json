@@ -1,0 +1,37 @@
+{
+  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_POWER.title": "Eudie, Maiden Reborn",
+  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_POWER.description": "At end of turn, if your hand has fewer than 5 cards, draw {Amount} additional card next turn. If your hand has more than 6 cards, gain {Amount} Energy next turn.",
+  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_POWER.smartDescription": "At end of turn, if your hand has fewer than 5 cards, draw {Amount} additional card next turn. If your hand has more than 6 cards, gain {Amount} Energy next turn.",
+
+  "STS2_CHAR_PORTALCRAFT-ANCIENT_CANNON_POWER.title": "Ancient Cannon",
+  "STS2_CHAR_PORTALCRAFT-ANCIENT_CANNON_POWER.description": "Whenever you merge an Artifact, deal {Amount} damage to a random enemy.",
+  "STS2_CHAR_PORTALCRAFT-ANCIENT_CANNON_POWER.smartDescription": "Whenever you merge an Artifact, deal {Amount} damage to a random enemy.",
+
+  "STS2_CHAR_PORTALCRAFT-REPLAY_NEXT_PUPPET_POWER.title": "Puppet Strings",
+  "STS2_CHAR_PORTALCRAFT-REPLAY_NEXT_PUPPET_POWER.description": "The next Puppet you play is replayed {Amount} time(s).",
+  "STS2_CHAR_PORTALCRAFT-REPLAY_NEXT_PUPPET_POWER.smartDescription": "The next Puppet you play is replayed {Amount} time(s).",
+
+  "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER_POWER.title": "Puppet Theater",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER_POWER.description": "At the start of each turn, add {Amount} Puppet(s) to your hand.",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER_POWER.smartDescription": "At the start of each turn, add {Amount} Puppet(s) to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR_POWER.title": "Crazed Creator",
+  "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR_POWER.description": "Whenever you play a Puppet, gain {Amount} Block. For every 4 Puppets played, gain 1 Energy.",
+  "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR_POWER.smartDescription": "Whenever you play a Puppet, gain {Amount} Block. For every 4 Puppets played, gain 1 Energy.",
+
+  "STS2_CHAR_PORTALCRAFT-TALISMAN_POWER.title": "Talisman",
+  "STS2_CHAR_PORTALCRAFT-TALISMAN_POWER.description": "Talisman cards activate at end of turn and transform. Wasteland cards draw 1 card when exhausted. Wasteland copies also grant 1 Energy.",
+  "STS2_CHAR_PORTALCRAFT-TALISMAN_POWER.smartDescription": "Talisman cards activate at end of turn and transform. Wasteland cards draw 1 card when exhausted. Wasteland copies also grant 1 Energy.",
+
+  "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION_POWER.title": "Heir to Destruction",
+  "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION_POWER.description": "At end of turn, Exhaust all [gold]White Psalm, New Revelation[/gold] and [gold]Black Psalm, New Revelation[/gold] in your hand {Amount} time(s).",
+  "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION_POWER.smartDescription": "At end of turn, Exhaust all [gold]White Psalm, New Revelation[/gold] and [gold]Black Psalm, New Revelation[/gold] in your hand {Amount} time(s).",
+
+  "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING_POWER.title": "Supreme King",
+  "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING_POWER.description": "[gold]White Psalm, New Revelation[/gold] gains +2 Block. [gold]Black Psalm, New Revelation[/gold] gains +2 damage.",
+  "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING_POWER.smartDescription": "[gold]White Psalm, New Revelation[/gold] gains +2 Block. [gold]Black Psalm, New Revelation[/gold] gains +2 damage.",
+
+  "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER_POWER.title": "Sonic Racer",
+  "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER_POWER.description": "For every 4 Fusions, gain {Amount} Energy.",
+  "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER_POWER.smartDescription": "For every 4 Fusions, gain {Amount} Energy."
+}

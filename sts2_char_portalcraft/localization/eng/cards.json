@@ -1,0 +1,205 @@
+{
+  "STS2_CHAR_PORTALCRAFT-GEAR_OF_AMBITION.title": "Gear of Ambition",
+  "STS2_CHAR_PORTALCRAFT-GEAR_OF_AMBITION.description": "No effect.\n[gold]Fuse[/gold]: Exhaust another [gold]Gear of Ambition[/gold] to create a [gold]Striker Artifact[/gold].",
+
+  "STS2_CHAR_PORTALCRAFT-GEAR_OF_REMEMBRANCE.title": "Gear of Remembrance",
+  "STS2_CHAR_PORTALCRAFT-GEAR_OF_REMEMBRANCE.description": "No effect.\n[gold]Fuse[/gold]: Exhaust another [gold]Gear of Remembrance[/gold] to create a [gold]Fortifier Artifact[/gold].",
+
+  "STS2_CHAR_PORTALCRAFT-STRIKER_ARTIFACT.title": "Striker Artifact",
+  "STS2_CHAR_PORTALCRAFT-STRIKER_ARTIFACT.description": "Deal {Damage:diff} damage.\n[gold]Fuse[/gold]: Exhaust [gold]Artifacts[/gold] to transform based on total cost of cards fused.\n1: [gold]Ominous Artifact α[/gold]\n2: [gold]Ominous Artifact β[/gold]\n3 or more: [gold]Ominous Artifact γ[/gold]",
+
+  "STS2_CHAR_PORTALCRAFT-FORTIFIER_ARTIFACT.title": "Fortifier Artifact",
+  "STS2_CHAR_PORTALCRAFT-FORTIFIER_ARTIFACT.description": "Gain {Block:diff} Block.\n[gold]Fuse[/gold]: Exhaust [gold]Artifacts[/gold] to transform based on total cost of cards fused.\n1: [gold]Ominous Artifact α[/gold]\n2: [gold]Ominous Artifact β[/gold]\n3 or more: [gold]Ominous Artifact γ[/gold]",
+
+  "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_ALPHA.title": "Ominous Artifact α",
+  "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_ALPHA.description": "Deal {CalculatedDamage:diff} damage. Damage increases by {ExtraDamage:diff} for each card in your exhaust pile. Deal {MagicNumber:diff} damage to ALL other enemies.\n[gold]Fuse[/gold]: Exhaust [gold]Ominous Artifact β[/gold] and [gold]Ominous Artifact γ[/gold] to create [gold]Masterwork Artifact Ω[/gold].",
+
+  "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_BETA.title": "Ominous Artifact β",
+  "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_BETA.description": "Heal {Heal:diff} HP. Gain {Block:diff} Block. Gain {PlatingPower:diff} [gold]Plating[/gold].\n[gold]Fuse[/gold]: Exhaust [gold]Ominous Artifact α[/gold] and [gold]Ominous Artifact γ[/gold] to create [gold]Masterwork Artifact Ω[/gold].",
+
+  "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_GAMMA.title": "Ominous Artifact γ",
+  "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_GAMMA.description": "Draw {Cards:diff} cards. Gain {Energy:diff} Energy. Next turn, draw {MagicNumber:diff} additional cards.\n[gold]Fuse[/gold]: Exhaust [gold]Ominous Artifact α[/gold] and [gold]Ominous Artifact β[/gold] to create [gold]Masterwork Artifact Ω[/gold].",
+
+  "STS2_CHAR_PORTALCRAFT-MASTERWORK_OMEGA.title": "Masterwork Artifact Ω",
+  "STS2_CHAR_PORTALCRAFT-MASTERWORK_OMEGA.description": "Deal {CalculatedDamage:diff} damage. Damage increases by {ExtraDamage:diff} for each card in your exhaust pile. Deal {MagicNumber:diff} damage to ALL other enemies. Heal {Heal:diff} HP. Gain {Block:diff} Block. Gain {PlatingPower:diff} [gold]Plating[/gold]. Draw {Cards:diff} cards. Gain {Energy:diff} Energy. Next turn, draw {DrawNextTurn:diff} additional cards.",
+
+  "STS2_CHAR_PORTALCRAFT-STRIKE_PORTALCRAFT.title": "Strike",
+  "STS2_CHAR_PORTALCRAFT-STRIKE_PORTALCRAFT.description": "Deal {Damage:diff} damage.",
+
+  "STS2_CHAR_PORTALCRAFT-DEFEND_PORTALCRAFT.title": "Defend",
+  "STS2_CHAR_PORTALCRAFT-DEFEND_PORTALCRAFT.description": "Gain {Block:diff} Block.",
+
+  "STS2_CHAR_PORTALCRAFT-ARTIFACT_RECHARGE.title": "Artifact Recharge",
+  "STS2_CHAR_PORTALCRAFT-ARTIFACT_RECHARGE.description": "Add a [gold]Gear of Remembrance[/gold] and [gold]Gear of Ambition[/gold] to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-FLIGHT_OF_ICARUS.title": "Flight of Icarus",
+  "STS2_CHAR_PORTALCRAFT-FLIGHT_OF_ICARUS.description": "Select an [gold]Artifact[/gold] in your hand. It costs 0 this turn, and you draw a card when you play it.",
+
+  "STS2_CHAR_PORTALCRAFT-ELISE_ELECTRIFYING_INVENTOR.title": "Elise, Electrifying Inventor",
+  "STS2_CHAR_PORTALCRAFT-ELISE_ELECTRIFYING_INVENTOR.description": "Gain {Block:diff} Block. Add a [gold]Gear of Remembrance[/gold] to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-IRONHEART_HUNTER.title": "Ironheart Hunter",
+  "STS2_CHAR_PORTALCRAFT-IRONHEART_HUNTER.description": "Deal {Damage:diff} damage. Add a [gold]Gear of Ambition[/gold] to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-ARTIFACT_CATAPULT.title": "Artifact Catapult",
+  "STS2_CHAR_PORTALCRAFT-ARTIFACT_CATAPULT.description": "Add a [gold]Gear of Ambition[/gold] to your hand. Select any [gold]Artifact[/gold] in your hand, and add a copy of it to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-BULLET_FROM_BEYOND.title": "Bullet from Beyond",
+  "STS2_CHAR_PORTALCRAFT-BULLET_FROM_BEYOND.description": "Deal {Damage:diff} damage. Add a [gold]Gear of Ambition[/gold] and [gold]Gear of Remembrance[/gold] to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-FIELD_SCIENTIST.title": "Field Scientist",
+  "STS2_CHAR_PORTALCRAFT-FIELD_SCIENTIST.description": "Discard 1 card. Draw {Cards:diff} cards.",
+
+  "STS2_CHAR_PORTALCRAFT-DOOMWRIGHT_RESURGENCE.title": "Doomwright Resurgence",
+  "STS2_CHAR_PORTALCRAFT-DOOMWRIGHT_RESURGENCE.description": "Select up to 2 [gold]Artifact[/gold] cards in your hand that cost 1 or less. Add a copy of each. The copies cost 0 this turn and have [gold]Ethereal[/gold].",
+
+  "STS2_CHAR_PORTALCRAFT-CARNELIA_EMBER_OF_DARKNESS.title": "Carnelia, Ember of Darkness",
+  "STS2_CHAR_PORTALCRAFT-CARNELIA_EMBER_OF_DARKNESS.description": "Add a [gold]Gear of Remembrance[/gold] to your hand. Choose an [gold]Artifact[/gold] in your hand to Exhaust. Gain energy equal to its cost +1.",
+
+  "STS2_CHAR_PORTALCRAFT-MIRIAM_THE_RESOLUTE.title": "Miriam, the Resolute",
+  "STS2_CHAR_PORTALCRAFT-MIRIAM_THE_RESOLUTE.description": "Add 2 [gold]Gears of Remembrance[/gold] and 2 [gold]Gears of Ambition[/gold] to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-RUKINA_RESISTANCE_LEADER.title": "Rukina, Resistance Leader",
+  "STS2_CHAR_PORTALCRAFT-RUKINA_RESISTANCE_LEADER.description": "Gain {Block:diff} Block. Add a [gold]Gear of Ambition[/gold] and [gold]Gear of Remembrance[/gold] to your hand. Add a [gold]Striker Artifact[/gold] to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-NEW_AGE_CARTOGRAPHER.title": "New-Age Cartographer",
+  "STS2_CHAR_PORTALCRAFT-NEW_AGE_CARTOGRAPHER.description": "Add an [gold]Ominous Artifact β[/gold] to your hand. It has [gold]Ethereal[/gold] and costs 0 this turn.",
+
+  "STS2_CHAR_PORTALCRAFT-ALOUETTE_DOOMWRIGHT_WARD.title": "Alouette, Doomwright Ward",
+  "STS2_CHAR_PORTALCRAFT-ALOUETTE_DOOMWRIGHT_WARD.description": "Add a [gold]Gear of Ambition[/gold] and [gold]Gear of Remembrance[/gold] to your hand. Select an [gold]Artifact[/gold] in your hand. It costs 0 this turn.",
+
+  "STS2_CHAR_PORTALCRAFT-SHODDY_PLAYTHING.title": "Shoddy Plaything",
+  "STS2_CHAR_PORTALCRAFT-SHODDY_PLAYTHING.description": "Draw {Cards:diff} cards. Add a copy of this card to your draw pile.",
+
+  "STS2_CHAR_PORTALCRAFT-ENGINEBLADE_MAVEN.title": "Engineblade Maven",
+  "STS2_CHAR_PORTALCRAFT-ENGINEBLADE_MAVEN.description": "Deal {Damage:diff} damage. Add a [gold]Gear of Remembrance[/gold] and a [gold]Striker Artifact[/gold] to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-BRILLIANT_INVENTOR.title": "Brilliant Inventor",
+  "STS2_CHAR_PORTALCRAFT-BRILLIANT_INVENTOR.description": "Add an [gold]Ominous Artifact α[/gold] to your hand. It has [gold]Ethereal[/gold] and costs 0 this turn.",
+
+  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN.title": "Eudie, Maiden Reborn",
+  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN.description": "At end of turn, if your hand has fewer than 5 cards, draw 1 additional card next turn. If your hand has more than 6 cards, gain 1 Energy next turn.",
+
+  "STS2_CHAR_PORTALCRAFT-ANCIENT_CANNON.title": "Ancient Cannon",
+  "STS2_CHAR_PORTALCRAFT-ANCIENT_CANNON.description": "Whenever you [gold]Fuse[/gold] an [gold]Artifact[/gold], deal {MagicNumber:diff} damage to a random enemy.",
+
+  "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_BOOM.title": "Ralmia, Sonic Boom",
+  "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_BOOM.description": "Select up to {IfUpgraded:show:X+1|X} [gold]Artifacts[/gold] (cost 2 or less) in your hand. Activate their effects.",
+
+  "STS2_CHAR_PORTALCRAFT-CAMISCILLA_UNFEELING_HEART.title": "Camiscilla, Unfeeling Heart",
+  "STS2_CHAR_PORTALCRAFT-CAMISCILLA_UNFEELING_HEART.description": "Deal {Damage:diff} damage for each [gold]Artifact[/gold] in your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-LUDICROUS_ORDNANCE.title": "Ludicrous Ordnance",
+  "STS2_CHAR_PORTALCRAFT-LUDICROUS_ORDNANCE.description": "Add {Cards:diff} copies of this card to your hand. Deal {Damage:diff} damage to ALL enemies for each copy in your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-SYLVIA_GARDEN_EXECUTIONER.title": "Sylvia, Garden Executioner",
+  "STS2_CHAR_PORTALCRAFT-SYLVIA_GARDEN_EXECUTIONER.description": "Choose a [gold]Draw Cards[/gold] or [gold]Heal[/gold] card to add to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-SYLVIA_DRAW_CHOICE.title": "Draw Cards",
+  "STS2_CHAR_PORTALCRAFT-SYLVIA_DRAW_CHOICE.description": "Draw {Cards:diff} cards.",
+
+  "STS2_CHAR_PORTALCRAFT-SYLVIA_HEAL_CHOICE.title": "Heal",
+  "STS2_CHAR_PORTALCRAFT-SYLVIA_HEAL_CHOICE.description": "Heal {Heal:diff} HP.",
+
+  "STS2_CHAR_PORTALCRAFT-PUPPET.title": "Puppet",
+  "STS2_CHAR_PORTALCRAFT-PUPPET.description": "Deal {Damage:diff} damage.",
+
+  "STS2_CHAR_PORTALCRAFT-ENHANCED_PUPPET.title": "Enhanced Puppet",
+  "STS2_CHAR_PORTALCRAFT-ENHANCED_PUPPET.description": "Deal {Damage:diff} damage.",
+
+  "STS2_CHAR_PORTALCRAFT-DOLL_SLAYER.title": "Doll Slayer",
+  "STS2_CHAR_PORTALCRAFT-DOLL_SLAYER.description": "Deal {Damage:diff} damage to ALL enemies. Add a [gold]Vier, Heart Slayer[/gold] to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-PUPPET_CAT.title": "Puppet Cat",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_CAT.description": "Add a [gold]Puppet[/gold] to your hand. It gains +{BonusDamage:diff} damage.",
+
+  "STS2_CHAR_PORTALCRAFT-PUPPET_LANCER.title": "Puppet Lancer",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_LANCER.description": "Deal {Damage:diff} damage. Add an [gold]Enhanced Puppet[/gold] to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-LOVESTRUCK_PUPPETEER.title": "Lovestruck Puppeteer",
+  "STS2_CHAR_PORTALCRAFT-LOVESTRUCK_PUPPETEER.description": "Deal {Damage:diff} damage. Add {PuppetCount:diff} [gold]Puppet(s)[/gold] to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-VIER_HEART_SLAYER.title": "Vier, Heart Slayer",
+  "STS2_CHAR_PORTALCRAFT-VIER_HEART_SLAYER.description": "Select a [gold]Puppet[/gold] in your hand and transform it into a [gold]Doll Slayer[/gold]. The Doll Slayer inherits its damage.",
+
+  "STS2_CHAR_PORTALCRAFT-PUPPET_SHIELD.title": "Puppet Shield",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_SHIELD.description": "Exhaust up to {IfUpgraded:show:4|3} [gold]Puppets[/gold] in your hand. Gain Block equal to their damage for each.",
+
+  "STS2_CHAR_PORTALCRAFT-WIRED_ASSAULT.title": "Wired Assault",
+  "STS2_CHAR_PORTALCRAFT-WIRED_ASSAULT.description": "Deal {Damage:diff} damage. Add 2 [gold]Puppets[/gold] to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-MEDICAL_GRADE_ASSASSIN.title": "Medical-Grade Assassin",
+  "STS2_CHAR_PORTALCRAFT-MEDICAL_GRADE_ASSASSIN.description": "Deal {Damage:diff} damage. Add an [gold]Enhanced Puppet[/gold] with [gold]Recast[/gold] 1 to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-RESURRECTION_TUNER.title": "Resurrection Tuner",
+  "STS2_CHAR_PORTALCRAFT-RESURRECTION_TUNER.description": "Exhaust 1 card in your hand. Add up to 2 random [gold]Puppets[/gold] from your exhaust pile to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER.title": "Puppet Theater",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER.description": "At the start of each turn, add {MagicNumber:diff} [gold]Puppet(s)[/gold] to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-MARIONETTE_MASTER.title": "Marionette Master",
+  "STS2_CHAR_PORTALCRAFT-MARIONETTE_MASTER.description": "Add a [gold]Puppet[/gold] and an [gold]Enhanced Puppet[/gold] to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-ZWEI_SYMPHONIC_HEART.title": "Zwei, Symphonic Heart",
+  "STS2_CHAR_PORTALCRAFT-ZWEI_SYMPHONIC_HEART.description": "Add a [gold]Victoria[/gold] to your hand. [gold]Victoria[/gold] gains [gold]Recast[/gold] 1.",
+
+  "STS2_CHAR_PORTALCRAFT-NOAH_THREAD_OF_DEATH.title": "Noah, Thread of Death",
+  "STS2_CHAR_PORTALCRAFT-NOAH_THREAD_OF_DEATH.description": "All [gold]Puppets[/gold] in your hand gain +{MagicNumber:diff} damage.",
+
+  "STS2_CHAR_PORTALCRAFT-SUBSTANDARD_PUPPET.title": "Substandard Puppet",
+  "STS2_CHAR_PORTALCRAFT-SUBSTANDARD_PUPPET.description": "Deal {Damage:diff} damage. Add 2 copies of this card to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-SYNCHRONOUS_HEARTS.title": "Synchronous Hearts",
+  "STS2_CHAR_PORTALCRAFT-SYNCHRONOUS_HEARTS.description": "Add a [gold]Lloyd[/gold] and a [gold]Victoria[/gold] to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-LLOYD.title": "Lloyd",
+  "STS2_CHAR_PORTALCRAFT-LLOYD.description": "Gain {Block:diff} Block.",
+
+  "STS2_CHAR_PORTALCRAFT-VICTORIA.title": "Victoria",
+  "STS2_CHAR_PORTALCRAFT-VICTORIA.description": "Deal {Damage:diff} damage.",
+
+  "STS2_CHAR_PORTALCRAFT-ORCHIS_NEWFOUND_HEART.title": "Orchis, Newfound Heart",
+  "STS2_CHAR_PORTALCRAFT-ORCHIS_NEWFOUND_HEART.description": "Add a [gold]Lloyd[/gold] to your hand. Add 2 [gold]Enhanced Puppets[/gold] to your hand. Apply [gold]Recast[/gold] 1 to all [gold]Puppets[/gold] in your hand and exhaust pile.",
+
+  "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR.title": "Liam, Crazed Creator",
+  "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR.description": "Whenever you play a [gold]Puppet[/gold], gain {MagicNumber:diff} Block. For every 4 [gold]Puppets[/gold] played, gain 1 Energy.",
+
+  "STS2_CHAR_PORTALCRAFT-SUPPLICANT_OF_DESTRUCTION.title": "Supplicant of Destruction",
+  "STS2_CHAR_PORTALCRAFT-SUPPLICANT_OF_DESTRUCTION.description": "Select a card in your hand and Exhaust it. Deal {Damage:diff} damage to a random enemy.",
+
+  "STS2_CHAR_PORTALCRAFT-DEVOTEE_OF_DESTRUCTION.title": "Devotee of Destruction",
+  "STS2_CHAR_PORTALCRAFT-DEVOTEE_OF_DESTRUCTION.description": "Exhaust all cards in your hand. Gain {Multiplier:diff}X Block and deal {Multiplier:diff}X damage. X = cards exhausted this turn.",
+
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION.title": "Wasteland of Destruction",
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION.description": "Select a card in your hand and Exhaust it. Draw {Cards:diff} cards. Add an unplayable copy to your hand. If this card is exhausted, draw 1 card.",
+
+  "STS2_CHAR_PORTALCRAFT-CONGREGANT_OF_DESTRUCTION.title": "Congregant of Destruction",
+  "STS2_CHAR_PORTALCRAFT-CONGREGANT_OF_DESTRUCTION.description": "Exhaust all cards in your hand. Draw X cards. X = cards exhausted this turn.",
+
+  "STS2_CHAR_PORTALCRAFT-DEVASTATING_SOPRANO.title": "Devastating Soprano",
+  "STS2_CHAR_PORTALCRAFT-DEVASTATING_SOPRANO.description": "Select a card in your hand and Exhaust it. Add a [gold]White Psalm, New Revelation[/gold] to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION.title": "Axia, Heir to Destruction",
+  "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION.description": "At end of turn, Exhaust all [gold]White Psalm, New Revelation[/gold] and [gold]Black Psalm, New Revelation[/gold] in your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-LISHENNA_MELODY_MANIFEST.title": "Lishenna, Melody Manifest",
+  "STS2_CHAR_PORTALCRAFT-LISHENNA_MELODY_MANIFEST.description": "Add 2 [gold]White Psalm, New Revelation[/gold] to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING.title": "Beelzebub, Supreme King",
+  "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING.description": "[gold]White Psalm, New Revelation[/gold] gains +2 Block. [gold]Black Psalm, New Revelation[/gold] gains +2 damage.",
+
+  "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.title": "White Psalm, New Revelation",
+  "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.description": "At end of turn, gain 2 Block, then transform into [gold]Black Psalm, New Revelation[/gold]. If exhausted, immediately gain 2 Block and add a [gold]Black Psalm[/gold] to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.title": "Black Psalm, New Revelation",
+  "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.description": "At end of turn, deal 2 damage to ALL enemies, then transform into [gold]White Psalm, New Revelation[/gold]. If exhausted, immediately deal 2 AoE damage and add a [gold]White Psalm[/gold] to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.title": "Wasteland of Destruction",
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.description": "If exhausted, draw 1 card and gain 1 Energy.",
+
+  "STS2_CHAR_PORTALCRAFT-BIOFABRICATION.title": "Biofabrication",
+  "STS2_CHAR_PORTALCRAFT-BIOFABRICATION.description": "Select an [gold]Artifact[/gold] in your hand. Subtract 1 from its cost. Put 3 copies of it into your draw pile.",
+
+  "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.title": "Ralmia, Sonic Racer",
+  "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.description": "For every 4 [gold]Fusions[/gold], gain 1 Energy."
+}

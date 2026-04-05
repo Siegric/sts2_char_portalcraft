@@ -1,0 +1,11 @@
+{
+  "id": "sts2_char_portalcraft",
+  "name": "Portalcraft",
+  "author": "Siegric",
+  "description": "A Slay the Spire 2 character mod inspired by Portalcraft from Shadowverse.",
+  "version": "v0.1.7",
+  "has_pck": true,
+  "has_dll": true,
+  "dependencies": ["BaseLib"],
+  "affects_gameplay": true
+}

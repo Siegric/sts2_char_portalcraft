@@ -1,0 +1,41 @@
+using System.Threading.Tasks;
+using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Powers;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.ValueProps;
+using sts2_char_portalcraft.sts2_char_portalcraftCode.Cards.Puppets;
+
+namespace sts2_char_portalcraft.sts2_char_portalcraftCode.Powers;
+
+/// <summary>
+/// Liam power: Whenever you play a Puppet, gain Amount block.
+/// Every 5 Puppets played, gain 1 energy.
+/// </summary>
+public sealed class LiamCrazedCreatorPower : sts2_char_portalcraftPower
+{
+    public override PowerType Type => PowerType.Buff;
+    public override PowerStackType StackType => PowerStackType.Counter;
+
+    private int _puppetPlayCount;
+
+    public override async Task AfterCardPlayed(PlayerChoiceContext context, CardPlay cardPlay)
+    {
+        var card = cardPlay.Card;
+        if (card.Owner?.Creature != Owner) return;
+        if (!PuppetHelper.IsPuppet(card)) return;
+
+        Flash();
+
+        // Gain block (unpowered — not affected by Agility)
+        await CreatureCmd.GainBlock(Owner, Amount, ValueProp.Unpowered, null);
+
+        // Track puppet plays for energy
+        _puppetPlayCount++;
+        if (_puppetPlayCount >= 4)
+        {
+            _puppetPlayCount = 0;
+            await PlayerCmd.GainEnergy(1, card.Owner);
+        }
+    }
+}

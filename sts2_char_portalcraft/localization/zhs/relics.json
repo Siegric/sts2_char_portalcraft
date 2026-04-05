@@ -1,0 +1,9 @@
+{
+  "STS2_CHAR_PORTALCRAFT-RESONANCE_CORE.title": "共振核心",
+  "STS2_CHAR_PORTALCRAFT-RESONANCE_CORE.description": "战斗开始时，将1个[gold]未来核心[/gold]和1个[gold]过往核心[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-RESONANCE_CORE.flavor": "微微嗡鸣的核心，与过去和未来的回响共振。",
+
+  "STS2_CHAR_PORTALCRAFT-FUSION_PLATING.title": "融合装甲",
+  "STS2_CHAR_PORTALCRAFT-FUSION_PLATING.description": "每当你[gold]融合[/gold]创造物时，获得2点格挡。",
+  "STS2_CHAR_PORTALCRAFT-FUSION_PLATING.flavor": "层叠的合金板，每次融合后更加坚固。"
+}

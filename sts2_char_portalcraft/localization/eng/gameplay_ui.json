@@ -1,0 +1,5 @@
+{
+  "CARD_TYPE.ARTIFACT": "Artifact",
+  "CARD_TYPE.PUPPET": "Puppet",
+  "CARD_TYPE.TALISMAN": "Talisman"
+}

@@ -1,0 +1,59 @@
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using BaseLib.Utils;
+using MegaCrit.Sts2.Core.CardSelection;
+using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
+using MegaCrit.Sts2.Core.Localization;
+using MegaCrit.Sts2.Core.Models;
+using sts2_char_portalcraft.sts2_char_portalcraftCode.Cards.Artifacts;
+using sts2_char_portalcraft.sts2_char_portalcraftCode.Character;
+
+namespace sts2_char_portalcraft.sts2_char_portalcraftCode.Cards;
+
+[Pool(typeof(sts2_char_portalcraftCardPool))]
+public sealed class AlouetteDoomwrightWard : sts2_char_portalcraftCard
+{
+    public override IEnumerable<CardKeyword> CanonicalKeywords => new[] { CardKeyword.Exhaust };
+
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
+    {
+        HoverTipFactory.FromCard<GearOfAmbition>(),
+        HoverTipFactory.FromCard<GearOfRemembrance>(),
+    };
+
+    public AlouetteDoomwrightWard() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self) { }
+
+    protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
+    {
+        var gear1 = CombatState.CreateCard<GearOfAmbition>(Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(gear1, PileType.Hand, addedByPlayer: true);
+
+        var gear2 = CombatState.CreateCard<GearOfRemembrance>(Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(gear2, PileType.Hand, addedByPlayer: true);
+
+        var prefs = new CardSelectorPrefs(
+            new LocString("card_selection", "ALOUETTE_PROMPT"),
+            minCount: 1,
+            maxCount: 1
+        );
+
+        bool Filter(CardModel c) => c != this && c is ArtifactCard;
+
+        var selected = await CardSelectCmd.FromHand(choiceContext, Owner, prefs, Filter, this);
+        var card = selected.FirstOrDefault();
+
+        if (card != null)
+        {
+            card.EnergyCost.SetThisTurnOrUntilPlayed(0, reduceOnly: true);
+        }
+    }
+
+    protected override void OnUpgrade()
+    {
+        RemoveKeyword(CardKeyword.Exhaust);
+    }
+}

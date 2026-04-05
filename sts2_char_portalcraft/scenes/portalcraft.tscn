@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1m6dce7nqjho"]
+
+[ext_resource type="Texture2D" uid="uid://doujbcqf046i2" path="res://sts2_char_portalcraft/images/Visuals/Ralmia_leader.webp" id="1_j185a"]
+
+[node name="Portalcraft" type="Node2D"]
+position = Vector2(525, 157)
+metadata/_edit_group_ = true
+
+[node name="Visuals" type="Sprite2D" parent="."]
+position = Vector2(0, -150)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_j185a")
+
+[node name="Bounds" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = -121.0
+offset_top = -280.0
+offset_right = 121.0
+mouse_filter = 2
+
+[node name="CenterPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -165)
+
+[node name="IntentPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(20, -351)

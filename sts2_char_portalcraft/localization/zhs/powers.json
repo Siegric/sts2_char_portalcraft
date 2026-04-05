@@ -1,0 +1,37 @@
+{
+  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_POWER.title": "崭新的少女·欧丝",
+  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_POWER.description": "回合结束时，若手牌少于5张，下回合多抽 {Amount} 张牌。若手牌多于6张，下回合获得 {Amount} 点能量。",
+  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_POWER.smartDescription": "回合结束时，若手牌少于5张，下回合多抽 {Amount} 张牌。若手牌多于6张，下回合获得 {Amount} 点能量。",
+
+  "STS2_CHAR_PORTALCRAFT-ANCIENT_CANNON_POWER.title": "遗产的炮击",
+  "STS2_CHAR_PORTALCRAFT-ANCIENT_CANNON_POWER.description": "每当你融合创造物时，对1个随机敌人造成 {Amount} 点伤害。",
+  "STS2_CHAR_PORTALCRAFT-ANCIENT_CANNON_POWER.smartDescription": "每当你融合创造物时，对1个随机敌人造成 {Amount} 点伤害。",
+
+  "STS2_CHAR_PORTALCRAFT-REPLAY_NEXT_PUPPET_POWER.title": "操线术",
+  "STS2_CHAR_PORTALCRAFT-REPLAY_NEXT_PUPPET_POWER.description": "你打出的下一个悬丝傀儡会被重新打出 {Amount} 次。",
+  "STS2_CHAR_PORTALCRAFT-REPLAY_NEXT_PUPPET_POWER.smartDescription": "你打出的下一个悬丝傀儡会被重新打出 {Amount} 次。",
+
+  "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER_POWER.title": "人偶剧场",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER_POWER.description": "每回合开始时，将 {Amount} 个悬丝傀儡加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER_POWER.smartDescription": "每回合开始时，将 {Amount} 个悬丝傀儡加入手牌。",
+
+  "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR_POWER.title": "疯狂的创造者",
+  "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR_POWER.description": "每当你打出悬丝傀儡时，获得 {Amount} 点格挡。每打出4个悬丝傀儡，获得1点能量。",
+  "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR_POWER.smartDescription": "每当你打出悬丝傀儡时，获得 {Amount} 点格挡。每打出4个悬丝傀儡，获得1点能量。",
+
+  "STS2_CHAR_PORTALCRAFT-TALISMAN_POWER.title": "护符",
+  "STS2_CHAR_PORTALCRAFT-TALISMAN_POWER.description": "护符牌在回合结束时触发并变化形态。荒野牌被消耗时抽1张牌。荒野复制被消耗时还获得1点能量。",
+  "STS2_CHAR_PORTALCRAFT-TALISMAN_POWER.smartDescription": "护符牌在回合结束时触发并变化形态。荒野牌被消耗时抽1张牌。荒野复制被消耗时还获得1点能量。",
+
+  "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION_POWER.title": "破坏的继承者",
+  "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION_POWER.description": "回合结束时，消耗手牌中所有[gold]新约·白之章[/gold]和[gold]新约·黑之章[/gold] {Amount} 次。",
+  "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION_POWER.smartDescription": "回合结束时，消耗手牌中所有[gold]新约·白之章[/gold]和[gold]新约·黑之章[/gold] {Amount} 次。",
+
+  "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING_POWER.title": "唯一王者",
+  "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING_POWER.description": "[gold]新约·白之章[/gold]格挡+2。[gold]新约·黑之章[/gold]伤害+2。",
+  "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING_POWER.smartDescription": "[gold]新约·白之章[/gold]格挡+2。[gold]新约·黑之章[/gold]伤害+2。",
+
+  "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER_POWER.title": "音速机关",
+  "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER_POWER.description": "每融合4次，获得 {Amount} 点能量。",
+  "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER_POWER.smartDescription": "每融合4次，获得 {Amount} 点能量。"
+}

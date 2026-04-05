@@ -1,0 +1,9 @@
+{
+  "STS2_CHAR_PORTALCRAFT-RESONANCE_CORE.title": "Resonance Core",
+  "STS2_CHAR_PORTALCRAFT-RESONANCE_CORE.description": "At the start of combat, add a [gold]Gear of Ambition[/gold] and a [gold]Gear of Remembrance[/gold] to your hand.",
+  "STS2_CHAR_PORTALCRAFT-RESONANCE_CORE.flavor": "A faintly humming core that resonates with the echoes of past and future.",
+
+  "STS2_CHAR_PORTALCRAFT-FUSION_PLATING.title": "Fusion Plating",
+  "STS2_CHAR_PORTALCRAFT-FUSION_PLATING.description": "Whenever you [gold]Fuse[/gold] an Artifact, gain 2 Block.",
+  "STS2_CHAR_PORTALCRAFT-FUSION_PLATING.flavor": "Layered alloy plates that harden with each fusion."
+}

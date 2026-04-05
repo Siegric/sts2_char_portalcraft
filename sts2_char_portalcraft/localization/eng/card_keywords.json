@@ -1,0 +1,26 @@
+{
+  "ARTIFACT.title": "Artifact",
+  "ARTIFACT.description": "[gold]Retain[/gold]. [gold]Exhaust[/gold]. Can be [gold]Fused[/gold] with other Artifacts from your hand, creating a higher-tier Artifact for free.",
+  "STS2_CHAR_PORTALCRAFT-ARTIFACT.title": "Artifact",
+  "STS2_CHAR_PORTALCRAFT-ARTIFACT.description": "[gold]Retain[/gold]. [gold]Exhaust[/gold]. Can be [gold]Fused[/gold] with other Artifacts from your hand, creating a higher-tier Artifact for free.",
+
+  "PUPPET.title": "Puppet",
+  "PUPPET.description": "[gold]Exhaust[/gold]. A disposable token that deals damage. Synergizes with Puppet-related cards.",
+  "STS2_CHAR_PORTALCRAFT-PUPPET.title": "Puppet",
+  "STS2_CHAR_PORTALCRAFT-PUPPET.description": "[gold]Exhaust[/gold]. A disposable token that deals damage. Synergizes with Puppet-related cards.",
+
+  "TALISMAN.title": "Talisman",
+  "TALISMAN.description": "Cannot be played from hand. Has effects that trigger at end of turn or when exhausted.",
+  "STS2_CHAR_PORTALCRAFT-TALISMAN.title": "Talisman",
+  "STS2_CHAR_PORTALCRAFT-TALISMAN.description": "Cannot be played from hand. Has effects that trigger at end of turn or when exhausted.",
+
+  "WASTELAND_TOKEN.title": "Wasteland Token",
+  "WASTELAND_TOKEN.description": "Cannot be played. When exhausted, draws a card and grants Energy.",
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_TOKEN.title": "Wasteland Token",
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_TOKEN.description": "Cannot be played. When exhausted, draws a card and grants Energy.",
+
+  "FUSE.title": "Fuse",
+  "FUSE.description": "When played, you may select matching Artifacts from your hand to exhaust and combine into a higher-tier Artifact. Fusing refunds the energy cost.",
+  "STS2_CHAR_PORTALCRAFT-FUSE.title": "Fuse",
+  "STS2_CHAR_PORTALCRAFT-FUSE.description": "When played, you may select matching Artifacts from your hand to exhaust and combine into a higher-tier Artifact. Fusing refunds the energy cost."
+}
