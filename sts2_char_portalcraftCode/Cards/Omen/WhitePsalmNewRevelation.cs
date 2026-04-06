@@ -6,12 +6,16 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Models;
+using sts2_char_portalcraft.sts2_char_portalcraftCode.Powers;
 
 namespace sts2_char_portalcraft.sts2_char_portalcraftCode.Cards.Omen;
 
 public sealed class WhitePsalmNewRevelation : sts2_char_portalcraftCard
 {
+    private const int BaseBlock = 2;
+
     protected override HashSet<CardTag> CanonicalTags => new() { OmenTag.Talisman };
 
     public override IEnumerable<CardKeyword> CanonicalKeywords => new[]
@@ -21,6 +25,14 @@ public sealed class WhitePsalmNewRevelation : sts2_char_portalcraftCard
     };
 
     public WhitePsalmNewRevelation() : base(0, TalismanType.Talisman, CardRarity.Token, TargetType.Self) { }
+
+    protected override void AddExtraArgsToDescription(LocString description)
+    {
+        int bonus = Owner?.Creature?.GetPower<BeelzebubSupremeKingPower>()?.Amount ?? 0;
+        int total = BaseBlock + bonus;
+        string display = bonus > 0 ? $"[green]{total}[/green]" : total.ToString();
+        description.Add("PsalmBlock", display);
+    }
 
     protected override Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

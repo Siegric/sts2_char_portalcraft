@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using BaseLib.Utils;
@@ -16,9 +15,11 @@ namespace sts2_char_portalcraft.sts2_char_portalcraftCode.Cards;
 [Pool(typeof(sts2_char_portalcraftCardPool))]
 public sealed class LovestruckPuppeteer : sts2_char_portalcraftCard
 {
+    public override bool GainsBlock => true;
+
     protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]
     {
-        new DamageVar(7m, ValueProp.Move),
+        new BlockVar(8m, ValueProp.Move),
         new IntVar("PuppetCount", 1m),
     };
 
@@ -27,15 +28,11 @@ public sealed class LovestruckPuppeteer : sts2_char_portalcraftCard
         HoverTipFactory.FromCard<Puppet>(),
     };
 
-    public LovestruckPuppeteer() : base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy) { }
+    public LovestruckPuppeteer() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self) { }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
-        await DamageCmd.Attack(DynamicVars.Damage.BaseValue)
-            .FromCard(this)
-            .Targeting(cardPlay.Target)
-            .Execute(choiceContext);
+        await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, cardPlay);
 
         int puppetCount = (int)DynamicVars["PuppetCount"].BaseValue;
         await Puppet.CreateInHand(Owner, puppetCount, CombatState);
@@ -43,7 +40,7 @@ public sealed class LovestruckPuppeteer : sts2_char_portalcraftCard
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(3m);
+        DynamicVars.Block.UpgradeValueBy(2m);
         DynamicVars["PuppetCount"].UpgradeValueBy(1m);
     }
 }

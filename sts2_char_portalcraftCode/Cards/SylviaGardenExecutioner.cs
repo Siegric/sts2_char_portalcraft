@@ -17,6 +17,7 @@ namespace sts2_char_portalcraft.sts2_char_portalcraftCode.Cards;
 [Pool(typeof(sts2_char_portalcraftCardPool))]
 public sealed class SylviaGardenExecutioner : sts2_char_portalcraftCard
 {
+    public override IEnumerable<CardKeyword> CanonicalKeywords => new[] { CardKeyword.Exhaust };
     protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
     {
         HoverTipFactory.FromCard<SylviaDrawChoice>(),

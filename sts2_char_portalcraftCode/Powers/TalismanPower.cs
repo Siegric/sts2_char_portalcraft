@@ -148,11 +148,17 @@ public sealed class TalismanPower : sts2_char_portalcraftPower
 
     private int GetWhitePsalmBlock()
     {
-        return BaseBlockAmount;
+        return BaseBlockAmount + GetBeelzebubBonus();
     }
 
     private int GetBlackPsalmDamage()
     {
-        return BaseDamageAmount;
+        return BaseDamageAmount + GetBeelzebubBonus();
+    }
+
+    private int GetBeelzebubBonus()
+    {
+        var beelzebub = Owner.GetPower<BeelzebubSupremeKingPower>();
+        return beelzebub?.Amount ?? 0;
     }
 }

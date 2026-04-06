@@ -18,7 +18,7 @@ public sealed class ArtifactRecharge : sts2_char_portalcraftCard
         HoverTipFactory.FromCard<GearOfAmbition>(),
     };
 
-    public ArtifactRecharge() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self) { }
+    public ArtifactRecharge() : base(1, CardType.Skill, CardRarity.Basic, TargetType.Self) { }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

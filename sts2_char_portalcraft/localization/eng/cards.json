@@ -117,7 +117,7 @@
   "STS2_CHAR_PORTALCRAFT-PUPPET_LANCER.description": "Deal {Damage:diff()} damage. Add an [gold]Enhanced Puppet[/gold] to your hand.",
 
   "STS2_CHAR_PORTALCRAFT-LOVESTRUCK_PUPPETEER.title": "Lovestruck Puppeteer",
-  "STS2_CHAR_PORTALCRAFT-LOVESTRUCK_PUPPETEER.description": "Deal {Damage:diff()} damage. Add {PuppetCount:diff()} [gold]Puppet(s)[/gold] to your hand.",
+  "STS2_CHAR_PORTALCRAFT-LOVESTRUCK_PUPPETEER.description": "Gain {Block:diff()} Block. Add {PuppetCount:diff()} [gold]Puppet(s)[/gold] to your hand.",
 
   "STS2_CHAR_PORTALCRAFT-VIER_HEART_SLAYER.title": "Vier, Heart Slayer",
   "STS2_CHAR_PORTALCRAFT-VIER_HEART_SLAYER.description": "Select a [gold]Puppet[/gold] in your hand and transform it into a [gold]Doll Slayer[/gold]. The Doll Slayer inherits its damage.",
@@ -147,7 +147,7 @@
   "STS2_CHAR_PORTALCRAFT-NOAH_THREAD_OF_DEATH.description": "All [gold]Puppets[/gold] in your hand gain +{MagicNumber:diff()} damage.",
 
   "STS2_CHAR_PORTALCRAFT-SUBSTANDARD_PUPPET.title": "Substandard Puppet",
-  "STS2_CHAR_PORTALCRAFT-SUBSTANDARD_PUPPET.description": "Deal {Damage:diff()} damage. Add 2 copies of this card to your hand.",
+  "STS2_CHAR_PORTALCRAFT-SUBSTANDARD_PUPPET.description": "Deal {Damage:diff()} damage. Add 1 copy of this card to your hand.",
 
   "STS2_CHAR_PORTALCRAFT-SYNCHRONOUS_HEARTS.title": "Synchronous Hearts",
   "STS2_CHAR_PORTALCRAFT-SYNCHRONOUS_HEARTS.description": "Add a [gold]Lloyd[/gold] and a [gold]Victoria[/gold] to your hand.",
@@ -189,10 +189,10 @@
   "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING.description": "Whenever an enemy takes damage, it takes +2 damage. Whenever you gain Block, you gain +2 Block.",
 
   "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.title": "White Psalm, New Revelation",
-  "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.description": "At end of turn, gain 2 Block, then transform into [gold]Black Psalm, New Revelation[/gold]. If exhausted, immediately gain 2 Block and add a [gold]Black Psalm[/gold] to your hand.",
+  "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.description": "At end of turn, gain {PsalmBlock} Block, then transform into [gold]Black Psalm, New Revelation[/gold]. If exhausted, immediately gain {PsalmBlock} Block and add a [gold]Black Psalm[/gold] to your hand.",
 
   "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.title": "Black Psalm, New Revelation",
-  "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.description": "At end of turn, deal 2 damage to ALL enemies, then transform into [gold]White Psalm, New Revelation[/gold]. If exhausted, immediately deal 2 AoE damage and add a [gold]White Psalm[/gold] to your hand.",
+  "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.description": "At end of turn, deal {PsalmDamage} damage to ALL enemies, then transform into [gold]White Psalm, New Revelation[/gold]. If exhausted, immediately deal {PsalmDamage} AoE damage and add a [gold]White Psalm[/gold] to your hand.",
 
   "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.title": "Wasteland of Destruction",
   "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.description": "If exhausted, draw 1 card and gain 1 Energy.",

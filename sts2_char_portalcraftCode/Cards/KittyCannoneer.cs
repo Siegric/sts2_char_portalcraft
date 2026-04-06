@@ -32,7 +32,7 @@ public sealed class KittyCannoneer : sts2_char_portalcraftCard
         HoverTipFactory.FromCard<GearOfAmbition>(),
     };
 
-    public KittyCannoneer() : base(2, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy) { }
+    public KittyCannoneer() : base(2, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy) { }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

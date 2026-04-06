@@ -24,7 +24,7 @@ public sealed class PuppetCat : sts2_char_portalcraftCard
         HoverTipFactory.FromCard<Puppet>(),
     };
 
-    public PuppetCat() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self) { }
+    public PuppetCat() : base(1, CardType.Skill, CardRarity.Basic, TargetType.Self) { }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

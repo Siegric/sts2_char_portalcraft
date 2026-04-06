@@ -33,7 +33,7 @@ public sealed class MechanizedBeast : sts2_char_portalcraftCard
         HoverTipFactory.FromPower<MechanizedBeastPower>(),
     };
 
-    public MechanizedBeast() : base(3, CardType.Skill, CardRarity.Common, TargetType.Self) { }
+    public MechanizedBeast() : base(3, CardType.Skill, CardRarity.Uncommon, TargetType.Self) { }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

@@ -34,9 +34,8 @@ public sealed class SubstandardPuppet : sts2_char_portalcraftCard
             .Targeting(cardPlay.Target!)
             .Execute(choiceContext);
 
-        var copy1 = CombatState.CreateCard<SubstandardPuppet>(Owner);
-        var copy2 = CombatState.CreateCard<SubstandardPuppet>(Owner);
-        await CardPileCmd.AddGeneratedCardsToCombat(new[] { copy1, copy2 }, PileType.Hand, addedByPlayer: true);
+        var copy = CombatState.CreateCard<SubstandardPuppet>(Owner);
+        await CardPileCmd.AddGeneratedCardsToCombat(new[] {copy}, PileType.Hand, addedByPlayer: true);
     }
 
     protected override void OnUpgrade()

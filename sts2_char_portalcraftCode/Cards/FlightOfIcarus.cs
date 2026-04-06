@@ -15,7 +15,7 @@ namespace sts2_char_portalcraft.sts2_char_portalcraftCode.Cards;
 [Pool(typeof(sts2_char_portalcraftCardPool))]
 public sealed class FlightOfIcarus : sts2_char_portalcraftCard
 {
-    public FlightOfIcarus() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self) { }
+    public FlightOfIcarus() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self) { }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

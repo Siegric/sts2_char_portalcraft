@@ -117,7 +117,7 @@
   "STS2_CHAR_PORTALCRAFT-PUPPET_LANCER.description": "造成 {Damage:diff()} 点伤害。将1个[gold]改良型·悬丝傀儡[/gold]加入手牌。",
 
   "STS2_CHAR_PORTALCRAFT-LOVESTRUCK_PUPPETEER.title": "依恋的人偶师",
-  "STS2_CHAR_PORTALCRAFT-LOVESTRUCK_PUPPETEER.description": "造成 {Damage:diff()} 点伤害。将 {PuppetCount:diff()} 个[gold]悬丝傀儡[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-LOVESTRUCK_PUPPETEER.description": "获得 {Block:diff()} 点格挡。将 {PuppetCount:diff()} 个[gold]悬丝傀儡[/gold]加入手牌。",
 
   "STS2_CHAR_PORTALCRAFT-VIER_HEART_SLAYER.title": "心灵屠戮者·菲亚",
   "STS2_CHAR_PORTALCRAFT-VIER_HEART_SLAYER.description": "选择手牌中1个[gold]悬丝傀儡[/gold]，将其变为[gold]屠戮人偶[/gold]。屠戮人偶继承其伤害。",
@@ -147,7 +147,7 @@
   "STS2_CHAR_PORTALCRAFT-NOAH_THREAD_OF_DEATH.description": "手牌中所有[gold]悬丝傀儡[/gold]获得 +{MagicNumber:diff()} 伤害。",
 
   "STS2_CHAR_PORTALCRAFT-SUBSTANDARD_PUPPET.title": "拙劣的人偶",
-  "STS2_CHAR_PORTALCRAFT-SUBSTANDARD_PUPPET.description": "造成 {Damage:diff()} 点伤害。将此牌的2份复制品加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-SUBSTANDARD_PUPPET.description": "造成 {Damage:diff()} 点伤害。将此牌的1份复制品加入手牌。",
 
   "STS2_CHAR_PORTALCRAFT-SYNCHRONOUS_HEARTS.title": "心有灵犀的共斗",
   "STS2_CHAR_PORTALCRAFT-SYNCHRONOUS_HEARTS.description": "将1个[gold]洛伊德[/gold]和1个[gold]维多利亚[/gold]加入手牌。",
@@ -189,10 +189,10 @@
   "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING.description": "当敌人受到伤害时，多受2点伤害。当你获得格挡时，多获得2点格挡。",
 
   "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.title": "新约·白之章",
-  "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.description": "回合结束时，获得2点格挡，然后变为[gold]新约·黑之章[/gold]。若被消耗，立即获得2点格挡并将1张[gold]新约·黑之章[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.description": "回合结束时，获得{PsalmBlock}点格挡，然后变为[gold]新约·黑之章[/gold]。若被消耗，立即获得{PsalmBlock}点格挡并将1张[gold]新约·黑之章[/gold]加入手牌。",
 
   "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.title": "新约·黑之章",
-  "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.description": "回合结束时，对所有敌人造成2点伤害，然后变为[gold]新约·白之章[/gold]。若被消耗，立即对所有敌人造成2点伤害并将1张[gold]新约·白之章[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.description": "回合结束时，对所有敌人造成{PsalmDamage}点伤害，然后变为[gold]新约·白之章[/gold]。若被消耗，立即对所有敌人造成{PsalmDamage}点伤害并将1张[gold]新约·白之章[/gold]加入手牌。",
 
   "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.title": "破坏的荒野",
   "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.description": "若被消耗，抽1张牌并获得1点能量。",
