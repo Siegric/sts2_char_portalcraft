@@ -49,8 +49,8 @@ public class sts2_char_portalcraft : PlaceholderCharacterModel
         These are just some of the simplest assets, given some placeholders to differentiate your character with.
         You don't have to, but you're suggested to rename these images. */
     // TODO Override the visual model for character when it is ready
-    // public override string? CustomVisualPath => "res://sts2_char_portalcraft/scenes/portalcraft.tscn";
-    // public override string? CustomCharacterSelectBg => "res://sts2_char_portalcraft/scenes/char_select_bg.tscn";
+    public override string? CustomVisualPath => "res://sts2_char_portalcraft/scenes/portalcraft.tscn";
+    public override string? CustomCharacterSelectBg => "res://sts2_char_portalcraft/scenes/char_select_bg.tscn";
     public override string CustomIconTexturePath => "character_icon_char_name.png".CharacterUiPath();
     public override string CustomCharacterSelectIconPath => "char_select_char_name.png".CharacterUiPath();
     public override string CustomCharacterSelectLockedIconPath => "char_select_char_name_locked.png".CharacterUiPath();
