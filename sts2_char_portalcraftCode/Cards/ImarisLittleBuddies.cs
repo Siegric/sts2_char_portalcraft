@@ -25,7 +25,7 @@ public sealed class ImarisLittleBuddies : sts2_char_portalcraftCard
 
     public override IEnumerable<CardKeyword> CanonicalKeywords => new[] { CardKeyword.Exhaust };
 
-    public ImarisLittleBuddies() : base(0, CardType.Attack, CardRarity.Token, TargetType.AnyEnemy) { }
+    public ImarisLittleBuddies() : base(0, CardType.Attack, CardRarity.Token, TargetType.AnyEnemy, showInCardLibrary: true) { }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

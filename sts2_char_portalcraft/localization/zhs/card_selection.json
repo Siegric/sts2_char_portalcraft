@@ -17,5 +17,6 @@
   "BIOFABRICATION_PROMPT": "选择要量产的创造物",
   "SINCERITY_PROMPT": "选择要变形为伊鞠的小鬼的牌",
   "CASSIUS_PROMPT": "选择1个创造物以决定伤害",
-  "IMARI_DISCARD_PROMPT": "选择要弃置的牌"
+  "IMARI_DISCARD_PROMPT": "选择要弃置的牌",
+  "IMARI_TUTOR_PROMPT": "选择1张技能牌加入手牌"
 }

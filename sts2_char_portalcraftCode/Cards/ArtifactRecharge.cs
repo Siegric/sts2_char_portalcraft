@@ -1,16 +1,18 @@
 using System.Threading.Tasks;
+using BaseLib.Abstracts;
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
+using MegaCrit.Sts2.Core.Models;
 using sts2_char_portalcraft.sts2_char_portalcraftCode.Cards.Artifacts;
 using sts2_char_portalcraft.sts2_char_portalcraftCode.Character;
 
 namespace sts2_char_portalcraft.sts2_char_portalcraftCode.Cards;
 
 [Pool(typeof(sts2_char_portalcraftCardPool))]
-public sealed class ArtifactRecharge : sts2_char_portalcraftCard
+public sealed class ArtifactRecharge : sts2_char_portalcraftCard, ITranscendenceCard
 {
     protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
     {
@@ -32,5 +34,10 @@ public sealed class ArtifactRecharge : sts2_char_portalcraftCard
     protected override void OnUpgrade()
     {
         EnergyCost.UpgradeBy(-1);
+    }
+
+    public CardModel GetTranscendenceTransformedCard()
+    {
+        return ModelDb.Card<Biofabrication>();
     }
 }

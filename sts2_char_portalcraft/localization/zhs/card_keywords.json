@@ -15,9 +15,9 @@
   "STS2_CHAR_PORTALCRAFT-TALISMAN.description": "无法从手牌打出。在回合结束时或被消耗时触发效果。",
 
   "WASTELAND_TOKEN.title": "荒野衍生物",
-  "WASTELAND_TOKEN.description": "无法打出。被消耗时抽1张牌并获得能量。",
+  "WASTELAND_TOKEN.description": "无法打出。被消耗时抽2张牌并获得能量。",
   "STS2_CHAR_PORTALCRAFT-WASTELAND_TOKEN.title": "荒野衍生物",
-  "STS2_CHAR_PORTALCRAFT-WASTELAND_TOKEN.description": "无法打出。被消耗时抽1张牌并获得能量。",
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_TOKEN.description": "无法打出。被消耗时抽2张牌并获得能量。",
 
   "FUSE.title": "融合",
   "FUSE.description": "打出时，可以选择手牌中匹配的创造物消耗并融合为更高阶的创造物。融合时退还能量费用。",

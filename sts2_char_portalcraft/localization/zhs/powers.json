@@ -1,5 +1,5 @@
 {
-  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_POWER.title": "崭新的少女·欧丝",
+  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_POWER.title": "崭新的少女",
   "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_POWER.description": "回合结束时，若手牌少于5张，下回合多抽1张牌。若手牌多于6张，下回合获得1点能量。",
   "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_POWER.smartDescription": "回合结束时，若手牌少于5张，下回合多抽 {Amount} 张牌。若手牌多于6张，下回合获得 {Amount} 点能量。",
 
@@ -41,5 +41,9 @@
 
   "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_POWER.title": "尽小花的祝福",
   "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_POWER.description": "本回合每使用1张技能牌，将伊鞠的小鬼加入手牌。",
-  "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_POWER.smartDescription": "本回合每使用1张技能牌，将伊鞠的小鬼加入手牌。"
+  "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_POWER.smartDescription": "本回合每使用1张技能牌，将伊鞠的小鬼加入手牌。",
+
+  "STS2_CHAR_PORTALCRAFT-NOAH_DAMAGE_BONUS_POWER.title": "杀意之丝",
+  "STS2_CHAR_PORTALCRAFT-NOAH_DAMAGE_BONUS_POWER.description": "你的悬丝傀儡造成额外伤害。",
+  "STS2_CHAR_PORTALCRAFT-NOAH_DAMAGE_BONUS_POWER.smartDescription": "你的悬丝傀儡造成额外 +{Amount} 点伤害。"
 }

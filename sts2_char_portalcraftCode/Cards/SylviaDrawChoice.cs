@@ -17,7 +17,7 @@ public sealed class SylviaDrawChoice : sts2_char_portalcraftCard
 
     public override IEnumerable<CardKeyword> CanonicalKeywords => new[] { CardKeyword.Exhaust };
 
-    public SylviaDrawChoice() : base(0, CardType.Skill, CardRarity.Token, TargetType.Self) { }
+    public SylviaDrawChoice() : base(0, CardType.Skill, CardRarity.Token, TargetType.Self, showInCardLibrary: true) { }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

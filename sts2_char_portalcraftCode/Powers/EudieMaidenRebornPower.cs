@@ -16,7 +16,7 @@ namespace sts2_char_portalcraft.sts2_char_portalcraftCode.Powers;
 public sealed class EudieMaidenRebornPower : sts2_char_portalcraftPower
 {
     public override PowerType Type => PowerType.Buff;
-    public override PowerStackType StackType => PowerStackType.Single;
+    public override PowerStackType StackType => PowerStackType.Counter;
 
     public override async Task BeforeTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
     {

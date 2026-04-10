@@ -29,6 +29,11 @@ public sealed class StrikerArtifact : ArtifactCard
             .Execute(choiceContext);
     }
 
+    protected override void OnUpgrade()
+    {
+        DynamicVars.Damage.UpgradeValueBy(4m);
+    }
+
     public override async Task ActivateEffect(PlayerChoiceContext choiceContext)
     {
         var target = CombatState.HittableEnemies.FirstOrDefault();

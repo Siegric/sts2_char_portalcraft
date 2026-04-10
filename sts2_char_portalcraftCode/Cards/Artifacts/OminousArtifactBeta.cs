@@ -32,6 +32,13 @@ public sealed class OminousArtifactBeta : ArtifactCard
 
     public OminousArtifactBeta() : base(2, ArtifactType.Artifact, TargetType.Self) { }
 
+    protected override void OnUpgrade()
+    {
+        DynamicVars.Heal.UpgradeValueBy(2m);
+        DynamicVars.Block.UpgradeValueBy(4m);
+        DynamicVars["PlatingPower"].UpgradeValueBy(2m);
+    }
+
     protected override async Task OnRawPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await CreatureCmd.Heal(Owner.Creature, DynamicVars.Heal.BaseValue);

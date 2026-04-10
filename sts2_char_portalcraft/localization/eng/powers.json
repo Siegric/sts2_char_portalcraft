@@ -41,5 +41,9 @@
 
   "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_POWER.title": "Dewdrop's Blessing",
   "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_POWER.description": "This turn, whenever you play a Skill, add Imari's Little Buddies to your hand.",
-  "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_POWER.smartDescription": "This turn, whenever you play a Skill, add Imari's Little Buddies to your hand."
+  "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_POWER.smartDescription": "This turn, whenever you play a Skill, add Imari's Little Buddies to your hand.",
+
+  "STS2_CHAR_PORTALCRAFT-NOAH_DAMAGE_BONUS_POWER.title": "Thread of Death",
+  "STS2_CHAR_PORTALCRAFT-NOAH_DAMAGE_BONUS_POWER.description": "Your Puppets deal additional damage.",
+  "STS2_CHAR_PORTALCRAFT-NOAH_DAMAGE_BONUS_POWER.smartDescription": "Your Puppets deal +{Amount} additional damage."
 }

@@ -23,10 +23,10 @@ public sealed class OminousArtifactAlpha : ArtifactCard
     protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]
     {
         new CalculationBaseVar(14m),
-        new ExtraDamageVar(1m),
+        new ExtraDamageVar(2m),
         new CalculatedDamageVar(ValueProp.Move)
             .WithMultiplier((CardModel card, Creature? _) =>
-                PileType.Exhaust.GetPile(card.Owner).Cards.Count),
+                card.Owner != null ? PileType.Exhaust.GetPile(card.Owner).Cards.Count : 0),
         new IntVar("MagicNumber", 14m),
     };
 
@@ -36,6 +36,13 @@ public sealed class OminousArtifactAlpha : ArtifactCard
     };
 
     public OminousArtifactAlpha() : base(2, ArtifactType.Artifact, TargetType.AnyEnemy) { }
+
+    protected override void OnUpgrade()
+    {
+        DynamicVars["CalculationBase"].UpgradeValueBy(4m);
+        DynamicVars["ExtraDamage"].UpgradeValueBy(1m);
+        DynamicVars["MagicNumber"].UpgradeValueBy(4m);
+    }
 
     protected override async Task OnRawPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
@@ -61,8 +68,8 @@ public sealed class OminousArtifactAlpha : ArtifactCard
         var enemies = CombatState.HittableEnemies;
         if (enemies.Count == 0) return;
 
-        // When activated via Ralmia etc., no target selected — fall back to lowest HP
-        Creature target = enemies.MinBy(e => e.CurrentHp)!;
+        // When activated via Ralmia etc., no target selected — fall back to highest HP
+        Creature target = enemies.MaxBy(e => e.CurrentHp)!;
 
         await DamageCmd.Attack(DynamicVars.CalculatedDamage)
             .FromCard(this)

@@ -31,6 +31,13 @@ public sealed class OminousArtifactGamma : ArtifactCard
 
     public OminousArtifactGamma() : base(2, ArtifactType.Artifact, TargetType.Self) { }
 
+    protected override void OnUpgrade()
+    {
+        DynamicVars.Cards.UpgradeValueBy(1);
+        DynamicVars.Energy.UpgradeValueBy(1);
+        DynamicVars["MagicNumber"].UpgradeValueBy(1m);
+    }
+
     protected override async Task OnRawPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.BaseValue, Owner);

@@ -31,7 +31,7 @@ public sealed class MasterworkOmega : ArtifactCard
         new ExtraDamageVar(1m),
         new CalculatedDamageVar(ValueProp.Move)
             .WithMultiplier((CardModel card, Creature? _) =>
-                PileType.Exhaust.GetPile(card.Owner).Cards.Count),
+                card.Owner != null ? PileType.Exhaust.GetPile(card.Owner).Cards.Count : 0),
         new IntVar("MagicNumber", 14m),
         new HealVar(4m),
         new BlockVar(14m, ValueProp.Move),
@@ -48,6 +48,22 @@ public sealed class MasterworkOmega : ArtifactCard
     };
 
     public MasterworkOmega() : base(3, ArtifactType.Artifact, TargetType.AnyEnemy) { }
+
+    protected override void OnUpgrade()
+    {
+        // Alpha portion
+        DynamicVars["CalculationBase"].UpgradeValueBy(4m);
+        DynamicVars["ExtraDamage"].UpgradeValueBy(1m);
+        DynamicVars["MagicNumber"].UpgradeValueBy(4m);
+        // Beta portion
+        DynamicVars.Heal.UpgradeValueBy(2m);
+        DynamicVars.Block.UpgradeValueBy(4m);
+        DynamicVars["PlatingPower"].UpgradeValueBy(2m);
+        // Gamma portion
+        DynamicVars.Cards.UpgradeValueBy(1);
+        DynamicVars.Energy.UpgradeValueBy(1);
+        DynamicVars["DrawNextTurn"].UpgradeValueBy(1m);
+    }
 
     protected override async Task OnRawPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

@@ -23,7 +23,7 @@ public sealed class WastelandOfDestructionToken : sts2_char_portalcraftCard
         CardKeyword.Unplayable,
     };
 
-    public WastelandOfDestructionToken() : base(0, TalismanType.Talisman, CardRarity.Token, TargetType.Self) { }
+    public WastelandOfDestructionToken() : base(0, TalismanType.Talisman, CardRarity.Token, TargetType.Self, showInCardLibrary: true) { }
 
     protected override Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

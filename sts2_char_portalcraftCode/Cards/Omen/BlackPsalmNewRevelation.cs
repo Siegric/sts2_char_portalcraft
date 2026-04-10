@@ -8,13 +8,18 @@ using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Models;
-using sts2_char_portalcraft.sts2_char_portalcraftCode.Powers;
 
 namespace sts2_char_portalcraft.sts2_char_portalcraftCode.Cards.Omen;
 
 public sealed class BlackPsalmNewRevelation : sts2_char_portalcraftCard
 {
-    private const int BaseDamage = 2;
+    private const int BaseDamageAmount = 2;
+    private const int UpgradeDamageAmount = 1;
+
+    /// <summary>
+    /// The damage value this psalm deals per turn, accounting for upgrade state.
+    /// </summary>
+    public int DamageValue => BaseDamageAmount + (CurrentUpgradeLevel > 0 ? UpgradeDamageAmount : 0);
 
     protected override HashSet<CardTag> CanonicalTags => new() { OmenTag.Talisman };
 
@@ -24,14 +29,11 @@ public sealed class BlackPsalmNewRevelation : sts2_char_portalcraftCard
         CardKeyword.Unplayable,
     };
 
-    public BlackPsalmNewRevelation() : base(0, TalismanType.Talisman, CardRarity.Token, TargetType.Self) { }
+    public BlackPsalmNewRevelation() : base(0, TalismanType.Talisman, CardRarity.Token, TargetType.Self, showInCardLibrary: true) { }
 
     protected override void AddExtraArgsToDescription(LocString description)
     {
-        int bonus = Owner?.Creature?.GetPower<BeelzebubSupremeKingPower>()?.Amount ?? 0;
-        int total = BaseDamage + bonus;
-        string display = bonus > 0 ? $"[green]{total}[/green]" : total.ToString();
-        description.Add("PsalmDamage", display);
+        description.Add("PsalmDamage", DamageValue.ToString());
     }
 
     protected override Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)

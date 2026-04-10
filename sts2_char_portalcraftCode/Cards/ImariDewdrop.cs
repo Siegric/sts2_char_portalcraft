@@ -44,23 +44,33 @@ public sealed class ImariDewdrop : sts2_char_portalcraftCard
                 maxCount: 1);
 
             var toDiscard = (await CardSelectCmd.FromHand(choiceContext, Owner, discardPrefs, AnyCard, this)).ToList();
-            if (toDiscard.Count == 0) return;
-            await CardCmd.Discard(choiceContext, toDiscard[0]);
+            if (toDiscard.Count > 0)
+            {
+                await CardCmd.Discard(choiceContext, toDiscard[0]);
+            }
         }
 
         // Step 2: Tutor a Skill from draw pile
         var skills = PileType.Draw.GetPile(Owner).Cards.Where(c => c.Type == CardType.Skill).ToList();
         if (skills.Count > 0)
         {
-            var chosen = await CardSelectCmd.FromChooseACardScreen(choiceContext, skills, Owner);
-            if (chosen != null)
+            var tutorPrefs = new CardSelectorPrefs(
+                new LocString("card_selection", "IMARI_TUTOR_PROMPT"),
+                minCount: 1,
+                maxCount: 1);
+
+            var chosen = (await CardSelectCmd.FromSimpleGrid(choiceContext, skills, Owner, tutorPrefs)).ToList();
+            if (chosen.Count > 0)
             {
-                await CardPileCmd.Add(chosen, PileType.Hand);
+                await CardPileCmd.Add(chosen[0], PileType.Hand);
             }
         }
 
         // Step 3: Apply temporary power — Skills generate Imari tokens this turn
-        int amount = IsUpgraded ? 2 : 1;
-        await PowerCmd.Apply<ImariDewdropPower>(Owner.Creature, amount, Owner.Creature, this);
+        await PowerCmd.Apply<ImariDewdropPower>(Owner.Creature, 1, Owner.Creature, this);
+        if (IsUpgraded)
+        {
+            Owner.Creature.GetPower<ImariDewdropPower>()!.Upgraded = true;
+        }
     }
 }

@@ -15,9 +15,9 @@
   "STS2_CHAR_PORTALCRAFT-TALISMAN.description": "Cannot be played from hand. Has effects that trigger at end of turn or when exhausted.",
 
   "WASTELAND_TOKEN.title": "Wasteland Token",
-  "WASTELAND_TOKEN.description": "Cannot be played. When exhausted, draws a card and grants Energy.",
+  "WASTELAND_TOKEN.description": "Cannot be played. When exhausted, draws 2 cards and grants Energy.",
   "STS2_CHAR_PORTALCRAFT-WASTELAND_TOKEN.title": "Wasteland Token",
-  "STS2_CHAR_PORTALCRAFT-WASTELAND_TOKEN.description": "Cannot be played. When exhausted, draws a card and grants Energy.",
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_TOKEN.description": "Cannot be played. When exhausted, draws 2 cards and grants Energy.",
 
   "FUSE.title": "Fuse",
   "FUSE.description": "When played, you may select matching Artifacts from your hand to exhaust and combine into a higher-tier Artifact. Fusing refunds the energy cost.",

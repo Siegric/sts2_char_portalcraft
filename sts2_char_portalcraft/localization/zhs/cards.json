@@ -93,7 +93,7 @@
   "STS2_CHAR_PORTALCRAFT-LUDICROUS_ORDNANCE.description": "将此牌的 {Cards:diff()} 份复制品加入手牌。对所有敌人造成 {Damage:diff()} 点伤害，每份手牌中的复制品各造成一次。",
 
   "STS2_CHAR_PORTALCRAFT-SYLVIA_GARDEN_EXECUTIONER.title": "箱庭的断罪者·希尔薇娅",
-  "STS2_CHAR_PORTALCRAFT-SYLVIA_GARDEN_EXECUTIONER.description": "选择1张[gold]抽牌[/gold]或[gold]治疗[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-SYLVIA_GARDEN_EXECUTIONER.description": "选择一个模式发动。\n1. 抽两张牌 \n2. 恢复4点体力",
 
   "STS2_CHAR_PORTALCRAFT-SYLVIA_DRAW_CHOICE.title": "抽牌",
   "STS2_CHAR_PORTALCRAFT-SYLVIA_DRAW_CHOICE.description": "抽 {Cards:diff()} 张牌。",
@@ -144,7 +144,7 @@
   "STS2_CHAR_PORTALCRAFT-ZWEI_SYMPHONIC_HEART.description": "将1个[gold]维多利亚[/gold]加入手牌。[gold]维多利亚[/gold]获得[gold]重放[/gold] 1。",
 
   "STS2_CHAR_PORTALCRAFT-NOAH_THREAD_OF_DEATH.title": "杀意之丝·诺亚",
-  "STS2_CHAR_PORTALCRAFT-NOAH_THREAD_OF_DEATH.description": "手牌中所有[gold]悬丝傀儡[/gold]获得 +{MagicNumber:diff()} 伤害。",
+  "STS2_CHAR_PORTALCRAFT-NOAH_THREAD_OF_DEATH.description": "你的[gold]悬丝傀儡[/gold]造成额外 +{MagicNumber:diff()} 点伤害。",
 
   "STS2_CHAR_PORTALCRAFT-SUBSTANDARD_PUPPET.title": "拙劣的人偶",
   "STS2_CHAR_PORTALCRAFT-SUBSTANDARD_PUPPET.description": "造成 {Damage:diff()} 点伤害。将此牌的1份复制品加入手牌。",
@@ -195,7 +195,7 @@
   "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.description": "回合结束时，对所有敌人造成{PsalmDamage}点伤害，然后变为[gold]新约·白之章[/gold]。若被消耗，立即对所有敌人造成{PsalmDamage}点伤害并将1张[gold]新约·白之章[/gold]加入手牌。",
 
   "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.title": "破坏的荒野",
-  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.description": "若被消耗，抽1张牌并获得1点能量。",
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.description": "若被[gold]消耗[/gold]，抽1张牌。",
 
   "STS2_CHAR_PORTALCRAFT-BIOFABRICATION.title": "生命量产",
   "STS2_CHAR_PORTALCRAFT-BIOFABRICATION.description": "选择手牌中1个[gold]创造物[/gold]，将其费用减少1。将3份复制品加入抽牌堆。",

@@ -24,7 +24,7 @@ public sealed class Puppet : sts2_char_portalcraftCard
 
     public override IEnumerable<CardKeyword> CanonicalKeywords => new[] { CardKeyword.Exhaust };
 
-    public Puppet() : base(0, PuppetType.Puppet, CardRarity.Token, TargetType.AnyEnemy) { }
+    public Puppet() : base(0, PuppetType.Puppet, CardRarity.Token, TargetType.AnyEnemy, showInCardLibrary: true) { }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

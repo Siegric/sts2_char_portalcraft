@@ -43,12 +43,12 @@ public abstract class ArtifactCard : sts2_char_portalcraftCard
     private bool CanMerge => Tier != ArtifactTier.T3_Omega;
 
     protected ArtifactCard(CardType type, TargetType target)
-        : base(0, type, CardRarity.Token, target)
+        : base(0, type, CardRarity.Token, target, showInCardLibrary: true)
     {
     }
 
     protected ArtifactCard(int energyCost, CardType type, TargetType target)
-        : base(energyCost, type, CardRarity.Token, target)
+        : base(energyCost, type, CardRarity.Token, target, showInCardLibrary: true)
     {
     }
 

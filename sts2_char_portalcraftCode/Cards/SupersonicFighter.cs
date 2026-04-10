@@ -25,7 +25,7 @@ public sealed class SupersonicFighter : sts2_char_portalcraftCard
 
     public override IEnumerable<CardKeyword> CanonicalKeywords => new[] { CardKeyword.Exhaust };
 
-    public SupersonicFighter() : base(4, CardType.Skill, CardRarity.Rare, TargetType.Self) { }
+    public SupersonicFighter() : base(2, CardType.Skill, CardRarity.Rare, TargetType.Self) { }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

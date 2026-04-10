@@ -26,6 +26,11 @@ public sealed class FortifierArtifact : ArtifactCard
         await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, cardPlay);
     }
 
+    protected override void OnUpgrade()
+    {
+        DynamicVars.Block.UpgradeValueBy(4m);
+    }
+
     public override async Task ActivateEffect(PlayerChoiceContext choiceContext)
     {
         await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block.BaseValue, ValueProp.Move, null);

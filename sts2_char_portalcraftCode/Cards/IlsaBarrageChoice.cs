@@ -22,7 +22,7 @@ public sealed class IlsaBarrageChoice : sts2_char_portalcraftCard
 
     public override IEnumerable<CardKeyword> CanonicalKeywords => new[] { CardKeyword.Exhaust };
 
-    public IlsaBarrageChoice() : base(0, CardType.Attack, CardRarity.Token, TargetType.Self) { }
+    public IlsaBarrageChoice() : base(0, CardType.Attack, CardRarity.Token, TargetType.Self, showInCardLibrary: true) { }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

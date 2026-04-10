@@ -23,7 +23,12 @@ public sealed class Victoria : sts2_char_portalcraftCard
 
     public override IEnumerable<CardKeyword> CanonicalKeywords => new[] { CardKeyword.Exhaust };
 
-    public Victoria() : base(0, PuppetType.Puppet, CardRarity.Token, TargetType.AnyEnemy) { }
+    public Victoria() : base(0, PuppetType.Puppet, CardRarity.Token, TargetType.AnyEnemy, showInCardLibrary: true) { }
+
+    protected override void OnUpgrade()
+    {
+        DynamicVars.Damage.UpgradeValueBy(4m);
+    }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

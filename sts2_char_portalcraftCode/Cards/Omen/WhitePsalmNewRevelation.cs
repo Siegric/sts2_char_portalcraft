@@ -8,13 +8,18 @@ using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Models;
-using sts2_char_portalcraft.sts2_char_portalcraftCode.Powers;
 
 namespace sts2_char_portalcraft.sts2_char_portalcraftCode.Cards.Omen;
 
 public sealed class WhitePsalmNewRevelation : sts2_char_portalcraftCard
 {
-    private const int BaseBlock = 2;
+    private const int BaseBlockAmount = 2;
+    private const int UpgradeBlockAmount = 1;
+
+    /// <summary>
+    /// The block value this psalm provides per turn, accounting for upgrade state.
+    /// </summary>
+    public int BlockValue => BaseBlockAmount + (CurrentUpgradeLevel > 0 ? UpgradeBlockAmount : 0);
 
     protected override HashSet<CardTag> CanonicalTags => new() { OmenTag.Talisman };
 
@@ -24,14 +29,11 @@ public sealed class WhitePsalmNewRevelation : sts2_char_portalcraftCard
         CardKeyword.Unplayable,
     };
 
-    public WhitePsalmNewRevelation() : base(0, TalismanType.Talisman, CardRarity.Token, TargetType.Self) { }
+    public WhitePsalmNewRevelation() : base(0, TalismanType.Talisman, CardRarity.Token, TargetType.Self, showInCardLibrary: true) { }
 
     protected override void AddExtraArgsToDescription(LocString description)
     {
-        int bonus = Owner?.Creature?.GetPower<BeelzebubSupremeKingPower>()?.Amount ?? 0;
-        int total = BaseBlock + bonus;
-        string display = bonus > 0 ? $"[green]{total}[/green]" : total.ToString();
-        description.Add("PsalmBlock", display);
+        description.Add("PsalmBlock", BlockValue.ToString());
     }
 
     protected override Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)

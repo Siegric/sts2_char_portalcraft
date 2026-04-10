@@ -1,4 +1,4 @@
-﻿using BaseLib.Abstracts;
+using BaseLib.Abstracts;
 using BaseLib.Extensions;
 using BaseLib.Utils;
 using sts2_char_portalcraft.sts2_char_portalcraftCode.Character;
@@ -8,8 +8,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 namespace sts2_char_portalcraft.sts2_char_portalcraftCode.Cards;
 
 [Pool(typeof(sts2_char_portalcraftCardPool))]
-public abstract class sts2_char_portalcraftCard(int cost, CardType type, CardRarity rarity, TargetType target) :
-    CustomCardModel(cost, type, rarity, target)
+public abstract class sts2_char_portalcraftCard : CustomCardModel
 {
     // Prevent Token and Basic cards from appearing in combat generation (potions, random card effects)
     public override bool CanBeGeneratedInCombat => Rarity != CardRarity.Token && Rarity != CardRarity.Basic;
@@ -26,4 +25,14 @@ public abstract class sts2_char_portalcraftCard(int cost, CardType type, CardRar
     //Uses card_portraits/card_name.png as image path. These should be smaller images.
     public override string PortraitPath => $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
     public override string BetaPortraitPath => $"beta/{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
+
+    protected sts2_char_portalcraftCard(int cost, CardType type, CardRarity rarity, TargetType target)
+        : base(cost, type, rarity, target, showInCardLibrary: rarity != CardRarity.Token)
+    {
+    }
+
+    protected sts2_char_portalcraftCard(int cost, CardType type, CardRarity rarity, TargetType target, bool showInCardLibrary)
+        : base(cost, type, rarity, target, showInCardLibrary: showInCardLibrary)
+    {
+    }
 }

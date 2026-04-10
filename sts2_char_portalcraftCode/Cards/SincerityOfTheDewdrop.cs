@@ -33,6 +33,10 @@ public sealed class SincerityOfTheDewdrop : sts2_char_portalcraftCard
         bool Filter(CardModel c) => c != this;
         int maxSelect = IsUpgraded ? 2 : 1;
 
+        // Guard: check for valid targets before opening selector to prevent soft lock
+        var validCards = PileType.Hand.GetPile(Owner).Cards.Where(Filter).ToList();
+        if (validCards.Count == 0) return;
+
         var prefs = new CardSelectorPrefs(
             new LocString("card_selection", "SINCERITY_PROMPT"),
             minCount: 1,

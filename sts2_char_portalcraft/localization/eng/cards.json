@@ -93,7 +93,7 @@
   "STS2_CHAR_PORTALCRAFT-LUDICROUS_ORDNANCE.description": "Add {Cards:diff()} copies of this card to your hand. Deal {Damage:diff()} damage to ALL enemies for each copy in your hand.",
 
   "STS2_CHAR_PORTALCRAFT-SYLVIA_GARDEN_EXECUTIONER.title": "Sylvia, Garden Executioner",
-  "STS2_CHAR_PORTALCRAFT-SYLVIA_GARDEN_EXECUTIONER.description": "Choose a [gold]Draw Cards[/gold] or [gold]Heal[/gold] card to add to your hand.",
+  "STS2_CHAR_PORTALCRAFT-SYLVIA_GARDEN_EXECUTIONER.description": "Select a Mode to activate.\n1. Draw 2 Cards \"\n2. Heal 4",
 
   "STS2_CHAR_PORTALCRAFT-SYLVIA_DRAW_CHOICE.title": "Draw Cards",
   "STS2_CHAR_PORTALCRAFT-SYLVIA_DRAW_CHOICE.description": "Draw {Cards:diff()} cards.",
@@ -144,7 +144,7 @@
   "STS2_CHAR_PORTALCRAFT-ZWEI_SYMPHONIC_HEART.description": "Add a [gold]Victoria[/gold] to your hand. [gold]Victoria[/gold] gains [gold]Recast[/gold] 1.",
 
   "STS2_CHAR_PORTALCRAFT-NOAH_THREAD_OF_DEATH.title": "Noah, Thread of Death",
-  "STS2_CHAR_PORTALCRAFT-NOAH_THREAD_OF_DEATH.description": "All [gold]Puppets[/gold] in your hand gain +{MagicNumber:diff()} damage.",
+  "STS2_CHAR_PORTALCRAFT-NOAH_THREAD_OF_DEATH.description": "Your [gold]Puppets[/gold] deal +{MagicNumber:diff()} additional damage this turn.",
 
   "STS2_CHAR_PORTALCRAFT-SUBSTANDARD_PUPPET.title": "Substandard Puppet",
   "STS2_CHAR_PORTALCRAFT-SUBSTANDARD_PUPPET.description": "Deal {Damage:diff()} damage. Add 1 copy of this card to your hand.",
@@ -195,7 +195,7 @@
   "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.description": "At end of turn, deal {PsalmDamage} damage to ALL enemies, then transform into [gold]White Psalm, New Revelation[/gold]. If exhausted, immediately deal {PsalmDamage} AoE damage and add a [gold]White Psalm[/gold] to your hand.",
 
   "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.title": "Wasteland of Destruction",
-  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.description": "If exhausted, draw 1 card and gain 1 Energy.",
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.description": "On [gold]Exhaust[/gold], draw 1 cards.",
 
   "STS2_CHAR_PORTALCRAFT-BIOFABRICATION.title": "Biofabrication",
   "STS2_CHAR_PORTALCRAFT-BIOFABRICATION.description": "Select an [gold]Artifact[/gold] in your hand. Subtract 1 from its cost. Put 3 copies of it into your draw pile.",

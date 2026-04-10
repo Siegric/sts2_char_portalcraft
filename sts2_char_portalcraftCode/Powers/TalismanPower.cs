@@ -29,6 +29,7 @@ public sealed class TalismanPower : sts2_char_portalcraftPower
 
     private const int BaseBlockAmount = 2;
     private const int BaseDamageAmount = 2;
+    private const int WastelandTokenDrawCount = 1;
 
     /// <summary>
     /// Flag to distinguish end-of-turn psalm transforms from genuine exhausts.
@@ -55,7 +56,7 @@ public sealed class TalismanPower : sts2_char_portalcraftPower
         foreach (var psalm in whitePsalms)
         {
             Flash();
-            int block = GetWhitePsalmBlock();
+            int block = GetWhitePsalmBlock(psalm);
             await CreatureCmd.GainBlock(Owner, block, ValueProp.Unpowered, null);
         }
 
@@ -63,7 +64,7 @@ public sealed class TalismanPower : sts2_char_portalcraftPower
         foreach (var psalm in blackPsalms)
         {
             Flash();
-            int damage = GetBlackPsalmDamage();
+            int damage = GetBlackPsalmDamage(psalm);
             await DealAoeDamage(choiceContext, damage);
         }
 
@@ -106,7 +107,7 @@ public sealed class TalismanPower : sts2_char_portalcraftPower
         if (TalismanHelper.IsWhitePsalm(card))
         {
             Flash();
-            int block = GetWhitePsalmBlock();
+            int block = GetWhitePsalmBlock(card);
             await CreatureCmd.GainBlock(Owner, block, ValueProp.Unpowered, null);
 
             var black = CombatState.CreateCard<BlackPsalmNewRevelation>(player);
@@ -116,24 +117,23 @@ public sealed class TalismanPower : sts2_char_portalcraftPower
         else if (TalismanHelper.IsBlackPsalm(card))
         {
             Flash();
-            int damage = GetBlackPsalmDamage();
+            int damage = GetBlackPsalmDamage(card);
             await DealAoeDamage(choiceContext, damage);
 
             var white = CombatState.CreateCard<WhitePsalmNewRevelation>(player);
             await CardPileCmd.AddGeneratedCardToCombat(white, PileType.Hand, addedByPlayer: true);
         }
-        // Wasteland (original or token) exhausted: draw 1 card
-        // Wasteland token additionally gains 1 energy
+        // Wasteland base card exhausted: draw 1 card
         else if (card is WastelandOfDestruction)
         {
             Flash();
             await CardPileCmd.Draw(choiceContext, 1, player);
         }
+        // Wasteland token exhausted: draw 2 cards
         else if (TalismanHelper.IsWastelandToken(card))
         {
             Flash();
-            await PlayerCmd.GainEnergy(1, player);
-            await CardPileCmd.Draw(choiceContext, 1, player);
+            await CardPileCmd.Draw(choiceContext, WastelandTokenDrawCount, player);
         }
     }
 
@@ -146,14 +146,16 @@ public sealed class TalismanPower : sts2_char_portalcraftPower
         }
     }
 
-    private int GetWhitePsalmBlock()
+    private int GetWhitePsalmBlock(CardModel card)
     {
-        return BaseBlockAmount + GetBeelzebubBonus();
+        int baseBlock = (card as WhitePsalmNewRevelation)?.BlockValue ?? BaseBlockAmount;
+        return baseBlock + GetBeelzebubBonus();
     }
 
-    private int GetBlackPsalmDamage()
+    private int GetBlackPsalmDamage(CardModel card)
     {
-        return BaseDamageAmount + GetBeelzebubBonus();
+        int baseDamage = (card as BlackPsalmNewRevelation)?.DamageValue ?? BaseDamageAmount;
+        return baseDamage + GetBeelzebubBonus();
     }
 
     private int GetBeelzebubBonus()

@@ -1,11 +1,13 @@
 [gd_scene load_steps=2 format=3 uid="uid://b1m6dce7nqjho"]
 
-[ext_resource type="Texture2D" uid="uid://f6fxkfr5if5x" path="res://sts2_char_portalcraft/images/Visuals/Gemini_Generated_Image_8y3mxv8y3mxv8y3m.png" id="1_j185a"]
+[ext_resource type="Texture2D" uid="uid://cj4sct3tk6v0" path="res://sts2_char_portalcraft/images/charui/Ralmia_leader_emblem.webp" id="1_j185a"]
 
 [node name="Portalcraft" type="Node2D"]
 metadata/_edit_group_ = true
 
 [node name="Visual" type="Sprite2D" parent="."]
+position = Vector2(0, -190)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_j185a")
 
 [node name="Bounds" type="Control" parent="."]
