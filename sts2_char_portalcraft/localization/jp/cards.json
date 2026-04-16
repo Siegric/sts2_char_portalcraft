@@ -1,0 +1,304 @@
+{
+  "STS2_CHAR_PORTALCRAFT-GEAR_OF_AMBITION.title": "フューチャー·コア",
+  "STS2_CHAR_PORTALCRAFT-GEAR_OF_AMBITION.description": "効果なし。\n[gold]融合[/gold]：他の[gold]フューチャー·コア[/gold]を廃棄して[gold]アタックアーティファクト[/gold]を創造する。",
+
+  "STS2_CHAR_PORTALCRAFT-GEAR_OF_REMEMBRANCE.title": "パスト·コア",
+  "STS2_CHAR_PORTALCRAFT-GEAR_OF_REMEMBRANCE.description": "効果なし。\n[gold]融合[/gold]：他の[gold]パスト·コア[/gold]を廃棄して[gold]キャッスルアーティファクト[/gold]を創造する。",
+
+  "STS2_CHAR_PORTALCRAFT-STRIKER_ARTIFACT.title": "アタックアーティファクト",
+  "STS2_CHAR_PORTALCRAFT-STRIKER_ARTIFACT.description": "　{Damage:diff()} ダメージを与える。\n[gold]融合[/gold]：[gold]アーティファクト[/gold]を破棄する、融合したアーティファクトの合計コストに応じて変化する。\n1：[gold]デストロイアーティファクトα[/gold]\n2：[gold]デストロイアーティファクトβ[/gold]\n3以上：[gold]デストロイアーティファクトγ[/gold]",
+
+  "STS2_CHAR_PORTALCRAFT-FORTIFIER_ARTIFACT.title": "キャッスルアーティファクト",
+  "STS2_CHAR_PORTALCRAFT-FORTIFIER_ARTIFACT.description": " {Block:diff()} ブロックを得る。\n[gold]融合[/gold]：[gold]アーティファクト[/gold]を破棄する、融合したアーティファクトの合計コストに応じて変化する。\n1：[gold]デストロイアーティファクトα[/gold]\n2：[gold]デストロイアーティファクトβ[/gold]\n3以上：[gold]デストロイアーティファクトγ[/gold]",
+
+  "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_ALPHA.title": "デストロイアーティファクトα",
+  "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_ALPHA.description": " {CalculatedDamage:diff()} ダメージを与える。廃棄札にあるカード1枚つき， {ExtraDamage:diff()}　ダメージを追加する。すべての敵に {MagicNumber:diff()} ダメージを与える。\n[gold]融合[/gold]：[gold]デストロイアーティファクトβ[/gold]と[gold]デストロイアーティファクトγ[/gold]を破棄して[gold]イクシードアーティファクトΩ[/gold]を生成する。",
+
+  "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_BETA.title": "デストロイアーティファクトβ",
+  "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_BETA.description": "HPを {Heal:diff()} 回復する。 {Block:diff()} ブロックを得る。[gold]プレート[/gold] {PlatingPower:diff()} を得る。\n[gold]融合[/gold]：[gold]"デストロイアーティファクトα[/gold]と[gold]"デストロイアーティファクトγ[/gold]を破棄して[gold]イクシードアーティファクトΩ[/gold]を生成する。",
+
+  "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_GAMMA.title": "デストロイアーティファクトγ",
+  "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_GAMMA.description": "カードを {Cards:diff()} 枚引く。エナジー {Energy:diff()} を得る。次のターン、カードを{MagicNumber:diff()} 枚引く。\n[gold]融合[/gold]：[gold]デストロイアーティファクトα[/gold]と[gold]デストロイアーティファクトβ[/gold]を破棄して[gold]イクシードアーティファクトΩ[/gold]を生成する。",
+
+  "STS2_CHAR_PORTALCRAFT-MASTERWORK_OMEGA.title": "イクシードアーティファクトΩ",
+  "STS2_CHAR_PORTALCRAFT-MASTERWORK_OMEGA.description": " {CalculatedDamage:diff()} ダメージを与える。廃棄札にあるカード1枚つき， {ExtraDamage:diff()}　ダメージを追加する。すべての敵に {MagicNumber:diff()} ダメージを与える。HPを {Heal:diff()} 回復する。 {Block:diff()} ブロックを得る。[gold]プレート[/gold] {PlatingPower:diff()} を得る。カードを{Cards:diff()} 枚引く。エナジー {Energy:diff()} を得る。次のターン、カードを {DrawNextTurn:diff()} 枚引く。",
+
+  "STS2_CHAR_PORTALCRAFT-STRIKE_PORTALCRAFT.title": "ストライク",
+  "STS2_CHAR_PORTALCRAFT-STRIKE_PORTALCRAFT.description": " {Damage:diff()} ダメージを与える。",
+
+  "STS2_CHAR_PORTALCRAFT-DEFEND_PORTALCRAFT.title": "防御",
+  "STS2_CHAR_PORTALCRAFT-DEFEND_PORTALCRAFT.description": " {Block:diff()} ブロックを得る。",
+
+  "STS2_CHAR_PORTALCRAFT-ARTIFACT_RECHARGE.title": "アーティファクトチャージ  ",
+  "STS2_CHAR_PORTALCRAFT-ARTIFACT_RECHARGE.description": "[gold]パスト·コア[/gold]と[gold]フューチャー·コア[/gold]をそれぞれ1枚ずつ手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-FLIGHT_OF_ICARUS.title": "イカロスの飛翔",
+  "STS2_CHAR_PORTALCRAFT-FLIGHT_OF_ICARUS.description": "[gold]アーティファクト[/gold]を1枚選び、このターンそのコストを０にする。プレイした時、カードを1枚引く。",
+
+  "STS2_CHAR_PORTALCRAFT-ELISE_ELECTRIFYING_INVENTOR.title": "ビビッドインベンター・イリス",
+  "STS2_CHAR_PORTALCRAFT-ELISE_ELECTRIFYING_INVENTOR.description": " {Block:diff()} ブロックを得る。[gold]パスト·コア[/gold]を1枚手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-IRONHEART_HUNTER.title": "アンストッパブルガンナー",
+  "STS2_CHAR_PORTALCRAFT-IRONHEART_HUNTER.description": " {Damage:diff()} ダメージを与える。[gold]フューチャー·コア[/gold]を1枚手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-ARTIFACT_CATAPULT.title": "アーティファクトカタパルト",
+  "STS2_CHAR_PORTALCRAFT-ARTIFACT_CATAPULT.description": "[gold]フューチャー·コア[/gold]を1枚手札に加える。[gold]アーティファクト[/gold]を1枚選び、そのコピーを1枚手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-BULLET_FROM_BEYOND.title": "異次元からの銃撃",
+  "STS2_CHAR_PORTALCRAFT-BULLET_FROM_BEYOND.description": " {Damage:diff()} ダメージを与える。[gold]フューチャー·コア[/gold]と[gold]パスト·コア[/gold]をそれぞれ1枚ずつ手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-FIELD_SCIENTIST.title": "フィールドエンジニア",
+  "STS2_CHAR_PORTALCRAFT-FIELD_SCIENTIST.description": "カードを1枚捨てる。カードを {Cards:diff()} 枚引く。",
+
+  "STS2_CHAR_PORTALCRAFT-DOOMWRIGHT_RESURGENCE.title": "改境の再動",
+  "STS2_CHAR_PORTALCRAFT-DOOMWRIGHT_RESURGENCE.description": "1コスト以下の[gold]アーティファクト[/gold]を最大2枚まで選ぶ、そのコピーを手札に加える。このターンのコストを0にする、[gold]エセリアル[/gold]を持つ。",
+
+  "STS2_CHAR_PORTALCRAFT-CARNELIA_EMBER_OF_DARKNESS.title": "暗獄の残光・ジャスパー",
+  "STS2_CHAR_PORTALCRAFT-CARNELIA_EMBER_OF_DARKNESS.description": "[gold]パスト·コア[/gold]を1枚手札に加える。[gold]アーティファクト[/gold]を1枚廃棄する。廃棄したアーティファクトのコスト＋1のエナジーを得る。",
+
+  "STS2_CHAR_PORTALCRAFT-MIRIAM_THE_RESOLUTE.title": "レゾリューション・ミリアム",
+  "STS2_CHAR_PORTALCRAFT-MIRIAM_THE_RESOLUTE.description": "[gold]パスト·コア[/gold]と[gold]フューチャー·コア[/gold]をそれぞれ2枚ずつ手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-RUKINA_RESISTANCE_LEADER.title": "ストラグルリーダー・ルキナ",
+  "STS2_CHAR_PORTALCRAFT-RUKINA_RESISTANCE_LEADER.description": " {Block:diff()} ブロックを得る。[gold]フューチャー·コア[/gold]と[gold]パスト·コア[/gold]をそれぞれ1枚ずつ手札に加える。[gold]アタックアーティファクト[/gold]を1枚手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-NEW_AGE_CARTOGRAPHER.title": "ネオジオグラファー",
+  "STS2_CHAR_PORTALCRAFT-NEW_AGE_CARTOGRAPHER.description": "[gold]デストロイアーティファクトβ[/gold]を1枚手札に加える。このターンのコストを0にする、[gold]エセリアル[/gold]を持つ。",
+
+  "STS2_CHAR_PORTALCRAFT-ALOUETTE_DOOMWRIGHT_WARD.title": "改境の天宫·アルエット",
+  "STS2_CHAR_PORTALCRAFT-ALOUETTE_DOOMWRIGHT_WARD.description": "[gold]フューチャー·コア[/gold]と[gold]パスト·コア[/gold]をそれぞれ1枚ずつ手札に加える。[gold]アーティファクト[/gold]を1枚選び、このターンそのコストを0にする。",
+
+  "STS2_CHAR_PORTALCRAFT-SHODDY_PLAYTHING.title": "低劣の玩具",
+  "STS2_CHAR_PORTALCRAFT-SHODDY_PLAYTHING.description": "カードを {Cards:diff()} 枚引く。このカードのコピーを1枚山札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-ENGINEBLADE_MAVEN.title": "エンジンブレイダー",
+  "STS2_CHAR_PORTALCRAFT-ENGINEBLADE_MAVEN.description": " {Damage:diff()} ダメージを与える。[gold]パスト·コア[/gold]と[gold]アタックアーティファクト[/gold]をそれぞれ1枚ずつ手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-BRILLIANT_INVENTOR.title": "ブライトクリエイター",
+  "STS2_CHAR_PORTALCRAFT-BRILLIANT_INVENTOR.description": "[gold]デストロイアーティファクトα[/gold]を1枚手札に加える。このターンのコストを0にする、[gold]エセリアル[/gold]を持つ。",
+
+  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN.title": "新たなる少女・エース",
+  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN.description": "ターン終了時、手札が5枚未満の場合、次のターンにカードを1枚引く。手札が6枚を超える場合、次のターンにエナジー1を得る。",
+
+  "STS2_CHAR_PORTALCRAFT-ANCIENT_CANNON.title": "遺産の砲撃",
+  "STS2_CHAR_PORTALCRAFT-ANCIENT_CANNON.description": "[gold]アーティファクト[/gold]を[gold]融合[/gold]するたび、ランダムな敵に {MagicNumber:diff()} ダメージを与える。",
+
+  "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_BOOM.title": "ブーストエクステンド・ララミア",
+  "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_BOOM.description": "2コスト以下の[gold]アーティファクト[/gold]を最大{IfUpgraded:show:X+1|X}枚まで選ぶ、効果を発動する。",
+
+  "STS2_CHAR_PORTALCRAFT-CAMISCILLA_UNFEELING_HEART.title": "劣恶の纯心·カミシラ",
+  "STS2_CHAR_PORTALCRAFT-CAMISCILLA_UNFEELING_HEART.description": "手札にある[gold]アーティファクト[/gold]1枚につき、 {Damage:diff()} ダメージを与える。",
+
+  "STS2_CHAR_PORTALCRAFT-LUDICROUS_ORDNANCE.title": "愚劣的兵器",
+  "STS2_CHAR_PORTALCRAFT-LUDICROUS_ORDNANCE.description": "このカードのコピーを {Cards:diff()} 枚手札に加える。すべての敵に {Damage:diff()} ダメージを与える，手札にあるコピー1枚につき、1回ダメージを与える。",
+
+  "STS2_CHAR_PORTALCRAFT-SYLVIA_GARDEN_EXECUTIONER.title": "箱庭の断罪者・シルヴィア",
+  "STS2_CHAR_PORTALCRAFT-SYLVIA_GARDEN_EXECUTIONER.description": "モードを選択して発動する。\n1. カードを2枚引く \n2. HPを4回復する",
+
+  "STS2_CHAR_PORTALCRAFT-SYLVIA_DRAW_CHOICE.title": "ドロー",
+  "STS2_CHAR_PORTALCRAFT-SYLVIA_DRAW_CHOICE.description": "カードを {Cards:diff()} 枚引く。",
+
+  "STS2_CHAR_PORTALCRAFT-SYLVIA_HEAL_CHOICE.title": "治療",
+  "STS2_CHAR_PORTALCRAFT-SYLVIA_HEAL_CHOICE.description": "HPを {Heal:diff()} 回復する。",
+
+  "STS2_CHAR_PORTALCRAFT-PUPPET.title": "パペット",
+  "STS2_CHAR_PORTALCRAFT-PUPPET.description": " {Damage:diff()} ダメージを与える。",
+
+  "STS2_CHAR_PORTALCRAFT-ENHANCED_PUPPET.title": "改良型·パペット",
+  "STS2_CHAR_PORTALCRAFT-ENHANCED_PUPPET.description": " {Damage:diff()} ダメージを与える。",
+
+  "STS2_CHAR_PORTALCRAFT-DOLL_SLAYER.title": "ドールスローター",
+  "STS2_CHAR_PORTALCRAFT-DOLL_SLAYER.description": "すべての敵に {Damage:diff()} ダメージを与える。[gold]ハートスローター・フィア[/gold]を1枚手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-PUPPET_CAT.title": "パペットキャット",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_CAT.description": "[gold]パペット[/gold]を1枚手札に加える，そのダメージを{BonusDamage:diff()}追加する。",
+
+  "STS2_CHAR_PORTALCRAFT-PUPPET_LANCER.title": "傀儡長槍手",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_LANCER.description": " {Damage:diff()} ダメージを与える。[gold]改良型·パペット[/gold]を1枚手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-LOVESTRUCK_PUPPETEER.title": "愛執のドールユーザー",
+  "STS2_CHAR_PORTALCRAFT-LOVESTRUCK_PUPPETEER.description": " {Block:diff()} ブロックを得る。[gold]パペット[/gold]を {PuppetCount:diff()} 枚手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-VIER_HEART_SLAYER.title": "ハートスローター・フィア",
+  "STS2_CHAR_PORTALCRAFT-VIER_HEART_SLAYER.description": "[gold]パペット[/gold]1枚をドールスローターに変化させる，その[gold]ドールスローター[/gold]は変化したパペットのダメージをこれに追加する。",
+
+  "STS2_CHAR_PORTALCRAFT-PUPPET_SHIELD.title": "人形の身代わり",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_SHIELD.description": "[gold]パペット[/gold]を最大{IfUpgraded:show:4|3}枚まで廃棄する。廃棄した[gold]パペット[/gold]1枚につき、そのダメージに等しいブロックを得る。",
+
+  "STS2_CHAR_PORTALCRAFT-WIRED_ASSAULT.title": "ストリングアサルト",
+  "STS2_CHAR_PORTALCRAFT-WIRED_ASSAULT.description": " {Damage:diff()} ダメージを与える。[gold]パペット[/gold]を2枚手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-MEDICAL_GRADE_ASSASSIN.title": "機偶暗殺者",
+  "STS2_CHAR_PORTALCRAFT-MEDICAL_GRADE_ASSASSIN.description": " {Damage:diff()} ダメージを与える。[gold]リプレイ[/gold]1の[gold]を持つ改良型·パペット[/gold]を1枚手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-RESURRECTION_TUNER.title": "リヴァイブチューニング",
+  "STS2_CHAR_PORTALCRAFT-RESURRECTION_TUNER.description": "カードを1枚廃棄する。廃棄札にある[gold]パペット[/gold]最大2枚まで選び、ランダムに手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER.title": "ドールズシアター",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER.description": "ターン開始時、[gold]パペット[/gold]を {MagicNumber:diff()} 枚手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-MARIONETTE_MASTER.title": "ステージメーカー",
+  "STS2_CHAR_PORTALCRAFT-MARIONETTE_MASTER.description": "[gold]パペット[/gold]と[gold]改良型·パペット[/gold]をそれぞれ1枚ずつ手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-ZWEI_SYMPHONIC_HEART.title": "シンフォニアハート・ツヴァイ",
+  "STS2_CHAR_PORTALCRAFT-ZWEI_SYMPHONIC_HEART.description": "[gold]ヴィクトリア[/gold]を1枚手札に加える。[gold]ヴィクトリア[/gold]は[gold]リプレイ[/gold]1を付与する。",
+
+  "STS2_CHAR_PORTALCRAFT-NOAH_THREAD_OF_DEATH.title": "殺意の糸・ノア",
+  "STS2_CHAR_PORTALCRAFT-NOAH_THREAD_OF_DEATH.description": "このターン，[gold]パペット[/gold]は　{MagicNumber:diff()} ダメージを追加する。",
+
+  "STS2_CHAR_PORTALCRAFT-SUBSTANDARD_PUPPET.title": "拙劣の人形",
+  "STS2_CHAR_PORTALCRAFT-SUBSTANDARD_PUPPET.description": " {Damage:diff()} ダメージを与える。このカードのコピーを1枚手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-SYNCHRONOUS_HEARTS.title": "心有る共闘",
+  "STS2_CHAR_PORTALCRAFT-SYNCHRONOUS_HEARTS.description": "[gold]ロイド[/gold]と[gold]ヴィクトリア[/gold]をそれぞれ1枚ずつ手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-LLOYD.title": "ロイド",
+  "STS2_CHAR_PORTALCRAFT-LLOYD.description": " {Block:diff()} ブロックを得る。",
+
+  "STS2_CHAR_PORTALCRAFT-VICTORIA.title": "ヴィクトリア",
+  "STS2_CHAR_PORTALCRAFT-VICTORIA.description": " {Damage:diff()} ダメージを与える。",
+
+  "STS2_CHAR_PORTALCRAFT-ORCHIS_NEWFOUND_HEART.title": "プロシードハート·オーキス",
+  "STS2_CHAR_PORTALCRAFT-ORCHIS_NEWFOUND_HEART.description": "[gold]ロイド[/gold]を1枚手札に加える。[gold]改良型·パペット[/gold]を2枚手札に加える。手札と廃棄札にあるすべての[gold]パペット[/gold]に[gold]リプレイ[/gold]1をエンチャントする。",
+
+  "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR.title": "狂気の創造者・リーアム",
+  "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR.description": "[gold]パペット[/gold]をプレイするたび、{MagicNumber:diff()} ブロックを得る。[gold]パペット[/gold]を4枚プレイするたび、エナジー1を得る。",
+
+  "STS2_CHAR_PORTALCRAFT-SUPPLICANT_OF_DESTRUCTION.title": "破壊の祈祷者",
+  "STS2_CHAR_PORTALCRAFT-SUPPLICANT_OF_DESTRUCTION.description": "カードを1枚を破棄する。ランダムな敵に {Damage:diff()} ダメージを与える。",
+
+  "STS2_CHAR_PORTALCRAFT-DEVOTEE_OF_DESTRUCTION.title": "破壊の肯定者",
+  "STS2_CHAR_PORTALCRAFT-DEVOTEE_OF_DESTRUCTION.description": "手札をすべて廃棄する。 {Multiplier:diff()}X ブロックを得、 {Multiplier:diff()}X ダメージを与える。X = このターンに廃棄したカードの数。",
+
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION.title": "破壊の荒野",
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION.description": "カードを1枚廃棄する。カードを {Cards:diff()} 枚引く。このカードのプレイ不可のコピーを1枚手札に加える。このカードが廃棄された場合、カード1枚を引く。",
+
+  "STS2_CHAR_PORTALCRAFT-CONGREGANT_OF_DESTRUCTION.title": "破壊の団結者",
+  "STS2_CHAR_PORTALCRAFT-CONGREGANT_OF_DESTRUCTION.description": "手札をすべて廃棄する。カードをX枚引く。X = このターンに廃棄したカードの数。",
+
+  "STS2_CHAR_PORTALCRAFT-DEVASTATING_SOPRANO.title": "殲滅の歌声",
+  "STS2_CHAR_PORTALCRAFT-DEVASTATING_SOPRANO.description": "カードを1枚廃棄する。[gold]新約・白の章[/gold]を1枚手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION.title": "破壊の継承者・アクシア",
+  "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION.description": "ターン終了時、手札にあるすべての[gold]新約・白の章[/gold]と[gold]新約・黒の章[/gold]を廃棄する。",
+
+  "STS2_CHAR_PORTALCRAFT-LISHENNA_MELODY_MANIFEST.title": "奏絶の顕現・リーシェナ",
+  "STS2_CHAR_PORTALCRAFT-LISHENNA_MELODY_MANIFEST.description": "[gold]新約・白の章[/gold]を2枚手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING.title": "全一の王·ベルゼバブ",
+  "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING.description": "敵がダメージを受けた時、その受けるダメージを2増加させる。ブロックを得た時、さらに2ブロックを得る。",
+
+  "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.title": "新約・白の章",
+  "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.description": "ターン終了時、{PsalmBlock}ブロックを得る、そして[gold]新約・黒の章[/gold]に変化する。廃棄された場合，直ちに{PsalmBlock}ブロックを得る、そして[gold]新約・黒の章[/gold]を1枚手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.title": "新約・黒の章",
+  "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.description": "ターン終了時、すべての敵に{PsalmDamage}ダメージを与える、そして[gold]新約・白の章[/gold]。廃棄された場合，直ちにすべての敵に{PsalmDamage}ダメージを与える、そして[gold]新約・白の章[/gold]を1枚手札に加え。",
+
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.title": "破壊の荒野",
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.description": "[gold]廃棄[/gold]された場合、カード1枚を引く。",
+
+  "STS2_CHAR_PORTALCRAFT-BIOFABRICATION.title": "生命の量産",
+  "STS2_CHAR_PORTALCRAFT-BIOFABRICATION.description": "[gold]アーティファクト[/gold]を1枚選び，そのコストを1減少する。そのコピーを3枚山札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.title": "音速の機構・ララミア",
+  "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.description": "[gold]融合[/gold]を4回するたび、エナジー1を得る。",
+
+  "STS2_CHAR_PORTALCRAFT-LIGHT_OF_THE_DEWDROP.title": "尽小花の照臨",
+  "STS2_CHAR_PORTALCRAFT-LIGHT_OF_THE_DEWDROP.description": "カード {Cards:diff()} 枚を引く。",
+
+  "STS2_CHAR_PORTALCRAFT-STREAM_OF_LIFE.title": "生命の奔流",
+  "STS2_CHAR_PORTALCRAFT-STREAM_OF_LIFE.description": " {Damage:diff()} を与える。[gold]パスト·コア[/gold]を1枚手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-ELECTRIC_WHIP_LASS.title": "エレクトロウィッパー",
+  "STS2_CHAR_PORTALCRAFT-ELECTRIC_WHIP_LASS.description": " {Block:diff()} ブロックを得る。[gold]パスト·コア[/gold]を　{MagicNumber:diff()}　枚手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-ADVENT_OF_THE_ELD_AXE.title": "天斧授与",
+  "STS2_CHAR_PORTALCRAFT-ADVENT_OF_THE_ELD_AXE.description": " {Damage:diff()} ダメージを与える。手札に基本コストが2以上のカードがある場合、カードを {Cards:diff()} 枚を引く。",
+
+  "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST.title": "獣性の鉄人",
+  "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST.description": " {Block:diff()} ブロックを得る。このターン攻撃受けるたび、攻撃した敵に {MagicNumber:diff()} ダメージを与える。",
+
+  "STS2_CHAR_PORTALCRAFT-KITTY_CANNONEER.title": "砲擊の貓獸人",
+  "STS2_CHAR_PORTALCRAFT-KITTY_CANNONEER.description": " {Damage:diff()} ダメージを与える。 {MagicNumber:diff()} [gold]脱力[/gold] {MagicNumber:diff()} を付与する。[gold]弱体[/gold] {MagicNumber:diff()} を付与する。[gold]フューチャー·コア[/gold]を1枚手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-SINCERITY_OF_THE_DEWDROP.title": "誠心なる尽小花",
+  "STS2_CHAR_PORTALCRAFT-SINCERITY_OF_THE_DEWDROP.description": "カード1枚を{IfUpgraded:show:[gold]イマリの小鬼+[/gold]|[gold]イマリの小鬼[/gold]}に変化させる。",
+
+  "STS2_CHAR_PORTALCRAFT-ILSA_BRUTAL_DRILL_SERGEANT.title": "严烈なる教官·イルザ",
+  "STS2_CHAR_PORTALCRAFT-ILSA_BRUTAL_DRILL_SERGEANT.description": "モードを選択して発動する。\n1. ランダムな敵に　{IfUpgraded:show:16|12}　ダメージを3回与える。\n2. すべての敵に{IfUpgraded:show:20|16}ダメージを与える。",
+
+  "STS2_CHAR_PORTALCRAFT-ILSA_BARRAGE_CHOICE.title": "連射",
+  "STS2_CHAR_PORTALCRAFT-ILSA_BARRAGE_CHOICE.description": "ランダムな敵に {Damage:diff()} ダメージを3回与える。",
+
+  "STS2_CHAR_PORTALCRAFT-ILSA_SWEEP_CHOICE.title": "薙ぎ払い",
+  "STS2_CHAR_PORTALCRAFT-ILSA_SWEEP_CHOICE.description": "すべての敵に {Damage:diff()} ダメージを与える。",
+
+  "STS2_CHAR_PORTALCRAFT-ISAAC_CONGENIAL_ENGINEER.title": "報恩の技師・アイザック",
+  "STS2_CHAR_PORTALCRAFT-ISAAC_CONGENIAL_ENGINEER.description": "[gold]アタックアーティファクト[/gold]を1枚手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-DIRK_METAL_MERCENARY.title": "メタルマーセナリー・ディルク",
+  "STS2_CHAR_PORTALCRAFT-DIRK_METAL_MERCENARY.description": "[gold]キャッスルアーティファクト[/gold]を1枚手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-STONE_BREAKER.title": "ストーン・ブレイク",
+  "STS2_CHAR_PORTALCRAFT-STONE_BREAKER.description": "ランダムな敵に1ダメージを {MagicNumber:diff()} 回与える。",
+
+  "STS2_CHAR_PORTALCRAFT-CASSIUS_SKY_YEARNING_ARRIVAL.title": "空慕う帰還者・カシウス",
+  "STS2_CHAR_PORTALCRAFT-CASSIUS_SKY_YEARNING_ARRIVAL.description": "[gold]アーティファクト[/gold]を1枚選ぶ。すべての敵に {MagicNumber:diff()}X ダメージを与える。X = 選んだアーティファクトのコスト。[gold]キャッスルアーティファクト[/gold]を1枚手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-MYRIAD_DESIGNS.title": "凡百の製図",
+  "STS2_CHAR_PORTALCRAFT-MYRIAD_DESIGNS.description":"{IfUpgraded:show:[gold]愚劣の兵器+[/gold]|[gold]愚劣の兵器[/gold]}、{IfUpgraded:show:[gold]低劣の玩具+[/gold]|[gold]低劣の玩具[/gold]}、{IfUpgraded:show:[gold]拙劣の人形+[/gold]|[gold]拙劣の人形[/gold]} をそれぞれ1枚ずつ手札に加える。このターンそれらのコストを0にする。",
+
+  "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP.title": "尽小花・イマリ",
+  "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP.description": "カードを1枚捨てる。山札から[gold]スキル[/gold]を1枚手札に加える。このターン、[gold]スキル[/gold]をプレイするたび、{IfUpgraded:show:[gold]イマリの小鬼+[/gold]|[gold]イマリの小鬼[/gold]}を1枚手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-UNFEELING_ELD_AXE.title": "劣悪の天斧",
+  "STS2_CHAR_PORTALCRAFT-UNFEELING_ELD_AXE.description": "[gold]手札効果[/gold]：基本コストが2以上のカードをプレイするたび、このターン、このカードのコストを1減少する。\nカードを1枚選び、戦闘終了までそのコストを1減少する。",
+
+  "STS2_CHAR_PORTALCRAFT-SUPERSONIC_FIGHTER.title": "音速の飛行兵",
+  "STS2_CHAR_PORTALCRAFT-SUPERSONIC_FIGHTER.description": "[gold]デストロイアーティファクトγ[/gold]を1枚手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-IMARIS_LITTLE_BUDDIES.title": "イマリの小鬼",
+  "STS2_CHAR_PORTALCRAFT-IMARIS_LITTLE_BUDDIES.description": " {Damage:diff()} ダメージを与える。 {Block:diff()} ブロックを得る。",
+
+  "STS2_CHAR_PORTALCRAFT-LUNAR_BUNNY.title": "清宵の偶兎",
+  "STS2_CHAR_PORTALCRAFT-LUNAR_BUNNY.description": " {Block:diff()} ブロックを得る。\n[gold]手札効果[/gold]：[gold]スキル[/gold]プレイするたび，このターン、このカードのコストを1減少する。。",
+
+  "STS2_CHAR_PORTALCRAFT-YOG_ZENTHA_ELD_AXE.title": "旧き天斧・ヨグゼンタ",
+  "STS2_CHAR_PORTALCRAFT-YOG_ZENTHA_ELD_AXE.description": " {Damage:diff()} ダメージを与える。手札に基本コストが2以上のカードがある場合、[gold]天斧の深淵[/gold]を1枚手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-DEPTHS_OF_THE_ELD_AXE.title": "天斧の深淵",
+  "STS2_CHAR_PORTALCRAFT-DEPTHS_OF_THE_ELD_AXE.description": "基本コストが2以上のカードを選び、そのコピーを手札に加える、戦闘終了までそのコピーのコストを1減少する。",
+
+  "STS2_CHAR_PORTALCRAFT-SHO_REBORN_NIGHT_KING.title": "再起の夜王·ショウ",
+  "STS2_CHAR_PORTALCRAFT-SHO_REBORN_NIGHT_KING.description": "このターン、スキルを{SkillThreshold:diff()}枚以上プレイした場合，エナジー {MagicNumber:diff()} を得る。",
+
+  "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_OF_FORTUNE.title": "廻る《運命の輪》・スロース",
+  "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_OF_FORTUNE.description": "ターン開始時、以下の効果をランダムで発動する。（同じ効果はターンごとに連続して発動しない。）：\n1. ターン終了時まで手札にあるすべてのカードのコストを1减少する。\n2. [gold]筋力[/gold]2と[gold]敏捷[/gold]2を得る。\n3. HPを3回復する。",
+
+  "STS2_CHAR_PORTALCRAFT-MECHA_CAVALIER.title": "魔鋼の騎兵",
+  "STS2_CHAR_PORTALCRAFT-MECHA_CAVALIER.description": " {Block:diff()} ブロックを得る。このカードのコストが1になった場合，代わりに　{IfUpgraded:show:20|16}　ブロックを得る。コストが0の場合，　{IfUpgraded:show:24|20}　ブロックを得る。",
+
+  "STS2_CHAR_PORTALCRAFT-TIMID_PIONEER.title": "小胆のパイオニア",
+  "STS2_CHAR_PORTALCRAFT-TIMID_PIONEER.description": "ターン終了時まですべての敵は[gold]筋力[/gold] {MagicNumber:diff()} を失う。",
+
+  "STS2_CHAR_PORTALCRAFT-ACHIM_LORD_OF_DESPAIR.title": "ディスペアロード・アキム",
+  "STS2_CHAR_PORTALCRAFT-ACHIM_LORD_OF_DESPAIR.description": "カードを１枚廃棄する。捨て札からカードを　{IfUpgraded:show:2枚|1枚}　選び、手札に加える。",
+
+  "STS2_CHAR_PORTALCRAFT-TSUBASA_BLAZING_GEARCYCLIST.title": "爆燃の総長・ツバサ",
+  "STS2_CHAR_PORTALCRAFT-TSUBASA_BLAZING_GEARCYCLIST.description": "このターン終了時まで手札にある {MagicNumber:diff()} 枚のカードのコストをランダムで1減少する。",
+
+  "STS2_CHAR_PORTALCRAFT-EUSTACE_HOWL_OF_THUNDER.title": "轟雷の閃狼・ユーステス",
+  "STS2_CHAR_PORTALCRAFT-EUSTACE_HOWL_OF_THUNDER.description": " {Damage:diff()} ダメージを与える。このカードのコストが2でない場合、代わりに　{IfUpgraded:show:22|18}　ダメージを与え，このターン終了時まで手札にある1枚のカードのコストをランダムで1減少する。",
+
+  "STS2_CHAR_PORTALCRAFT-NEURON_DISRUPTER.title": "神经遮蔽者",
+  "STS2_CHAR_PORTALCRAFT-NEURON_DISRUPTER.description": "カードを {Cards:diff()} 枚引く。手札の枚数に等しいエナジーを得る。",
+
+  "STS2_CHAR_PORTALCRAFT-FLOWERING_ARTISAN.title": "満開の技術屋",
+  "STS2_CHAR_PORTALCRAFT-FLOWERING_ARTISAN.description": "山札から[gold]スキル[/gold]を1枚手札に加える。このターン、[gold]スキル[/gold]をプレイするたび、すべての敵に {MagicNumber:diff()} ダメージを与える。",
+
+  "STS2_CHAR_PORTALCRAFT-LU_WOH_LIGHT_PERSONIFIED.title": "光の理・ル・オー",
+  "STS2_CHAR_PORTALCRAFT-LU_WOH_LIGHT_PERSONIFIED.description": "ランダムな敵に1ダメージを6回与える。ターン終了時まですべての敵は[gold]筋力[/gold] {MagicNumber:diff()} を失う。このカードのコストが2でない場合，次の敵の３ターン，攻撃意図を持つ敵はターン開始時に[gold]筋力[/gold]を4失う。",
+
+  "STS2_CHAR_PORTALCRAFT-CHAOS_LEGION.title": "ケイオス・レギオン",
+  "STS2_CHAR_PORTALCRAFT-CHAOS_LEGION.description": "すべての敵に {Damage:diff()} ダメージを与える。"
+}

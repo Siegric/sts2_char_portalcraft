@@ -1,0 +1,16 @@
+{
+  "STS2_CHAR_PORTALCRAFT-STS2_CHAR_PORTALCRAFT.aromaPrinciple": "伝説",
+  "STS2_CHAR_PORTALCRAFT-STS2_CHAR_PORTALCRAFT.banter.alive.endTurnPing": "早くターンエンドしろ！",
+  "STS2_CHAR_PORTALCRAFT-STS2_CHAR_PORTALCRAFT.banter.dead.endTurnPing": "……",
+  "STS2_CHAR_PORTALCRAFT-STS2_CHAR_PORTALCRAFT.cardsModifierDescription": "超越者のカードはカード報酬と商人に含まれます。",
+  "STS2_CHAR_PORTALCRAFT-STS2_CHAR_PORTALCRAFT.cardsModifierTitle": "超越者のカード",
+  "STS2_CHAR_PORTALCRAFT-STS2_CHAR_PORTALCRAFT.description": "生成したアーティファクトを利用し，融合を重ねて強大な力を生み出し、戦う。",
+  "STS2_CHAR_PORTALCRAFT-STS2_CHAR_PORTALCRAFT.eventDeathPrevention": "まだ倒れる時ではない。",
+  "STS2_CHAR_PORTALCRAFT-STS2_CHAR_PORTALCRAFT.goldMonologue": "ありがとうございます！",
+  "STS2_CHAR_PORTALCRAFT-STS2_CHAR_PORTALCRAFT.possessiveAdjective": "彼女の",
+  "STS2_CHAR_PORTALCRAFT-STS2_CHAR_PORTALCRAFT.pronounObject": "彼女",
+  "STS2_CHAR_PORTALCRAFT-STS2_CHAR_PORTALCRAFT.pronounPossessive": "彼女の",
+  "STS2_CHAR_PORTALCRAFT-STS2_CHAR_PORTALCRAFT.pronounSubject": "彼女",
+  "STS2_CHAR_PORTALCRAFT-STS2_CHAR_PORTALCRAFT.title": "超越者",
+  "STS2_CHAR_PORTALCRAFT-STS2_CHAR_PORTALCRAFT.titleObject": "超越者"
+}
