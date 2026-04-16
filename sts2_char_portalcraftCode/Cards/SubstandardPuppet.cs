@@ -29,7 +29,7 @@ public sealed class SubstandardPuppet : sts2_char_portalcraftCard
             .Targeting(cardPlay.Target!)
             .Execute(choiceContext);
 
-        var copy = CombatState.CreateCard<SubstandardPuppet>(Owner);
+        var copy = CombatState.CloneCard(this);
         await CardPileCmd.AddGeneratedCardsToCombat(new[] {copy}, PileType.Hand, addedByPlayer: true);
     }
 

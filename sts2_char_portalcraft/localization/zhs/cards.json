@@ -273,7 +273,7 @@
   "STS2_CHAR_PORTALCRAFT-SHO_REBORN_NIGHT_KING.description": "若本回合已使用{SkillThreshold:diff()}张或以上技能牌，获得 {MagicNumber:diff()} 点能量。",
 
   "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_OF_FORTUNE.title": "转动的《命运之轮》·斯洛士",
-  "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_OF_FORTUNE.description": "每回合开始时，随机发动一个效果（不会连续两回合发动相同效果）：\n1. 手牌中所有牌费用减少1直到回合结束。\n2. 获得2点[gold]力量[/gold]和2点[gold]敏捷[/gold]。\n3. 恢复3点生命。",
+  "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_OF_FORTUNE.description": "每回合开始时，随机发动一个效果（不会连续两回合发动相同效果）：\n1. 手牌中所有牌费用减少1直到回合结束。\n2. 获得2点[gold]力量[/gold]和2点[gold]敏捷[/gold]直到回合结束。\n3. 恢复3点生命。",
 
   "STS2_CHAR_PORTALCRAFT-MECHA_CAVALIER.title": "魔钢骑兵",
   "STS2_CHAR_PORTALCRAFT-MECHA_CAVALIER.description": "获得 {Block:diff()} 点格挡。若此牌费用为1，改为获得{IfUpgraded:show:20|16}点格挡。若费用为0，改为获得{IfUpgraded:show:24|20}点格挡。",

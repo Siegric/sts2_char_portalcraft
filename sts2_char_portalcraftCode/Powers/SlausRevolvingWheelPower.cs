@@ -7,18 +7,9 @@ using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace sts2_char_portalcraft.sts2_char_portalcraftCode.Powers;
 
-/// <summary>
-/// Slaus, Revolving Wheel of Fortune power.
-/// At start of turn, randomly activate one of the effects that wasn't used last turn:
-/// 1. Reduce all hand card costs by 1 this turn (scales with stacks)
-/// 2. Gain 2 Strength and 2 Dexterity (scales with stacks)
-/// 3. Heal 3 HP (scales with stacks)
-/// The same effect cannot activate two turns in a row.
-/// </summary>
 public sealed class SlausRevolvingWheelPower : sts2_char_portalcraftPower
 {
     public override PowerType Type => PowerType.Buff;
@@ -56,9 +47,11 @@ public sealed class SlausRevolvingWheelPower : sts2_char_portalcraftPower
                 break;
 
             case 1:
-                // Gain (2 * stacks) Strength and (2 * stacks) Dexterity
-                await PowerCmd.Apply<StrengthPower>(Owner, 2m * Amount, Owner, null);
-                await PowerCmd.Apply<DexterityPower>(Owner, 2m * Amount, Owner, null);
+                // Gain (2 * stacks) Strength and (2 * stacks) Dexterity — this turn only.
+                // Our concrete TemporaryStrength/Dexterity subclasses handle self-removal at turn end.
+                var amount = 2m * Amount;
+                await PowerCmd.Apply<SlausRevolvingWheelStrengthPower>(Owner, amount, Owner, null);
+                await PowerCmd.Apply<SlausRevolvingWheelDexterityPower>(Owner, amount, Owner, null);
                 break;
 
             case 2:

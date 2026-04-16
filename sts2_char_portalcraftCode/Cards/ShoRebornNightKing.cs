@@ -32,7 +32,7 @@ public sealed class ShoRebornNightKing : sts2_char_portalcraftCard
     protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]
     {
         new IntVar("MagicNumber", 3m),
-        new IntVar("SkillThreshold", 2m),
+        new IntVar("SkillThreshold", 3m),
     };
 
     public ShoRebornNightKing() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self) { }

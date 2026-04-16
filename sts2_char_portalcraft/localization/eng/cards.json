@@ -273,7 +273,7 @@
   "STS2_CHAR_PORTALCRAFT-SHO_REBORN_NIGHT_KING.description": "If you have played {SkillThreshold:diff()} or more Skills this turn, gain {MagicNumber:diff()} Energy.",
 
   "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_OF_FORTUNE.title": "Slaus, Revolving Wheel of Fortune",
-  "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_OF_FORTUNE.description": "At the start of your turn, activate a random ability (cannot repeat the previous turn's effect):\n1. Reduce the cost of all cards in your hand by 1 until end of turn.\n2. Gain 2 [gold]Strength[/gold] and 2 [gold]Dexterity[/gold].\n3. Restore 3 HP.",
+  "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_OF_FORTUNE.description": "At the start of your turn, activate a random ability (cannot repeat the previous turn's effect):\n1. Reduce the cost of all cards in your hand by 1 until end of turn.\n2. Gain 2 [gold]Strength[/gold] and 2 [gold]Dexterity[/gold] until end of turn.\n3. Restore 3 HP.",
 
   "STS2_CHAR_PORTALCRAFT-MECHA_CAVALIER.title": "Mecha Cavalier",
   "STS2_CHAR_PORTALCRAFT-MECHA_CAVALIER.description": "Gain {Block:diff()} Block. If the cost of this card is 1, gain {IfUpgraded:show:20|16} Block instead. If the cost is 0, gain {IfUpgraded:show:24|20} Block instead.",

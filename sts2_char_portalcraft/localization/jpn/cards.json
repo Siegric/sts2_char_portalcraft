@@ -15,7 +15,7 @@
   "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_ALPHA.description": " {CalculatedDamage:diff()} ダメージを与える。廃棄札にあるカード1枚つき， {ExtraDamage:diff()}　ダメージを追加する。すべての敵に {MagicNumber:diff()} ダメージを与える。\n[gold]融合[/gold]：[gold]デストロイアーティファクトβ[/gold]と[gold]デストロイアーティファクトγ[/gold]を破棄して[gold]イクシードアーティファクトΩ[/gold]を生成する。",
 
   "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_BETA.title": "デストロイアーティファクトβ",
-  "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_BETA.description": "HPを {Heal:diff()} 回復する。 {Block:diff()} ブロックを得る。[gold]プレート[/gold] {PlatingPower:diff()} を得る。\n[gold]融合[/gold]：[gold]"デストロイアーティファクトα[/gold]と[gold]"デストロイアーティファクトγ[/gold]を破棄して[gold]イクシードアーティファクトΩ[/gold]を生成する。",
+  "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_BETA.description": "HPを {Heal:diff()} 回復する。 {Block:diff()} ブロックを得る。[gold]プレート[/gold] {PlatingPower:diff()} を得る。\n[gold]融合[/gold]：[gold]デストロイアーティファクトα[/gold]と[gold]デストロイアーティファクトγ[/gold]を破棄して[gold]イクシードアーティファクトΩ[/gold]を生成する。",
 
   "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_GAMMA.title": "デストロイアーティファクトγ",
   "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_GAMMA.description": "カードを {Cards:diff()} 枚引く。エナジー {Energy:diff()} を得る。次のターン、カードを{MagicNumber:diff()} 枚引く。\n[gold]融合[/gold]：[gold]デストロイアーティファクトα[/gold]と[gold]デストロイアーティファクトβ[/gold]を破棄して[gold]イクシードアーティファクトΩ[/gold]を生成する。",

@@ -27,7 +27,7 @@ public sealed class LudicrousOrdnance : sts2_char_portalcraftCard
         int copies = (int)DynamicVars.Cards.BaseValue;
         for (int i = 0; i < copies; i++)
         {
-            var copy = CombatState.CreateCard<LudicrousOrdnance>(Owner);
+            var copy = CombatState.CloneCard(this);
             await CardPileCmd.AddGeneratedCardToCombat(copy, PileType.Hand, addedByPlayer: true);
         }
         
