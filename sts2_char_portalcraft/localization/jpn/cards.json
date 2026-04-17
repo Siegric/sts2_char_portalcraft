@@ -15,7 +15,7 @@
   "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_ALPHA.description": " {CalculatedDamage:diff()} ダメージを与える。廃棄札にあるカード1枚つき， {ExtraDamage:diff()}　ダメージを追加する。すべての敵に {MagicNumber:diff()} ダメージを与える。\n[gold]融合[/gold]：[gold]デストロイアーティファクトβ[/gold]と[gold]デストロイアーティファクトγ[/gold]を廃棄して[gold]イクシードアーティファクトΩ[/gold]を生成する。",
 
   "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_BETA.title": "デストロイアーティファクトβ",
-  "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_BETA.description": "HPを {Heal:diff()} 回復する。 {Block:diff()} ブロックを得る。[gold]プレート[/gold] {PlatingPower:diff()} を得る。\n[gold]融合[/gold]：[gold]"デストロイアーティファクトα[/gold]と[gold]"デストロイアーティファクトγ[/gold]を廃棄して[gold]イクシードアーティファクトΩ[/gold]を生成する。",
+  "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_BETA.description": "HPを {Heal:diff()} 回復する。 {Block:diff()} ブロックを得る。[gold]プレート[/gold] {PlatingPower:diff()} を得る。\n[gold]融合[/gold]：[gold]デストロイアーティファクトα[/gold]と[gold]デストロイアーティファクトγ[/gold]を廃棄して[gold]イクシードアーティファクトΩ[/gold]を生成する。",
 
   "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_GAMMA.title": "デストロイアーティファクトγ",
   "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_GAMMA.description": "カードを {Cards:diff()} 枚引く。エナジー {Energy:diff()} を得る。次のターン、カードを{MagicNumber:diff()} 枚引く。\n[gold]融合[/gold]：[gold]デストロイアーティファクトα[/gold]と[gold]デストロイアーティファクトβ[/gold]を廃棄して[gold]イクシードアーティファクトΩ[/gold]を生成する。",
@@ -89,7 +89,7 @@
   "STS2_CHAR_PORTALCRAFT-CAMISCILLA_UNFEELING_HEART.title": "劣恶の纯心·カミシラ",
   "STS2_CHAR_PORTALCRAFT-CAMISCILLA_UNFEELING_HEART.description": "手札にある[gold]アーティファクト[/gold]1枚につき、{Damage:diff()}ダメージを与える。",
 
-  "STS2_CHAR_PORTALCRAFT-LUDICROUS_ORDNANCE.title": "愚劣的兵器",
+  "STS2_CHAR_PORTALCRAFT-LUDICROUS_ORDNANCE.title": "愚劣の兵器",
   "STS2_CHAR_PORTALCRAFT-LUDICROUS_ORDNANCE.description": "このカードのコピーを {Cards:diff()} 枚手札に加える。すべての敵に {Damage:diff()} ダメージを与える，手札にあるコピー1枚につき、1回ダメージを与える。",
 
   "STS2_CHAR_PORTALCRAFT-SYLVIA_GARDEN_EXECUTIONER.title": "箱庭の断罪者・シルヴィア",
