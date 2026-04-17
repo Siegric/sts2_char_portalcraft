@@ -20,7 +20,7 @@
   "STS2_CHAR_PORTALCRAFT-WASTELAND_TOKEN.description": "プレイ不可。廃棄された時、カード1枚を引く。",
 
   "FUSE.title": "融合",
-  "FUSE.description": "プレイ時、手札にある同種のアーティファクトを1枚廃棄して、より上位のアーティファクトと生成できる。 融合時、消費したエネルギーを返還する。",
+  "FUSE.description": "プレイ時、手札にある同位のアーティファクトを1枚廃棄して、より上位のアーティファクトを生成できる。融合時、消費したエネルギーを返還する。",
   "STS2_CHAR_PORTALCRAFT-FUSE.title": "融合",
-  "STS2_CHAR_PORTALCRAFT-FUSE.description": "プレイ時、手札にある同種のアーティファクトを1枚廃棄し、より上位のアーティファクトを生成できる。 融合時、消費したエナジーを返還する。"
+  "STS2_CHAR_PORTALCRAFT-FUSE.description": "プレイ時、手札にある同位のアーティファクトを1枚廃棄し、より上位のアーティファクトを生成できる。融合時、消費したエナジーを返還する。"
 }

@@ -36,8 +36,8 @@
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER_POWER.smartDescription": "融合を4回するたび、エナジー {Amount} を得る。",
 
   "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST_POWER.title": "獣性の鉄人",
-  "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST_POWER.description": "次の自分のターンのはじめまで、攻撃を受けるたび、攻撃した敵にダメージを与える。",
-  "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST_POWER.smartDescription": "次の自分のターンのはじめまで、攻撃を受けるたび、攻撃した敵に {Amount} ダメージを与える。",
+  "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST_POWER.description": "次の自分のターンのはじめまで、攻撃を受けるたび、攻撃した敵にダメージを跳ね返す。",
+  "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST_POWER.smartDescription": "次の自分のターンのはじめまで、攻撃を受けるたび、攻撃した敵に {Amount} ダメージを跳ね返す。",
 
   "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_POWER.title": "尽小花の祝福",
   "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_POWER.description": "このターン、スキルをプレイするたび、イマリの小鬼を手札に加える。",
@@ -57,5 +57,5 @@
 
   "STS2_CHAR_PORTALCRAFT-LU_WOH_INTENT_DEBUFF_POWER.title": "紋章：光の理・ル・オー",
   "STS2_CHAR_PORTALCRAFT-LU_WOH_INTENT_DEBUFF_POWER.description": "次の敵の３ターン、攻撃意図を持つ敵はターン開始時に筋力4を失う。",
-  "STS2_CHAR_PORTALCRAFT-LU_WOH_INTENT_DEBUFF_POWER.smartDescription": "次の敵の {Amount} ターン，攻撃意図を持つ敵はターン開始時に[gold]筋力[/gold]4を失う。"
+  "STS2_CHAR_PORTALCRAFT-LU_WOH_INTENT_DEBUFF_POWER.smartDescription": "次の敵の {Amount} ターン、攻撃意図を持つ敵はターン開始時に[gold]筋力[/gold]4を失う。"
 }

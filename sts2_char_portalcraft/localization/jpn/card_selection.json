@@ -1,7 +1,7 @@
 {
   "ARTIFACT_MERGE_PROMPT": "融合するアーティファクトを選択する（または確認して直接プレイする）",
   "CATALYST_PROMPT": "T2のアーティファクトを1枚、手札に加える",
-  "CARNELIA_PROMPT": "廃棄するアーティファクトを選択してエネルギーを得る",
+  "CARNELIA_PROMPT": "廃棄するアーティファクトを選択してエナジーを得る",
   "ALOUETTE_PROMPT": "このターンにコストを0にするアーティファクトを選択する",
   "FLIGHT_OF_ICARUS_PROMPT": "強化するアーティファクトを選択する",
   "ARTIFACT_CATAPULT_PROMPT": "複製するアーティファクトを選択する",
