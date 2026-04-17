@@ -19,7 +19,6 @@ public sealed class ReplayNextPuppetPower : sts2_char_portalcraftPower
         {
             Flash();
             card.BaseReplayCount += Amount;
-            // Remove this power after triggering
             Owner.RemovePowerInternal(this);
         }
         return Task.CompletedTask;

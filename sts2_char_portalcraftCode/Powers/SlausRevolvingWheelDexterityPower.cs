@@ -5,8 +5,6 @@ using sts2_char_portalcraft.sts2_char_portalcraftCode.Cards;
 
 namespace sts2_char_portalcraft.sts2_char_portalcraftCode.Powers;
 
-// Temporary Dexterity granted by Slaus, Revolving Wheel of Fortune (effect 2).
-// Mirrors the vanilla pattern (e.g. AnticipatePower : TemporaryDexterityPower).
 public sealed class SlausRevolvingWheelDexterityPower : TemporaryDexterityPower, ICustomPower
 {
     public override AbstractModel OriginModel => ModelDb.Card<SlausRevolvingWheelOfFortune>();

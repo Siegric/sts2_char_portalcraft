@@ -53,10 +53,7 @@ public sealed class TalismanPower : sts2_char_portalcraftPower
             int damage = GetBlackPsalmDamage(psalm);
             await DealAoeDamage(choiceContext, damage);
         }
-
-        // Transform: exhaust old psalms via CardCmd.Exhaust for proper multiplayer sync,
-        // then add opposite psalm. The _isTransforming flag prevents AfterCardExhausted
-        // from double-triggering the effect and creating duplicate opposite psalms.
+        
         _isTransforming = true;
         try
         {
@@ -83,13 +80,11 @@ public sealed class TalismanPower : sts2_char_portalcraftPower
     public override async Task AfterCardExhausted(PlayerChoiceContext choiceContext, CardModel card, bool causedByEthereal)
     {
         if (card.Owner?.Creature != Owner) return;
-
-        // Skip effects during end-of-turn transforms — BeforeTurnEnd already handled them
+        
         if (_isTransforming) return;
 
         var player = card.Owner;
-
-        // White Psalm exhausted: gain block + add Black Psalm
+        
         if (TalismanHelper.IsWhitePsalm(card))
         {
             Flash();
@@ -99,7 +94,6 @@ public sealed class TalismanPower : sts2_char_portalcraftPower
             var black = CombatState.CreateCard<BlackPsalmNewRevelation>(player);
             await CardPileCmd.AddGeneratedCardToCombat(black, PileType.Hand, addedByPlayer: true);
         }
-        // Black Psalm exhausted: deal AoE + add White Psalm
         else if (TalismanHelper.IsBlackPsalm(card))
         {
             Flash();
@@ -109,13 +103,11 @@ public sealed class TalismanPower : sts2_char_portalcraftPower
             var white = CombatState.CreateCard<WhitePsalmNewRevelation>(player);
             await CardPileCmd.AddGeneratedCardToCombat(white, PileType.Hand, addedByPlayer: true);
         }
-        // Wasteland base card exhausted: draw 1 card
         else if (card is WastelandOfDestruction)
         {
             Flash();
             await CardPileCmd.Draw(choiceContext, 1, player);
         }
-        // Wasteland token exhausted: draw 2 cards
         else if (TalismanHelper.IsWastelandToken(card))
         {
             Flash();
