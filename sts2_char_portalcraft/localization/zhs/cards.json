@@ -33,7 +33,7 @@
   "STS2_CHAR_PORTALCRAFT-ARTIFACT_RECHARGE.description": "将1个[gold]过往核心[/gold]和1个[gold]未来核心[/gold]加入手牌。",
 
   "STS2_CHAR_PORTALCRAFT-FLIGHT_OF_ICARUS.title": "伊卡洛斯之翼",
-  "STS2_CHAR_PORTALCRAFT-FLIGHT_OF_ICARUS.description": "选择手牌中1个[gold]创造物[/gold]。它本回合费用变为0，打出此造物时抽1张牌。",
+  "STS2_CHAR_PORTALCRAFT-FLIGHT_OF_ICARUS.description": "选择手牌中1个[gold]创造物[/gold]。它本回合费用变为0，并获得\"[gold]谢幕曲[/gold]：抽1张牌。\"",
 
   "STS2_CHAR_PORTALCRAFT-ELISE_ELECTRIFYING_INVENTOR.title": "耀眼的发明家·伊莉斯",
   "STS2_CHAR_PORTALCRAFT-ELISE_ELECTRIFYING_INVENTOR.description": "获得 {Block:diff()} 点格挡。将1个[gold]过往核心[/gold]加入手牌。",
@@ -108,7 +108,7 @@
   "STS2_CHAR_PORTALCRAFT-ENHANCED_PUPPET.description": "造成 {Damage:diff()} 点伤害。",
 
   "STS2_CHAR_PORTALCRAFT-DOLL_SLAYER.title": "屠戮人偶",
-  "STS2_CHAR_PORTALCRAFT-DOLL_SLAYER.description": "对所有敌人造成 {Damage:diff()} 点伤害。将1张[gold]心灵屠戮者·菲亚[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-DOLL_SLAYER.description": "对所有敌人造成 {Damage:diff()} 点伤害。\n[gold]谢幕曲[/gold]：将1张[gold]心灵屠戮者·菲亚[/gold]加入手牌。",
 
   "STS2_CHAR_PORTALCRAFT-PUPPET_CAT.title": "猫偶",
   "STS2_CHAR_PORTALCRAFT-PUPPET_CAT.description": "将1个[gold]悬丝傀儡[/gold]加入手牌，使其伤害增加 +{BonusDamage:diff()}。",
@@ -171,7 +171,7 @@
   "STS2_CHAR_PORTALCRAFT-DEVOTEE_OF_DESTRUCTION.description": "消耗手牌中所有牌。获得 {Multiplier:diff()}X 格挡并造成 {Multiplier:diff()}X 伤害。X = 本回合消耗的牌数。",
 
   "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION.title": "破坏的荒野",
-  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION.description": "选择手牌中1张牌并消耗。抽 {Cards:diff()} 张牌。将1张无法打出的复制品加入手牌。若此牌被消耗，抽1张牌。",
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION.description": "选择手牌中的另一张牌。若选中一张，[gold]消耗[/gold]它并抽 {Cards:diff()} 张牌。将1张无法打出的复制品加入手牌。\n[gold]谢幕曲[/gold]：抽1张牌。",
 
   "STS2_CHAR_PORTALCRAFT-CONGREGANT_OF_DESTRUCTION.title": "破坏的团结者",
   "STS2_CHAR_PORTALCRAFT-CONGREGANT_OF_DESTRUCTION.description": "消耗手牌中所有牌。抽X张牌。X = 本回合消耗的牌数。",
@@ -189,19 +189,25 @@
   "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING.description": "当敌人受到伤害时，多受2点伤害。当你获得格挡时，多获得2点格挡。",
 
   "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.title": "新约·白之章",
-  "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.description": "回合结束时，获得{PsalmBlock}点格挡，然后变为[gold]新约·黑之章[/gold]。若被消耗，立即获得{PsalmBlock}点格挡并将1张[gold]新约·黑之章[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.description": "[gold]倒数[/gold]（{Countdown}）。\n[gold]谢幕曲[/gold]：获得{PsalmBlock}点格挡。将1张[gold]新约·黑之章[/gold]加入手牌。",
 
   "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.title": "新约·黑之章",
-  "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.description": "回合结束时，对所有敌人造成{PsalmDamage}点伤害，然后变为[gold]新约·白之章[/gold]。若被消耗，立即对所有敌人造成{PsalmDamage}点伤害并将1张[gold]新约·白之章[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.description": "[gold]倒数[/gold]（{Countdown}）。\n[gold]谢幕曲[/gold]：对所有敌人造成{PsalmDamage}点伤害。将1张[gold]新约·白之章[/gold]加入手牌。",
 
   "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.title": "破坏的荒野",
-  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.description": "若被[gold]消耗[/gold]，抽1张牌。",
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.description": "[gold]谢幕曲[/gold]：抽1张牌。",
 
   "STS2_CHAR_PORTALCRAFT-BIOFABRICATION.title": "生命量产",
   "STS2_CHAR_PORTALCRAFT-BIOFABRICATION.description": "选择手牌中1个[gold]创造物[/gold]，将其费用减少1。将3份复制品加入抽牌堆。",
 
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.title": "音速机关·洛拉米亚",
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.description": "每[gold]融合[/gold]4次，获得1点能量。",
+
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER.title": "天降曙光·蕾德拉菲雅",
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER.description": "[gold]结晶[/gold]（1）：[gold]倒数[/gold]（10）。你的回合内，所有[gold]创造物[/gold]的费用变为0。每当一张友方[gold]创造物[/gold]被打出时，此护符的[gold]倒数[/gold]减1。\n[gold]谢幕曲[/gold]：将1张[gold]天降曙光·蕾德拉菲雅[/gold]加入手牌。它本回合费用变为0。\n----------\n对所有敌人造成 {IfUpgraded:show:4|3}X 点伤害。X 等于本场战斗中已被消耗的[gold]创造物[/gold]数量。",
+
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER_AMULET.title": "天降曙光·蕾德拉菲雅",
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER_AMULET.description": "[gold]倒数[/gold]（{Countdown}）。你的回合内，所有[gold]创造物[/gold]的费用变为0。每当一张友方[gold]创造物[/gold]被打出时，[gold]倒数[/gold]减1。\n[gold]谢幕曲[/gold]：将1张[gold]天降曙光·蕾德拉菲雅[/gold]加入手牌。它本回合费用变为0。",
 
   "STS2_CHAR_PORTALCRAFT-LIGHT_OF_THE_DEWDROP.title": "尽小花的临照",
   "STS2_CHAR_PORTALCRAFT-LIGHT_OF_THE_DEWDROP.description": "抽 {Cards:diff()} 张牌。",

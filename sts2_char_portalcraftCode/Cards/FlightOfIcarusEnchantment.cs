@@ -1,22 +1,27 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Commands;
-using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Enchantments;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
+using sts2_char_portalcraft.sts2_char_portalcraftCode.Cards.Keywords;
 
 namespace sts2_char_portalcraft.sts2_char_portalcraftCode.Cards;
 
-public sealed class FlightOfIcarusEnchantment : EnchantmentModel
+public sealed class FlightOfIcarusEnchantment : EnchantmentModel, ILastWordsEnchantment
 {
     public override bool HasExtraCardText => true;
 
-    public override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay? cardPlay)
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
     {
-        if (Status == EnchantmentStatus.Normal)
-        {
-            await CardPileCmd.Draw(choiceContext, 1, Card.Owner);
-            Status = EnchantmentStatus.Disabled;
-        }
+        HoverTipFactory.FromKeyword(LastWordsKeyword.LastWords),
+    };
+
+    public async Task OnLastWords(PlayerChoiceContext choiceContext, CardModel card)
+    {
+        if (Status != EnchantmentStatus.Normal) return;
+        await CardPileCmd.Draw(choiceContext, 1, card.Owner);
+        Status = EnchantmentStatus.Disabled;
     }
 }

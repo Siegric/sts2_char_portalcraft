@@ -24,7 +24,7 @@ public sealed class AxiaHeirToDestructionPower : sts2_char_portalcraftPower
         for (int round = 0; round < Amount; round++)
         {
             var psalms = PileType.Hand.GetPile(player).Cards
-                .Where(c => TalismanHelper.IsWhitePsalm(c) || TalismanHelper.IsBlackPsalm(c))
+                .Where(c => AmuletHelper.IsWhitePsalm(c) || AmuletHelper.IsBlackPsalm(c))
                 .ToList();
 
             if (psalms.Count == 0) break;

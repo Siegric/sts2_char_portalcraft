@@ -1,5 +1,5 @@
 {
   "FLIGHT_OF_ICARUS_ENCHANTMENT.title": "Flight of Icarus",
-  "FLIGHT_OF_ICARUS_ENCHANTMENT.description": "Draw 1 card when played.",
-  "FLIGHT_OF_ICARUS_ENCHANTMENT.extraCardText": "Draw 1 card when played."
+  "FLIGHT_OF_ICARUS_ENCHANTMENT.description": "[gold]Last Words[/gold]: Draw 1 card.",
+  "FLIGHT_OF_ICARUS_ENCHANTMENT.extraCardText": "[gold]Last Words[/gold]: Draw 1 card."
 }

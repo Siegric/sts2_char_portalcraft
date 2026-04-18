@@ -1,4 +1,12 @@
 {
+  "STS2_CHAR_PORTALCRAFT-KEYWORD_DISPATCHER_POWER.title": "Keyword Dispatcher (JPN TBD)",
+  "STS2_CHAR_PORTALCRAFT-KEYWORD_DISPATCHER_POWER.description": "Internal (JPN TBD)",
+  "STS2_CHAR_PORTALCRAFT-KEYWORD_DISPATCHER_POWER.smartDescription": "Internal (JPN TBD)",
+
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_AMULET_POWER.title": "Divine Mother's Blessing (JPN TBD)",
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_AMULET_POWER.description": "All [gold]Artifact[/gold] cards cost 0 to play. (JPN TBD)",
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_AMULET_POWER.smartDescription": "All [gold]Artifact[/gold] cards cost 0 to play. (JPN TBD)",
+
   "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_POWER.title": "紋章：新たなる少女",
   "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_POWER.description": "ターン終了時、手札が5枚未満の場合、次のターンにカードを1枚引く。手札が6枚を超える場合、次のターンにエナジー1を得る。",
   "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_POWER.smartDescription": "ターン終了時、手札が5枚未満の場合、次のターンにカードを {Amount} 枚引く。手札が6枚を超える場合、次のターンにエナジー {Amount} を得る。",
@@ -18,10 +26,6 @@
   "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR_POWER.title": "狂気の創造者",
   "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR_POWER.description": "パペットをプレイするたび、ブロックを得る。パペットを4枚プレイするたび、エナジー1を得る。",
   "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR_POWER.smartDescription": "パペットをプレイするたび、 {Amount} ブロックを得る。パペットを4枚プレイするたび、エナジー1を得る。",
-
-  "STS2_CHAR_PORTALCRAFT-TALISMAN_POWER.title": "御守り",
-  "STS2_CHAR_PORTALCRAFT-TALISMAN_POWER.description": "御守りはプレイすることはできない。",
-  "STS2_CHAR_PORTALCRAFT-TALISMAN_POWER.smartDescription": "御守りはプレイすることはできない。",
 
   "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION_POWER.title": "破壊の継承者",
   "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION_POWER.description": "ターン終了時、手札にあるすべての[gold]新約・白の章[/gold]と[gold]新約・黒の章[/gold]を廃棄する。",

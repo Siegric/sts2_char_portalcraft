@@ -10,7 +10,7 @@ sts2_char_portalcraftCode/
     CardPlayAudioManager.cs         # Godot AudioStreamPlayer manager
   Cards/
     Constructs/                     # Merge pyramid cards + ConstructCard base
-    Omen/                           # Talisman tokens + OmenTag + TalismanHelper
+    Omen/                           # Amulet tokens + OmenTag + AmuletHelper
     Puppets/                        # Puppet tokens + PuppetTag + PuppetHelper
     sts2_char_portalcraftCard.cs    # Base card class (portrait path logic)
   Character/

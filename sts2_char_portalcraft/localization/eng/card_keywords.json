@@ -9,10 +9,10 @@
   "STS2_CHAR_PORTALCRAFT-PUPPET.title": "Puppet",
   "STS2_CHAR_PORTALCRAFT-PUPPET.description": "[gold]Exhaust[/gold]. A disposable token that deals damage. Synergizes with Puppet-related cards.",
 
-  "TALISMAN.title": "Talisman",
-  "TALISMAN.description": "Cannot be played from hand. Has effects that trigger at end of turn or when exhausted.",
-  "STS2_CHAR_PORTALCRAFT-TALISMAN.title": "Talisman",
-  "STS2_CHAR_PORTALCRAFT-TALISMAN.description": "Cannot be played from hand. Has effects that trigger at end of turn or when exhausted.",
+  "AMULET.title": "Amulet",
+  "AMULET.description": "[gold]Retain[/gold]. Cannot be played.",
+  "STS2_CHAR_PORTALCRAFT-AMULET.title": "Amulet",
+  "STS2_CHAR_PORTALCRAFT-AMULET.description": "[gold]Retain[/gold]. Cannot be played.",
 
   "WASTELAND_TOKEN.title": "Wasteland Token",
   "WASTELAND_TOKEN.description": "Cannot be played. When exhausted, draws 1.",
@@ -22,5 +22,20 @@
   "FUSE.title": "Fuse",
   "FUSE.description": "When played, you may select matching Artifacts from your hand to exhaust and combine into a higher-tier Artifact. Fusing refunds the energy cost.",
   "STS2_CHAR_PORTALCRAFT-FUSE.title": "Fuse",
-  "STS2_CHAR_PORTALCRAFT-FUSE.description": "When played, you may select matching Artifacts from your hand to exhaust and combine into a higher-tier Artifact. Fusing refunds the energy cost."
+  "STS2_CHAR_PORTALCRAFT-FUSE.description": "When played, you may select matching Artifacts from your hand to exhaust and combine into a higher-tier Artifact. Fusing refunds the energy cost.",
+
+  "CRYSTALLIZE.title": "Crystallize",
+  "CRYSTALLIZE.description": "If you can't afford this card's full cost, it may be played for its [gold]Crystallize[/gold] cost instead, adding an [gold]Amulet[/gold] copy to your hand. Only the Crystallize effects activate this way.",
+  "STS2_CHAR_PORTALCRAFT-CRYSTALLIZE.title": "Crystallize",
+  "STS2_CHAR_PORTALCRAFT-CRYSTALLIZE.description": "If you can't afford this card's full cost, it may be played for its [gold]Crystallize[/gold] cost instead, adding an [gold]Amulet[/gold] copy to your hand. Only the Crystallize effects activate this way.",
+
+  "COUNTDOWN.title": "Countdown",
+  "COUNTDOWN.description": "At the start of your turn, subtract 1. When this reaches 0, the card is [gold]Exhausted[/gold].",
+  "STS2_CHAR_PORTALCRAFT-COUNTDOWN.title": "Countdown",
+  "STS2_CHAR_PORTALCRAFT-COUNTDOWN.description": "At the start of your turn, subtract 1. When this reaches 0, the card is [gold]Exhausted[/gold].",
+
+  "LASTWORDS.title": "Last Words",
+  "LASTWORDS.description": "Activates when this card is [gold]Exhausted[/gold].",
+  "STS2_CHAR_PORTALCRAFT-LASTWORDS.title": "Last Words",
+  "STS2_CHAR_PORTALCRAFT-LASTWORDS.description": "Activates when this card is [gold]Exhausted[/gold]."
 }

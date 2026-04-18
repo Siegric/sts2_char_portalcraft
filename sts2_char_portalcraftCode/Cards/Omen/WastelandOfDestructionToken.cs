@@ -6,20 +6,22 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
+using sts2_char_portalcraft.sts2_char_portalcraftCode.Cards.Keywords;
 
 namespace sts2_char_portalcraft.sts2_char_portalcraftCode.Cards.Omen;
 
-public sealed class WastelandOfDestructionToken : sts2_char_portalcraftCard
+public sealed class WastelandOfDestructionToken : sts2_char_portalcraftCard, ILastWordsCard
 {
-    protected override HashSet<CardTag> CanonicalTags => new() { OmenTag.Talisman, OmenTag.WastelandToken };
+    protected override HashSet<CardTag> CanonicalTags => new() { OmenTag.Amulet, OmenTag.WastelandToken };
 
     public override IEnumerable<CardKeyword> CanonicalKeywords => new[]
     {
         CardKeyword.Retain,
         CardKeyword.Unplayable,
+        LastWordsKeyword.LastWords,
     };
 
-    public WastelandOfDestructionToken() : base(0, TalismanType.Talisman, CardRarity.Token, TargetType.Self, showInCardLibrary: true) { }
+    public WastelandOfDestructionToken() : base(0, AmuletType.Amulet, CardRarity.Token, TargetType.Self, showInCardLibrary: true) { }
 
     protected override Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
@@ -27,6 +29,11 @@ public sealed class WastelandOfDestructionToken : sts2_char_portalcraftCard
     }
 
     protected override void OnUpgrade() { }
+
+    public async Task OnLastWords(PlayerChoiceContext choiceContext)
+    {
+        await CardPileCmd.Draw(choiceContext, 1, Owner);
+    }
 
     public static async Task<CardModel> CreateInHand(Player owner, CombatState combatState)
     {

@@ -108,7 +108,7 @@
   "STS2_CHAR_PORTALCRAFT-ENHANCED_PUPPET.description": " {Damage:diff()} ダメージを与える。",
 
   "STS2_CHAR_PORTALCRAFT-DOLL_SLAYER.title": "ドールスローター",
-  "STS2_CHAR_PORTALCRAFT-DOLL_SLAYER.description": "すべての敵に {Damage:diff()} ダメージを与える。[gold]ハートスローター・フィア[/gold]を1枚手札に加える。",
+  "STS2_CHAR_PORTALCRAFT-DOLL_SLAYER.description": "すべての敵に {Damage:diff()} ダメージを与える。\n[gold]Last Words[/gold]: Add a [gold]Vier, Heart Slayer[/gold] to your hand. (JPN TBD)",
 
   "STS2_CHAR_PORTALCRAFT-PUPPET_CAT.title": "パペットキャット",
   "STS2_CHAR_PORTALCRAFT-PUPPET_CAT.description": "[gold]パペット[/gold]を1枚手札に加える，そのダメージを{BonusDamage:diff()}追加する。",
@@ -171,7 +171,7 @@
   "STS2_CHAR_PORTALCRAFT-DEVOTEE_OF_DESTRUCTION.description": "手札をすべて廃棄する。 {Multiplier:diff()}X ブロックを得、 {Multiplier:diff()}X ダメージを与える。X = このターンに廃棄したカードの数。",
 
   "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION.title": "破壊の荒野",
-  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION.description": "カードを1枚廃棄する。カードを {Cards:diff()} 枚引く。このカードのプレイ不可のコピーを1枚手札に加える。このカードが廃棄された場合、カード1枚を引く。",
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION.description": "Select another card in your hand. If you selected one, [gold]Exhaust[/gold] it and draw {Cards:diff()} cards. Add an unplayable copy to your hand.\n[gold]Last Words[/gold]: Draw 1 card. (JPN TBD)",
 
   "STS2_CHAR_PORTALCRAFT-CONGREGANT_OF_DESTRUCTION.title": "破壊の団結者",
   "STS2_CHAR_PORTALCRAFT-CONGREGANT_OF_DESTRUCTION.description": "手札をすべて廃棄する。カードをX枚引く。X = このターンに廃棄したカードの数。",
@@ -189,19 +189,25 @@
   "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING.description": "敵がダメージを受けた時、その受けるダメージを2増加させる。ブロックを得た時、さらに2ブロックを得る。",
 
   "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.title": "新約・白の章",
-  "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.description": "ターン終了時、{PsalmBlock}ブロックを得る、そして[gold]新約・黒の章[/gold]に変化する。廃棄された場合，直ちに{PsalmBlock}ブロックを得る、そして[gold]新約・黒の章[/gold]を1枚手札に加える。",
+  "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.description": "[gold]Countdown[/gold] ({Countdown}).\n[gold]Last Words[/gold]: Gain {PsalmBlock} Block. Add a Black Psalm, New Revelation to your hand. (JPN TBD)",
 
   "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.title": "新約・黒の章",
-  "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.description": "ターン終了時、すべての敵に{PsalmDamage}ダメージを与える、そして[gold]新約・白の章[/gold]。廃棄された場合，直ちにすべての敵に{PsalmDamage}ダメージを与える、そして[gold]新約・白の章[/gold]を1枚手札に加え。",
+  "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.description": "[gold]Countdown[/gold] ({Countdown}).\n[gold]Last Words[/gold]: Deal {PsalmDamage} damage to ALL enemies. Add a White Psalm, New Revelation to your hand. (JPN TBD)",
 
   "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.title": "破壊の荒野",
-  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.description": "[gold]廃棄[/gold]された場合、カード1枚を引く。",
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.description": "[gold]Last Words[/gold]: Draw 1 card. (JPN TBD)",
 
   "STS2_CHAR_PORTALCRAFT-BIOFABRICATION.title": "生命の量産",
   "STS2_CHAR_PORTALCRAFT-BIOFABRICATION.description": "[gold]アーティファクト[/gold]を1枚選び，そのコストを1減少する。そのコピーを3枚山札に加える。",
 
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.title": "音速の機構・ララミア",
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.description": "[gold]融合[/gold]を4回するたび、エナジー1を得る。",
+
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER.title": "Retrafia, Divine Mother (JPN TBD)",
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER.description": "[gold]Crystallize[/gold] (1): [gold]Countdown[/gold] (10). During your turn, all [gold]Artifacts[/gold] cost 0 to play. Whenever an allied [gold]Artifact[/gold] is played, subtract 1 from this amulet's [gold]Countdown[/gold].\n[gold]Last Words[/gold]: Add a [gold]Retrafia, Divine Mother[/gold] to your hand. It costs 0 to play this turn.\n----------\nDeal {IfUpgraded:show:4|3}X damage to ALL enemies. X equals the number of different allied [gold]Artifact[/gold] cards destroyed this match. (JPN TBD)",
+
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER_AMULET.title": "Retrafia, Divine Mother (JPN TBD)",
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER_AMULET.description": "[gold]Countdown[/gold] ({Countdown}). During your turn, all [gold]Artifacts[/gold] cost 0 to play. Whenever an allied [gold]Artifact[/gold] is played, subtract 1 from [gold]Countdown[/gold].\n[gold]Last Words[/gold]: Add a [gold]Retrafia, Divine Mother[/gold] to your hand. It costs 0 to play this turn. (JPN TBD)",
 
   "STS2_CHAR_PORTALCRAFT-LIGHT_OF_THE_DEWDROP.title": "尽小花の照臨",
   "STS2_CHAR_PORTALCRAFT-LIGHT_OF_THE_DEWDROP.description": "カード {Cards:diff()} 枚を引く。",

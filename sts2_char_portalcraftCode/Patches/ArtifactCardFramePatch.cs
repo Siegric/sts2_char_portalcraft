@@ -16,7 +16,7 @@ public static class CustomCardTypePatch
     private static CardType GetFrameType(CardModel card)
     {
         if (card.Type == PuppetType.Puppet) return CardType.Attack;
-        if (card.Type == TalismanType.Talisman) return CardType.Power;
+        if (card.Type == AmuletType.Amulet) return CardType.Power;
         return CardType.Skill; 
     }
 
@@ -71,7 +71,7 @@ public static class CustomCardTypePatch
     private static string GetLocKey(CardType cardType)
     {
         if (cardType == PuppetType.Puppet) return "CARD_TYPE.PUPPET";
-        if (cardType == TalismanType.Talisman) return "CARD_TYPE.TALISMAN";
+        if (cardType == AmuletType.Amulet) return "CARD_TYPE.AMULET";
         return "CARD_TYPE.ARTIFACT";
     }
 

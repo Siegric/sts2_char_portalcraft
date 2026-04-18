@@ -6,7 +6,7 @@ namespace sts2_char_portalcraft.sts2_char_portalcraftCode.Cards.Omen;
 public static class OmenTag
 {
     [CustomEnum]
-    public static CardTag Talisman;
+    public static CardTag Amulet;
 
     [CustomEnum]
     public static CardTag WastelandToken;
