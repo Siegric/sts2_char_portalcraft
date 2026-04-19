@@ -34,8 +34,8 @@
   "STS2_CHAR_PORTALCRAFT-COUNTDOWN.title": "カウントダウン",
   "STS2_CHAR_PORTALCRAFT-COUNTDOWN.description": "ターン開始時、カウントが1進む。0になると[gold]廃棄[/gold]される。",
 
-  "LASTWORDS.title": "カーテンコール",
-  "LASTWORDS.description": "このカードが[gold]廃棄[/gold]された時、効果を発動する。",
-  "STS2_CHAR_PORTALCRAFT-LASTWORDS.title": "カーテンコール",
-  "STS2_CHAR_PORTALCRAFT-LASTWORDS.description": "このカードが[gold]廃棄[/gold]された時、効果を発動する。"
+  "LASTWORDS.title": "ラストワード",
+  "LASTWORDS.description": "[gold]廃棄[/gold]されたときに働く能力。",
+  "STS2_CHAR_PORTALCRAFT-LASTWORDS.title": "ラストワード",
+  "STS2_CHAR_PORTALCRAFT-LASTWORDS.description": "[gold]廃棄[/gold]されたときに働く能力。"
 }
