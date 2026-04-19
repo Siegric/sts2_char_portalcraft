@@ -28,6 +28,8 @@ public sealed class LudicrousOrdnance : sts2_char_portalcraftCard
         for (int i = 0; i < copies; i++)
         {
             var copy = CombatState.CloneCard(this);
+            copy.EnergyCost.AfterCardPlayedCleanup();
+            copy.EnergyCost.EndOfTurnCleanup();
             await CardPileCmd.AddGeneratedCardToCombat(copy, PileType.Hand, addedByPlayer: true);
         }
         

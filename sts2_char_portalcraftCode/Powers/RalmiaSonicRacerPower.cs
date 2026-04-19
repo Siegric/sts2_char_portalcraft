@@ -1,3 +1,4 @@
+#if FALSE
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Commands;
@@ -32,3 +33,4 @@ public sealed class RalmiaSonicRacerPower : sts2_char_portalcraftPower, IMergeLi
         }
     }
 }
+#endif

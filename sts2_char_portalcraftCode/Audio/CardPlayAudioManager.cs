@@ -4,10 +4,6 @@ using MegaCrit.Sts2.Core.Helpers;
 
 namespace sts2_char_portalcraft.sts2_char_portalcraftCode.Audio;
 
-/// <summary>
-/// Manages per-card custom audio playback using Godot's native AudioStreamPlayer.
-/// Ogg files are loaded via ResourceLoader from res://sts2_char_portalcraft/audio/{ClassName}.ogg.
-/// </summary>
 public static class CardPlayAudioManager
 {
     private static readonly Dictionary<string, AudioStream> _cache = new();

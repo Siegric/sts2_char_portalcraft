@@ -9,10 +9,10 @@
   "STS2_CHAR_PORTALCRAFT-PUPPET.title": "悬丝傀儡",
   "STS2_CHAR_PORTALCRAFT-PUPPET.description": "[gold]消耗[/gold]。一次性的衍生牌，用于造成伤害。与悬丝傀儡相关卡牌产生协同效果。",
 
-  "TALISMAN.title": "护符",
-  "TALISMAN.description": "无法从手牌打出。在回合结束时或被消耗时触发效果。",
-  "STS2_CHAR_PORTALCRAFT-TALISMAN.title": "护符",
-  "STS2_CHAR_PORTALCRAFT-TALISMAN.description": "无法从手牌打出。在回合结束时或被消耗时触发效果。",
+  "AMULET.title": "护符",
+  "AMULET.description": "[gold]保留[/gold]。无法从手牌打出。",
+  "STS2_CHAR_PORTALCRAFT-AMULET.title": "护符",
+  "STS2_CHAR_PORTALCRAFT-AMULET.description": "[gold]保留[/gold]。无法从手牌打出。",
 
   "WASTELAND_TOKEN.title": "荒野衍生物",
   "WASTELAND_TOKEN.description": "无法打出。被消耗时抽1张牌。",
@@ -22,5 +22,20 @@
   "FUSE.title": "融合",
   "FUSE.description": "打出时，可以选择手牌中匹配的创造物消耗并融合为更高阶的创造物。融合时退还能量费用。",
   "STS2_CHAR_PORTALCRAFT-FUSE.title": "融合",
-  "STS2_CHAR_PORTALCRAFT-FUSE.description": "打出时，可以选择手牌中匹配的创造物消耗并融合为更高阶的创造物。融合时退还能量费用。"
+  "STS2_CHAR_PORTALCRAFT-FUSE.description": "打出时，可以选择手牌中匹配的创造物消耗并融合为更高阶的创造物。融合时退还能量费用。",
+
+  "CRYSTALLIZE.title": "结晶",
+  "CRYSTALLIZE.description": "若无法支付此牌的完整费用，则以[gold]结晶[/gold]费用打出，并将此牌变为[gold]护符[/gold]。此时仅结晶效果会触发。",
+  "STS2_CHAR_PORTALCRAFT-CRYSTALLIZE.title": "结晶",
+  "STS2_CHAR_PORTALCRAFT-CRYSTALLIZE.description": "若无法支付此牌的完整费用，则以[gold]结晶[/gold]费用打出，并将此牌变为[gold]护符[/gold]。此时仅结晶效果会触发。",
+
+  "COUNTDOWN.title": "倒数",
+  "COUNTDOWN.description": "你的回合开始时减1。归零时，此牌被[gold]消耗[/gold]。",
+  "STS2_CHAR_PORTALCRAFT-COUNTDOWN.title": "倒数",
+  "STS2_CHAR_PORTALCRAFT-COUNTDOWN.description": "你的回合开始时减1。归零时，此牌被[gold]消耗[/gold]。",
+
+  "LASTWORDS.title": "谢幕曲",
+  "LASTWORDS.description": "此牌被[gold]消耗[/gold]时触发。",
+  "STS2_CHAR_PORTALCRAFT-LASTWORDS.title": "谢幕曲",
+  "STS2_CHAR_PORTALCRAFT-LASTWORDS.description": "此牌被[gold]消耗[/gold]时触发。"
 }

@@ -30,7 +30,7 @@ public sealed class FlightOfIcarus : sts2_char_portalcraftCard
         var selected = await CardSelectCmd.FromHand(choiceContext, Owner, prefs, Filter, this);
         var card = selected.FirstOrDefault();
 
-        if (card != null)
+        if (card != null && card.Enchantment is not FlightOfIcarusEnchantment)
         {
             card.EnergyCost.SetThisTurnOrUntilPlayed(0, reduceOnly: true);
             CardCmd.Enchant<FlightOfIcarusEnchantment>(card, 1m);

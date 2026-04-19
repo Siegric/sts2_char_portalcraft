@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://k04nkvwf8cib"
-path="res://.godot/imported/IMG_1698.png-75e03faada693359a53d11d2c758dfb3.ctex"
+uid="uid://dbe83gvlgeuru"
+path="res://.godot/imported/augmentation_bestowal.png-79a45f0ad943fd64694153e50d082ef3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sts2_char_portalcraft/images/Visuals/IMG_1698.png"
-dest_files=["res://.godot/imported/IMG_1698.png-75e03faada693359a53d11d2c758dfb3.ctex"]
+source_file="res://sts2_char_portalcraft/images/card_portraits/augmentation_bestowal.png"
+dest_files=["res://.godot/imported/augmentation_bestowal.png-79a45f0ad943fd64694153e50d082ef3.ctex"]
 
 [params]
 

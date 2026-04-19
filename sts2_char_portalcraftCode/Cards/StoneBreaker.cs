@@ -23,11 +23,11 @@ public sealed class StoneBreaker : sts2_char_portalcraftCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         int hits = (int)DynamicVars["MagicNumber"].BaseValue;
-        var enemies = CombatState.HittableEnemies.ToList();
-        if (enemies.Count == 0) return;
-
         for (int i = 0; i < hits; i++)
         {
+            var enemies = CombatState.HittableEnemies.ToList();
+            if (enemies.Count == 0) return;
+
             var target = Owner.RunState.Rng.Shuffle.NextItem(enemies);
             await DamageCmd.Attack(1m)
                 .FromCard(this)

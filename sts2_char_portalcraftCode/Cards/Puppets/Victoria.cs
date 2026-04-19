@@ -8,10 +8,6 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace sts2_char_portalcraft.sts2_char_portalcraftCode.Cards.Puppets;
-
-/// <summary>
-/// Victoria — 0 cost Attack, Puppet. Deal 14 damage. Exhaust.
-/// </summary>
 public sealed class Victoria : sts2_char_portalcraftCard
 {
     protected override HashSet<CardTag> CanonicalTags => new() { PuppetTag.Puppet };

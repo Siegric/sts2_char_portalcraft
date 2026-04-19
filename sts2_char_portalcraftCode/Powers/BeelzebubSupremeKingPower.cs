@@ -13,16 +13,13 @@ public sealed class BeelzebubSupremeKingPower : sts2_char_portalcraftPower
 
     public override decimal ModifyDamageAdditive(Creature? target, decimal amount, ValueProp props, Creature? dealer, CardModel? cardSource)
     {
-        // Only apply when the power owner is dealing damage
         if (dealer != Owner) return 0m;
-        // Only for powered attacks (card/move damage)
         if (!props.HasFlag(ValueProp.Move) || props.HasFlag(ValueProp.Unpowered)) return 0m;
         return Amount;
     }
 
     public override decimal ModifyBlockAdditive(Creature target, decimal block, ValueProp props, CardModel? cardSource, CardPlay? cardPlay)
     {
-        // Only apply when the power owner is gaining block
         if (cardSource != null)
         {
             if (cardSource.Owner.Creature != Owner) return 0m;
@@ -31,7 +28,6 @@ public sealed class BeelzebubSupremeKingPower : sts2_char_portalcraftPower
         {
             return 0m;
         }
-        // Only for powered block (card/move block)
         if (!props.HasFlag(ValueProp.Move) || props.HasFlag(ValueProp.Unpowered)) return 0m;
         return Amount;
     }

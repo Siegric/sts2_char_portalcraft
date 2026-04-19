@@ -1,3 +1,4 @@
+#if FALSE
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using BaseLib.Utils;
@@ -30,3 +31,4 @@ public sealed class RalmiaSonicRacer : sts2_char_portalcraftCard
         AddKeyword(CardKeyword.Innate);
     }
 }
+#endif

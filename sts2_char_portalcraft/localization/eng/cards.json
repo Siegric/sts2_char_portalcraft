@@ -33,7 +33,7 @@
   "STS2_CHAR_PORTALCRAFT-ARTIFACT_RECHARGE.description": "Add a [gold]Gear of Remembrance[/gold] and [gold]Gear of Ambition[/gold] to your hand.",
 
   "STS2_CHAR_PORTALCRAFT-FLIGHT_OF_ICARUS.title": "Flight of Icarus",
-  "STS2_CHAR_PORTALCRAFT-FLIGHT_OF_ICARUS.description": "Select an [gold]Artifact[/gold] in your hand. It costs 0 this turn, and you draw a card when you play it.",
+  "STS2_CHAR_PORTALCRAFT-FLIGHT_OF_ICARUS.description": "Select an [gold]Artifact[/gold] in your hand. It costs 0 this turn, and gains '[gold]Last Words[/gold]: Draw 1 card.'",
 
   "STS2_CHAR_PORTALCRAFT-ELISE_ELECTRIFYING_INVENTOR.title": "Elise, Electrifying Inventor",
   "STS2_CHAR_PORTALCRAFT-ELISE_ELECTRIFYING_INVENTOR.description": "Gain {Block:diff()} Block. Add a [gold]Gear of Remembrance[/gold] to your hand.",
@@ -108,7 +108,7 @@
   "STS2_CHAR_PORTALCRAFT-ENHANCED_PUPPET.description": "Deal {Damage:diff()} damage.",
 
   "STS2_CHAR_PORTALCRAFT-DOLL_SLAYER.title": "Doll Slayer",
-  "STS2_CHAR_PORTALCRAFT-DOLL_SLAYER.description": "Deal {Damage:diff()} damage to ALL enemies. Add a [gold]Vier, Heart Slayer[/gold] to your hand.",
+  "STS2_CHAR_PORTALCRAFT-DOLL_SLAYER.description": "Deal {Damage:diff()} damage to ALL enemies.\n[gold]Last Words[/gold]: Add a [gold]Vier, Heart Slayer[/gold] to your hand.",
 
   "STS2_CHAR_PORTALCRAFT-PUPPET_CAT.title": "Puppet Cat",
   "STS2_CHAR_PORTALCRAFT-PUPPET_CAT.description": "Add a [gold]Puppet[/gold] to your hand. It gains +{BonusDamage:diff()} damage.",
@@ -135,7 +135,7 @@
   "STS2_CHAR_PORTALCRAFT-RESURRECTION_TUNER.description": "Exhaust 1 card in your hand. Add up to 2 random [gold]Puppets[/gold] from your exhaust pile to your hand.",
 
   "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER.title": "Puppet Theater",
-  "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER.description": "At the start of each turn, add {MagicNumber:diff()} [gold]Puppet(s)[/gold] to your hand.",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER.description": "[gold]Countdown[/gold] ({Countdown}). At the start of your turn, add {MagicNumber:diff()} [gold]Puppet(s)[/gold] to your hand.",
 
   "STS2_CHAR_PORTALCRAFT-MARIONETTE_MASTER.title": "Marionette Master",
   "STS2_CHAR_PORTALCRAFT-MARIONETTE_MASTER.description": "Add a [gold]Puppet[/gold] and an [gold]Enhanced Puppet[/gold] to your hand.",
@@ -171,7 +171,7 @@
   "STS2_CHAR_PORTALCRAFT-DEVOTEE_OF_DESTRUCTION.description": "Exhaust all cards in your hand. Gain {Multiplier:diff()}X Block and deal {Multiplier:diff()}X damage. X = cards exhausted this turn.",
 
   "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION.title": "Wasteland of Destruction",
-  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION.description": "Select a card in your hand and Exhaust it. Draw {Cards:diff()} cards. Add an unplayable copy to your hand. If this card is exhausted, draw 1 card.",
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION.description": "Select another card in your hand. If you selected one, [gold]Exhaust[/gold] it and draw {Cards:diff()} cards. Add an unplayable copy to your hand.\n[gold]Last Words[/gold]: Draw 1 card.",
 
   "STS2_CHAR_PORTALCRAFT-CONGREGANT_OF_DESTRUCTION.title": "Congregant of Destruction",
   "STS2_CHAR_PORTALCRAFT-CONGREGANT_OF_DESTRUCTION.description": "Exhaust all cards in your hand. Draw X cards. X = cards exhausted this turn.",
@@ -189,19 +189,28 @@
   "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING.description": "Whenever an enemy takes damage, it takes +2 damage. Whenever you gain Block, you gain +2 Block.",
 
   "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.title": "White Psalm, New Revelation",
-  "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.description": "At end of turn, gain {PsalmBlock} Block, then transform into [gold]Black Psalm, New Revelation[/gold]. If exhausted, immediately gain {PsalmBlock} Block and add a [gold]Black Psalm[/gold] to your hand.",
+  "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.description": "[gold]Countdown[/gold] ({Countdown}).\n[gold]Last Words[/gold]: Gain {PsalmBlock} Block. Add a [gold]Black Psalm, New Revelation[/gold] to your hand.",
 
   "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.title": "Black Psalm, New Revelation",
-  "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.description": "At end of turn, deal {PsalmDamage} damage to ALL enemies, then transform into [gold]White Psalm, New Revelation[/gold]. If exhausted, immediately deal {PsalmDamage} AoE damage and add a [gold]White Psalm[/gold] to your hand.",
+  "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.description": "[gold]Countdown[/gold] ({Countdown}).\n[gold]Last Words[/gold]: Deal {PsalmDamage} damage to ALL enemies. Add a [gold]White Psalm, New Revelation[/gold] to your hand.",
 
   "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.title": "Wasteland of Destruction",
-  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.description": "On [gold]Exhaust[/gold], draw 1 cards.",
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.description": "[gold]Last Words[/gold]: Draw 1 card.",
 
   "STS2_CHAR_PORTALCRAFT-BIOFABRICATION.title": "Biofabrication",
   "STS2_CHAR_PORTALCRAFT-BIOFABRICATION.description": "Select an [gold]Artifact[/gold] in your hand. Subtract 1 from its cost. Put 3 copies of it into your draw pile.",
 
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.title": "Ralmia, Sonic Racer",
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.description": "For every 4 [gold]Fusions[/gold], gain 1 Energy.",
+
+  "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL.title": "Augmentation Bestowal",
+  "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL.description": "Until the end of this turn, whenever an [gold]Artifact[/gold] card is played, gain 1 Energy and draw 1 card.",
+
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER.title": "Retrafia, Divine Mother",
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER.description": "[gold]Crystallize[/gold] (1): [gold]Countdown[/gold] (10). During your turn, all [gold]Artifacts[/gold] cost 0 to play. Whenever an [gold]Artifact[/gold] is played, subtract 1 from this amulet's [gold]Countdown[/gold].\n[gold]Last Words[/gold]: Add a [gold]Retrafia, Divine Mother[/gold] to your hand. It costs 0 to play this turn.\n----------\nDeal {IfUpgraded:show:4|3}X damage to ALL enemies. X equals the number of [gold]Artifact[/gold] cards exhausted this match.",
+
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER_AMULET.title": "Retrafia, Divine Mother",
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER_AMULET.description": "[gold]Countdown[/gold] ({Countdown}). During your turn, all [gold]Artifacts[/gold] cost 0 to play. Whenever an [gold]Artifact[/gold] is played, subtract 1 from [gold]Countdown[/gold].\n[gold]Last Words[/gold]: Add a [gold]Retrafia, Divine Mother[/gold] to your hand. It costs 0 to play this turn.",
 
   "STS2_CHAR_PORTALCRAFT-LIGHT_OF_THE_DEWDROP.title": "Light of the Dewdrop",
   "STS2_CHAR_PORTALCRAFT-LIGHT_OF_THE_DEWDROP.description": "Draw {Cards:diff()} cards.",

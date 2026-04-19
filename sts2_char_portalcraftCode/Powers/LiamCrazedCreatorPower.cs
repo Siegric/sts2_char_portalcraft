@@ -22,11 +22,9 @@ public sealed class LiamCrazedCreatorPower : sts2_char_portalcraftPower
         if (!PuppetHelper.IsPuppet(card)) return;
 
         Flash();
-
-        // Gain block (unpowered — not affected by Agility)
+        
         await CreatureCmd.GainBlock(Owner, Amount, ValueProp.Unpowered, null);
-
-        // Track puppet plays for energy
+        
         _puppetPlayCount++;
         if (_puppetPlayCount >= 4)
         {

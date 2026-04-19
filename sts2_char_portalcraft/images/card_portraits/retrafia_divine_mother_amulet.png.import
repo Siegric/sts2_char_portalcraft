@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4d0wsip1h6ul"
-path="res://.godot/imported/IMG_1697.png-8f8b7485a3edb3aa66e4ad8704ee6639.ctex"
+uid="uid://dkkwfspi7c5vo"
+path="res://.godot/imported/retrafia_divine_mother_amulet.png-26cb647a7765382dac556bb8ded8fd64.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sts2_char_portalcraft/images/Visuals/IMG_1697.png"
-dest_files=["res://.godot/imported/IMG_1697.png-8f8b7485a3edb3aa66e4ad8704ee6639.ctex"]
+source_file="res://sts2_char_portalcraft/images/card_portraits/retrafia_divine_mother_amulet.png"
+dest_files=["res://.godot/imported/retrafia_divine_mother_amulet.png-26cb647a7765382dac556bb8ded8fd64.ctex"]
 
 [params]
 

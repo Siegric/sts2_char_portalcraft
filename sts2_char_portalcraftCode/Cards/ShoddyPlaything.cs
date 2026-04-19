@@ -24,6 +24,8 @@ public sealed class ShoddyPlaything : sts2_char_portalcraftCard
         await CardPileCmd.Draw(choiceContext, (int)DynamicVars.Cards.BaseValue, Owner);
 
         var copyDraw = CombatState.CloneCard(this);
+        copyDraw.EnergyCost.AfterCardPlayedCleanup();
+        copyDraw.EnergyCost.EndOfTurnCleanup();
         await CardPileCmd.AddGeneratedCardToCombat(copyDraw, PileType.Draw, addedByPlayer: true);
     }
 

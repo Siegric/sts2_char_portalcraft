@@ -10,20 +10,14 @@ using sts2_char_portalcraft.sts2_char_portalcraftCode.Cards.Puppets;
 
 namespace sts2_char_portalcraft.sts2_char_portalcraftCode.Patches;
 
-/// <summary>
-/// Patches CardModel's frame/border properties and CardType.ToLocString() to handle
-/// custom CardTypes (Artifact, Puppet, Talisman).
-/// Artifact → Skill frame, Puppet → Attack frame, Talisman → Power frame.
-/// </summary>
 [HarmonyPatch]
 public static class CustomCardTypePatch
 {
-    // Frame mapping: custom CardType → which vanilla CardType's frame to use
     private static CardType GetFrameType(CardModel card)
     {
         if (card.Type == PuppetType.Puppet) return CardType.Attack;
-        if (card.Type == TalismanType.Talisman) return CardType.Power;
-        return CardType.Skill; // Artifact and any other unknown
+        if (card.Type == AmuletType.Amulet) return CardType.Power;
+        return CardType.Skill; 
     }
 
     private static string FramePathFor(CardType frameType) =>
@@ -77,7 +71,7 @@ public static class CustomCardTypePatch
     private static string GetLocKey(CardType cardType)
     {
         if (cardType == PuppetType.Puppet) return "CARD_TYPE.PUPPET";
-        if (cardType == TalismanType.Talisman) return "CARD_TYPE.TALISMAN";
+        if (cardType == AmuletType.Amulet) return "CARD_TYPE.AMULET";
         return "CARD_TYPE.ARTIFACT";
     }
 

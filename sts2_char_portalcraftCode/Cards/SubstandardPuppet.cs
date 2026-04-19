@@ -30,6 +30,8 @@ public sealed class SubstandardPuppet : sts2_char_portalcraftCard
             .Execute(choiceContext);
 
         var copy = CombatState.CloneCard(this);
+        copy.EnergyCost.AfterCardPlayedCleanup();
+        copy.EnergyCost.EndOfTurnCleanup();
         await CardPileCmd.AddGeneratedCardsToCombat(new[] {copy}, PileType.Hand, addedByPlayer: true);
     }
 

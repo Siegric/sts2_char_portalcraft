@@ -8,9 +8,6 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace sts2_char_portalcraft.sts2_char_portalcraftCode.Cards.Puppets;
 
-/// <summary>
-/// Lloyd — 0 cost Skill, Puppet. Gain 14 Block. Exhaust.
-/// </summary>
 public sealed class Lloyd : sts2_char_portalcraftCard
 {
     protected override HashSet<CardTag> CanonicalTags => new() { PuppetTag.Puppet };

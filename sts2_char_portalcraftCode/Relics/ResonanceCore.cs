@@ -5,12 +5,18 @@ using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using sts2_char_portalcraft.sts2_char_portalcraftCode.Cards.Artifacts;
+using sts2_char_portalcraft.sts2_char_portalcraftCode.Powers;
 
 namespace sts2_char_portalcraft.sts2_char_portalcraftCode.Relics;
 
 public sealed class ResonanceCore : sts2_char_portalcraftRelic
 {
     public override RelicRarity Rarity => RelicRarity.Starter;
+
+    public override async Task BeforeCombatStart()
+    {
+        await PowerCmd.Apply<KeywordDispatcherPower>(Owner.Creature, 1, Owner.Creature, null);
+    }
 
     public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
     {

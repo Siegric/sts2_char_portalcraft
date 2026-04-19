@@ -11,18 +11,23 @@ using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
+using sts2_char_portalcraft.sts2_char_portalcraftCode.Cards.Keywords;
 using sts2_char_portalcraft.sts2_char_portalcraftCode.Cards.Omen;
 using sts2_char_portalcraft.sts2_char_portalcraftCode.Character;
-using sts2_char_portalcraft.sts2_char_portalcraftCode.Powers;
 
 namespace sts2_char_portalcraft.sts2_char_portalcraftCode.Cards;
 
 [Pool(typeof(sts2_char_portalcraftCardPool))]
-public sealed class WastelandOfDestruction : sts2_char_portalcraftCard
+public sealed class WastelandOfDestruction : sts2_char_portalcraftCard, ILastWordsCard
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]
     {
         new IntVar("Cards", 2m),
+    };
+
+    public override IEnumerable<CardKeyword> CanonicalKeywords => new[]
+    {
+        LastWordsKeyword.LastWords,
     };
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
@@ -36,33 +41,34 @@ public sealed class WastelandOfDestruction : sts2_char_portalcraftCard
     {
         bool AnyCard(CardModel c) => c != this;
         var handCards = PileType.Hand.GetPile(Owner).Cards.Where(AnyCard).ToList();
-        if (handCards.Count == 0) return;
 
-        var exhaustPrefs = new CardSelectorPrefs(
-            new LocString("card_selection", "WASTELAND_PROMPT"),
-            minCount: 1,
-            maxCount: 1
-        );
-
-        var toExhaust = (await CardSelectCmd.FromHand(choiceContext, Owner, exhaustPrefs, AnyCard, this)).ToList();
-        if (toExhaust.Count == 0) return;
-
-        bool didExhaust = false;
-        foreach (var card in toExhaust)
+        if (handCards.Count > 0)
         {
-            await CardCmd.Exhaust(choiceContext, card);
-            didExhaust = true;
+            var exhaustPrefs = new CardSelectorPrefs(
+                new LocString("card_selection", "WASTELAND_PROMPT"),
+                minCount: 0,
+                maxCount: 1
+            );
+
+            var toExhaust = (await CardSelectCmd.FromHand(choiceContext, Owner, exhaustPrefs, AnyCard, this)).ToList();
+            if (toExhaust.Count > 0)
+            {
+                foreach (var card in toExhaust)
+                {
+                    await CardCmd.Exhaust(choiceContext, card);
+                }
+
+                int drawCount = (int)DynamicVars["Cards"].BaseValue;
+                await CardPileCmd.Draw(choiceContext, drawCount, Owner);
+            }
         }
-        
-        if (didExhaust)
-        {
-            int drawCount = (int)DynamicVars["Cards"].BaseValue;
-            await CardPileCmd.Draw(choiceContext, drawCount, Owner);
-        }
-        
+
         await WastelandOfDestructionToken.CreateInHand(Owner, CombatState);
-        
-        await TalismanHelper.EnsureTalismanPower(Owner, this);
+    }
+
+    public async Task OnLastWords(PlayerChoiceContext choiceContext)
+    {
+        await CardPileCmd.Draw(choiceContext, 1, Owner);
     }
 
     protected override void OnUpgrade()
