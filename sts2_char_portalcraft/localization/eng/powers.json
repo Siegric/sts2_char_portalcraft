@@ -3,6 +3,10 @@
   "STS2_CHAR_PORTALCRAFT-KEYWORD_DISPATCHER_POWER.description": "Internal. Dispatches custom keyword effects.",
   "STS2_CHAR_PORTALCRAFT-KEYWORD_DISPATCHER_POWER.smartDescription": "Internal. Dispatches custom keyword effects.",
 
+  "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL_POWER.title": "Augmentation Bestowal",
+  "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL_POWER.description": "Whenever you play an [gold]Artifact[/gold], gain 1 Energy and draw 1 card. Expires at end of turn.",
+  "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL_POWER.smartDescription": "Whenever you play an [gold]Artifact[/gold], gain 1 Energy and draw 1 card. Expires at end of turn.",
+
   "STS2_CHAR_PORTALCRAFT-RETRAFIA_AMULET_POWER.title": "Divine Mother's Blessing",
   "STS2_CHAR_PORTALCRAFT-RETRAFIA_AMULET_POWER.description": "All [gold]Artifact[/gold] cards cost 0 to play.",
   "STS2_CHAR_PORTALCRAFT-RETRAFIA_AMULET_POWER.smartDescription": "All [gold]Artifact[/gold] cards cost 0 to play.",
@@ -18,10 +22,6 @@
   "STS2_CHAR_PORTALCRAFT-REPLAY_NEXT_PUPPET_POWER.title": "Puppet Strings",
   "STS2_CHAR_PORTALCRAFT-REPLAY_NEXT_PUPPET_POWER.description": "The next Puppet you play is replayed.",
   "STS2_CHAR_PORTALCRAFT-REPLAY_NEXT_PUPPET_POWER.smartDescription": "The next Puppet you play is replayed {Amount} time(s).",
-
-  "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER_POWER.title": "Puppet Theater",
-  "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER_POWER.description": "At the start of each turn, add Puppet(s) to your hand.",
-  "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER_POWER.smartDescription": "At the start of each turn, add {Amount} Puppet(s) to your hand.",
 
   "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR_POWER.title": "Crazed Creator",
   "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR_POWER.description": "Whenever you play a Puppet, gain Block. For every 4 Puppets played, gain 1 Energy.",

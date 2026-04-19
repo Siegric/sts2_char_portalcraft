@@ -135,7 +135,7 @@
   "STS2_CHAR_PORTALCRAFT-RESURRECTION_TUNER.description": "消耗手牌中1张牌。将消耗牌堆中至多2个随机[gold]悬丝傀儡[/gold]加入手牌。",
 
   "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER.title": "人偶剧场",
-  "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER.description": "每回合开始时，将 {MagicNumber:diff()} 个[gold]悬丝傀儡[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER.description": "[gold]倒数[/gold]（{Countdown}）。你的回合开始时，将 {MagicNumber:diff()} 个[gold]悬丝傀儡[/gold]加入手牌。",
 
   "STS2_CHAR_PORTALCRAFT-MARIONETTE_MASTER.title": "舞台缔造者",
   "STS2_CHAR_PORTALCRAFT-MARIONETTE_MASTER.description": "将1个[gold]悬丝傀儡[/gold]和1个[gold]改良型·悬丝傀儡[/gold]加入手牌。",
@@ -202,6 +202,9 @@
 
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.title": "音速机关·洛拉米亚",
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.description": "每[gold]融合[/gold]4次，获得1点能量。",
+
+  "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL.title": "机械的解放",
+  "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL.description": "直到本回合结束，每当一张[gold]创造物[/gold]牌被打出时，获得1点能量并抽1张牌。",
 
   "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER.title": "天降曙光·蕾德拉菲雅",
   "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER.description": "[gold]结晶[/gold]（1）：[gold]倒数[/gold]（10）。你的回合内，所有[gold]创造物[/gold]的费用变为0。每当一张友方[gold]创造物[/gold]被打出时，此护符的[gold]倒数[/gold]减1。\n[gold]谢幕曲[/gold]：将1张[gold]天降曙光·蕾德拉菲雅[/gold]加入手牌。它本回合费用变为0。\n----------\n对所有敌人造成 {IfUpgraded:show:4|3}X 点伤害。X 等于本场战斗中已被消耗的[gold]创造物[/gold]数量。",

@@ -30,12 +30,19 @@ public sealed class KeywordDispatcherPower : sts2_char_portalcraftPower
     {
         if (player.Creature != Owner) return;
 
-        var countdownCards = new[] { PileType.Hand, PileType.Draw, PileType.Discard }
+        var scanned = new[] { PileType.Hand, PileType.Draw, PileType.Discard }
             .SelectMany(p => p.GetPile(player).Cards)
-            .OfType<ICountdownCard>()
-            .Cast<CardModel>()
             .ToList();
 
+        // Fire per-turn-start card effects first (before countdown tick, so the card
+        // still exists for its final turn's effect).
+        var turnStartCards = scanned.OfType<IOnTurnStartCard>().ToList();
+        foreach (var card in turnStartCards)
+        {
+            await card.OnTurnStart(choiceContext);
+        }
+
+        var countdownCards = scanned.OfType<ICountdownCard>().Cast<CardModel>().ToList();
         foreach (var card in countdownCards)
         {
             Flash();

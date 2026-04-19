@@ -38,7 +38,7 @@ public sealed class RetrafiaDivineMother : sts2_char_portalcraftCard, ICrystalli
         HoverTipFactory.FromKeyword(LastWordsKeyword.LastWords),
     };
 
-    public RetrafiaDivineMother() : base(5, CardType.Skill, CardRarity.Ancient, TargetType.AllEnemies) { }
+    public RetrafiaDivineMother() : base(3, CardType.Skill, CardRarity.Ancient, TargetType.AllEnemies) { }
 
     protected override bool ShouldGlowGoldInternal
     {

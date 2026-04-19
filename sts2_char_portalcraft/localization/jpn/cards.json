@@ -135,7 +135,7 @@
   "STS2_CHAR_PORTALCRAFT-RESURRECTION_TUNER.description": "カードを1枚廃棄する。廃棄札にある[gold]パペット[/gold]最大2枚まで選び、ランダムに手札に加える。",
 
   "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER.title": "ドールズシアター",
-  "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER.description": "ターン開始時、[gold]パペット[/gold]を {MagicNumber:diff()} 枚手札に加える。",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER.description": "[gold]Countdown[/gold] ({Countdown}). At the start of your turn, add {MagicNumber:diff()} [gold]Puppet(s)[/gold] to your hand. (JPN TBD)",
 
   "STS2_CHAR_PORTALCRAFT-MARIONETTE_MASTER.title": "ステージメーカー",
   "STS2_CHAR_PORTALCRAFT-MARIONETTE_MASTER.description": "[gold]パペット[/gold]と[gold]改良型·パペット[/gold]をそれぞれ1枚ずつ手札に加える。",
@@ -202,6 +202,9 @@
 
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.title": "音速の機構・ララミア",
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.description": "[gold]融合[/gold]を4回するたび、エナジー1を得る。",
+
+  "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL.title": "Augmentation Bestowal (JPN TBD)",
+  "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL.description": "Until the end of this turn, whenever an [gold]Artifact[/gold] card is played, gain 1 Energy and draw 1 card. (JPN TBD)",
 
   "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER.title": "Retrafia, Divine Mother (JPN TBD)",
   "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER.description": "[gold]Crystallize[/gold] (1): [gold]Countdown[/gold] (10). During your turn, all [gold]Artifacts[/gold] cost 0 to play. Whenever an allied [gold]Artifact[/gold] is played, subtract 1 from this amulet's [gold]Countdown[/gold].\n[gold]Last Words[/gold]: Add a [gold]Retrafia, Divine Mother[/gold] to your hand. It costs 0 to play this turn.\n----------\nDeal {IfUpgraded:show:4|3}X damage to ALL enemies. X equals the number of different allied [gold]Artifact[/gold] cards destroyed this match. (JPN TBD)",

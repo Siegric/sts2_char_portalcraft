@@ -135,7 +135,7 @@
   "STS2_CHAR_PORTALCRAFT-RESURRECTION_TUNER.description": "Exhaust 1 card in your hand. Add up to 2 random [gold]Puppets[/gold] from your exhaust pile to your hand.",
 
   "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER.title": "Puppet Theater",
-  "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER.description": "At the start of each turn, add {MagicNumber:diff()} [gold]Puppet(s)[/gold] to your hand.",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER.description": "[gold]Countdown[/gold] ({Countdown}). At the start of your turn, add {MagicNumber:diff()} [gold]Puppet(s)[/gold] to your hand.",
 
   "STS2_CHAR_PORTALCRAFT-MARIONETTE_MASTER.title": "Marionette Master",
   "STS2_CHAR_PORTALCRAFT-MARIONETTE_MASTER.description": "Add a [gold]Puppet[/gold] and an [gold]Enhanced Puppet[/gold] to your hand.",
@@ -202,6 +202,9 @@
 
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.title": "Ralmia, Sonic Racer",
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.description": "For every 4 [gold]Fusions[/gold], gain 1 Energy.",
+
+  "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL.title": "Augmentation Bestowal",
+  "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL.description": "Until the end of this turn, whenever an [gold]Artifact[/gold] card is played, gain 1 Energy and draw 1 card.",
 
   "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER.title": "Retrafia, Divine Mother",
   "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER.description": "[gold]Crystallize[/gold] (1): [gold]Countdown[/gold] (10). During your turn, all [gold]Artifacts[/gold] cost 0 to play. Whenever an allied [gold]Artifact[/gold] is played, subtract 1 from this amulet's [gold]Countdown[/gold].\n[gold]Last Words[/gold]: Add a [gold]Retrafia, Divine Mother[/gold] to your hand. It costs 0 to play this turn.\n----------\nDeal {IfUpgraded:show:4|3}X damage to ALL enemies. X equals the number of [gold]Artifact[/gold] cards exhausted this match.",
