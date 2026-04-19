@@ -108,7 +108,7 @@
   "STS2_CHAR_PORTALCRAFT-ENHANCED_PUPPET.description": " {Damage:diff()} ダメージを与える。",
 
   "STS2_CHAR_PORTALCRAFT-DOLL_SLAYER.title": "ドールスローター",
-  "STS2_CHAR_PORTALCRAFT-DOLL_SLAYER.description": "すべての敵に {Damage:diff()} ダメージを与える。\n[gold]Last Words[/gold]: Add a [gold]Vier, Heart Slayer[/gold] to your hand. (JPN TBD)",
+  "STS2_CHAR_PORTALCRAFT-DOLL_SLAYER.description": "すべての敵に {Damage:diff()} ダメージを与える。\n[gold]カーテンコール[/gold]: [gold]ハートスローター・フィア[/gold]を1枚手札に加える",
 
   "STS2_CHAR_PORTALCRAFT-PUPPET_CAT.title": "パペットキャット",
   "STS2_CHAR_PORTALCRAFT-PUPPET_CAT.description": "[gold]パペット[/gold]を1枚手札に加える，そのダメージを{BonusDamage:diff()}追加する。",
@@ -207,10 +207,10 @@
   "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL.description": "このターン、[gold]アーティファクト[/gold]をプレイするたび、エナジー1を得、カード1枚を引く。",
 
   "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER.title": "天来の救光・レトラフィア",
-  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER.description": "[gold]結晶[/gold] (1): [gold]カウントダウン[/gold] (10). 自分のターン中、 すべての[gold]アーティファクト[/gold]のコストを0にする。 [gold]アーティファクト[/gold]をプレイするたび、 このタリスマンの[gold]カウントダウン[/gold]が進む。\n[gold]カーテンコール[/gold]: [gold]天来の救光・レトラフィア[/gold]を1枚手札に加える。このターン、それはコストを支払わずにプレイできる。\n----------\n　すべての敵に{IfUpgraded:show:4|3}X ダメージを与える。 X　⁼ この戦闘で廃棄した[gold]アーティファクト[/gold]の数。",
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER.description": "[gold]結晶[/gold] (1): [gold]カウントダウン[/gold] (10). 自分のターン中、 すべての[gold]アーティファクト[/gold]のコストを0にする。 [gold]アーティファクト[/gold]をプレイするたび、 この御守りの[gold]カウントダウン[/gold]が進む。\n[gold]カーテンコール[/gold]: [gold]天来の救光・レトラフィア[/gold]を1枚手札に加える。このターン、それはコストを支払わずにプレイできる。\n----------\n　すべての敵に{IfUpgraded:show:4|3}X ダメージを与える。 X　⁼ この戦闘で廃棄した[gold]アーティファクト[/gold]の数。",
 
   "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER_AMULET.title": "天来の救光・レトラフィア",
-  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER_AMULET.description": "[gold]カウントダウン[/gold] ({Countdown}). 自分のターン中、 すべての[gold]アーティファクト[/gold]のコストを0にする。 [gold]アーティファクト[/gold]をプレイするたび、このタリスマンの[gold]カウントダウン[/gold]が進む。\n[gold]カーテンコール[/gold]: [gold]天来の救光・レトラフィア[/gold]を1枚手札に加える。このターン、それはコストを支払わずにプレイできる。",
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER_AMULET.description": "[gold]カウントダウン[/gold] ({Countdown}). 自分のターン中、 すべての[gold]アーティファクト[/gold]のコストを0にする。 [gold]アーティファクト[/gold]をプレイするたび、この御守りの[gold]カウントダウン[/gold]が進む。\n[gold]カーテンコール[/gold]: [gold]天来の救光・レトラフィア[/gold]を1枚手札に加える。このターン、それはコストを支払わずにプレイできる。",
 
   "STS2_CHAR_PORTALCRAFT-LIGHT_OF_THE_DEWDROP.title": "尽小花の照臨",
   "STS2_CHAR_PORTALCRAFT-LIGHT_OF_THE_DEWDROP.description": "カードを {Cards:diff()} 枚引く。",
