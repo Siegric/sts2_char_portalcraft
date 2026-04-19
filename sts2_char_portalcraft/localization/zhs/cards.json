@@ -249,7 +249,7 @@
   "STS2_CHAR_PORTALCRAFT-DIRK_METAL_MERCENARY.description": "将1个[gold]城堡创造物[/gold]加入手牌。",
 
   "STS2_CHAR_PORTALCRAFT-STONE_BREAKER.title": "身无长物唯有石",
-  "STS2_CHAR_PORTALCRAFT-STONE_BREAKER.description": "对随机敌人造成1点伤害，共 {MagicNumber:diff()} 次。",
+  "STS2_CHAR_PORTALCRAFT-STONE_BREAKER.description": "对随机敌人造成 {Damage:diff()} 点伤害，共 {Repeat:diff()} 次。",
 
   "STS2_CHAR_PORTALCRAFT-CASSIUS_SKY_YEARNING_ARRIVAL.title": "向往天空的回归者·卡西乌斯",
   "STS2_CHAR_PORTALCRAFT-CASSIUS_SKY_YEARNING_ARRIVAL.description": "选择手牌中1个[gold]创造物[/gold]。对所有敌人造成 {MagicNumber:diff()}X 点伤害。X = 该创造物的费用。将1个[gold]城堡创造物[/gold]加入手牌。",
@@ -285,7 +285,7 @@
   "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_OF_FORTUNE.description": "每回合开始时，随机发动一个效果（不会连续两回合发动相同效果）：\n1. 手牌中所有牌费用减少1直到回合结束。\n2. 获得2点[gold]力量[/gold]和2点[gold]敏捷[/gold]直到回合结束。\n3. 恢复3点生命。",
 
   "STS2_CHAR_PORTALCRAFT-MECHA_CAVALIER.title": "魔钢骑兵",
-  "STS2_CHAR_PORTALCRAFT-MECHA_CAVALIER.description": "获得 {Block:diff()} 点格挡。若此牌费用为1，改为获得{IfUpgraded:show:20|16}点格挡。若费用为0，改为获得{IfUpgraded:show:24|20}点格挡。",
+  "STS2_CHAR_PORTALCRAFT-MECHA_CAVALIER.description": "获得 {Block:diff()} 点格挡。若此牌费用为1，改为获得{IfUpgraded:show:Block:diff()|Block:diff()}点格挡。若费用为0，改为获得{IfUpgraded:show:24|20}点格挡。",
 
   "STS2_CHAR_PORTALCRAFT-TIMID_PIONEER.title": "胆小鬼先锋",
   "STS2_CHAR_PORTALCRAFT-TIMID_PIONEER.description": "所有敌人失去 {MagicNumber:diff()} 点[gold]力量[/gold]直到其回合结束。",
@@ -297,7 +297,7 @@
   "STS2_CHAR_PORTALCRAFT-TSUBASA_BLAZING_GEARCYCLIST.description": "随机减少手牌中 {MagicNumber:diff()} 张牌的费用1点，持续到本回合结束。",
 
   "STS2_CHAR_PORTALCRAFT-EUSTACE_HOWL_OF_THUNDER.title": "轰雷闪狼·尤斯提斯",
-  "STS2_CHAR_PORTALCRAFT-EUSTACE_HOWL_OF_THUNDER.description": "造成 {Damage:diff()} 点伤害。若此牌费用不为2，改为造成{IfUpgraded:show:22|18}点伤害，并随机减少手牌中1张牌的费用1点，持续本回合。",
+  "STS2_CHAR_PORTALCRAFT-EUSTACE_HOWL_OF_THUNDER.description": "造成 {Damage:diff()} 点伤害。若此牌费用不为2，改为造成{IfUpgraded:show:Damage:diff()|Damage:diff()}点伤害，并随机减少手牌中1张牌的费用1点，持续本回合。",
 
   "STS2_CHAR_PORTALCRAFT-NEURON_DISRUPTER.title": "神经遮蔽者",
   "STS2_CHAR_PORTALCRAFT-NEURON_DISRUPTER.description": "抽 {Cards:diff()} 张牌。获得等同于手牌数量的能量。",

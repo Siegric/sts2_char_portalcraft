@@ -249,7 +249,7 @@
   "STS2_CHAR_PORTALCRAFT-DIRK_METAL_MERCENARY.description": "[gold]キャッスルアーティファクト[/gold]を1枚手札に加える。",
 
   "STS2_CHAR_PORTALCRAFT-STONE_BREAKER.title": "ストーン・ブレイク",
-  "STS2_CHAR_PORTALCRAFT-STONE_BREAKER.description": "ランダムな敵に1ダメージを {MagicNumber:diff()} 回与える。",
+  "STS2_CHAR_PORTALCRAFT-STONE_BREAKER.description": "ランダムな敵に {Damage:diff()} ダメージを {Repeat:diff()} 回与える。",
 
   "STS2_CHAR_PORTALCRAFT-CASSIUS_SKY_YEARNING_ARRIVAL.title": "空慕う帰還者・カシウス",
   "STS2_CHAR_PORTALCRAFT-CASSIUS_SKY_YEARNING_ARRIVAL.description": "[gold]アーティファクト[/gold]を1枚選ぶ。すべての敵に {MagicNumber:diff()}X ダメージを与える。X = 選んだアーティファクトのコスト。[gold]キャッスルアーティファクト[/gold]を1枚手札に加える。",
