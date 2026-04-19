@@ -1,15 +1,15 @@
 {
-  "STS2_CHAR_PORTALCRAFT-KEYWORD_DISPATCHER_POWER.title": "Keyword Dispatcher (JPN TBD)",
-  "STS2_CHAR_PORTALCRAFT-KEYWORD_DISPATCHER_POWER.description": "Internal (JPN TBD)",
-  "STS2_CHAR_PORTALCRAFT-KEYWORD_DISPATCHER_POWER.smartDescription": "Internal (JPN TBD)",
+  "STS2_CHAR_PORTALCRAFT-KEYWORD_DISPATCHER_POWER.title": "キーワードディスパッチャ",
+  "STS2_CHAR_PORTALCRAFT-KEYWORD_DISPATCHER_POWER.description": "内部用",
+  "STS2_CHAR_PORTALCRAFT-KEYWORD_DISPATCHER_POWER.smartDescription": "内部用",
 
-  "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL_POWER.title": "Augmentation Bestowal (JPN TBD)",
-  "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL_POWER.description": "Whenever you play an [gold]Artifact[/gold], gain 1 Energy and draw 1 card. Expires at end of turn. (JPN TBD)",
-  "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL_POWER.smartDescription": "Whenever you play an [gold]Artifact[/gold], gain 1 Energy and draw 1 card. Expires at end of turn. (JPN TBD)",
+  "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL_POWER.title": "機構の解放",
+  "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL_POWER.description": "ターン終了時まで[gold]アーティファクト[/gold]をプレイするたび、エナジー1を得、カード1枚を引く。",
+  "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL_POWER.smartDescription": "ターン終了時まで[gold]アーティファクト[/gold]をプレイするたび、エナジー1を得、カード1枚を引く。",
 
-  "STS2_CHAR_PORTALCRAFT-RETRAFIA_AMULET_POWER.title": "Divine Mother's Blessing (JPN TBD)",
-  "STS2_CHAR_PORTALCRAFT-RETRAFIA_AMULET_POWER.description": "All [gold]Artifact[/gold] cards cost 0 to play. (JPN TBD)",
-  "STS2_CHAR_PORTALCRAFT-RETRAFIA_AMULET_POWER.smartDescription": "All [gold]Artifact[/gold] cards cost 0 to play. (JPN TBD)",
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_AMULET_POWER.title": "聖母なる光",
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_AMULET_POWER.description": "すべての[gold]アーティファクト[/gold] のコストを0にする。",
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_AMULET_POWER.smartDescription": "すべての[gold]アーティファクト[/gold] のコストを0にする。",
 
   "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_POWER.title": "紋章：新たなる少女",
   "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_POWER.description": "ターン終了時、手札が5枚未満の場合、次のターンにカードを1枚引く。手札が6枚を超える場合、次のターンにエナジー1を得る。",

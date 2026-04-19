@@ -24,18 +24,18 @@
   "STS2_CHAR_PORTALCRAFT-FUSE.title": "融合",
   "STS2_CHAR_PORTALCRAFT-FUSE.description": "プレイ時、手札にある同位のアーティファクトを1枚廃棄し、より上位のアーティファクトを生成できる。融合時、消費したエナジーを返還する。",
 
-  "CRYSTALLIZE.title": "Crystallize (JPN TBD)",
-  "CRYSTALLIZE.description": "Crystallize (JPN TBD)",
-  "STS2_CHAR_PORTALCRAFT-CRYSTALLIZE.title": "Crystallize (JPN TBD)",
-  "STS2_CHAR_PORTALCRAFT-CRYSTALLIZE.description": "Crystallize (JPN TBD)",
+  "CRYSTALLIZE.title": "結晶",
+  "CRYSTALLIZE.description": "このカードをプレイするためのエナジーが不足している場合、代わりに[gold]結晶[/gold]のコストを消費し、結晶効果のみ発動して、[gold]御守り[/gold]に変化する。",
+  "STS2_CHAR_PORTALCRAFT-CRYSTALLIZE.title": "結晶",
+  "STS2_CHAR_PORTALCRAFT-CRYSTALLIZE.description": "このカードをプレイするためのエナジーが不足している場合、代わりに[gold]結晶[/gold]のコストを消費し、結晶効果のみ発動して、[gold]御守り[/gold]に変化する。",
 
-  "COUNTDOWN.title": "Countdown (JPN TBD)",
-  "COUNTDOWN.description": "Countdown (JPN TBD)",
-  "STS2_CHAR_PORTALCRAFT-COUNTDOWN.title": "Countdown (JPN TBD)",
-  "STS2_CHAR_PORTALCRAFT-COUNTDOWN.description": "Countdown (JPN TBD)",
+  "COUNTDOWN.title": "カウントダウン",
+  "COUNTDOWN.description": "ターン開始時、カウントが1進む。0になると[gold]廃棄[/gold]される。",
+  "STS2_CHAR_PORTALCRAFT-COUNTDOWN.title": "カウントダウン",
+  "STS2_CHAR_PORTALCRAFT-COUNTDOWN.description": "ターン開始時、カウントが1進む。0になると[gold]廃棄[/gold]される。",
 
-  "LASTWORDS.title": "Last Words (JPN TBD)",
-  "LASTWORDS.description": "Last Words (JPN TBD)",
-  "STS2_CHAR_PORTALCRAFT-LASTWORDS.title": "Last Words (JPN TBD)",
-  "STS2_CHAR_PORTALCRAFT-LASTWORDS.description": "Last Words (JPN TBD)"
+  "LASTWORDS.title": "カーテンコール",
+  "LASTWORDS.description": "このカードが[gold]廃棄[/gold]された時、効果を発動する。",
+  "STS2_CHAR_PORTALCRAFT-LASTWORDS.title": "カーテンコール",
+  "STS2_CHAR_PORTALCRAFT-LASTWORDS.description": "このカードが[gold]廃棄[/gold]された時、効果を発動する。"
 }

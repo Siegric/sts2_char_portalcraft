@@ -51,7 +51,7 @@
   "STS2_CHAR_PORTALCRAFT-FIELD_SCIENTIST.description": "カードを1枚捨てる。カードを {Cards:diff()} 枚引く。",
 
   "STS2_CHAR_PORTALCRAFT-DOOMWRIGHT_RESURGENCE.title": "改境の再動",
-  "STS2_CHAR_PORTALCRAFT-DOOMWRIGHT_RESURGENCE.description": "1コスト以下の[gold]アーティファクト[/gold]を最大2枚まで選ぶ、そのコピーを手札に加える。このターンのコストを0にする、[gold]エセリアル[/gold]を持つ。",
+  "STS2_CHAR_PORTALCRAFT-DOOMWRIGHT_RESURGENCE.description": "1コスト以下の[gold]アーティファクト[/gold]を最大2枚まで選ぶ、そのコピーを手札に加える。このターン、それはコストを支払わずにプレイできる。[gold]エセリアル[/gold]を持つ。",
 
   "STS2_CHAR_PORTALCRAFT-CARNELIA_EMBER_OF_DARKNESS.title": "暗獄の残光・ジャスパー",
   "STS2_CHAR_PORTALCRAFT-CARNELIA_EMBER_OF_DARKNESS.description": "[gold]パスト·コア[/gold]を1枚手札に加える。[gold]アーティファクト[/gold]を1枚廃棄する。廃棄したアーティファクトのコスト＋1のエナジーを得る。",
@@ -63,7 +63,7 @@
   "STS2_CHAR_PORTALCRAFT-RUKINA_RESISTANCE_LEADER.description": " {Block:diff()} ブロックを得る。[gold]フューチャー·コア[/gold]と[gold]パスト·コア[/gold]をそれぞれ1枚ずつ手札に加える。[gold]アタックアーティファクト[/gold]を1枚手札に加える。",
 
   "STS2_CHAR_PORTALCRAFT-NEW_AGE_CARTOGRAPHER.title": "ネオジオグラファー",
-  "STS2_CHAR_PORTALCRAFT-NEW_AGE_CARTOGRAPHER.description": "[gold]デストロイアーティファクトβ[/gold]を1枚手札に加える。このターンのコストを0にする、[gold]エセリアル[/gold]を持つ。",
+  "STS2_CHAR_PORTALCRAFT-NEW_AGE_CARTOGRAPHER.description": "[gold]デストロイアーティファクトβ[/gold]を1枚手札に加える。このターン、それはコストを支払わずにプレイできる。、[gold]エセリアル[/gold]を持つ。",
 
   "STS2_CHAR_PORTALCRAFT-ALOUETTE_DOOMWRIGHT_WARD.title": "改境の天宫·アルエット",
   "STS2_CHAR_PORTALCRAFT-ALOUETTE_DOOMWRIGHT_WARD.description": "[gold]フューチャー·コア[/gold]と[gold]パスト·コア[/gold]をそれぞれ1枚ずつ手札に加える。[gold]アーティファクト[/gold]を1枚選び、このターンそのコストを0にする。",
@@ -75,7 +75,7 @@
   "STS2_CHAR_PORTALCRAFT-ENGINEBLADE_MAVEN.description": " {Damage:diff()} ダメージを与える。[gold]パスト·コア[/gold]と[gold]アタックアーティファクト[/gold]をそれぞれ1枚ずつ手札に加える。",
 
   "STS2_CHAR_PORTALCRAFT-BRILLIANT_INVENTOR.title": "ブライトクリエイター",
-  "STS2_CHAR_PORTALCRAFT-BRILLIANT_INVENTOR.description": "[gold]デストロイアーティファクトα[/gold]を1枚手札に加える。このターンのコストを0にする、[gold]エセリアル[/gold]を持つ。",
+  "STS2_CHAR_PORTALCRAFT-BRILLIANT_INVENTOR.description": "[gold]デストロイアーティファクトα[/gold]を1枚手札に加える。このターン、それはコストを支払わずにプレイできる。[gold]エセリアル[/gold]を持つ。",
 
   "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN.title": "新たなる少女・エース",
   "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN.description": "ターン終了時、手札が5枚未満の場合、次のターンにカードを1枚引く。手札が6枚を超える場合、次のターンにエナジー1を得る。",
@@ -108,7 +108,7 @@
   "STS2_CHAR_PORTALCRAFT-ENHANCED_PUPPET.description": " {Damage:diff()} ダメージを与える。",
 
   "STS2_CHAR_PORTALCRAFT-DOLL_SLAYER.title": "ドールスローター",
-  "STS2_CHAR_PORTALCRAFT-DOLL_SLAYER.description": "すべての敵に {Damage:diff()} ダメージを与える。\n[gold]Last Words[/gold]: Add a [gold]Vier, Heart Slayer[/gold] to your hand. (JPN TBD)",
+  "STS2_CHAR_PORTALCRAFT-DOLL_SLAYER.description": "すべての敵に {Damage:diff()} ダメージを与える。\n[gold]カーテンコール[/gold]: [gold]ハートスローター・フィア[/gold]を1枚手札に加える",
 
   "STS2_CHAR_PORTALCRAFT-PUPPET_CAT.title": "パペットキャット",
   "STS2_CHAR_PORTALCRAFT-PUPPET_CAT.description": "[gold]パペット[/gold]を1枚手札に加える，そのダメージを{BonusDamage:diff()}追加する。",
@@ -132,10 +132,10 @@
   "STS2_CHAR_PORTALCRAFT-MEDICAL_GRADE_ASSASSIN.description": " {Damage:diff()} ダメージを与える。[gold]リプレイ[/gold]1の[gold]を持つ改良型·パペット[/gold]を1枚手札に加える。",
 
   "STS2_CHAR_PORTALCRAFT-RESURRECTION_TUNER.title": "リヴァイブチューニング",
-  "STS2_CHAR_PORTALCRAFT-RESURRECTION_TUNER.description": "カードを1枚廃棄する。廃棄札にある[gold]パペット[/gold]最大2枚まで選び、ランダムに手札に加える。",
+  "STS2_CHAR_PORTALCRAFT-RESURRECTION_TUNER.description": "カードを1枚廃棄する。廃棄札にある[gold]パペット[/gold]を最大2枚までランダムに手札に加える。",
 
   "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER.title": "ドールズシアター",
-  "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER.description": "[gold]Countdown[/gold] ({Countdown}). At the start of your turn, add {MagicNumber:diff()} [gold]Puppet(s)[/gold] to your hand. (JPN TBD)",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER.description": "[gold]Countdown[/gold] ({Countdown}). ターン開始時、[gold]パペット[/gold]を{MagicNumber:diff()}枚手札に加える",
 
   "STS2_CHAR_PORTALCRAFT-MARIONETTE_MASTER.title": "ステージメーカー",
   "STS2_CHAR_PORTALCRAFT-MARIONETTE_MASTER.description": "[gold]パペット[/gold]と[gold]改良型·パペット[/gold]をそれぞれ1枚ずつ手札に加える。",
@@ -171,7 +171,7 @@
   "STS2_CHAR_PORTALCRAFT-DEVOTEE_OF_DESTRUCTION.description": "手札をすべて廃棄する。 {Multiplier:diff()}X ブロックを得、 {Multiplier:diff()}X ダメージを与える。X = このターンに廃棄したカードの数。",
 
   "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION.title": "破壊の荒野",
-  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION.description": "Select another card in your hand. If you selected one, [gold]Exhaust[/gold] it and draw {Cards:diff()} cards. Add an unplayable copy to your hand.\n[gold]Last Words[/gold]: Draw 1 card. (JPN TBD)",
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION.description": "カード1枚を選ぶ。選んだカードを廃棄して、カードを{Cards:diff()}枚引く。 このカードのプレイ不可のコピーを１枚手札に加える\n[gold]カーテンコール[/gold]: カード1枚を引く。",
 
   "STS2_CHAR_PORTALCRAFT-CONGREGANT_OF_DESTRUCTION.title": "破壊の団結者",
   "STS2_CHAR_PORTALCRAFT-CONGREGANT_OF_DESTRUCTION.description": "手札をすべて廃棄する。カードをX枚引く。X = このターンに廃棄したカードの数。",
@@ -189,13 +189,13 @@
   "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING.description": "敵がダメージを受けた時、その受けるダメージを2増加させる。ブロックを得た時、さらに2ブロックを得る。",
 
   "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.title": "新約・白の章",
-  "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.description": "[gold]Countdown[/gold] ({Countdown}).\n[gold]Last Words[/gold]: Gain {PsalmBlock} Block. Add a Black Psalm, New Revelation to your hand. (JPN TBD)",
+  "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.description": "[gold]カウントダウン[/gold] ({Countdown}).\n[gold]カーテンコール[/gold]:　{PsalmBlock}ブロックを得る。新約・黒の章1枚を手札に加える。",
 
   "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.title": "新約・黒の章",
-  "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.description": "[gold]Countdown[/gold] ({Countdown}).\n[gold]Last Words[/gold]: Deal {PsalmDamage} damage to ALL enemies. Add a White Psalm, New Revelation to your hand. (JPN TBD)",
+  "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.description": "[gold]カウントダウン[/gold] ({Countdown}).\n[gold]カーテンコール[/gold]: すべての敵に{PsalmDamage}ダメージを与える。新約・白の章1枚を手札に加える。",
 
   "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.title": "破壊の荒野",
-  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.description": "[gold]Last Words[/gold]: Draw 1 card. (JPN TBD)",
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.description": "[gold]カーテンコール[/gold]: カード1枚を引く。",
 
   "STS2_CHAR_PORTALCRAFT-BIOFABRICATION.title": "生命の量産",
   "STS2_CHAR_PORTALCRAFT-BIOFABRICATION.description": "[gold]アーティファクト[/gold]を1枚選び，そのコストを1減少する。そのコピーを3枚山札に加える。",
@@ -203,17 +203,17 @@
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.title": "音速の機構・ララミア",
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.description": "[gold]融合[/gold]を4回するたび、エナジー1を得る。",
 
-  "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL.title": "Augmentation Bestowal (JPN TBD)",
-  "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL.description": "Until the end of this turn, whenever an [gold]Artifact[/gold] card is played, gain 1 Energy and draw 1 card. (JPN TBD)",
+  "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL.title": "機構の解放",
+  "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL.description": "このターン、[gold]アーティファクト[/gold]をプレイするたび、エナジー1を得、カード1枚を引く。",
 
-  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER.title": "Retrafia, Divine Mother (JPN TBD)",
-  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER.description": "[gold]Crystallize[/gold] (1): [gold]Countdown[/gold] (10). During your turn, all [gold]Artifacts[/gold] cost 0 to play. Whenever an allied [gold]Artifact[/gold] is played, subtract 1 from this amulet's [gold]Countdown[/gold].\n[gold]Last Words[/gold]: Add a [gold]Retrafia, Divine Mother[/gold] to your hand. It costs 0 to play this turn.\n----------\nDeal {IfUpgraded:show:4|3}X damage to ALL enemies. X equals the number of different allied [gold]Artifact[/gold] cards destroyed this match. (JPN TBD)",
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER.title": "天来の救光・レトラフィア",
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER.description": "[gold]結晶[/gold] (1): [gold]カウントダウン[/gold] (10). 自分のターン中、 すべての[gold]アーティファクト[/gold]のコストを0にする。 [gold]アーティファクト[/gold]をプレイするたび、 この御守りの[gold]カウントダウン[/gold]が進む。\n[gold]カーテンコール[/gold]: [gold]天来の救光・レトラフィア[/gold]を1枚手札に加える。このターン、それはコストを支払わずにプレイできる。\n----------\n　すべての敵に{IfUpgraded:show:4|3}X ダメージを与える。 X　⁼ この戦闘で廃棄した[gold]アーティファクト[/gold]の数。",
 
-  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER_AMULET.title": "Retrafia, Divine Mother (JPN TBD)",
-  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER_AMULET.description": "[gold]Countdown[/gold] ({Countdown}). During your turn, all [gold]Artifacts[/gold] cost 0 to play. Whenever an allied [gold]Artifact[/gold] is played, subtract 1 from [gold]Countdown[/gold].\n[gold]Last Words[/gold]: Add a [gold]Retrafia, Divine Mother[/gold] to your hand. It costs 0 to play this turn. (JPN TBD)",
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER_AMULET.title": "天来の救光・レトラフィア",
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER_AMULET.description": "[gold]カウントダウン[/gold] ({Countdown}). 自分のターン中、 すべての[gold]アーティファクト[/gold]のコストを0にする。 [gold]アーティファクト[/gold]をプレイするたび、この御守りの[gold]カウントダウン[/gold]が進む。\n[gold]カーテンコール[/gold]: [gold]天来の救光・レトラフィア[/gold]を1枚手札に加える。このターン、それはコストを支払わずにプレイできる。",
 
   "STS2_CHAR_PORTALCRAFT-LIGHT_OF_THE_DEWDROP.title": "尽小花の照臨",
-  "STS2_CHAR_PORTALCRAFT-LIGHT_OF_THE_DEWDROP.description": "カード {Cards:diff()} 枚を引く。",
+  "STS2_CHAR_PORTALCRAFT-LIGHT_OF_THE_DEWDROP.description": "カードを {Cards:diff()} 枚引く。",
 
   "STS2_CHAR_PORTALCRAFT-STREAM_OF_LIFE.title": "生命の奔流",
   "STS2_CHAR_PORTALCRAFT-STREAM_OF_LIFE.description": " {Damage:diff()} ダメージを与える。[gold]パスト·コア[/gold]を1枚手札に加える。",
