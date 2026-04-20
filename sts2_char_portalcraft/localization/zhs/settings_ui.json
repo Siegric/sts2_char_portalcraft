@@ -1,5 +1,7 @@
 {
-  "STS2_CHAR_PORTALCRAFT-Audio.title": "音频",
-  "STS2_CHAR_PORTALCRAFT-CardSfxVolume.title": "卡牌音效音量",
-  "STS2_CHAR_PORTALCRAFT-CardSfxVolume.hover.desc": "调整自定义卡牌音效的音量。"
+  "STS2_CHAR_PORTALCRAFT.mod_title": "超越者",
+  "STS2_CHAR_PORTALCRAFT-AUDIO.title": "音频",
+  "STS2_CHAR_PORTALCRAFT-CARD_SFX_VOLUME.title": "卡牌音效音量",
+  "STS2_CHAR_PORTALCRAFT-CARD_SFX_VOLUME.hover.title": "卡牌音效音量",
+  "STS2_CHAR_PORTALCRAFT-CARD_SFX_VOLUME.hover.desc": "调整自定义卡牌音效的音量。"
 }

@@ -8,6 +8,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
 using sts2_char_portalcraft.sts2_char_portalcraftCode.Character;
+using sts2_char_portalcraft.sts2_char_portalcraftCode.Extensions;
 
 namespace sts2_char_portalcraft.sts2_char_portalcraftCode.Cards;
 
@@ -28,8 +29,7 @@ public sealed class LudicrousOrdnance : sts2_char_portalcraftCard
         for (int i = 0; i < copies; i++)
         {
             var copy = CombatState.CloneCard(this);
-            copy.EnergyCost.AfterCardPlayedCleanup();
-            copy.EnergyCost.EndOfTurnCleanup();
+            copy.EnergyCost.ClearLocalCostModifiers();
             await CardPileCmd.AddGeneratedCardToCombat(copy, PileType.Hand, addedByPlayer: true);
         }
         

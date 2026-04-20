@@ -11,11 +11,30 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Models;
 using sts2_char_portalcraft.sts2_char_portalcraftCode.Character;
+using sts2_char_portalcraft.sts2_char_portalcraftCode.Cards.Keywords;
 
 namespace sts2_char_portalcraft.sts2_char_portalcraftCode.Cards.Artifacts;
 [Pool(typeof(sts2_char_portalcraftCardPool))]
-public abstract class ArtifactCard : sts2_char_portalcraftCard
+public abstract class ArtifactCard : sts2_char_portalcraftCard, IFuseCard
 {
+    public int FuseCost => 0;
+
+    public bool HasValidFusionPartnerInHand()
+    {
+        if (!CanMerge) return false;
+        if (Owner == null) return false;
+
+        var handCards = PileType.Hand.GetPile(Owner).Cards;
+        var validDiscardTypes = MergeRecipes.GetValidDiscardTypes(GetType(), Tier);
+
+        if (Tier == ArtifactTier.T2_Steel)
+        {
+            return validDiscardTypes.All(rt => handCards.Any(c => c != this && c.GetType() == rt));
+        }
+
+        return handCards.Any(c => c != this && c is ArtifactCard && validDiscardTypes.Contains(c.GetType()));
+    }
+
     public abstract ArtifactTier Tier { get; }
     private int MergeDiscardMax => Tier switch
     {
@@ -63,7 +82,9 @@ public abstract class ArtifactCard : sts2_char_portalcraftCard
 
     private async Task HandleMergeOrRawPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        if (Tier == ArtifactTier.T2_Steel)
+        bool fused = FuseRuntime.TryConsume(this);
+
+        if (!fused && Tier == ArtifactTier.T2_Steel)
         {
             var handCards = PileType.Hand.GetPile(Owner).Cards;
             var requiredTypes = MergeRecipes.GetValidDiscardTypes(GetType(), Tier);
@@ -91,9 +112,9 @@ public abstract class ArtifactCard : sts2_char_portalcraftCard
                 int maxSelect = Math.Min(MergeDiscardMax, handArtifacts.Count);
                 var prefs = new CardSelectorPrefs(
                     new LocString("card_selection", "ARTIFACT_MERGE_PROMPT"),
-                    minCount: 0,
+                    minCount: fused ? 1 : 0,
                     maxCount: maxSelect
-                );
+                ) { RequireManualConfirmation = fused };
 
                 selected = await CardSelectCmd.FromHand(
                     choiceContext, Owner, prefs, Filter, this);
@@ -102,7 +123,7 @@ public abstract class ArtifactCard : sts2_char_portalcraftCard
             {
                 selected = Enumerable.Empty<CardModel>();
             }
-            
+
             var selectedList = selected.Where(Filter).ToList();
 
             if (selectedList.Count > 0)
@@ -115,19 +136,20 @@ public abstract class ArtifactCard : sts2_char_portalcraftCard
                     {
                         await CardCmd.Exhaust(choiceContext, card);
                     }
-                    
+
                     var canonicalCard = (CardModel)typeof(ModelDb)
                         .GetMethod(nameof(ModelDb.Card), System.Type.EmptyTypes)!
                         .MakeGenericMethod(resultType)
                         .Invoke(null, null)!;
                     var resultCard = CombatState.CreateCard(canonicalCard, Owner);
                     await CardPileCmd.AddGeneratedCardToCombat(resultCard, PileType.Hand, addedByPlayer: true);
-                    
-                    if (CanonicalEnergyCost > 0)
+
+                    int refund = fused ? 0 : EnergyCost.GetResolved();
+                    if (refund > 0)
                     {
-                        await PlayerCmd.GainEnergy(CanonicalEnergyCost, Owner);
+                        await PlayerCmd.GainEnergy(refund, Owner);
                     }
-                    
+
                     var resultTier = (resultCard as ArtifactCard)?.Tier ?? ArtifactTier.T3_Omega;
                     foreach (var power in Owner.Creature.Powers)
                     {
@@ -151,6 +173,9 @@ public abstract class ArtifactCard : sts2_char_portalcraftCard
         catch (System.Exception)
         {
         }
+
+        if (fused) return;
+
         await OnRawPlay(choiceContext, cardPlay);
     }
 }

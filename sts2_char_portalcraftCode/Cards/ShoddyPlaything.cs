@@ -6,6 +6,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using sts2_char_portalcraft.sts2_char_portalcraftCode.Character;
+using sts2_char_portalcraft.sts2_char_portalcraftCode.Extensions;
 
 namespace sts2_char_portalcraft.sts2_char_portalcraftCode.Cards;
 
@@ -24,8 +25,7 @@ public sealed class ShoddyPlaything : sts2_char_portalcraftCard
         await CardPileCmd.Draw(choiceContext, (int)DynamicVars.Cards.BaseValue, Owner);
 
         var copyDraw = CombatState.CloneCard(this);
-        copyDraw.EnergyCost.AfterCardPlayedCleanup();
-        copyDraw.EnergyCost.EndOfTurnCleanup();
+        copyDraw.EnergyCost.ClearLocalCostModifiers();
         await CardPileCmd.AddGeneratedCardToCombat(copyDraw, PileType.Draw, addedByPlayer: true);
     }
 

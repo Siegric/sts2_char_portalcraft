@@ -1,5 +1,7 @@
 {
-  "STS2_CHAR_PORTALCRAFT-Audio.title": "Audio",
-  "STS2_CHAR_PORTALCRAFT-CardSfxVolume.title": "Card SFX Volume",
-  "STS2_CHAR_PORTALCRAFT-CardSfxVolume.hover.desc": "Adjusts the volume of custom card sound effects."
+  "STS2_CHAR_PORTALCRAFT.mod_title": "PortalCraft",
+  "STS2_CHAR_PORTALCRAFT-AUDIO.title": "Audio",
+  "STS2_CHAR_PORTALCRAFT-CARD_SFX_VOLUME.title": "Card SFX Volume",
+  "STS2_CHAR_PORTALCRAFT-CARD_SFX_VOLUME.hover.title": "Card SFX Volume",
+  "STS2_CHAR_PORTALCRAFT-CARD_SFX_VOLUME.hover.desc": "Adjusts the volume of custom card sound effects."
 }

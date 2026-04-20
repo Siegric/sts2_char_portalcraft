@@ -1,5 +1,6 @@
 {
-  "STS2_CHAR_PORTALCRAFT-Audio.title": "サウンド",
-  "STS2_CHAR_PORTALCRAFT-CardSfxVolume.title": "カードの効果音",
-  "STS2_CHAR_PORTALCRAFT-CardSfxVolume.hover.desc": "カスタムカードの効果音を調整。"
+  "STS2_CHAR_PORTALCRAFT-AUDIO.title": "ネメシス",
+  "STS2_CHAR_PORTALCRAFT-CARD_SFX_VOLUME.title": "カードの効果音",
+  "STS2_CHAR_PORTALCRAFT-CARD_SFX_VOLUME.hover.title": "カードの効果音",
+  "STS2_CHAR_PORTALCRAFT-CARD_SFX_VOLUME.hover.desc": "カスタムカードの効果音を調整。"
 }

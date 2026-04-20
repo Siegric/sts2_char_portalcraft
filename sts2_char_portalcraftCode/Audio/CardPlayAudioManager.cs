@@ -49,6 +49,7 @@ public static class CardPlayAudioManager
     public static void PlayForCard(string typeName)
     {
         if (!_initialized || NonInteractiveMode.IsActive) return;
+        if (_volumeDb <= -20f) return;
 
         var stream = GetOrLoadStream(typeName);
         if (stream == null) return;

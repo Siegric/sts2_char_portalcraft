@@ -285,7 +285,7 @@
   "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_OF_FORTUNE.description": "At the start of your turn, activate a random ability (cannot repeat the previous turn's effect):\n1. Reduce the cost of all cards in your hand by 1 until end of turn.\n2. Gain 2 [gold]Strength[/gold] and 2 [gold]Dexterity[/gold] until end of turn.\n3. Restore 3 HP.",
 
   "STS2_CHAR_PORTALCRAFT-MECHA_CAVALIER.title": "Mecha Cavalier",
-  "STS2_CHAR_PORTALCRAFT-MECHA_CAVALIER.description": "Gain {Block:diff()} Block. If the cost of this card is 1, gain {IfUpgraded:show:Block:diff()|Block:diff()} Block instead. If the cost is 0, gain {IfUpgraded:show:24|20} Block instead.",
+  "STS2_CHAR_PORTALCRAFT-MECHA_CAVALIER.description": "Gain {Block:diff()} Block. If played at a cost other than 2, gain an additional 4 block for each cost below 2.",
 
   "STS2_CHAR_PORTALCRAFT-TIMID_PIONEER.title": "Timid Pioneer",
   "STS2_CHAR_PORTALCRAFT-TIMID_PIONEER.description": "All enemies lose {MagicNumber:diff()} [gold]Strength[/gold] until end of their turn.",
@@ -297,7 +297,7 @@
   "STS2_CHAR_PORTALCRAFT-TSUBASA_BLAZING_GEARCYCLIST.description": "Reduce the cost of {MagicNumber:diff()} random cards in your hand by 1 for this turn.",
 
   "STS2_CHAR_PORTALCRAFT-EUSTACE_HOWL_OF_THUNDER.title": "Eustace, Howl of Thunder",
-  "STS2_CHAR_PORTALCRAFT-EUSTACE_HOWL_OF_THUNDER.description": "Deal {Damage:diff()} damage. If the cost of this card is not 2, deal {IfUpgraded:show:Damage:diff()|Damage:diff()} damage instead and reduce a random card's cost in your hand by 1 for this turn.",
+  "STS2_CHAR_PORTALCRAFT-EUSTACE_HOWL_OF_THUNDER.description": "Deal {Damage:diff()} damage. If the cost of this card is not 2, deal 4 additional damage and reduce a random card's cost in your hand by 1 for this turn.",
 
   "STS2_CHAR_PORTALCRAFT-NEURON_DISRUPTER.title": "Neuron Disrupter",
   "STS2_CHAR_PORTALCRAFT-NEURON_DISRUPTER.description": "Draw {Cards:diff()} cards. Gain Energy equal to the number of cards in your hand.",

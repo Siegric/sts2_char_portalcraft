@@ -31,8 +31,8 @@ public sealed class LuWohLightPersonified : sts2_char_portalcraftCard
 
     protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]
     {
-        new IntVar("MagicNumber", 2m),
-        new IntVar("BoostedMagicNumber", 4m),
+        new IntVar("MagicNumber", 4m),
+        new IntVar("BoostedMagicNumber", 6m),
     };
 
     public override IEnumerable<CardKeyword> CanonicalKeywords => new[] { CardKeyword.Exhaust };

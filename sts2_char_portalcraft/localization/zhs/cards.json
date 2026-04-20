@@ -285,7 +285,7 @@
   "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_OF_FORTUNE.description": "每回合开始时，随机发动一个效果（不会连续两回合发动相同效果）：\n1. 手牌中所有牌费用减少1直到回合结束。\n2. 获得2点[gold]力量[/gold]和2点[gold]敏捷[/gold]直到回合结束。\n3. 恢复3点生命。",
 
   "STS2_CHAR_PORTALCRAFT-MECHA_CAVALIER.title": "魔钢骑兵",
-  "STS2_CHAR_PORTALCRAFT-MECHA_CAVALIER.description": "获得 {Block:diff()} 点格挡。若此牌费用为1，改为获得{IfUpgraded:show:Block:diff()|Block:diff()}点格挡。若费用为0，改为获得{IfUpgraded:show:24|20}点格挡。",
+  "STS2_CHAR_PORTALCRAFT-MECHA_CAVALIER.description": "获得 {Block:diff()} 点格挡。若此牌费用不为2, 每低于1费，获得额外的4点格挡。",
 
   "STS2_CHAR_PORTALCRAFT-TIMID_PIONEER.title": "胆小鬼先锋",
   "STS2_CHAR_PORTALCRAFT-TIMID_PIONEER.description": "所有敌人失去 {MagicNumber:diff()} 点[gold]力量[/gold]直到其回合结束。",
@@ -297,7 +297,7 @@
   "STS2_CHAR_PORTALCRAFT-TSUBASA_BLAZING_GEARCYCLIST.description": "随机减少手牌中 {MagicNumber:diff()} 张牌的费用1点，持续到本回合结束。",
 
   "STS2_CHAR_PORTALCRAFT-EUSTACE_HOWL_OF_THUNDER.title": "轰雷闪狼·尤斯提斯",
-  "STS2_CHAR_PORTALCRAFT-EUSTACE_HOWL_OF_THUNDER.description": "造成 {Damage:diff()} 点伤害。若此牌费用不为2，改为造成{IfUpgraded:show:Damage:diff()|Damage:diff()}点伤害，并随机减少手牌中1张牌的费用1点，持续本回合。",
+  "STS2_CHAR_PORTALCRAFT-EUSTACE_HOWL_OF_THUNDER.description": "造成 {Damage:diff()} 点伤害。若此牌费用不为2，额外造成4点伤害，并随机减少手牌中1张牌的费用1点，持续到本回合结束。",
 
   "STS2_CHAR_PORTALCRAFT-NEURON_DISRUPTER.title": "神经遮蔽者",
   "STS2_CHAR_PORTALCRAFT-NEURON_DISRUPTER.description": "抽 {Cards:diff()} 张牌。获得等同于手牌数量的能量。",

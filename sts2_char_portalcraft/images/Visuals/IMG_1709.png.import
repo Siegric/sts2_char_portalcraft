@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cutwrqh1oesuo"
-path="res://.godot/imported/Ralmia2.png-e952eed7f82f2e938185da1b12add4b7.ctex"
+uid="uid://l3dhgwkrvj50"
+path="res://.godot/imported/IMG_1709.png-66bce81c5c4a6acf78f2c9c8b1bf71c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sts2_char_portalcraft/images/charui/Ralmia2.png"
-dest_files=["res://.godot/imported/Ralmia2.png-e952eed7f82f2e938185da1b12add4b7.ctex"]
+source_file="res://sts2_char_portalcraft/images/Visuals/IMG_1709.png"
+dest_files=["res://.godot/imported/IMG_1709.png-66bce81c5c4a6acf78f2c9c8b1bf71c0.ctex"]
 
 [params]
 
