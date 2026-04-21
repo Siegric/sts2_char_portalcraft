@@ -1,0 +1,313 @@
+{
+  "STS2_CHAR_PORTALCRAFT-GEAR_OF_AMBITION.title": "퓨처 코어",
+  "STS2_CHAR_PORTALCRAFT-GEAR_OF_AMBITION.description": "효과 없음.\n[gold]융합[/gold]: 다른 [gold]퓨처 코어[/gold]를 소멸시키고 [gold]어택 아티팩트[/gold]를 생성한다.",
+
+  "STS2_CHAR_PORTALCRAFT-GEAR_OF_REMEMBRANCE.title": "패스트 코어",
+  "STS2_CHAR_PORTALCRAFT-GEAR_OF_REMEMBRANCE.description": "효과 없음.\n[gold]융합[/gold]: 다른 [gold]패스트 코어[/gold]를 소멸시키고 [gold]캐슬 아티팩트[/gold]를 생성한다.",
+
+  "STS2_CHAR_PORTALCRAFT-STRIKER_ARTIFACT.title": "어택 아티팩트",
+  "STS2_CHAR_PORTALCRAFT-STRIKER_ARTIFACT.description": " {Damage:diff()} 의 피해를 준다.\n[gold]융합[/gold]: [gold]아티팩트[/gold]를 소멸시킨다, 융합한 아티팩트의 합계 비용에 따라 변화한다.\n1: [gold]디스트로이 아티팩트 α[/gold]\n2: [gold]디스트로이 아티팩트 β[/gold]\n3 이상: [gold]디스트로이 아티팩트 γ[/gold]",
+
+  "STS2_CHAR_PORTALCRAFT-FORTIFIER_ARTIFACT.title": "캐슬 아티팩트",
+  "STS2_CHAR_PORTALCRAFT-FORTIFIER_ARTIFACT.description": " 방어도를 {Block:diff()} 얻는다.\n[gold]융합[/gold]: [gold]아티팩트[/gold]를 소멸시킨다, 융합한 아티팩트의 합계 비용에 따라 변화한다.\n1: [gold]디스트로이 아티팩트 α[/gold]\n2: [gold]디스트로이 아티팩트 β[/gold]\n3 이상: [gold]디스트로이 아티팩트 γ[/gold]",
+
+  "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_ALPHA.title": "디스트로이 아티팩트 α",
+  "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_ALPHA.description": " {CalculatedDamage:diff()} 의 피해를 준다. 소멸 더미에 있는 카드 1장당, {ExtraDamage:diff()} 의 피해를 추가한다. 모든 적에게 {MagicNumber:diff()} 의 피해를 준다.\n[gold]융합[/gold]: [gold]디스트로이 아티팩트 β[/gold]와 [gold]디스트로이 아티팩트 γ[/gold]를 소멸시키고 [gold]익시드 아티팩트 Ω[/gold]를 생성한다.",
+
+  "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_BETA.title": "디스트로이 아티팩트 β",
+  "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_BETA.description": "HP를 {Heal:diff()} 회복한다. 방어도를 {Block:diff()} 얻는다. [gold]판금[/gold] {PlatingPower:diff()} 을(를) 얻는다.\n[gold]융합[/gold]: [gold]디스트로이 아티팩트 α[/gold]와 [gold]디스트로이 아티팩트 γ[/gold]를 소멸시키고 [gold]익시드 아티팩트 Ω[/gold]를 생성한다.",
+
+  "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_GAMMA.title": "디스트로이 아티팩트 γ",
+  "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_GAMMA.description": "카드를 {Cards:diff()} 장 뽑는다. 에너지를 {Energy:diff()} 얻는다. 다음 턴에, 카드를 {MagicNumber:diff()} 장 뽑는다.\n[gold]융합[/gold]: [gold]디스트로이 아티팩트 α[/gold]와 [gold]디스트로이 아티팩트 β[/gold]를 소멸시키고 [gold]익시드 아티팩트 Ω[/gold]를 생성한다.",
+
+  "STS2_CHAR_PORTALCRAFT-MASTERWORK_OMEGA.title": "익시드 아티팩트 Ω",
+  "STS2_CHAR_PORTALCRAFT-MASTERWORK_OMEGA.description": " {CalculatedDamage:diff()} 의 피해를 준다. 소멸 더미에 있는 카드 1장당, {ExtraDamage:diff()} 의 피해를 추가한다. 모든 적에게 {MagicNumber:diff()} 의 피해를 준다. HP를 {Heal:diff()} 회복한다. 방어도를 {Block:diff()} 얻는다. [gold]판금[/gold] {PlatingPower:diff()} 을(를) 얻는다. 카드를 {Cards:diff()} 장 뽑는다. 에너지를 {Energy:diff()} 얻는다. 다음 턴에, 카드를 {DrawNextTurn:diff()} 장 뽑는다.",
+
+  "STS2_CHAR_PORTALCRAFT-STRIKE_PORTALCRAFT.title": "타격",
+  "STS2_CHAR_PORTALCRAFT-STRIKE_PORTALCRAFT.description": " {Damage:diff()} 의 피해를 준다.",
+
+  "STS2_CHAR_PORTALCRAFT-DEFEND_PORTALCRAFT.title": "수비",
+  "STS2_CHAR_PORTALCRAFT-DEFEND_PORTALCRAFT.description": " 방어도를 {Block:diff()} 얻는다.",
+
+  "STS2_CHAR_PORTALCRAFT-ARTIFACT_RECHARGE.title": "아티팩트 차지",
+  "STS2_CHAR_PORTALCRAFT-ARTIFACT_RECHARGE.description": "[gold]패스트 코어[/gold]와 [gold]퓨처 코어[/gold]를 각각 1장씩 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-FLIGHT_OF_ICARUS.title": "이카로스의 비상",
+  "STS2_CHAR_PORTALCRAFT-FLIGHT_OF_ICARUS.description": "[gold]아티팩트[/gold]를 1장 선택하여, 이번 턴 그 비용을 0으로 만든다. 플레이했을 때, 카드를 1장 뽑는다.",
+
+  "STS2_CHAR_PORTALCRAFT-ELISE_ELECTRIFYING_INVENTOR.title": "비비드 인벤터 이리스",
+  "STS2_CHAR_PORTALCRAFT-ELISE_ELECTRIFYING_INVENTOR.description": " 방어도를 {Block:diff()} 얻는다. [gold]패스트 코어[/gold]를 1장 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-IRONHEART_HUNTER.title": "언스토퍼블 거너",
+  "STS2_CHAR_PORTALCRAFT-IRONHEART_HUNTER.description": " {Damage:diff()} 의 피해를 준다. [gold]퓨처 코어[/gold]를 1장 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-ARTIFACT_CATAPULT.title": "아티팩트 캐터펄트",
+  "STS2_CHAR_PORTALCRAFT-ARTIFACT_CATAPULT.description": "[gold]퓨처 코어[/gold]를 1장 패에 넣는다. [gold]아티팩트[/gold]를 1장 선택하여, 그 복사본을 1장 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-BULLET_FROM_BEYOND.title": "이차원으로부터의 사격",
+  "STS2_CHAR_PORTALCRAFT-BULLET_FROM_BEYOND.description": " {Damage:diff()} 의 피해를 준다. [gold]퓨처 코어[/gold]와 [gold]패스트 코어[/gold]를 각각 1장씩 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-FIELD_SCIENTIST.title": "필드 엔지니어",
+  "STS2_CHAR_PORTALCRAFT-FIELD_SCIENTIST.description": "카드를 1장 버린다. 카드를 {Cards:diff()} 장 뽑는다.",
+
+  "STS2_CHAR_PORTALCRAFT-DOOMWRIGHT_RESURGENCE.title": "개경의 재동",
+  "STS2_CHAR_PORTALCRAFT-DOOMWRIGHT_RESURGENCE.description": "1 비용 이하의 [gold]아티팩트[/gold]를 최대 2장까지 선택하여, 그 복사본을 패에 넣는다. 이번 턴, 그것은 비용을 지불하지 않고 플레이할 수 있다. [gold]휘발성[/gold]을 가진다.",
+
+  "STS2_CHAR_PORTALCRAFT-CARNELIA_EMBER_OF_DARKNESS.title": "암옥의 잔광 재스퍼",
+  "STS2_CHAR_PORTALCRAFT-CARNELIA_EMBER_OF_DARKNESS.description": "[gold]패스트 코어[/gold]를 1장 패에 넣는다. [gold]아티팩트[/gold]를 1장 소멸시킨다. 소멸시킨 아티팩트의 비용＋1의 에너지를 얻는다.",
+
+  "STS2_CHAR_PORTALCRAFT-MIRIAM_THE_RESOLUTE.title": "레졸루션 미리암",
+  "STS2_CHAR_PORTALCRAFT-MIRIAM_THE_RESOLUTE.description": "[gold]패스트 코어[/gold]와 [gold]퓨처 코어[/gold]를 각각 2장씩 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-RUKINA_RESISTANCE_LEADER.title": "스트러글 리더 루키나",
+  "STS2_CHAR_PORTALCRAFT-RUKINA_RESISTANCE_LEADER.description": " 방어도를 {Block:diff()} 얻는다. [gold]퓨처 코어[/gold]와 [gold]패스트 코어[/gold]를 각각 1장씩 패에 넣는다. [gold]어택 아티팩트[/gold]를 1장 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-NEW_AGE_CARTOGRAPHER.title": "네오 지오그래퍼",
+  "STS2_CHAR_PORTALCRAFT-NEW_AGE_CARTOGRAPHER.description": "[gold]디스트로이 아티팩트 β[/gold]를 1장 패에 넣는다. 이번 턴, 그것은 비용을 지불하지 않고 플레이할 수 있다. [gold]휘발성[/gold]을 가진다.",
+
+  "STS2_CHAR_PORTALCRAFT-ALOUETTE_DOOMWRIGHT_WARD.title": "개경의 천궁 알루에트",
+  "STS2_CHAR_PORTALCRAFT-ALOUETTE_DOOMWRIGHT_WARD.description": "[gold]퓨처 코어[/gold]와 [gold]패스트 코어[/gold]를 각각 1장씩 패에 넣는다. [gold]아티팩트[/gold]를 1장 선택하여, 이번 턴 그 비용을 0으로 만든다.",
+
+  "STS2_CHAR_PORTALCRAFT-SHODDY_PLAYTHING.title": "저열한 장난감",
+  "STS2_CHAR_PORTALCRAFT-SHODDY_PLAYTHING.description": "카드를 {Cards:diff()} 장 뽑는다. 이 카드의 복사본을 1장 뽑을 카드 더미에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-ENGINEBLADE_MAVEN.title": "엔진 블레이더",
+  "STS2_CHAR_PORTALCRAFT-ENGINEBLADE_MAVEN.description": " {Damage:diff()} 의 피해를 준다. [gold]패스트 코어[/gold]와 [gold]어택 아티팩트[/gold]를 각각 1장씩 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-BRILLIANT_INVENTOR.title": "브라이트 크리에이터",
+  "STS2_CHAR_PORTALCRAFT-BRILLIANT_INVENTOR.description": "[gold]디스트로이 아티팩트 α[/gold]를 1장 패에 넣는다. 이번 턴, 그것은 비용을 지불하지 않고 플레이할 수 있다. [gold]휘발성[/gold]을 가진다.",
+
+  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN.title": "새로운 소녀 에이스",
+  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN.description": "턴 종료 시, 패가 5장 미만인 경우, 다음 턴에 카드를 1장 뽑는다. 패가 6장을 초과하는 경우, 다음 턴에 에너지 1을 얻는다.",
+
+  "STS2_CHAR_PORTALCRAFT-ANCIENT_CANNON.title": "유산의 포격",
+  "STS2_CHAR_PORTALCRAFT-ANCIENT_CANNON.description": "[gold]아티팩트[/gold]를 [gold]융합[/gold]할 때마다, 무작위 적에게 {MagicNumber:diff()} 의 피해를 준다.",
+
+  "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_BOOM.title": "부스트 익스텐드 라라미아",
+  "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_BOOM.description": "2 비용 이하의 [gold]아티팩트[/gold]를 최대 {IfUpgraded:show:X+1|X}장까지 선택하여, 효과를 발동한다.",
+
+  "STS2_CHAR_PORTALCRAFT-CAMISCILLA_UNFEELING_HEART.title": "열악의 순심 카미실라",
+  "STS2_CHAR_PORTALCRAFT-CAMISCILLA_UNFEELING_HEART.description": "패에 있는 [gold]아티팩트[/gold] 1장당, {Damage:diff()} 의 피해를 준다.",
+
+  "STS2_CHAR_PORTALCRAFT-LUDICROUS_ORDNANCE.title": "우열의 병기",
+  "STS2_CHAR_PORTALCRAFT-LUDICROUS_ORDNANCE.description": "이 카드의 복사본을 {Cards:diff()} 장 패에 넣는다. 모든 적에게 {Damage:diff()} 의 피해를 준다, 패에 있는 복사본 1장당, 1회 피해를 준다.",
+
+  "STS2_CHAR_PORTALCRAFT-SYLVIA_GARDEN_EXECUTIONER.title": "모형정원의 단죄자 실비아",
+  "STS2_CHAR_PORTALCRAFT-SYLVIA_GARDEN_EXECUTIONER.description": "모드를 선택하여 발동한다.\n1. 카드를 2장 뽑는다 \n2. HP를 4 회복한다",
+
+  "STS2_CHAR_PORTALCRAFT-SYLVIA_DRAW_CHOICE.title": "드로우",
+  "STS2_CHAR_PORTALCRAFT-SYLVIA_DRAW_CHOICE.description": "카드를 {Cards:diff()} 장 뽑는다.",
+
+  "STS2_CHAR_PORTALCRAFT-SYLVIA_HEAL_CHOICE.title": "치료",
+  "STS2_CHAR_PORTALCRAFT-SYLVIA_HEAL_CHOICE.description": "HP를 {Heal:diff()} 회복한다.",
+
+  "STS2_CHAR_PORTALCRAFT-PUPPET.title": "인형",
+  "STS2_CHAR_PORTALCRAFT-PUPPET.description": " {Damage:diff()} 의 피해를 준다.",
+
+  "STS2_CHAR_PORTALCRAFT-ENHANCED_PUPPET.title": "개량형 인형",
+  "STS2_CHAR_PORTALCRAFT-ENHANCED_PUPPET.description": " {Damage:diff()} 의 피해를 준다.",
+
+  "STS2_CHAR_PORTALCRAFT-DOLL_SLAYER.title": "돌 슬로터",
+  "STS2_CHAR_PORTALCRAFT-DOLL_SLAYER.description": "모든 적에게 {Damage:diff()} 의 피해를 준다.\n[gold]커튼콜[/gold]: [gold]하트 슬로터 피어[/gold]를 1장 패에 넣는다",
+
+  "STS2_CHAR_PORTALCRAFT-PUPPET_CAT.title": "인형 고양이",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_CAT.description": "[gold]인형[/gold]을 1장 패에 넣는다, 그 피해에 {BonusDamage:diff()} 을(를) 추가한다.",
+
+  "STS2_CHAR_PORTALCRAFT-PUPPET_LANCER.title": "괴뢰 장창수",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_LANCER.description": " {Damage:diff()} 의 피해를 준다. [gold]개량형 인형[/gold]을 1장 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-LOVESTRUCK_PUPPETEER.title": "애집의 인형술사",
+  "STS2_CHAR_PORTALCRAFT-LOVESTRUCK_PUPPETEER.description": " 방어도를 {Block:diff()} 얻는다. [gold]인형[/gold]을 {PuppetCount:diff()} 장 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-VIER_HEART_SLAYER.title": "하트 슬로터 피어",
+  "STS2_CHAR_PORTALCRAFT-VIER_HEART_SLAYER.description": "[gold]인형[/gold] 1장을 돌 슬로터로 변화시킨다, 그 [gold]돌 슬로터[/gold]는 변화한 인형의 피해를 이것에 추가한다.",
+
+  "STS2_CHAR_PORTALCRAFT-PUPPET_SHIELD.title": "인형의 대역",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_SHIELD.description": "[gold]인형[/gold]을 최대 {IfUpgraded:show:4|3}장까지 소멸시킨다. 소멸시킨 [gold]인형[/gold] 1장당, 그 피해와 동일한 방어도를 얻는다.",
+
+  "STS2_CHAR_PORTALCRAFT-WIRED_ASSAULT.title": "스트링 어설트",
+  "STS2_CHAR_PORTALCRAFT-WIRED_ASSAULT.description": " {Damage:diff()} 의 피해를 준다. [gold]인형[/gold]을 2장 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-MEDICAL_GRADE_ASSASSIN.title": "기계 인형 암살자",
+  "STS2_CHAR_PORTALCRAFT-MEDICAL_GRADE_ASSASSIN.description": " {Damage:diff()} 의 피해를 준다. [gold]리플레이[/gold] 1을 가진 [gold]개량형 인형[/gold]을 1장 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-RESURRECTION_TUNER.title": "리바이브 튜닝",
+  "STS2_CHAR_PORTALCRAFT-RESURRECTION_TUNER.description": "카드를 1장 소멸시킨다. 소멸 더미에 있는 [gold]인형[/gold]을 최대 2장까지 무작위로 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER.title": "돌즈 시어터",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER.description": "[gold]카운트다운[/gold] ({Countdown}). 턴 시작 시, [gold]인형[/gold]을 {MagicNumber:diff()} 장 패에 넣는다",
+
+  "STS2_CHAR_PORTALCRAFT-MARIONETTE_MASTER.title": "스테이지 메이커",
+  "STS2_CHAR_PORTALCRAFT-MARIONETTE_MASTER.description": "[gold]인형[/gold]과 [gold]개량형 인형[/gold]을 각각 1장씩 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-ZWEI_SYMPHONIC_HEART.title": "심포니아 하트 츠바이",
+  "STS2_CHAR_PORTALCRAFT-ZWEI_SYMPHONIC_HEART.description": "[gold]빅토리아[/gold]를 1장 패에 넣는다. [gold]빅토리아[/gold]는 [gold]리플레이[/gold] 1을 부여한다.",
+
+  "STS2_CHAR_PORTALCRAFT-NOAH_THREAD_OF_DEATH.title": "살의의 실 노아",
+  "STS2_CHAR_PORTALCRAFT-NOAH_THREAD_OF_DEATH.description": "이번 턴, [gold]인형[/gold]은 {MagicNumber:diff()} 의 피해를 추가한다.",
+
+  "STS2_CHAR_PORTALCRAFT-SUBSTANDARD_PUPPET.title": "졸렬한 인형",
+  "STS2_CHAR_PORTALCRAFT-SUBSTANDARD_PUPPET.description": " {Damage:diff()} 의 피해를 준다. 이 카드의 복사본을 1장 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-SYNCHRONOUS_HEARTS.title": "마음이 있는 공투",
+  "STS2_CHAR_PORTALCRAFT-SYNCHRONOUS_HEARTS.description": "[gold]로이드[/gold]와 [gold]빅토리아[/gold]를 각각 1장씩 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-LLOYD.title": "로이드",
+  "STS2_CHAR_PORTALCRAFT-LLOYD.description": " 방어도를 {Block:diff()} 얻는다.",
+
+  "STS2_CHAR_PORTALCRAFT-VICTORIA.title": "빅토리아",
+  "STS2_CHAR_PORTALCRAFT-VICTORIA.description": " {Damage:diff()} 의 피해를 준다.",
+
+  "STS2_CHAR_PORTALCRAFT-ORCHIS_NEWFOUND_HEART.title": "프로시드 하트 오키스",
+  "STS2_CHAR_PORTALCRAFT-ORCHIS_NEWFOUND_HEART.description": "[gold]로이드[/gold]를 1장 패에 넣는다. [gold]개량형 인형[/gold]을 2장 패에 넣는다. 패와 소멸 더미에 있는 모든 [gold]인형[/gold]에 [gold]리플레이[/gold] 1을 인챈트한다.",
+
+  "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR.title": "광기의 창조자 리암",
+  "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR.description": "[gold]인형[/gold]을 플레이할 때마다, 방어도를 {MagicNumber:diff()} 얻는다. [gold]인형[/gold]을 4장 플레이할 때마다, 에너지 1을 얻는다.",
+
+  "STS2_CHAR_PORTALCRAFT-SUPPLICANT_OF_DESTRUCTION.title": "파괴의 기도자",
+  "STS2_CHAR_PORTALCRAFT-SUPPLICANT_OF_DESTRUCTION.description": "카드 1장을 소멸시킨다. 무작위 적에게 {Damage:diff()} 의 피해를 준다.",
+
+  "STS2_CHAR_PORTALCRAFT-DEVOTEE_OF_DESTRUCTION.title": "파괴의 긍정자",
+  "STS2_CHAR_PORTALCRAFT-DEVOTEE_OF_DESTRUCTION.description": "패를 모두 소멸시킨다. {Multiplier:diff()}X 의 방어도를 얻고, {Multiplier:diff()}X 의 피해를 준다. X = 이번 턴에 소멸시킨 카드의 수.",
+
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION.title": "파괴의 황야",
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION.description": "카드 1장을 선택한다. 선택한 카드를 소멸시키고, 카드를 {Cards:diff()} 장 뽑는다. 이 카드의 플레이 불가인 복사본을 1장 패에 넣는다\n[gold]커튼콜[/gold]: 카드를 1장 뽑는다.",
+
+  "STS2_CHAR_PORTALCRAFT-CONGREGANT_OF_DESTRUCTION.title": "파괴의 단결자",
+  "STS2_CHAR_PORTALCRAFT-CONGREGANT_OF_DESTRUCTION.description": "패를 모두 소멸시킨다. 카드를 X장 뽑는다. X = 이번 턴에 소멸시킨 카드의 수.",
+
+  "STS2_CHAR_PORTALCRAFT-DEVASTATING_SOPRANO.title": "섬멸의 노랫소리",
+  "STS2_CHAR_PORTALCRAFT-DEVASTATING_SOPRANO.description": "카드를 1장 소멸시킨다. [gold]신약 백의 장[/gold]을 1장 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION.title": "파괴의 계승자 악시아",
+  "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION.description": "턴 종료 시, 패에 있는 모든 [gold]신약 백의 장[/gold]과 [gold]신약 흑의 장[/gold]을 소멸시킨다.",
+
+  "STS2_CHAR_PORTALCRAFT-LISHENNA_MELODY_MANIFEST.title": "주절의 현현 리셰나",
+  "STS2_CHAR_PORTALCRAFT-LISHENNA_MELODY_MANIFEST.description": "[gold]신약 백의 장[/gold]을 2장 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING.title": "전일의 왕 벨제부브",
+  "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING.description": "적이 피해를 입었을 때, 그 받는 피해를 2 증가시킨다. 방어도를 얻었을 때, 추가로 2 방어도를 얻는다.",
+
+  "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.title": "신약 백의 장",
+  "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.description": "[gold]카운트다운[/gold] ({Countdown}).\n[gold]커튼콜[/gold]: {PsalmBlock} 방어도를 얻는다. 신약 흑의 장 1장을 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.title": "신약 흑의 장",
+  "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.description": "[gold]카운트다운[/gold] ({Countdown}).\n[gold]커튼콜[/gold]: 모든 적에게 {PsalmDamage} 의 피해를 준다. 신약 백의 장 1장을 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.title": "파괴의 황야",
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.description": "[gold]커튼콜[/gold]: 카드를 1장 뽑는다.",
+
+  "STS2_CHAR_PORTALCRAFT-BIOFABRICATION.title": "생명의 양산",
+  "STS2_CHAR_PORTALCRAFT-BIOFABRICATION.description": "[gold]아티팩트[/gold]를 1장 선택하여, 그 비용을 1 감소시킨다. 그 복사본을 3장 뽑을 카드 더미에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.title": "음속의 기구 라라미아",
+  "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.description": "[gold]융합[/gold]을 4회 할 때마다, 에너지 1을 얻는다.",
+
+  "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL.title": "기구의 해방",
+  "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL.description": "이번 턴, [gold]아티팩트[/gold]를 플레이할 때마다, 에너지 1을 얻고 카드를 1장 뽑는다.",
+
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER.title": "천래의 구광 레트라피아",
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER.description": "[gold]결정[/gold] (1): [gold]카운트다운[/gold] (10). 자신의 턴 중, 모든 [gold]아티팩트[/gold]의 비용을 0으로 만든다. [gold]아티팩트[/gold]를 플레이할 때마다, 이 마법진의 [gold]카운트다운[/gold]이 진행된다.\n[gold]커튼콜[/gold]: [gold]천래의 구광 레트라피아[/gold]를 1장 패에 넣는다. 이번 턴, 그것은 비용을 지불하지 않고 플레이할 수 있다.\n----------\n 모든 적에게 {IfUpgraded:show:4|3}X 의 피해를 준다. X = 이번 전투에서 소멸시킨 [gold]아티팩트[/gold]의 수.",
+
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER_AMULET.title": "천래의 구광 레트라피아",
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER_AMULET.description": "[gold]카운트다운[/gold] ({Countdown}). 자신의 턴 중, 모든 [gold]아티팩트[/gold]의 비용을 0으로 만든다. [gold]아티팩트[/gold]를 플레이할 때마다, 이 마법진의 [gold]카운트다운[/gold]이 진행된다.\n[gold]커튼콜[/gold]: [gold]천래의 구광 레트라피아[/gold]를 1장 패에 넣는다. 이번 턴, 그것은 비용을 지불하지 않고 플레이할 수 있다.",
+
+  "STS2_CHAR_PORTALCRAFT-LIGHT_OF_THE_DEWDROP.title": "작은 꽃의 조림",
+  "STS2_CHAR_PORTALCRAFT-LIGHT_OF_THE_DEWDROP.description": "카드를 {Cards:diff()} 장 뽑는다.",
+
+  "STS2_CHAR_PORTALCRAFT-STREAM_OF_LIFE.title": "생명의 분류",
+  "STS2_CHAR_PORTALCRAFT-STREAM_OF_LIFE.description": " {Damage:diff()} 의 피해를 준다. [gold]패스트 코어[/gold]를 1장 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-ELECTRIC_WHIP_LASS.title": "일렉트로 위퍼",
+  "STS2_CHAR_PORTALCRAFT-ELECTRIC_WHIP_LASS.description": " 방어도를 {Block:diff()} 얻는다. [gold]패스트 코어[/gold]를 {MagicNumber:diff()} 장 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-ADVENT_OF_THE_ELD_AXE.title": "천부 수여",
+  "STS2_CHAR_PORTALCRAFT-ADVENT_OF_THE_ELD_AXE.description": " {Damage:diff()} 의 피해를 준다. 패에 기본 비용이 2 이상인 카드가 있는 경우, 카드를 {Cards:diff()} 장 뽑는다.",
+
+  "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST.title": "수성의 철인",
+  "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST.description": " 방어도를 {Block:diff()} 얻는다. 이번 턴 공격을 받을 때마다, 공격한 적에게 {MagicNumber:diff()} 의 피해를 반사한다.",
+
+  "STS2_CHAR_PORTALCRAFT-KITTY_CANNONEER.title": "포격의 고양이 수인",
+  "STS2_CHAR_PORTALCRAFT-KITTY_CANNONEER.description": " {Damage:diff()} 의 피해를 준다. [gold]약화[/gold] {MagicNumber:diff()} 을(를) 부여한다. [gold]취약[/gold] {MagicNumber:diff()} 을(를) 부여한다. [gold]퓨처 코어[/gold]를 1장 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-SINCERITY_OF_THE_DEWDROP.title": "성심어린 작은 꽃",
+  "STS2_CHAR_PORTALCRAFT-SINCERITY_OF_THE_DEWDROP.description": "카드 1장을 {IfUpgraded:show:[gold]이마리의 꼬마 도깨비+[/gold]|[gold]이마리의 꼬마 도깨비[/gold]}로 변화시킨다.",
+
+  "STS2_CHAR_PORTALCRAFT-ILSA_BRUTAL_DRILL_SERGEANT.title": "엄렬한 교관 일자",
+  "STS2_CHAR_PORTALCRAFT-ILSA_BRUTAL_DRILL_SERGEANT.description": "모드를 선택하여 발동한다.\n1. 무작위 적에게 {IfUpgraded:show:16|12}의 피해를 3회 준다.\n2. 모든 적에게 {IfUpgraded:show:20|16}의 피해를 준다.",
+
+  "STS2_CHAR_PORTALCRAFT-ILSA_BARRAGE_CHOICE.title": "연사",
+  "STS2_CHAR_PORTALCRAFT-ILSA_BARRAGE_CHOICE.description": "무작위 적에게 {Damage:diff()} 의 피해를 3회 준다.",
+
+  "STS2_CHAR_PORTALCRAFT-ILSA_SWEEP_CHOICE.title": "휩쓸기",
+  "STS2_CHAR_PORTALCRAFT-ILSA_SWEEP_CHOICE.description": "모든 적에게 {Damage:diff()} 의 피해를 준다.",
+
+  "STS2_CHAR_PORTALCRAFT-ISAAC_CONGENIAL_ENGINEER.title": "보은의 기사 아이작",
+  "STS2_CHAR_PORTALCRAFT-ISAAC_CONGENIAL_ENGINEER.description": "[gold]어택 아티팩트[/gold]를 1장 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-DIRK_METAL_MERCENARY.title": "메탈 머시너리 디르크",
+  "STS2_CHAR_PORTALCRAFT-DIRK_METAL_MERCENARY.description": "[gold]캐슬 아티팩트[/gold]를 1장 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-STONE_BREAKER.title": "스톤 브레이크",
+  "STS2_CHAR_PORTALCRAFT-STONE_BREAKER.description": "무작위 적에게 {Damage:diff()} 의 피해를 {Repeat:diff()} 회 준다.",
+
+  "STS2_CHAR_PORTALCRAFT-CASSIUS_SKY_YEARNING_ARRIVAL.title": "하늘을 그리는 귀환자 카시우스",
+  "STS2_CHAR_PORTALCRAFT-CASSIUS_SKY_YEARNING_ARRIVAL.description": "[gold]아티팩트[/gold]를 1장 선택한다. 모든 적에게 {MagicNumber:diff()}X 의 피해를 준다. X = 선택한 아티팩트의 비용. [gold]캐슬 아티팩트[/gold]를 1장 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-MYRIAD_DESIGNS.title": "평범한 제도",
+  "STS2_CHAR_PORTALCRAFT-MYRIAD_DESIGNS.description":"{IfUpgraded:show:[gold]우열의 병기+[/gold]|[gold]우열의 병기[/gold]}, {IfUpgraded:show:[gold]저열한 장난감+[/gold]|[gold]저열한 장난감[/gold]}, {IfUpgraded:show:[gold]졸렬한 인형+[/gold]|[gold]졸렬한 인형[/gold]} 을 각각 1장씩 패에 넣는다. 이번 턴 그것들의 비용을 0으로 만든다.",
+
+  "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP.title": "작은 꽃 이마리",
+  "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP.description": "카드를 1장 버린다. 뽑을 카드 더미에서 [gold]스킬[/gold]을 1장 패에 넣는다. 이번 턴, [gold]스킬[/gold]을 플레이할 때마다, {IfUpgraded:show:[gold]이마리의 꼬마 도깨비+[/gold]|[gold]이마리의 꼬마 도깨비[/gold]}를 1장 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-UNFEELING_ELD_AXE.title": "열악의 천부",
+  "STS2_CHAR_PORTALCRAFT-UNFEELING_ELD_AXE.description": "[gold]패 효과[/gold]: 기본 비용이 2 이상인 카드를 플레이할 때마다, 이번 턴, 이 카드의 비용을 1 감소시킨다.\n카드를 1장 선택하여, 전투 종료 시까지 그 비용을 1 감소시킨다.",
+
+  "STS2_CHAR_PORTALCRAFT-SUPERSONIC_FIGHTER.title": "음속의 비행병",
+  "STS2_CHAR_PORTALCRAFT-SUPERSONIC_FIGHTER.description": "[gold]디스트로이 아티팩트 γ[/gold]를 1장 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-IMARIS_LITTLE_BUDDIES.title": "이마리의 꼬마 도깨비",
+  "STS2_CHAR_PORTALCRAFT-IMARIS_LITTLE_BUDDIES.description": " {Damage:diff()} 의 피해를 준다. 방어도를 {Block:diff()} 얻는다.",
+
+  "STS2_CHAR_PORTALCRAFT-LUNAR_BUNNY.title": "맑은 밤의 짝토끼",
+  "STS2_CHAR_PORTALCRAFT-LUNAR_BUNNY.description": " 방어도를 {Block:diff()} 얻는다.\n[gold]패 효과[/gold]: [gold]스킬[/gold]을 플레이할 때마다, 이번 턴, 이 카드의 비용을 1 감소시킨다.",
+
+  "STS2_CHAR_PORTALCRAFT-YOG_ZENTHA_ELD_AXE.title": "오래된 천부 요그젠타",
+  "STS2_CHAR_PORTALCRAFT-YOG_ZENTHA_ELD_AXE.description": " {Damage:diff()} 의 피해를 준다. 패에 기본 비용이 2 이상인 카드가 있는 경우, [gold]천부의 심연[/gold]을 1장 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-DEPTHS_OF_THE_ELD_AXE.title": "천부의 심연",
+  "STS2_CHAR_PORTALCRAFT-DEPTHS_OF_THE_ELD_AXE.description": "기본 비용이 2 이상인 카드를 선택하여, 그 복사본을 패에 넣고, 전투 종료 시까지 그 복사본의 비용을 1 감소시킨다.",
+
+  "STS2_CHAR_PORTALCRAFT-SHO_REBORN_NIGHT_KING.title": "재기의 야왕 쇼",
+  "STS2_CHAR_PORTALCRAFT-SHO_REBORN_NIGHT_KING.description": "이번 턴, 스킬을 {SkillThreshold:diff()} 장 이상 플레이한 경우, 에너지 {MagicNumber:diff()} 을(를) 얻는다.",
+
+  "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_OF_FORTUNE.title": "도는 《운명의 수레바퀴》 슬로스",
+  "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_OF_FORTUNE.description": "턴 시작 시, 이하의 효과를 무작위로 발동한다. (동일한 효과는 턴마다 연속해서 발동하지 않는다.):\n1. 턴 종료 시까지 패에 있는 모든 카드의 비용을 1 감소시킨다.\n2. [gold]근력[/gold] 2와 [gold]민첩[/gold] 2를 얻는다.\n3. HP를 3 회복한다.",
+
+  "STS2_CHAR_PORTALCRAFT-MECHA_CAVALIER.title": "마강의 기병",
+  "STS2_CHAR_PORTALCRAFT-MECHA_CAVALIER.description": " 방어도를 {Block:diff()} 얻는다. 이 카드의 비용이 1이 된 경우, 대신 {IfUpgraded:show:20|16} 방어도를 얻는다. 비용이 0인 경우, {IfUpgraded:show:24|20} 방어도를 얻는다.",
+
+  "STS2_CHAR_PORTALCRAFT-TIMID_PIONEER.title": "소담의 파이오니아",
+  "STS2_CHAR_PORTALCRAFT-TIMID_PIONEER.description": "턴 종료 시까지 모든 적은 [gold]근력[/gold] {MagicNumber:diff()} 을(를) 잃는다.",
+
+  "STS2_CHAR_PORTALCRAFT-ACHIM_LORD_OF_DESPAIR.title": "디스페어 로드 아킴",
+  "STS2_CHAR_PORTALCRAFT-ACHIM_LORD_OF_DESPAIR.description": "카드를 1장 소멸시킨다. 버린 카드 더미에서 카드를 {IfUpgraded:show:2장|1장} 선택하여, 패에 넣는다.",
+
+  "STS2_CHAR_PORTALCRAFT-TSUBASA_BLAZING_GEARCYCLIST.title": "폭연의 총장 츠바사",
+  "STS2_CHAR_PORTALCRAFT-TSUBASA_BLAZING_GEARCYCLIST.description": "이번 턴 종료 시까지 패에 있는 {MagicNumber:diff()} 장의 카드 비용을 무작위로 1 감소시킨다.",
+
+  "STS2_CHAR_PORTALCRAFT-EUSTACE_HOWL_OF_THUNDER.title": "굉뢰의 섬랑 유스테스",
+  "STS2_CHAR_PORTALCRAFT-EUSTACE_HOWL_OF_THUNDER.description": " {Damage:diff()} 의 피해를 준다. 이 카드의 비용이 2가 아닌 경우, 대신 {IfUpgraded:show:22|18} 피해를 주고, 이번 턴 종료 시까지 패에 있는 1장의 카드 비용을 무작위로 1 감소시킨다.",
+
+  "STS2_CHAR_PORTALCRAFT-NEURON_DISRUPTER.title": "신경 차폐자",
+  "STS2_CHAR_PORTALCRAFT-NEURON_DISRUPTER.description": "카드를 {Cards:diff()} 장 뽑는다. 패의 매수와 동일한 에너지를 얻는다.",
+
+  "STS2_CHAR_PORTALCRAFT-FLOWERING_ARTISAN.title": "만개의 기술자",
+  "STS2_CHAR_PORTALCRAFT-FLOWERING_ARTISAN.description": "뽑을 카드 더미에서 [gold]스킬[/gold]을 1장 패에 넣는다. 이번 턴, [gold]스킬[/gold]을 플레이할 때마다, 모든 적에게 {MagicNumber:diff()} 의 피해를 준다.",
+
+  "STS2_CHAR_PORTALCRAFT-LU_WOH_LIGHT_PERSONIFIED.title": "빛의 이치 루 오",
+  "STS2_CHAR_PORTALCRAFT-LU_WOH_LIGHT_PERSONIFIED.description": "무작위 적에게 1의 피해를 6회 준다. 턴 종료 시까지 모든 적은 [gold]근력[/gold] {MagicNumber:diff()} 을(를) 잃는다. 이 카드의 비용이 2가 아닌 경우, 다음 적의 3턴 동안, 공격 의도를 가진 적은 턴 시작 시에 [gold]근력[/gold] 4를 잃는다.",
+
+  "STS2_CHAR_PORTALCRAFT-CHAOS_LEGION.title": "카오스 레기온",
+  "STS2_CHAR_PORTALCRAFT-CHAOS_LEGION.description": "모든 적에게 {Damage:diff()} 의 피해를 준다."
+}
