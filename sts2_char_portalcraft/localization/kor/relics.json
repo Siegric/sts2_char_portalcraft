@@ -1,0 +1,9 @@
+{
+  "STS2_CHAR_PORTALCRAFT-RESONANCE_CORE.title": "레조넌스 코어",
+  "STS2_CHAR_PORTALCRAFT-RESONANCE_CORE.description": "전투 시작 시, [gold]퓨처 코어[/gold]와 [gold]패스트 코어[/gold]를 각각 1장씩 패에 넣는다.",
+  "STS2_CHAR_PORTALCRAFT-RESONANCE_CORE.flavor": "PLACEHOLDER TEXT",
+
+  "STS2_CHAR_PORTALCRAFT-FUSION_PLATING.title": "퓨전 아머",
+  "STS2_CHAR_PORTALCRAFT-FUSION_PLATING.description": "아티팩트를 [gold]융합[/gold]할 때마다, 2 방어도를 얻는다.",
+  "STS2_CHAR_PORTALCRAFT-FUSION_PLATING.flavor": "PLACEHOLDER TEXT"
+}
