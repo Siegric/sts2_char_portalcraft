@@ -11,7 +11,7 @@ using sts2_char_portalcraft.PortalcraftCode.Relics;
 
 namespace sts2_char_portalcraft.PortalcraftCode.Character;
 
-public class sts2_char_portalcraft : PlaceholderCharacterModel
+public class Portalcraft : PlaceholderCharacterModel
 {
     public const string CharacterId = "sts2_char_portalcraft";
 

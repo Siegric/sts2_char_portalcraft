@@ -13,7 +13,7 @@ public class PortalcraftCardPool : CustomCardPoolModel
 {
 
 
-    public override string Title => sts2_char_portalcraft.CharacterId; //This is not a display name.
+    public override string Title => Portalcraft.CharacterId; //This is not a display name.
 
     public override string BigEnergyIconPath => "charui/big_energy.png".ImagePath();
     public override string TextEnergyIconPath => "charui/text_energy.png".ImagePath();

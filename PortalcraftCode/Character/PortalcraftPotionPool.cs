@@ -4,9 +4,10 @@ using Godot;
 
 namespace sts2_char_portalcraft.PortalcraftCode.Character;
 
-public class PortalcraftRelicPool : CustomRelicPoolModel
+public class PortalcraftPotionPool : CustomPotionPoolModel
 {
-    public override Color LabOutlineColor => sts2_char_portalcraft.Color;
+    public override Color LabOutlineColor => Portalcraft.Color;
+
 
     public override string BigEnergyIconPath => "charui/big_energy.png".ImagePath();
     public override string TextEnergyIconPath => "charui/text_energy.png".ImagePath();

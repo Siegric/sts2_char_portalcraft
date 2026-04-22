@@ -33,7 +33,7 @@ public static class EvoHolderInjectPatch
         string charId = player.Character?.Id.Entry ?? "<null>";
         MainFile.Logger.Info($"[Evo] Local player character: {charId}");
 
-        if (player.Character is not Character.sts2_char_portalcraft)
+        if (player.Character is not Character.Portalcraft)
         {
             MainFile.Logger.Info("[Evo] Not Portalcraft — skipping injection");
             return;
