@@ -47,5 +47,35 @@
   "SUPERSKYBOUNDART.title": "Super Skybound Art",
   "SUPERSKYBOUNDART.description": "An ability that activates when the card's [gold]Skybound Art[/gold] gauge is greater than or equal to [gold]15[/gold]. A card's Skybound Art gauge equals the current turn number plus the number of times a card has evolved while it is your hand.",
   "STS2_CHAR_PORTALCRAFT-SUPERSKYBOUNDART.title": "Super Skybound Art",
-  "STS2_CHAR_PORTALCRAFT-SUPERSKYBOUNDART.description": "An ability that activates when the card's [gold]Skybound Art[/gold] gauge is greater than or equal to [gold]15[/gold]. A card's Skybound Art gauge equals the current turn number plus the number of times a card has evolved while it is your hand."
+  "STS2_CHAR_PORTALCRAFT-SUPERSKYBOUNDART.description": "An ability that activates when the card's [gold]Skybound Art[/gold] gauge is greater than or equal to [gold]15[/gold]. A card's Skybound Art gauge equals the current turn number plus the number of times a card has evolved while it is your hand.",
+
+  "EVOLUTIONPOINT.title": "EP (Evolution Point)",
+  "EVOLUTIONPOINT.description": "Points you spend to [gold]Evolve[/gold] followers. You start the match with [gold]2[/gold].",
+  "STS2_CHAR_PORTALCRAFT-EVOLUTIONPOINT.title": "EP (Evolution Point)",
+  "STS2_CHAR_PORTALCRAFT-EVOLUTIONPOINT.description": "Points you spend to [gold]Evolve[/gold] followers. You start the match with [gold]2[/gold].",
+
+  "SUPEREVOLUTIONPOINT.title": "SEP (Super-Evolution Point)",
+  "SUPEREVOLUTIONPOINT.description": "Points you spend to [gold]Super-Evolve[/gold] followers. You start the match with [gold]2[/gold].",
+  "STS2_CHAR_PORTALCRAFT-SUPEREVOLUTIONPOINT.title": "SEP (Super-Evolution Point)",
+  "STS2_CHAR_PORTALCRAFT-SUPEREVOLUTIONPOINT.description": "Points you spend to [gold]Super-Evolve[/gold] followers. You start the match with [gold]2[/gold].",
+
+  "EVOLUTION.title": "Evolution",
+  "EVOLUTION.description": "Evolving a follower gives it a flat [gold]+2/+2[/gold] bonus. An evolved follower can't be evolved again. You can spend an [gold]EP[/gold] to evolve a follower once per turn. You can't [gold]Evolve[/gold] and [gold]Super-Evolve[/gold] in the same turn.",
+  "STS2_CHAR_PORTALCRAFT-EVOLUTION.title": "Evolution",
+  "STS2_CHAR_PORTALCRAFT-EVOLUTION.description": "Evolving a follower gives it a flat [gold]+2[/gold] bonus. An evolved follower can't be evolved again. You can spend an [gold]EP[/gold] to evolve a follower once per turn. You can't [gold]Evolve[/gold] and [gold]Super-Evolve[/gold] in the same turn.",
+
+  "SUPEREVOLUTION.title": "Super-Evolution",
+  "SUPEREVOLUTION.description": "Super-evolving a follower gives it a flat [gold]+3/+3[/gold] bonus and the following: — This follower can't be exhausted. Super-evolved followers are also considered [gold]Evolved[/gold]. You can spend an [gold]SEP[/gold] to super-evolve a follower once per turn. You can't [gold]Evolve[/gold] and [gold]Super-Evolve[/gold] in the same turn.",
+  "STS2_CHAR_PORTALCRAFT-SUPEREVOLUTION.title": "Super-Evolution",
+  "STS2_CHAR_PORTALCRAFT-SUPEREVOLUTION.description": "Super-evolving a follower gives it a flat [gold]+3[/gold] bonus and the following: — This follower can't be exhausted. Super-evolved followers are also considered [gold]Evolved[/gold]. You can spend an [gold]SEP[/gold] to super-evolve a follower once per turn. You can't [gold]Evolve[/gold] and [gold]Super-Evolve[/gold] in the same turn.",
+
+  "EVOLVE.title": "Evolve",
+  "EVOLVE.description": "An ability that activates when the card is evolved (using an [gold]EP[/gold]) or super-evolved.",
+  "STS2_CHAR_PORTALCRAFT-EVOLVE.title": "Evolve",
+  "STS2_CHAR_PORTALCRAFT-EVOLVE.description": "An ability that activates when the card is evolved (using an [gold]EP[/gold]) or super-evolved.",
+
+  "SUPEREVOLVE.title": "Super-Evolve",
+  "SUPEREVOLVE.description": "An ability that activates when the card is super-evolved.",
+  "STS2_CHAR_PORTALCRAFT-SUPEREVOLVE.title": "Super-Evolve",
+  "STS2_CHAR_PORTALCRAFT-SUPEREVOLVE.description": "An ability that activates when the card is super-evolved."
 }

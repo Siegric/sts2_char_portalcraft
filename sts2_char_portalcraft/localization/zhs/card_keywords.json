@@ -47,5 +47,35 @@
   "SUPERSKYBOUNDART.title": "解放奥义",
   "SUPERSKYBOUNDART.description": "[gold]奥义[/gold]槽为[gold]15[/gold]或以上时发动的能力。奥义槽是指“现在的回合数”和“在手牌中时自己的随从的进化次数”的合计。",
   "STS2_CHAR_PORTALCRAFT-SUPERSKYBOUNDART.title": "解放奥义",
-  "STS2_CHAR_PORTALCRAFT-SUPERSKYBOUNDART.description": "[gold]奥义[/gold]槽为[gold]15[/gold]或以上时发动的能力。奥义槽是指“现在的回合数”和“在手牌中时自己的随从的进化次数”的合计。"
+  "STS2_CHAR_PORTALCRAFT-SUPERSKYBOUNDART.description": "[gold]奥义[/gold]槽为[gold]15[/gold]或以上时发动的能力。奥义槽是指“现在的回合数”和“在手牌中时自己的随从的进化次数”的合计。",
+
+  "EVOLUTIONPOINT.title": "进化点",
+  "EVOLUTIONPOINT.description": "使随从进化时消耗的点数。开始对战时拥有[gold]2[/gold]点。",
+  "STS2_CHAR_PORTALCRAFT-EVOLUTIONPOINT.title": "进化点",
+  "STS2_CHAR_PORTALCRAFT-EVOLUTIONPOINT.description": "使随从进化时消耗的点数。开始对战时拥有[gold]2[/gold]点。",
+
+  "SUPEREVOLUTIONPOINT.title": "超进化点",
+  "SUPEREVOLUTIONPOINT.description": "使随从超进化时消耗的点数。开始对战时拥有[gold]2[/gold]点。",
+  "STS2_CHAR_PORTALCRAFT-SUPEREVOLUTIONPOINT.title": "超进化点",
+  "STS2_CHAR_PORTALCRAFT-SUPEREVOLUTIONPOINT.description": "使随从超进化时消耗的点数。开始对战时拥有[gold]2[/gold]点。",
+
+  "EVOLUTION.title": "进化",
+  "EVOLUTION.description": "强化自己随从的行为。进化后的随从将[gold]+2/+2[/gold]。已进化的随从无法再次进化。每回合1次，可通过消耗1个[gold]进化点[/gold]使1个随从进化。若消耗[gold]进化点[/gold]进化，则无法在同一回合内消耗[gold]超进化点[/gold]进行超进化。",
+  "STS2_CHAR_PORTALCRAFT-EVOLUTION.title": "进化",
+  "STS2_CHAR_PORTALCRAFT-EVOLUTION.description": "强化自己随从的行为。进化后的随从将[gold]+2[/gold]。已进化的随从无法再次进化。每回合1次，可通过消耗1个[gold]进化点[/gold]使1个随从进化。若消耗[gold]进化点[/gold]进化，则无法在同一回合内消耗[gold]超进化点[/gold]进行超进化。",
+
+  "SUPEREVOLUTION.title": "超进化",
+  "SUPEREVOLUTION.description": "强化自己随从的行为。超进化后的随从将[gold]+3/+3[/gold]，并获得以下能力。·此随从无法被[gold]消耗[/gold]。超进化后的随从也被视作[gold]进化[/gold]后的随从。每回合1次，可通过消耗1个[gold]超进化点[/gold]使1个随从超进化。若消耗[gold]进化点[/gold]进化，则无法在同一回合内消耗[gold]超进化点[/gold]进行超进化。",
+  "STS2_CHAR_PORTALCRAFT-SUPEREVOLUTION.title": "超进化",
+  "STS2_CHAR_PORTALCRAFT-SUPEREVOLUTION.description": "强化自己随从的行为。超进化后的随从将[gold]+3[/gold]，并获得以下能力。·此随从无法被[gold]消耗[/gold]。超进化后的随从也被视作[gold]进化[/gold]后的随从。每回合1次，可通过消耗1个[gold]超进化点[/gold]使1个随从超进化。若消耗[gold]进化点[/gold]进化，则无法在同一回合内消耗[gold]超进化点[/gold]进行超进化。",
+
+  "EVOLVE.title": "进化时",
+  "EVOLVE.description": "消耗[gold]进化点[/gold]进化时，或是消耗[gold]超进化点[/gold]超进化时，发动能力。",
+  "STS2_CHAR_PORTALCRAFT-EVOLVE.title": "进化时",
+  "STS2_CHAR_PORTALCRAFT-EVOLVE.description": "消耗[gold]进化点[/gold]进化时，或是消耗[gold]超进化点[/gold]超进化时，发动能力。",
+
+  "SUPEREVOLVE.title": "超进化时",
+  "SUPEREVOLVE.description": "消耗[gold]超进化点[/gold]超进化时，发动能力。",
+  "STS2_CHAR_PORTALCRAFT-SUPEREVOLVE.title": "超进化时",
+  "STS2_CHAR_PORTALCRAFT-SUPEREVOLVE.description": "消耗[gold]超进化点[/gold]超进化时，发动能力。"
 }

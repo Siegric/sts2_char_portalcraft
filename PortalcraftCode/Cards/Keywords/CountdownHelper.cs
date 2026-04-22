@@ -23,9 +23,7 @@ public static class CountdownHelper
         if (!card.DynamicVars.ContainsKey(CountdownVarName)) return;
         card.DynamicVars[CountdownVarName].BaseValue = value;
     }
-
-    // Decrements a card's Countdown by 1; if it hits 0, exhausts the card (which fires
-    // any Last Words via the dispatcher). Safe to call from any combat-time context.
+    
     public static async Task Tick(PlayerChoiceContext choiceContext, CardModel card)
     {
         if (!TryGetCountdown(card, out int current)) return;

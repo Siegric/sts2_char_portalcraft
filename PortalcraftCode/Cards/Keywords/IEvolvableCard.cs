@@ -4,7 +4,6 @@ using MegaCrit.Sts2.Core.Models;
 
 namespace sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
 
-// Tag interface for cards that can be evolved via Evo Points (EP) or Super Evo Points (SEP).
 public interface IEvolvableCard
 {
     Task OnEvolve(CardModel card, PlayerChoiceContext choiceContext) => Task.CompletedTask;
