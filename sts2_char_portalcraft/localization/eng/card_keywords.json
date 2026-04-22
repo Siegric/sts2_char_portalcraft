@@ -40,12 +40,12 @@
   "STS2_CHAR_PORTALCRAFT-LASTWORDS.description": "Activates when this card is [gold]Exhausted[/gold].",
 
   "SKYBOUNDART.title": "Skybound Art",
-  "SKYBOUNDART.description": "An ability that activates when the card's [gold]Skybound Art[/gold] gauge is greater than or equal to [gold]10[/gold]. A card's Skybound Art gauge equals the current turn number plus the number of times an allied follower has evolved while the card is in your hand.",
+  "SKYBOUNDART.description": "An ability that activates when the card's [gold]Skybound Art[/gold] gauge is greater than or equal to [gold]10[/gold]. A card's Skybound Art gauge equals the current turn number plus the number of times a card has evolved while it is your hand.",
   "STS2_CHAR_PORTALCRAFT-SKYBOUNDART.title": "Skybound Art",
-  "STS2_CHAR_PORTALCRAFT-SKYBOUNDART.description": "An ability that activates when the card's [gold]Skybound Art[/gold] gauge is greater than or equal to [gold]10[/gold]. A card's Skybound Art gauge equals the current turn number plus the number of times an allied follower has evolved while the card is in your hand.",
+  "STS2_CHAR_PORTALCRAFT-SKYBOUNDART.description": "An ability that activates when the card's [gold]Skybound Art[/gold] gauge is greater than or equal to [gold]10[/gold]. A card's Skybound Art gauge equals the current turn number plus the number of times a card has evolved while it is in your hand.",
 
   "SUPERSKYBOUNDART.title": "Super Skybound Art",
-  "SUPERSKYBOUNDART.description": "An ability that activates when the card's [gold]Skybound Art[/gold] gauge is greater than or equal to [gold]15[/gold]. A card's Skybound Art gauge equals the current turn number plus the number of times an allied follower has evolved while the card is in your hand.",
+  "SUPERSKYBOUNDART.description": "An ability that activates when the card's [gold]Skybound Art[/gold] gauge is greater than or equal to [gold]15[/gold]. A card's Skybound Art gauge equals the current turn number plus the number of times a card has evolved while it is your hand.",
   "STS2_CHAR_PORTALCRAFT-SUPERSKYBOUNDART.title": "Super Skybound Art",
-  "STS2_CHAR_PORTALCRAFT-SUPERSKYBOUNDART.description": "An ability that activates when the card's [gold]Skybound Art[/gold] gauge is greater than or equal to [gold]15[/gold]. A card's Skybound Art gauge equals the current turn number plus the number of times an allied follower has evolved while the card is in your hand."
+  "STS2_CHAR_PORTALCRAFT-SUPERSKYBOUNDART.description": "An ability that activates when the card's [gold]Skybound Art[/gold] gauge is greater than or equal to [gold]15[/gold]. A card's Skybound Art gauge equals the current turn number plus the number of times a card has evolved while it is your hand."
 }

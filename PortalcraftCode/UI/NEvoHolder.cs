@@ -10,27 +10,17 @@ using sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
 
 namespace sts2_char_portalcraft.PortalcraftCode.UI;
 
-// Factory for evo holder buttons. We deliberately avoid subclassing Godot.Control in
-// the mod assembly — the source-generated InvokeGodotClassMethod / HasGodotClassMethod
-// bridge interacts badly with MonoMod's JIT hook for mod-loaded types, producing an
-// ArgumentException at AddChildSafely time. Instead we build a vanilla Control with
-// children and hook its GuiInput signal.
-//
-// The holder's icon swaps per stage — one texture per "remaining points" value. Drop
-// PNGs named e.g. evo_icon_2.png (full), evo_icon_1.png, evo_icon_0.png (spent) and
-// the holder picks the right one based on current EvoPoints / SuperEvoPoints. If a
-// stage-specific file is missing, the holder falls back to the single-file icon.
 public static class NEvoHolder
 {
     private const float HolderSize = 64f;
     private const float IconOvershoot = 20f;
 
-    // Per-holder state, keyed by the root Control's Godot instance id.
+
     private sealed class State
     {
         public bool IsSuperEvolve;
         public TextureRect IconRect = null!;
-        public Texture2D?[] StageTextures = null!;  // indexed by remaining points (0..max)
+        public Texture2D?[] StageTextures = null!; 
         public Action<PlayerCombatState> ChangedHandler = null!;
     }
 
@@ -46,9 +36,7 @@ public static class NEvoHolder
         };
 
         var stageTextures = LoadStageTextures(isSuperEvolve);
-
-        // Icon extends beyond the holder's click area so the visible graphic is
-        // larger than the hit box — easier to read at a glance.
+        
         var icon = new TextureRect
         {
             ExpandMode = TextureRect.ExpandModeEnum.IgnoreSize,
@@ -63,7 +51,6 @@ public static class NEvoHolder
         };
         root.AddChild(icon);
 
-        // Register state + event subscriptions.
         var id = root.GetInstanceId();
         var state = new State
         {
@@ -77,9 +64,7 @@ public static class NEvoHolder
         EvoRuntime.Changed += state.ChangedHandler;
 
         _states[id] = state;
-
-        // Periodic refresh — hand contents change without firing EvoRuntime.Changed
-        // (cards drawn/discarded), so we poll to keep the greyed-out state in sync.
+        
         var refreshTimer = new Godot.Timer
         {
             WaitTime = 0.2,
@@ -89,12 +74,10 @@ public static class NEvoHolder
         root.AddChild(refreshTimer);
         refreshTimer.Connect(Godot.Timer.SignalName.Timeout,
             Callable.From(() => UpdateDisplay(rootRef)));
-
-        // Click handler.
+        
         root.Connect(Control.SignalName.GuiInput,
             Callable.From<InputEvent>(evt => OnGuiInput(rootRef, evt)));
-
-        // Cleanup when the holder leaves the tree (room change, combat end).
+        
         root.Connect(Node.SignalName.TreeExiting,
             Callable.From(() => OnTreeExiting(id)));
 
@@ -128,8 +111,6 @@ public static class NEvoHolder
         if (!_states.TryGetValue(root.GetInstanceId(), out var state)) return;
         if (evt is not InputEventMouseButton mb) return;
         if (mb.ButtonIndex != MouseButton.Left) return;
-        // Trigger on press so the arrow appears while the mouse button is still held;
-        // NTargetManager in ReleaseMouseToTarget mode completes on the subsequent release.
         if (!mb.Pressed) return;
 
         root.GetViewport().SetInputAsHandled();
@@ -149,8 +130,7 @@ public static class NEvoHolder
 
         int max = state.IsSuperEvolve ? EvoRuntime.MaxSuperEvoPoints : EvoRuntime.MaxEvoPoints;
         var player = GetLocalPlayer();
-
-        // Pre-combat (no PlayerCombatState) preview shows the "full" stage.
+        
         int count = player?.PlayerCombatState == null
             ? max
             : state.IsSuperEvolve

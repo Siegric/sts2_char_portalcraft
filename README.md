@@ -19,17 +19,9 @@ Slay the Spire 2 character mod inspired by Shadowverse's Portalcraft.
 | Skybound Art | `SkyboundArt` keyword (placeholder) | Gauge-based ability (unimplemented) |
 | Super Skybound Art | `SuperSkyboundArt` keyword (placeholder) | Gauge ≥15 variant (unimplemented) |
 
-All custom keyword dispatching flows through **`KeywordDispatcherPower`** — a
-hidden power applied to the player at combat start by `ResonanceCore`.
-
 ---
 
 ## Evolution
-
-Player spends 1 of 2 EP or 1 of 2 SEP per combat to buff an in-hand card.
-Unused points carry between turns; only one evolution action per turn; points
-don't regenerate. Default buff: +2 damage / +2 block (evolve) or +3 / +3
-(super-evolve), applied passively via `KeywordDispatcherPower`.
 
 ### Authoring an evolvable card
 
@@ -41,14 +33,12 @@ public sealed class MyCard : sts2_char_portalcraftCard, IEvolvableCard
 }
 ```
 
-Evolved cards automatically glow gold using `ShouldGlowGoldInternal`
-
 ### IEvolvableCard
 
 - `Task OnEvolve(CardModel card, PlayerChoiceContext ctx)`
-  — Card's custom evolve effect; default is no-op (passive stat boost only).
+  — Card's custom evolve effect; default is passive stat boost only.
 - `Task OnSuperEvolve(CardModel card, PlayerChoiceContext ctx)`
-  — Card's custom super-evolve effect; default is no-op.
+  — Card's custom super-evolve effect; default is passive stat boost only.
 
 ### EvoCmd 
 
@@ -57,31 +47,31 @@ Player-initiated:
 - `bool EvoCmd.CanEvolve(CardModel card)`
   — True if the player has 1+ EP, isn't turn-locked, and the card is an un-evolved `IEvolvableCard`.
 - `bool EvoCmd.CanSuperEvolve(CardModel card)`
-  — Same for SEP; allows re-tier on an already-evolved card (tier ≠ SuperEvolved).
+  — Same for SEP; blocks any card that already has a tier.
 - `Task<bool> EvoCmd.TryEvolve(CardModel card, PlayerChoiceContext ctx)`
-  — Spends 1 EP, runs the full pipeline (mark → glow → in-hand VFX → OnEvolve).
+  — Spends 1 EP, evolves the selected card.
 - `Task<bool> EvoCmd.TrySuperEvolve(CardModel card, PlayerChoiceContext ctx)`
-  — Spends 1 SEP, runs the full pipeline (mark → glow → center-screen VFX → OnSuperEvolve).
+  — Spends 1 SEP, super evolves the selected card.
 
 Card-initiated:
 
 - `bool EvoCmd.CanForceEvolve(CardModel card)`
   — True if the card is an `IEvolvableCard` with no tier yet.
 - `bool EvoCmd.CanForceSuperEvolve(CardModel card)`
-  — True if the card is an `IEvolvableCard` not already super-evolved.
+  — True if the card is an `IEvolvableCard` with no tier yet.
 - `Task<bool> EvoCmd.ForceEvolve(CardModel card, PlayerChoiceContext ctx, bool playVfx = true)`
-  — Evolves without spending EP; set `playVfx=false` for self-evolve on play (avoids double animation).
+  — Evolves without spending EP.
 - `Task<bool> EvoCmd.ForceSuperEvolve(CardModel card, PlayerChoiceContext ctx, bool playVfx = true)`
-  — Super-evolves without spending SEP; same `playVfx` control.
+  — Super-evolves without spending SEP.
 
-Hand-level predicates:
+Hand predicates:
 
 - `bool EvoCmd.CanEvolveAny(Player player)`
   — True if the player could evolve *some* card in hand right now.
 - `bool EvoCmd.CanSuperEvolveAny(Player player)`
-  — Same for super-evolve; used to grey out the SEP holder.
+  — Same for super-evolve.
 
-High-level UI flows:
+UI:
 
 - `Task<bool> EvoCmd.EvolveFromHand(Player p, PlayerChoiceContext ctx)`
   — Opens the modal `NPlayerHand.SelectCards` picker, then applies `TryEvolve` on the pick.
@@ -129,7 +119,7 @@ Pool:
 - `int EvoRuntime.EvoPoints(PlayerCombatState pcs)` / `SuperEvoPoints(PlayerCombatState pcs)`
   — Read current point counts.
 - `bool EvoRuntime.UsedThisTurn(PlayerCombatState pcs)`
-  — True if any evolution action has been used this turn (shared lockout across tiers).
+  — True if any evolution action has been used this turn.
 - `bool EvoRuntime.CanEvolve(PlayerCombatState pcs)` / `CanSuperEvolve(PlayerCombatState pcs)`
   — True if the corresponding point is available and the turn lockout isn't set.
 - `bool EvoRuntime.TrySpendEvo(PlayerCombatState pcs)` / `TrySpendSuperEvo(PlayerCombatState pcs)`
@@ -160,14 +150,14 @@ Events:
 
 ### Files
 
-| File | Role |
-|---|---|
-| `Cards/Keywords/EvoCmd.cs` | Command gateway — Try* and Force* entry points |
-| `Cards/Keywords/EvoRuntime.cs` | Per-combat pool + per-card tier state |
-| `Cards/Keywords/EvoTargeting.cs` | Session flag for arrow-select mode |
-| `Cards/Keywords/IEvolvableCard.cs` | Opt-in tag interface |
-| `UI/NEvoHolder.cs` | Button factory (staged icons, click-drag-arrow) |
-| `Patches/EvoHolderInjectPatch.cs` | Injects holders into `NCombatRoom` |
+| File | Role                                                               |
+|---|--------------------------------------------------------------------|
+| `Cards/Keywords/EvoCmd.cs` | Command gateway — Try* and Force* entry points                     |
+| `Cards/Keywords/EvoRuntime.cs` | Per-combat pool + per-card tier state                              |
+| `Cards/Keywords/EvoTargeting.cs` | Session flag for arrow-select mode                                 |
+| `Cards/Keywords/IEvolvableCard.cs` | Opt-in tag interface                                               |
+| `UI/NEvoHolder.cs` | Evo UI                                                             |
+| `Patches/EvoHolderInjectPatch.cs` | Injects holders into `NCombatRoom`                                 |
 | `Patches/NCardEvoTargetingPatch.cs` | Hand-hover bridge + play-click suppression + hover-tip suppression |
 
 ---

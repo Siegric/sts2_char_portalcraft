@@ -51,8 +51,10 @@ public static class EvoCmd
     {
         if (card is not IEvolvableCard) return false;
         if (card.Owner?.PlayerCombatState == null) return false;
-        // Already super → can't re-super-evolve.
-        return EvoRuntime.GetTier(card) != EvoRuntime.Tier.SuperEvolved;
+        // Any existing tier blocks super-evolve — an already-evolved card can't
+        // be super-evolved on top. A card is eligible only if it hasn't been
+        // evolved at all this combat.
+        return EvoRuntime.GetTier(card) == null;
     }
 
     // --- Player-initiated entry points (spend EP/SEP) -----------------------

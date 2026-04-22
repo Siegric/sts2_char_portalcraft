@@ -1,0 +1,41 @@
+{
+  "ARTIFACT.title": "아티팩트",
+  "ARTIFACT.description": "[gold]보존[/gold]. [gold]소멸[/gold]. 패에 있는 다른 아티팩트와 [gold]융합[/gold]하여, 더 상위의 아티팩트를 무료로 생성할 수 있다.",
+  "STS2_CHAR_PORTALCRAFT-ARTIFACT.title": "아티팩트",
+  "STS2_CHAR_PORTALCRAFT-ARTIFACT.description": "[gold]보존[/gold]. [gold]소멸[/gold]. 패에 있는 다른 아티팩트와 [gold]융합[/gold]하여, 더 상위의 아티팩트를 무료로 생성할 수 있다.",
+
+  "PUPPET.title": "꼭두각시 인형",
+  "PUPPET.description": "[gold]소멸[/gold]. 일시적인 파생 카드. 피해를 주기 위해 사용한다. 꼭두각시 인형 관련 카드와 시너지 효과를 가진다.",
+  "STS2_CHAR_PORTALCRAFT-PUPPET.title": "꼭두각시 인형",
+  "STS2_CHAR_PORTALCRAFT-PUPPET.description": "[gold]소멸[/gold]. 일시적인 파생 카드. 피해를 주기 위해 사용한다. 꼭두각시 인형 관련 카드와 시너지 효과를 가진다.",
+
+  "AMULET.title": "마법진",
+  "AMULET.description": "플레이 불가. 턴 종료 시 또는 소멸되었을 때 효과를 발동한다.",
+  "STS2_CHAR_PORTALCRAFT-AMULET.title": "마법진",
+  "STS2_CHAR_PORTALCRAFT-AMULET.description": "플레이 불가. 턴 종료 시 또는 소멸되었을 때 효과를 발동한다.",
+
+  "WASTELAND_TOKEN.title": "황야 파생물",
+  "WASTELAND_TOKEN.description": "플레이 불가. 소멸되었을 때, 카드를 1장 뽑는다.",
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_TOKEN.title": "황야 파생물",
+  "STS2_CHAR_PORTALCRAFT-WASTELAND_TOKEN.description": "플레이 불가. 소멸되었을 때, 카드를 1장 뽑는다.",
+
+  "FUSE.title": "융합",
+  "FUSE.description": "플레이 시, 패에 있는 동위의 아티팩트를 1장 소멸시키고, 더 상위의 아티팩트를 생성할 수 있다. 융합 시, 소비한 에너지를 반환한다.",
+  "STS2_CHAR_PORTALCRAFT-FUSE.title": "융합",
+  "STS2_CHAR_PORTALCRAFT-FUSE.description": "플레이 시, 패에 있는 동위의 아티팩트를 1장 소멸시키고, 더 상위의 아티팩트를 생성할 수 있다. 융합 시, 소비한 에너지를 반환한다.",
+
+  "CRYSTALLIZE.title": "결정",
+  "CRYSTALLIZE.description": "이 카드를 플레이하기 위한 에너지가 부족한 경우, 대신 [gold]결정[/gold] 비용을 소비하고, 결정 효과만 발동하여, [gold]아뮬렛[/gold]으로 변화한다.",
+  "STS2_CHAR_PORTALCRAFT-CRYSTALLIZE.title": "결정",
+  "STS2_CHAR_PORTALCRAFT-CRYSTALLIZE.description": "이 카드를 플레이하기 위한 에너지가 부족한 경우, 대신 [gold]결정[/gold] 비용을 소비하고, 결정 효과만 발동하여, [gold]아뮬렛[/gold]으로 변화한다.",
+
+  "COUNTDOWN.title": "카운트다운",
+  "COUNTDOWN.description": "턴 시작 시, 카운트가 1 진행된다. 0이 되면 [gold]소멸[/gold]된다.",
+  "STS2_CHAR_PORTALCRAFT-COUNTDOWN.title": "카운트다운",
+  "STS2_CHAR_PORTALCRAFT-COUNTDOWN.description": "턴 시작 시, 카운트가 1 진행된다. 0이 되면 [gold]소멸[/gold]된다.",
+
+  "LASTWORDS.title": "유언",
+  "LASTWORDS.description": "[gold]소멸[/gold]되었을 때 발동하는 능력.",
+  "STS2_CHAR_PORTALCRAFT-LASTWORDS.title": "유언",
+  "STS2_CHAR_PORTALCRAFT-LASTWORDS.description": "[gold]소멸[/gold]되었을 때 발동하는 능력."
+}
