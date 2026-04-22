@@ -1,0 +1,32 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using BaseLib.Utils;
+using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
+using sts2_char_portalcraft.PortalcraftCode.Character;
+using sts2_char_portalcraft.PortalcraftCode.Powers;
+
+namespace sts2_char_portalcraft.PortalcraftCode.Cards;
+
+[Pool(typeof(PortalcraftCardPool))]
+public sealed class BeelzebubSupremeKing : PortalcraftCard
+{
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
+    {
+        HoverTipFactory.FromPower<BeelzebubSupremeKingPower>(),
+    };
+
+    public BeelzebubSupremeKing() : base(3, CardType.Power, CardRarity.Rare, TargetType.Self) { }
+
+    protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
+    {
+        await PowerCmd.Apply<BeelzebubSupremeKingPower>(Owner.Creature, 2, Owner.Creature, this);
+    }
+
+    protected override void OnUpgrade()
+    {
+        EnergyCost.UpgradeBy(-1);
+    }
+}

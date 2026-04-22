@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__sts2-modding__search_game_code",
+      "mcp__sts2-modding__get_entity_source",
+      "Bash(xargs grep *)",
+      "mcp__sts2-modding__get_modding_guide",
+      "mcp__sts2-modding__suggest_hooks",
+      "mcp__sts2-modding__build_mod",
+      "mcp__sts2-modding__search_hooks_by_signature",
+      "Bash(dotnet build *)",
+      "Bash(grep -v \"^.*:$\")",
+      "Bash(xargs -0 sed -i -e s/sts2_char_portalcraftCardPool/PortalcraftCardPool/g -e s/sts2_char_portalcraftRelicPool/PortalcraftRelicPool/g -e s/sts2_char_portalcraftPotionPool/PortalcraftPotionPool/g -e s/sts2_char_portalcraftCard/PortalcraftCard/g -e s/sts2_char_portalcraftRelic/PortalcraftRelic/g -e s/sts2_char_portalcraftPotion/PortalcraftPotion/g -e s/sts2_char_portalcraftPower/PortalcraftPower/g -e s/sts2_char_portalcraftCode/PortalcraftCode/g)"
+    ]
+  }
+}

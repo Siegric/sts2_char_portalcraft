@@ -1,5 +1,5 @@
 {
-  "ARTIFACT_MERGE_PROMPT": "Select Artifacts to merge (or confirm to play raw)",
+  "ARTIFACT_FUSE_PROMPT": "Select Artifacts to fuse (or confirm to play raw)",
   "CATALYST_PROMPT": "Choose a T2 Artifact to add to your hand",
   "CARNELIA_PROMPT": "Select an Artifact to exhaust for energy",
   "ALOUETTE_PROMPT": "Select an Artifact to make free this turn",

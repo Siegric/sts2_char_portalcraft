@@ -135,7 +135,7 @@
   "STS2_CHAR_PORTALCRAFT-RESURRECTION_TUNER.description": "消耗手牌中1张牌。将消耗牌堆中至多2个随机[gold]悬丝傀儡[/gold]加入手牌。",
 
   "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER.title": "人偶剧场",
-  "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER.description": "[gold]倒数[/gold]（{Countdown}）。你的回合开始时，将 {MagicNumber:diff()} 个[gold]悬丝傀儡[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER.description": "[gold]吟唱[/gold]（{Countdown}）。你的回合开始时，将 {MagicNumber:diff()} 个[gold]悬丝傀儡[/gold]加入手牌。",
 
   "STS2_CHAR_PORTALCRAFT-MARIONETTE_MASTER.title": "舞台缔造者",
   "STS2_CHAR_PORTALCRAFT-MARIONETTE_MASTER.description": "将1个[gold]悬丝傀儡[/gold]和1个[gold]改良型·悬丝傀儡[/gold]加入手牌。",
@@ -189,10 +189,10 @@
   "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING.description": "当敌人受到伤害时，多受2点伤害。当你获得格挡时，多获得2点格挡。",
 
   "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.title": "新约·白之章",
-  "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.description": "[gold]倒数[/gold]（{Countdown}）。\n[gold]谢幕曲[/gold]：获得{PsalmBlock}点格挡。将1张[gold]新约·黑之章[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.description": "[gold]吟唱[/gold]（{Countdown}）。\n[gold]谢幕曲[/gold]：获得{PsalmBlock}点格挡。将1张[gold]新约·黑之章[/gold]加入手牌。",
 
   "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.title": "新约·黑之章",
-  "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.description": "[gold]倒数[/gold]（{Countdown}）。\n[gold]谢幕曲[/gold]：对所有敌人造成{PsalmDamage}点伤害。将1张[gold]新约·白之章[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.description": "[gold]吟唱[/gold]（{Countdown}）。\n[gold]谢幕曲[/gold]：对所有敌人造成{PsalmDamage}点伤害。将1张[gold]新约·白之章[/gold]加入手牌。",
 
   "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.title": "破坏的荒野",
   "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.description": "[gold]谢幕曲[/gold]：抽1张牌。",
@@ -207,10 +207,10 @@
   "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL.description": "直到本回合结束，每当一张[gold]创造物[/gold]牌被打出时，获得1点能量并抽1张牌。",
 
   "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER.title": "天降曙光·蕾德拉菲雅",
-  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER.description": "[gold]结晶[/gold]（1）：[gold]倒数[/gold]（10）。你的回合内，所有[gold]创造物[/gold]的费用变为0。每当一张[gold]创造物[/gold]被打出时，此护符的[gold]倒数[/gold]减1。\n[gold]谢幕曲[/gold]：将1张[gold]天降曙光·蕾德拉菲雅[/gold]加入手牌。它本回合费用变为0。\n----------\n对所有敌人造成 {IfUpgraded:show:4|3}X 点伤害。X 等于本场战斗中已被消耗的[gold]创造物[/gold]数量。",
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER.description": "[gold]结晶[/gold]（1）：[gold]吟唱[/gold]（10）。你的回合内，所有[gold]创造物[/gold]的费用变为0。每当一张[gold]创造物[/gold]被打出时，此护符的[gold]吟唱[/gold]减1。\n[gold]谢幕曲[/gold]：将1张[gold]天降曙光·蕾德拉菲雅[/gold]加入手牌。它本回合费用变为0。\n----------\n对所有敌人造成 {IfUpgraded:show:4|3}X 点伤害。X 等于本场战斗中已被消耗的[gold]创造物[/gold]数量。",
 
   "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER_AMULET.title": "天降曙光·蕾德拉菲雅",
-  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER_AMULET.description": "[gold]倒数[/gold]（{Countdown}）。你的回合内，所有[gold]创造物[/gold]的费用变为0。每当一张[gold]创造物[/gold]被打出时，[gold]倒数[/gold]减1。\n[gold]谢幕曲[/gold]：将1张[gold]天降曙光·蕾德拉菲雅[/gold]加入手牌。它本回合费用变为0。",
+  "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER_AMULET.description": "[gold]吟唱[/gold]（{Countdown}）。你的回合内，所有[gold]创造物[/gold]的费用变为0。每当一张[gold]创造物[/gold]被打出时，[gold]吟唱[/gold]减1。\n[gold]谢幕曲[/gold]：将1张[gold]天降曙光·蕾德拉菲雅[/gold]加入手牌。它本回合费用变为0。",
 
   "STS2_CHAR_PORTALCRAFT-LIGHT_OF_THE_DEWDROP.title": "尽小花的临照",
   "STS2_CHAR_PORTALCRAFT-LIGHT_OF_THE_DEWDROP.description": "抽 {Cards:diff()} 张牌。",

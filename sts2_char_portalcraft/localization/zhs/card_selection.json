@@ -1,5 +1,5 @@
 {
-  "ARTIFACT_MERGE_PROMPT": "选择要融合的创造物（或确认以直接打出）",
+  "ARTIFACT_FUSE_PROMPT": "选择要融合的创造物（或确认以直接打出）",
   "CATALYST_PROMPT": "选择1个T2创造物加入手牌",
   "CARNELIA_PROMPT": "选择要消耗的创造物以获得能量",
   "ALOUETTE_PROMPT": "选择本回合费用变为0的创造物",

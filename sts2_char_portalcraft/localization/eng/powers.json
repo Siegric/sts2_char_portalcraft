@@ -16,8 +16,8 @@
   "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_POWER.smartDescription": "At end of turn, if your hand has fewer than 5 cards, draw {Amount} additional card next turn. If your hand has more than 6 cards, gain {Amount} Energy next turn.",
 
   "STS2_CHAR_PORTALCRAFT-ANCIENT_CANNON_POWER.title": "Ancient Cannon",
-  "STS2_CHAR_PORTALCRAFT-ANCIENT_CANNON_POWER.description": "Whenever you merge an Artifact, deal damage to a random enemy.",
-  "STS2_CHAR_PORTALCRAFT-ANCIENT_CANNON_POWER.smartDescription": "Whenever you merge an Artifact, deal {Amount} damage to a random enemy.",
+  "STS2_CHAR_PORTALCRAFT-ANCIENT_CANNON_POWER.description": "Whenever you fuse an Artifact, deal damage to a random enemy.",
+  "STS2_CHAR_PORTALCRAFT-ANCIENT_CANNON_POWER.smartDescription": "Whenever you fuse an Artifact, deal {Amount} damage to a random enemy.",
 
   "STS2_CHAR_PORTALCRAFT-REPLAY_NEXT_PUPPET_POWER.title": "Puppet Strings",
   "STS2_CHAR_PORTALCRAFT-REPLAY_NEXT_PUPPET_POWER.description": "The next Puppet you play is replayed.",

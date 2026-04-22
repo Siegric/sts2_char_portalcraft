@@ -1,5 +1,7 @@
 {
   "CARD_TYPE.ARTIFACT": "Artifact",
   "CARD_TYPE.PUPPET": "Puppet",
-  "CARD_TYPE.AMULET": "Amulet"
+  "CARD_TYPE.AMULET": "Amulet",
+  "EVOLVE_SELECT_HEADER": "Select a card to [gold]Evolve[/gold]",
+  "SUPER_EVOLVE_SELECT_HEADER": "Select a card to [gold]Super Evolve[/gold]"
 }
