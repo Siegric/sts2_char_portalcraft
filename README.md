@@ -1,15 +1,12 @@
 # Portalcraft — Custom API Reference
 
-Slay the Spire 2 character mod inspired by Shadowverse's Portalcraft. This
-document indexes every custom system / hook / API the mod exposes. Each API
-shows its parameters plus a one-line description. Source files are the
-authoritative API — this is the navigation layer.
+Slay the Spire 2 character mod inspired by Shadowverse's Portalcraft.
 
 **Prerequisites:** .NET 9.0 SDK, Godot 4.5.1 Mono, Slay the Spire 2, BaseLib NuGet.
 
 ---
 
-## Systems at a glance
+## Systems 
 
 | System | Entry point | Purpose |
 |---|---|---|
@@ -44,7 +41,7 @@ public sealed class MyCard : sts2_char_portalcraftCard, IEvolvableCard
 }
 ```
 
-Evolved cards automatically glow gold (via `ShouldGlowGoldInternal` on the base class).
+Evolved cards automatically glow gold using `ShouldGlowGoldInternal`
 
 ### IEvolvableCard
 
@@ -53,9 +50,9 @@ Evolved cards automatically glow gold (via `ShouldGlowGoldInternal` on the base 
 - `Task OnSuperEvolve(CardModel card, PlayerChoiceContext ctx)`
   — Card's custom super-evolve effect; default is no-op.
 
-### EvoCmd — command gateway
+### EvoCmd 
 
-Player-initiated (UI holder click). Gated on pool + turn lockout + tier:
+Player-initiated:
 
 - `bool EvoCmd.CanEvolve(CardModel card)`
   — True if the player has 1+ EP, isn't turn-locked, and the card is an un-evolved `IEvolvableCard`.
@@ -66,7 +63,7 @@ Player-initiated (UI holder click). Gated on pool + turn lockout + tier:
 - `Task<bool> EvoCmd.TrySuperEvolve(CardModel card, PlayerChoiceContext ctx)`
   — Spends 1 SEP, runs the full pipeline (mark → glow → center-screen VFX → OnSuperEvolve).
 
-Card-initiated (from OnPlay etc). Tier-only, ignores pool/lockout:
+Card-initiated:
 
 - `bool EvoCmd.CanForceEvolve(CardModel card)`
   — True if the card is an `IEvolvableCard` with no tier yet.
@@ -77,7 +74,7 @@ Card-initiated (from OnPlay etc). Tier-only, ignores pool/lockout:
 - `Task<bool> EvoCmd.ForceSuperEvolve(CardModel card, PlayerChoiceContext ctx, bool playVfx = true)`
   — Super-evolves without spending SEP; same `playVfx` control.
 
-Hand-level predicates (for UI + select filters):
+Hand-level predicates:
 
 - `bool EvoCmd.CanEvolveAny(Player player)`
   — True if the player could evolve *some* card in hand right now.
@@ -113,7 +110,7 @@ protected override async Task OnPlay(PlayerChoiceContext ctx, CardPlay play)
 }
 ```
 
-### EvoRuntime — state store
+### EvoRuntime
 
 Constants:
 
@@ -125,7 +122,7 @@ Constants:
 - `const decimal EvoRuntime.SuperEvolveBlockBonus = 3` — Passive +block from Super Evolve.
 - `enum EvoRuntime.Tier { Evolved, SuperEvolved }` — Per-card evolution tier.
 
-Pool (per-combat, keyed weakly to `PlayerCombatState`):
+Pool:
 
 - `void EvoRuntime.InitForCombat(PlayerCombatState pcs)`
   — Resets EP/SEP to max and clears tier dict; called by `ResonanceCore.BeforeCombatStart`.
@@ -177,9 +174,6 @@ Events:
 
 ## Artifact Fusion
 
-Artifacts are token cards (Retain + Exhaust) that fuse into higher tiers while
-in hand. Fusing is free — energy is spent only on raw play. Tiers `T0 → T3`:
-
 | Tier | Cards | Fuse rules |
 |---|---|---|
 | T0 | `GearOfAmbition`, `GearOfRemembrance` | Any T0 pairs with any T0. Played card determines result: Ambition → `StrikerArtifact`, Remembrance → `FortifierArtifact` |
@@ -195,11 +189,11 @@ public sealed class MyArtifact : ArtifactCard
     public override ArtifactTier Tier => ArtifactTier.T1;
     public MyArtifact() : base(energyCost: 1, ArtifactType.Artifact, TargetType.Self) { }
     protected override Task OnRawPlay(PlayerChoiceContext ctx, CardPlay play) { ... }
-    public override Task ActivateEffect(PlayerChoiceContext ctx) { ... }   // Ralmia-style out-of-hand activation
+    public override Task ActivateEffect(PlayerChoiceContext ctx) { ... }   //out-of-hand activation
 }
 ```
 
-### ArtifactCard — base class
+### ArtifactCard
 
 - `abstract ArtifactTier Tier { get; }`
   — Declares which tier this artifact belongs to.
@@ -212,21 +206,21 @@ public sealed class MyArtifact : ArtifactCard
 - `virtual Task ActivateEffect(PlayerChoiceContext ctx)`
   — Card's effect when activated out of hand (e.g. by `RalmiaSonicRacer`); default no-op.
 
-### FuseRecipes — recipe lookup
+### FuseRecipes
 
 - `Type? FuseRecipes.FindResult(CardModel playedCard, IReadOnlyList<CardModel> discardedCards)`
   — Returns the resulting artifact type for the given fusion, or null if no recipe matches.
 - `HashSet<Type> FuseRecipes.GetValidDiscardTypes(Type playedType, ArtifactTier tier)`
   — Returns card types that are valid discard partners for a played card at `tier`.
 
-### IFuseListener — reacting to fusions
+### IFuseListener
 
 - `Task OnArtifactFused(PlayerChoiceContext ctx, ArtifactCard playedCard, IReadOnlyList<CardModel> discardedCards, CardModel resultCard, ArtifactTier resultTier)`
   — Fires for every successful fusion on the played card's owner's active powers + relics.
 
 Currently implemented by `AncientCannonPower`, `RalmiaSonicRacerPower`, `FusionPlating`.
 
-### ArtifactHelper — utilities
+### ArtifactHelper
 
 - `Type[] ArtifactHelper.T0Types / T1Types / T2Types`
   — Static arrays of concrete card types per tier.
@@ -237,7 +231,7 @@ Currently implemented by `AncientCannonPower`, `RalmiaSonicRacerPower`, `FusionP
 - `int ArtifactHelper.CountArtifactsInHand(Player owner)`
   — Returns how many `ArtifactCard`s are currently in the player's hand.
 
-### FuseRuntime — transient state
+### FuseRuntime
 
 - `void FuseRuntime.Mark(CardModel card)`
   — Flags a card as currently mid-fuse (used by `FusePatches` to spend reduced resources).
@@ -263,10 +257,6 @@ Currently implemented by `AncientCannonPower`, `RalmiaSonicRacerPower`, `FusionP
 ---
 
 ## Other custom keywords
-
-Each follows the same shape: a `CardKeyword` via `[CustomEnum]`, a tag interface
-on cards that implement the behaviour, optional runtime state, and a dispatcher
-site (usually `KeywordDispatcherPower`).
 
 ### Countdown
 
@@ -315,9 +305,6 @@ Dispatched from `KeywordDispatcherPower.AfterPlayerTurnStart`, before countdown 
 
 ## Custom CardKeywords / CardTags / CardTypes
 
-All via BaseLib's `[CustomEnum]`. Localization keys are the field name
-uppercased with underscores removed (e.g. `SkyboundArt` → `SKYBOUNDART`).
-
 | Name | Kind | File |
 |---|---|---|
 | `FuseKeyword.Fuse` | `CardKeyword` | `Cards/Artifacts/FuseKeyword.cs` |
@@ -331,13 +318,9 @@ uppercased with underscores removed (e.g. `SkyboundArt` → `SKYBOUNDART`).
 | `OmenTag.Omen` | `CardTag` | `Cards/Omen/OmenTag.cs` |
 | `ArtifactType.Artifact` | `CardType` | `Cards/Artifacts/ArtifactType.cs` |
 
-Tooltip text: `localization/{eng,jpn,zhs}/card_keywords.json`.
-
 ---
 
 ## Harmony patches (behavior modifiers)
-
-All registered by `MainFile.Initialize` → `new Harmony(ModId).PatchAll()`.
 
 | Patch | Target | Purpose |
 |---|---|---|
@@ -355,9 +338,6 @@ All registered by `MainFile.Initialize` → `new Harmony(ModId).PatchAll()`.
 ---
 
 ## Base classes
-
-All custom content subclasses one of these, registered into the Portalcraft
-pools via BaseLib's `[Pool(typeof(...))]`.
 
 - `abstract class sts2_char_portalcraftCard : CustomCardModel`
   — Card base; auto image-paths, gold glow for evolved cards, pool registration.
@@ -380,10 +360,6 @@ Base-card override of note:
 ---
 
 ## KeywordDispatcherPower — central dispatcher
-
-Hidden, persistent `PowerType.Buff`, applied at combat start by
-`ResonanceCore.BeforeCombatStart`. All custom keyword behaviour funnels through
-this single power.
 
 - `int ArtifactsExhaustedCount { get; }`
   — Running count of `ArtifactCard`s exhausted this combat (for relics/powers that scale with it).
