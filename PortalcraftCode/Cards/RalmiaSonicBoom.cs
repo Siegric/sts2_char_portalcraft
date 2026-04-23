@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BaseLib.Extensions;
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.CardSelection;
 using MegaCrit.Sts2.Core.Commands;
@@ -9,24 +11,56 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Models;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Artifacts;
+using sts2_char_portalcraft.PortalcraftCode.Cards.Evolved;
+using sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
+using sts2_char_portalcraft.PortalcraftCode.Cards.SuperEvolved;
 using sts2_char_portalcraft.PortalcraftCode.Character;
+using sts2_char_portalcraft.PortalcraftCode.Extensions;
 
 namespace sts2_char_portalcraft.PortalcraftCode.Cards;
 
 [Pool(typeof(PortalcraftCardPool))]
-public sealed class RalmiaSonicBoom : PortalcraftCard
+public class RalmiaSonicBoom : PortalcraftCard, IEvolvableCard
 {
+    protected readonly EvoTier Tier;
+
     protected override bool HasEnergyCostX => true;
 
-    public RalmiaSonicBoom() : base(-1, CardType.Skill, CardRarity.Rare, TargetType.Self) { }
+    public RalmiaSonicBoom() : this(EvoTier.Base) { }
+    protected RalmiaSonicBoom(EvoTier tier)
+        : base(-1, CardType.Skill, tier.OverrideRarity(CardRarity.Rare), TargetType.Self,
+               showInCardLibrary: tier == EvoTier.Base)
+    {
+        Tier = tier;
+    }
+
+    public virtual Type? EvolvedType      => Tier == EvoTier.Base ? typeof(RalmiaSonicBoomEvolved)      : null;
+    public virtual Type? SuperEvolvedType => Tier == EvoTier.Base ? typeof(RalmiaSonicBoomSuperEvolved) : null;
+
+    public override bool CanBeGeneratedInCombat => Tier == EvoTier.Base && base.CanBeGeneratedInCombat;
+
+    public override string PortraitPath       => $"{Tier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
+    public override string CustomPortraitPath => $"{Tier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
+    {
+        var selected = await SelectArtifacts(choiceContext);
+        foreach (var card in selected)
+        {
+            if (card is ArtifactCard artifact)
+            {
+                await artifact.ActivateEffect(choiceContext);
+            }
+        }
+    }
+    
+    protected async Task<List<CardModel>> SelectArtifacts(PlayerChoiceContext choiceContext)
     {
         int xValue = ResolveEnergyXValue();
         if (IsUpgraded)
             xValue++;
 
-        if (xValue <= 0) return;
+        if (xValue <= 0) return new List<CardModel>();
 
         bool Filter(CardModel c) =>
             c != this &&
@@ -34,28 +68,21 @@ public sealed class RalmiaSonicBoom : PortalcraftCard
             c.EnergyCost.Canonical <= 2;
 
         var handArtifacts = PileType.Hand.GetPile(Owner).Cards.Where(Filter).ToList();
+        if (handArtifacts.Count == 0) return new List<CardModel>();
 
-        if (handArtifacts.Count > 0)
-        {
-            int maxSelect = System.Math.Min(xValue, handArtifacts.Count);
-            var prefs = new CardSelectorPrefs(
-                new LocString("card_selection", "RALMIA_PROMPT"),
-                minCount: 0,
-                maxCount: maxSelect
-            );
+        int maxSelect = Math.Min(xValue, handArtifacts.Count);
+        var prefs = new CardSelectorPrefs(
+            new LocString("card_selection", "RALMIA_PROMPT"),
+            minCount: 0,
+            maxCount: maxSelect
+        );
 
-            var selected = await CardSelectCmd.FromHand(
-                choiceContext, Owner, prefs, Filter, this);
-
-            foreach (var card in selected)
-            {
-                if (card is ArtifactCard artifact)
-                {
-                    await artifact.ActivateEffect(choiceContext);
-                }
-            }
-        }
+        var selected = await CardSelectCmd.FromHand(choiceContext, Owner, prefs, Filter, this);
+        return selected.ToList();
     }
+
+    public virtual Task OnEvolve(CardModel card, PlayerChoiceContext choiceContext) => Task.CompletedTask;
+    public virtual Task OnSuperEvolve(CardModel card, PlayerChoiceContext choiceContext) => Task.CompletedTask;
 
     protected override void OnUpgrade()
     {

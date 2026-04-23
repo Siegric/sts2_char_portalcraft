@@ -6,9 +6,11 @@ using MegaCrit.Sts2.Core.CardSelection;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Models;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Artifacts;
+using sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
 using sts2_char_portalcraft.PortalcraftCode.Character;
 
 namespace sts2_char_portalcraft.PortalcraftCode.Cards;
@@ -17,6 +19,11 @@ namespace sts2_char_portalcraft.PortalcraftCode.Cards;
 public sealed class DoomwrightResurgence : PortalcraftCard
 {
     public override IEnumerable<CardKeyword> CanonicalKeywords => new[] { CardKeyword.Exhaust };
+
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
+    {
+        HoverTipFactory.FromKeyword(SummonKeyword.Summon),
+    };
 
     public DoomwrightResurgence() : base(2, CardType.Skill, CardRarity.Uncommon, TargetType.Self) { }
 
@@ -36,9 +43,7 @@ public sealed class DoomwrightResurgence : PortalcraftCard
         foreach (var card in selectedList)
         {
             var copy = ArtifactHelper.CreateByType(card.GetType(), CombatState, Owner);
-            copy.EnergyCost.SetThisTurnOrUntilPlayed(0, reduceOnly: true);
-            copy.AddKeyword(CardKeyword.Ethereal);
-            await CardPileCmd.AddGeneratedCardToCombat(copy, PileType.Hand, addedByPlayer: true);
+            await SummonHelper.Summon(copy, Owner);
         }
     }
 

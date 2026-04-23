@@ -30,7 +30,6 @@ public class SupplicantOfDestruction : PortalcraftCard, IEvolvableCard
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
     {
-        HoverTipFactory.FromKeyword(EvolutionKeyword.Evolution),
         HoverTipFactory.FromKeyword(EvolveKeyword.Evolve),
     };
 
@@ -55,9 +54,7 @@ public class SupplicantOfDestruction : PortalcraftCard, IEvolvableCard
     {
         await RunEffect(choiceContext);
     }
-
-    // Factored so Evolved/SuperEvolved can invoke the full effect multiple times
-    // (Evolve: Replicate this card's effects).
+    
     protected async Task RunEffect(PlayerChoiceContext choiceContext)
     {
         bool AnyCard(CardModel c) => c != this;
@@ -88,6 +85,13 @@ public class SupplicantOfDestruction : PortalcraftCard, IEvolvableCard
                 .Execute(choiceContext);
         }
     }
+    
+    public virtual async Task OnEvolve(CardModel card, PlayerChoiceContext choiceContext)
+    {
+        await RunEffect(choiceContext);
+    }
+
+    public virtual Task OnSuperEvolve(CardModel card, PlayerChoiceContext choiceContext) => Task.CompletedTask;
 
     protected override void OnUpgrade()
     {

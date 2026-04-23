@@ -23,5 +23,9 @@
   "ACHIM_EXHAUST_PROMPT": "选择要消耗的牌",
   "ACHIM_RETRIEVE_PROMPT": "选择要加入手牌的牌",
   "FLOWERING_ARTISAN_PROMPT": "选择1张技能牌加入手牌",
-  "DEPTHS_COPY_PROMPT": "选择1张基础费用2或以上的牌进行复制"
+  "DEPTHS_COPY_PROMPT": "选择1张基础费用2或以上的牌进行复制",
+  "NEW_AGE_CARTOGRAPHER_COPY_PROMPT": "选择1个费用2或以下的创造物进行复制",
+  "MELODIOUS_MONODY_PROMPT": "选择要消耗的牌",
+  "ALOUETTE_COPY_PROMPT": "选择1个费用2或以下的创造物进行复制",
+  "EUSTACE_SKYBOUND_PROMPT": "选择1张未进化的卡牌使其进化"
 }

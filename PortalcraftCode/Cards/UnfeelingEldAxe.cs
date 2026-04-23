@@ -32,9 +32,7 @@ public sealed class UnfeelingEldAxe : PortalcraftCard
     };
 
     public UnfeelingEldAxe() : base(1, CardType.Skill, CardRarity.Rare, TargetType.Self) { }
-
-    // In-hand: catch up on cost reductions for any cost-2+ plays already made
-    // this turn when the card first enters combat.
+    
     public override Task AfterCardEnteredCombat(CardModel card)
     {
         if (card != this || IsClone) return Task.CompletedTask;
@@ -49,8 +47,7 @@ public sealed class UnfeelingEldAxe : PortalcraftCard
         }
         return Task.CompletedTask;
     }
-
-    // In-hand: whenever a cost-2+ card is played, drop our cost by 1 this turn.
+    
     public override Task AfterCardPlayed(PlayerChoiceContext context, CardPlay cardPlay)
     {
         if (cardPlay.Card.Owner != Owner) return Task.CompletedTask;
@@ -62,7 +59,6 @@ public sealed class UnfeelingEldAxe : PortalcraftCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        // Evolve a random unevolved IEvolvableCard in hand with canonical cost ≥ 2.
         var candidates = PileType.Hand.GetPile(Owner).Cards
             .Where(c => c != this
                      && c is IEvolvableCard
@@ -73,7 +69,7 @@ public sealed class UnfeelingEldAxe : PortalcraftCard
         if (candidates.Count == 0) return;
 
         var picked = Owner.RunState.Rng.Shuffle.NextItem(candidates);
-        await EvoCmd.ForceEvolve(picked, choiceContext, playVfx: false);
+        await EvoCmd.ForceEvolve(picked, choiceContext, playVfx: true);
 
         var enemies = CombatState.HittableEnemies.ToList();
         if (enemies.Count == 0) return;

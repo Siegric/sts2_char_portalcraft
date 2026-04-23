@@ -4,6 +4,7 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using sts2_char_portalcraft.PortalcraftCode.Audio;
 
 namespace sts2_char_portalcraft.PortalcraftCode.Powers;
 
@@ -20,6 +21,7 @@ public sealed class ImariDewdropPower : PortalcraftPower
         if (cardPlay.Card.Type != CardType.Skill) return;
 
         Flash();
+        CardPlayAudioManager.PlayForEffect("ImariDewdrop");
         for (int i = 0; i < Amount; i++)
         {
             var token = CombatState.CreateCard<Cards.ImarisLittleBuddies>(cardPlay.Card.Owner);

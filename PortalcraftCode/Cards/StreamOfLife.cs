@@ -17,7 +17,7 @@ public sealed class StreamOfLife : PortalcraftCard
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]
     {
-        new DamageVar(6m, ValueProp.Move),
+        new DamageVar(4m, ValueProp.Move),
     };
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
@@ -25,7 +25,7 @@ public sealed class StreamOfLife : PortalcraftCard
         HoverTipFactory.FromCard<GearOfRemembrance>(),
     };
 
-    public StreamOfLife() : base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy) { }
+    public StreamOfLife() : base(0, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy) { }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

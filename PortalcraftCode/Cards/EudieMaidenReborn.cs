@@ -6,6 +6,7 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
+using MegaCrit.Sts2.Core.Models;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Evolved;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
 using sts2_char_portalcraft.PortalcraftCode.Cards.SuperEvolved;
@@ -46,6 +47,13 @@ public class EudieMaidenReborn : PortalcraftCard, IEvolvableCard
     {
         await CardPileCmd.Draw(choiceContext, 1, Owner);
     }
+    
+    public virtual async Task OnEvolve(CardModel card, PlayerChoiceContext choiceContext)
+    {
+        await PowerCmd.Apply<EudieMaidenRebornPower>(Owner.Creature, 1, Owner.Creature, this);
+    }
+
+    public virtual Task OnSuperEvolve(CardModel card, PlayerChoiceContext choiceContext) => Task.CompletedTask;
 
     protected override void OnUpgrade()
     {

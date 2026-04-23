@@ -102,6 +102,7 @@ public static class EvoCmd
 
         var hookTarget = finalCard as IEvolvableCard ?? evolvable;
         await hookTarget.OnEvolve(finalCard, ctx);
+        await NotifySkyboundArtOfEvolution(finalCard, ctx);
         return true;
     }
 
@@ -134,6 +135,7 @@ public static class EvoCmd
         var hookTarget = finalCard as IEvolvableCard ?? evolvable;
         await hookTarget.OnEvolve(finalCard, ctx);
         await hookTarget.OnSuperEvolve(finalCard, ctx);
+        await NotifySkyboundArtOfEvolution(finalCard, ctx);
         return true;
     }
     
@@ -164,7 +166,7 @@ public static class EvoCmd
         await CardPileCmd.AddGeneratedCardToCombat(newCard, PileType.Hand, addedByPlayer: true);
     }
 
-    private static async Task PlayEvolveVfx(CardModel card)
+    public static async Task PlayEvolveVfx(CardModel card)
     {
         var nCard = NCard.FindOnTable(card);
         if (nCard == null) return;
@@ -235,6 +237,38 @@ public static class EvoCmd
         if (hand == null) return;
         var holder = hand.ActiveHolders?.FirstOrDefault(h => h.CardNode?.Model == card);
         holder?.UpdateCard();
+    }
+
+    private static async Task NotifySkyboundArtOfEvolution(CardModel evolvedCard, PlayerChoiceContext ctx)
+    {
+        var owner = evolvedCard.Owner;
+        if (owner == null) return;
+
+        // Bump the single global counter once. Every Skybound Art card shares it.
+        SkyboundArtRuntime.AddGlobalBonus(evolvedCard.CombatState, 1);
+        SkyboundArtHelper.RefreshAllInHand(owner);
+
+        var handCards = PileType.Hand.GetPile(owner).Cards.ToList();
+        foreach (var card in handCards)
+        {
+            if (card is not ISkyboundArtCard skyCard) continue;
+
+            int gauge = SkyboundArtRuntime.CurrentGauge(card);
+
+            if (gauge >= SkyboundArtRuntime.SuperSkyboundArtThreshold &&
+                !SkyboundArtRuntime.HasFiredSuperSkyboundArt(card))
+            {
+                SkyboundArtRuntime.MarkSuperSkyboundArtFired(card);
+                await skyCard.OnSuperSkyboundArt(card, ctx);
+            }
+
+            if (gauge >= SkyboundArtRuntime.SkyboundArtThreshold &&
+                !SkyboundArtRuntime.HasFiredSkyboundArt(card))
+            {
+                SkyboundArtRuntime.MarkSkyboundArtFired(card);
+                await skyCard.OnSkyboundArt(card, ctx);
+            }
+        }
     }
     
     public static bool CanEvolveAny(Player player)

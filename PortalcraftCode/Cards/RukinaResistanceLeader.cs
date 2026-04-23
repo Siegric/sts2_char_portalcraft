@@ -7,6 +7,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Artifacts;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Evolved;
@@ -24,7 +25,7 @@ public class RukinaResistanceLeader : PortalcraftCard, IEvolvableCard
 
     protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]
     {
-        new BlockVar(12m, ValueProp.Move),
+        new BlockVar(8m, ValueProp.Move),
     };
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
@@ -34,6 +35,7 @@ public class RukinaResistanceLeader : PortalcraftCard, IEvolvableCard
         HoverTipFactory.FromCard<StrikerArtifact>(),
         HoverTipFactory.FromKeyword(EvolutionKeyword.Evolution),
         HoverTipFactory.FromKeyword(EvolveKeyword.Evolve),
+        HoverTipFactory.FromKeyword(SummonKeyword.Summon),
     };
 
     public RukinaResistanceLeader() : this(EvoTier.Base) { }
@@ -63,6 +65,13 @@ public class RukinaResistanceLeader : PortalcraftCard, IEvolvableCard
         var remembrance = CombatState.CreateCard<GearOfRemembrance>(Owner);
         await CardPileCmd.AddGeneratedCardToCombat(remembrance, PileType.Hand, addedByPlayer: true);
     }
+    
+    public virtual async Task OnEvolve(CardModel card, PlayerChoiceContext choiceContext)
+    {
+        await SummonHelper.Summon<StrikerArtifact>(Owner, CombatState);
+    }
+
+    public virtual Task OnSuperEvolve(CardModel card, PlayerChoiceContext choiceContext) => Task.CompletedTask;
 
     protected override void OnUpgrade()
     {

@@ -6,6 +6,7 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
+using MegaCrit.Sts2.Core.Models;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Evolved;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Omen;
@@ -54,6 +55,14 @@ public class LishennaMelodyManifest : PortalcraftCard, IEvolvableCard
         var monody = CombatState.CreateCard<MelodiousMonody>(Owner);
         await CardPileCmd.AddGeneratedCardToCombat(monody, PileType.Hand, addedByPlayer: true);
     }
+    
+    public virtual async Task OnEvolve(CardModel card, PlayerChoiceContext choiceContext)
+    {
+        await WhitePsalmNewRevelation.CreateInHand(Owner, CombatState);
+        await WhitePsalmNewRevelation.CreateInHand(Owner, CombatState);
+    }
+
+    public virtual Task OnSuperEvolve(CardModel card, PlayerChoiceContext choiceContext) => Task.CompletedTask;
 
     protected override void OnUpgrade()
     {

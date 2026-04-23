@@ -22,7 +22,7 @@ public class MedicalGradeAssassin : PortalcraftCard, IEvolvableCard
 
     protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]
     {
-        new DamageVar(4m, ValueProp.Move),
+        new DamageVar(6m, ValueProp.Move),
     };
 
     public override IEnumerable<CardKeyword> CanonicalKeywords => new[] { CardKeyword.Exhaust };
@@ -65,6 +65,6 @@ public class MedicalGradeAssassin : PortalcraftCard, IEvolvableCard
 
     protected override void OnUpgrade()
     {
-        EnergyCost.UpgradeBy(-1);
+        DynamicVars.Damage.UpgradeValueBy(3m);
     }
 }

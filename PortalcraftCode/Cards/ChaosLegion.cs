@@ -5,21 +5,36 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
+using sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
 using sts2_char_portalcraft.PortalcraftCode.Character;
 
 namespace sts2_char_portalcraft.PortalcraftCode.Cards;
 
 [Pool(typeof(PortalcraftCardPool))]
-public sealed class ChaosLegion : PortalcraftCard
+public sealed class ChaosLegion : PortalcraftCard, ISkyboundArtCard
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]
     {
-        new DamageVar(36m, ValueProp.Move),
+        new DamageVar(18m, ValueProp.Move),
+        new IntVar("SuperDamage", 36m),
+        new IntVar(SkyboundArtHelper.SkyboundArtVarName, 0m),
     };
 
-    public ChaosLegion() : base(4, CardType.Attack, CardRarity.Rare, TargetType.AllEnemies) { }
+    public override IEnumerable<CardKeyword> CanonicalKeywords => new[]
+    {
+        SuperSkyboundArtKeyword.SuperSkyboundArt,
+    };
+
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
+    {
+        HoverTipFactory.FromKeyword(SuperSkyboundArtKeyword.SuperSkyboundArt),
+    };
+
+    public ChaosLegion() : base(2, CardType.Attack, CardRarity.Rare, TargetType.AllEnemies) { }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
@@ -32,8 +47,21 @@ public sealed class ChaosLegion : PortalcraftCard
         }
     }
 
+    public async Task OnSuperSkyboundArt(CardModel card, PlayerChoiceContext choiceContext)
+    {
+        decimal amount = DynamicVars["SuperDamage"].BaseValue;
+        foreach (Creature enemy in CombatState.HittableEnemies)
+        {
+            await DamageCmd.Attack(amount)
+                .FromCard(this)
+                .Targeting(enemy)
+                .Execute(choiceContext);
+        }
+    }
+
     protected override void OnUpgrade()
     {
         DynamicVars.Damage.UpgradeValueBy(4m);
+        DynamicVars["SuperDamage"].UpgradeValueBy(8m);
     }
 }

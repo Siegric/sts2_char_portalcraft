@@ -6,6 +6,7 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
+using MegaCrit.Sts2.Core.Models;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Artifacts;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Evolved;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
@@ -47,8 +48,7 @@ public class MiriamTheResolute : PortalcraftCard, IEvolvableCard
     {
         await RunEffect();
     }
-
-    // Factored so Evolved can replicate the effect by calling it twice.
+    
     protected async Task RunEffect()
     {
         var ambition = CombatState.CreateCard<GearOfAmbition>(Owner);
@@ -57,6 +57,12 @@ public class MiriamTheResolute : PortalcraftCard, IEvolvableCard
         var remembrance = CombatState.CreateCard<GearOfRemembrance>(Owner);
         await CardPileCmd.AddGeneratedCardToCombat(remembrance, PileType.Hand, addedByPlayer: true);
     }
+    public virtual async Task OnEvolve(CardModel card, PlayerChoiceContext choiceContext)
+    {
+        await RunEffect();
+    }
+
+    public virtual Task OnSuperEvolve(CardModel card, PlayerChoiceContext choiceContext) => Task.CompletedTask;
 
     protected override void OnUpgrade()
     {

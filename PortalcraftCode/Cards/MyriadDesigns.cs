@@ -5,7 +5,7 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
-using MegaCrit.Sts2.Core.Models;
+using sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
 using sts2_char_portalcraft.PortalcraftCode.Character;
 
 namespace sts2_char_portalcraft.PortalcraftCode.Cards;
@@ -18,6 +18,7 @@ public sealed class MyriadDesigns : PortalcraftCard
         HoverTipFactory.FromCard<LudicrousOrdnance>(),
         HoverTipFactory.FromCard<ShoddyPlaything>(),
         HoverTipFactory.FromCard<SubstandardPuppet>(),
+        HoverTipFactory.FromKeyword(SummonKeyword.Summon),
     };
 
     public override IEnumerable<CardKeyword> CanonicalKeywords => new[] { CardKeyword.Exhaust };
@@ -37,11 +38,8 @@ public sealed class MyriadDesigns : PortalcraftCard
             CardCmd.Upgrade(puppet);
         }
 
-        ordnance.EnergyCost.SetThisTurnOrUntilPlayed(0, reduceOnly: true);
-        plaything.EnergyCost.SetThisTurnOrUntilPlayed(0, reduceOnly: true);
-        puppet.EnergyCost.SetThisTurnOrUntilPlayed(0, reduceOnly: true);
-
-        await CardPileCmd.AddGeneratedCardsToCombat(
-            new CardModel[] { ordnance, plaything, puppet }, PileType.Hand, addedByPlayer: true);
+        await SummonHelper.Summon(ordnance, Owner);
+        await SummonHelper.Summon(plaything, Owner);
+        await SummonHelper.Summon(puppet, Owner);
     }
 }

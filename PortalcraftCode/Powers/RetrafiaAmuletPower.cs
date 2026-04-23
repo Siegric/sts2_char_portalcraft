@@ -11,10 +11,6 @@ using sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
 
 namespace sts2_char_portalcraft.PortalcraftCode.Powers;
 
-// Ongoing effect while one or more RetrafiaDivineMotherAmulet cards exist in the player's piles:
-//   - All Artifact cards owned by the player cost 0.
-//   - When the player plays an Artifact, every Retrafia amulet's Countdown ticks by 1.
-// Removes itself when the last amulet leaves play.
 public sealed class RetrafiaAmuletPower : PortalcraftPower
 {
     public override PowerType Type => PowerType.Buff;

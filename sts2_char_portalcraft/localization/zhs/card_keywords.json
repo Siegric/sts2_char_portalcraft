@@ -42,12 +42,12 @@
   "SKYBOUNDART.title": "奥义",
   "SKYBOUNDART.description": "[gold]奥义[/gold]槽为[gold]10[/gold]或以上时发动的能力。奥义槽是指“现在的回合数”和“在手牌中时自己的随从的进化次数”的合计。",
   "STS2_CHAR_PORTALCRAFT-SKYBOUNDART.title": "奥义",
-  "STS2_CHAR_PORTALCRAFT-SKYBOUNDART.description": "[gold]奥义[/gold]槽为[gold]10[/gold]或以上时发动的能力。奥义槽是指“现在的回合数”和“在手牌中时自己的随从的进化次数”的合计。",
+  "STS2_CHAR_PORTALCRAFT-SKYBOUNDART.description": "[gold]奥义[/gold]槽为[gold]5[/gold]或以上时发动的能力。奥义槽是指“现在的回合数”和“在手牌中时自己的随从的进化次数”的合计。",
 
   "SUPERSKYBOUNDART.title": "解放奥义",
   "SUPERSKYBOUNDART.description": "[gold]奥义[/gold]槽为[gold]15[/gold]或以上时发动的能力。奥义槽是指“现在的回合数”和“在手牌中时自己的随从的进化次数”的合计。",
   "STS2_CHAR_PORTALCRAFT-SUPERSKYBOUNDART.title": "解放奥义",
-  "STS2_CHAR_PORTALCRAFT-SUPERSKYBOUNDART.description": "[gold]奥义[/gold]槽为[gold]15[/gold]或以上时发动的能力。奥义槽是指“现在的回合数”和“在手牌中时自己的随从的进化次数”的合计。",
+  "STS2_CHAR_PORTALCRAFT-SUPERSKYBOUNDART.description": "[gold]奥义[/gold]槽为[gold]7[/gold]或以上时发动的能力。奥义槽是指“现在的回合数”和“在手牌中时自己的随从的进化次数”的合计。",
 
   "EVOLUTIONPOINT.title": "进化点",
   "EVOLUTIONPOINT.description": "使随从进化时消耗的点数。开始对战时拥有[gold]2[/gold]点。",
@@ -87,5 +87,10 @@
   "CANNOTBEEXHAUSTED.title": "不可消耗",
   "CANNOTBEEXHAUSTED.description": "此牌无法被[gold]消耗[/gold]。",
   "STS2_CHAR_PORTALCRAFT-CANNOTBEEXHAUSTED.title": "不可消耗",
-  "STS2_CHAR_PORTALCRAFT-CANNOTBEEXHAUSTED.description": "此牌无法被[gold]消耗[/gold]。"
+  "STS2_CHAR_PORTALCRAFT-CANNOTBEEXHAUSTED.description": "此牌无法被[gold]消耗[/gold]。",
+
+  "SUMMON.title": "召唤",
+  "SUMMON.description": "将指定牌加入手牌。本回合费用为[gold]0[/gold]，并具有[gold]虚无[/gold]和[gold]消耗[/gold]。",
+  "STS2_CHAR_PORTALCRAFT-SUMMON.title": "召唤",
+  "STS2_CHAR_PORTALCRAFT-SUMMON.description": "将指定牌加入手牌。本回合费用为[gold]0[/gold]，并具有[gold]虚无[/gold]和[gold]消耗[/gold]。"
 }

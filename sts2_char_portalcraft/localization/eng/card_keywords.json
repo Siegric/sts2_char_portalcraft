@@ -42,12 +42,12 @@
   "SKYBOUNDART.title": "Skybound Art",
   "SKYBOUNDART.description": "An ability that activates when the card's [gold]Skybound Art[/gold] gauge is greater than or equal to [gold]10[/gold]. A card's Skybound Art gauge equals the current turn number plus the number of times a card has evolved while it is your hand.",
   "STS2_CHAR_PORTALCRAFT-SKYBOUNDART.title": "Skybound Art",
-  "STS2_CHAR_PORTALCRAFT-SKYBOUNDART.description": "An ability that activates when the card's [gold]Skybound Art[/gold] gauge is greater than or equal to [gold]10[/gold]. A card's Skybound Art gauge equals the current turn number plus the number of times a card has evolved while it is in your hand.",
+  "STS2_CHAR_PORTALCRAFT-SKYBOUNDART.description": "An ability that activates when the card's [gold]Skybound Art[/gold] gauge is greater than or equal to [gold]5[/gold]. A card's Skybound Art gauge equals the current turn number plus the number of times a card has evolved while it is in your hand.",
 
   "SUPERSKYBOUNDART.title": "Super Skybound Art",
   "SUPERSKYBOUNDART.description": "An ability that activates when the card's [gold]Skybound Art[/gold] gauge is greater than or equal to [gold]15[/gold]. A card's Skybound Art gauge equals the current turn number plus the number of times a card has evolved while it is your hand.",
   "STS2_CHAR_PORTALCRAFT-SUPERSKYBOUNDART.title": "Super Skybound Art",
-  "STS2_CHAR_PORTALCRAFT-SUPERSKYBOUNDART.description": "An ability that activates when the card's [gold]Skybound Art[/gold] gauge is greater than or equal to [gold]15[/gold]. A card's Skybound Art gauge equals the current turn number plus the number of times a card has evolved while it is your hand.",
+  "STS2_CHAR_PORTALCRAFT-SUPERSKYBOUNDART.description": "An ability that activates when the card's [gold]Skybound Art[/gold] gauge is greater than or equal to [gold]7[/gold]. A card's Skybound Art gauge equals the current turn number plus the number of times a card has evolved while it is your hand.",
 
   "EVOLUTIONPOINT.title": "EP (Evolution Point)",
   "EVOLUTIONPOINT.description": "Points you spend to [gold]Evolve[/gold] followers. You start the match with [gold]2[/gold].",
@@ -87,5 +87,10 @@
   "CANNOTBEEXHAUSTED.title": "Cannot be Exhausted",
   "CANNOTBEEXHAUSTED.description": "This card cannot be [gold]Exhausted[/gold] by any means.",
   "STS2_CHAR_PORTALCRAFT-CANNOTBEEXHAUSTED.title": "Cannot be Exhausted",
-  "STS2_CHAR_PORTALCRAFT-CANNOTBEEXHAUSTED.description": "This card cannot be [gold]Exhausted[/gold] by any means."
+  "STS2_CHAR_PORTALCRAFT-CANNOTBEEXHAUSTED.description": "This card cannot be [gold]Exhausted[/gold] by any means.",
+
+  "SUMMON.title": "Summon",
+  "SUMMON.description": "Adds the specified card to your hand. It costs [gold]0[/gold] this turn and gains [gold]Ethereal[/gold] and [gold]Exhaust[/gold].",
+  "STS2_CHAR_PORTALCRAFT-SUMMON.title": "Summon",
+  "STS2_CHAR_PORTALCRAFT-SUMMON.description": "Adds the specified card to your hand. It costs [gold]0[/gold] this turn and gains [gold]Ethereal[/gold] and [gold]Exhaust[/gold]."
 }

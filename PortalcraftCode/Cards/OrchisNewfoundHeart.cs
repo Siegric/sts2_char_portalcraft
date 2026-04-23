@@ -1,49 +1,67 @@
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
+using BaseLib.Extensions;
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
+using sts2_char_portalcraft.PortalcraftCode.Cards.Evolved;
+using sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Puppets;
+using sts2_char_portalcraft.PortalcraftCode.Cards.SuperEvolved;
 using sts2_char_portalcraft.PortalcraftCode.Character;
+using sts2_char_portalcraft.PortalcraftCode.Extensions;
+using sts2_char_portalcraft.PortalcraftCode.Powers;
 
 namespace sts2_char_portalcraft.PortalcraftCode.Cards;
 
 [Pool(typeof(PortalcraftCardPool))]
-public sealed class OrchisNewfoundHeart : PortalcraftCard
+public class OrchisNewfoundHeart : PortalcraftCard, IEvolvableCard
 {
+    protected readonly EvoTier Tier;
+
     public override IEnumerable<CardKeyword> CanonicalKeywords => new[] { CardKeyword.Exhaust };
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
     {
         HoverTipFactory.FromCard<Lloyd>(),
         HoverTipFactory.FromCard<EnhancedPuppet>(),
+        HoverTipFactory.FromPower<OrchisNewfoundHeartPower>(),
+        HoverTipFactory.FromKeyword(SummonKeyword.Summon),
+        HoverTipFactory.FromKeyword(BaneKeyword.Bane),
     };
 
-    public OrchisNewfoundHeart() : base(2, CardType.Skill, CardRarity.Rare, TargetType.Self) { }
+    public OrchisNewfoundHeart() : this(EvoTier.Base) { }
+    protected OrchisNewfoundHeart(EvoTier tier)
+        : base(3, CardType.Skill, tier.OverrideRarity(CardRarity.Rare), TargetType.Self,
+               showInCardLibrary: tier == EvoTier.Base)
+    {
+        Tier = tier;
+    }
+
+    public virtual Type? EvolvedType      => Tier == EvoTier.Base ? typeof(OrchisNewfoundHeartEvolved)      : null;
+    public virtual Type? SuperEvolvedType => Tier == EvoTier.Base ? typeof(OrchisNewfoundHeartSuperEvolved) : null;
+
+    public override bool CanBeGeneratedInCombat => Tier == EvoTier.Base && base.CanBeGeneratedInCombat;
+
+    public override string PortraitPath       => $"{Tier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
+    public override string CustomPortraitPath => $"{Tier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        var lloyd = CombatState.CreateCard<Lloyd>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(lloyd, PileType.Hand, addedByPlayer: true);
-        
-        await EnhancedPuppet.CreateInHand(Owner, 2, CombatState);
-        
-        var puppetsInHand = PileType.Hand.GetPile(Owner).Cards
-            .Where(c => PuppetHelper.IsPuppet(c))
-            .ToList();
+        await SummonHelper.Summon<Lloyd>(Owner, CombatState);
+        await PowerCmd.Apply<OrchisNewfoundHeartPower>(Owner.Creature, 1, Owner.Creature, this);
+    }
 
-        var puppetsInExhaust = PileType.Exhaust.GetPile(Owner).Cards
-            .Where(c => PuppetHelper.IsPuppet(c))
-            .ToList();
-
-        foreach (var puppet in puppetsInHand.Concat(puppetsInExhaust))
-        {
-            puppet.BaseReplayCount += 1;
-        }
+    public virtual Task OnEvolve(CardModel card, PlayerChoiceContext choiceContext) => Task.CompletedTask;
+    
+    public virtual async Task OnSuperEvolve(CardModel card, PlayerChoiceContext choiceContext)
+    {
+        await SummonHelper.Summon<EnhancedPuppet>(Owner, CombatState);
+        await SummonHelper.Summon<EnhancedPuppet>(Owner, CombatState);
     }
 
     protected override void OnUpgrade()

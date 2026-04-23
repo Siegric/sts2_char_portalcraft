@@ -62,6 +62,7 @@ public static class CardPlayAudioManager
     
     public static void PlayForEvolve(string typeName) => PlayForCard(typeName + "Evolve");
     public static void PlayForSuperEvolve(string typeName) => PlayForCard(typeName + "SuperEvolve");
+    public static void PlayForEffect(string typeName) => PlayForCard(typeName + "Effect");
 
     private static AudioStream GetOrLoadStream(string typeName)
     {

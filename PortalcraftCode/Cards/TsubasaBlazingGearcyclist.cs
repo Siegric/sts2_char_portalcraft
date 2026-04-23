@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using BaseLib.Extensions;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
@@ -23,7 +24,11 @@ public class TsubasaBlazingGearcyclist : PortalcraftCard, IEvolvableCard
     {
         new DamageVar(9m, ValueProp.Move),
     };
-
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
+    {
+        HoverTipFactory.FromKeyword(SkyboundArtKeyword.SkyboundArt),
+        HoverTipFactory.FromKeyword(SuperSkyboundArtKeyword.SuperSkyboundArt),
+    };
     public TsubasaBlazingGearcyclist() : this(EvoTier.Base) { }
 
     protected TsubasaBlazingGearcyclist(EvoTier tier)
@@ -48,12 +53,9 @@ public class TsubasaBlazingGearcyclist : PortalcraftCard, IEvolvableCard
             .FromCard(this)
             .Targeting(cardPlay.Target)
             .Execute(choiceContext);
-
-        // Boost Skybound Art gauge of every other card in hand by 1.
-        foreach (var other in PileType.Hand.GetPile(Owner).Cards.Where(c => c != this).ToList())
-        {
-            SkyboundArtRuntime.AddBonus(other, 1);
-        }
+        
+        SkyboundArtRuntime.AddGlobalBonus(CombatState, 1);
+        SkyboundArtHelper.RefreshAllInHand(Owner);
     }
 
     protected override void OnUpgrade()

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using BaseLib.Extensions;
 using MegaCrit.Sts2.Core.Commands;
@@ -7,6 +8,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Evolved;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
@@ -34,7 +36,6 @@ public class AxiaHeirToDestruction : PortalcraftCard, IEvolvableCard
     protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
     {
         HoverTipFactory.FromKeyword(CannotBeExhaustedKeyword.CannotBeExhausted),
-        HoverTipFactory.FromKeyword(SuperEvolutionKeyword.SuperEvolution),
         HoverTipFactory.FromKeyword(SuperEvolveKeyword.SuperEvolve),
     };
 
@@ -58,6 +59,31 @@ public class AxiaHeirToDestruction : PortalcraftCard, IEvolvableCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, cardPlay);
+    }
+
+    public virtual Task OnEvolve(CardModel card, PlayerChoiceContext choiceContext) => Task.CompletedTask;
+    
+    public virtual async Task OnSuperEvolve(CardModel card, PlayerChoiceContext choiceContext)
+    {
+        var otherCards = PileType.Hand.GetPile(Owner).Cards.Where(c => c != this).ToList();
+        int x = otherCards.Count;
+
+        var target = CombatState.HittableEnemies
+            .OrderByDescending(e => e.CurrentHp)
+            .FirstOrDefault();
+
+        if (x > 0 && target != null)
+        {
+            await DamageCmd.Attack(5m * x)
+                .FromCard(this)
+                .Targeting(target)
+                .Execute(choiceContext);
+        }
+
+        foreach (var c in otherCards)
+        {
+            await CardCmd.Exhaust(choiceContext, c);
+        }
     }
 
     protected override void OnUpgrade()

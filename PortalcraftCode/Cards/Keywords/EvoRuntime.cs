@@ -55,6 +55,8 @@ public static class EvoRuntime
 
     public static void MarkSuperEvolved(CardModel card) => _evoTier[card] = Tier.SuperEvolved;
 
+    public static void ClearTier(CardModel card) => _evoTier.Remove(card);
+
     public static int EvoPoints(PlayerCombatState pcs) => Get(pcs).EvoPoints;
 
     public static int SuperEvoPoints(PlayerCombatState pcs) => Get(pcs).SuperEvoPoints;

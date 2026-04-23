@@ -62,5 +62,6 @@ public class PuppetLancer : PortalcraftCard, IEvolvableCard
     protected override void OnUpgrade()
     {
         DynamicVars.Damage.UpgradeValueBy(3m);
+        EnergyCost.UpgradeBy(-1);
     }
 }

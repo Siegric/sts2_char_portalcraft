@@ -52,7 +52,6 @@ public class ImariDewdrop : PortalcraftCard, IEvolvableCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        // Discard a selected card, then draw 1 random Skill from the draw pile.
         bool AnyCard(CardModel c) => c != this;
         var handCards = PileType.Hand.GetPile(Owner).Cards.Where(AnyCard).ToList();
         if (handCards.Count > 0)
@@ -71,9 +70,7 @@ public class ImariDewdrop : PortalcraftCard, IEvolvableCard
 
         await DrawRandomSkills(Owner, 1);
     }
-
-    // Draws up to `count` random Skills from the owner's draw pile into hand.
-    // Returns early (partial fulfillment) if the draw pile runs out of Skills.
+    
     protected static async Task DrawRandomSkills(Player owner, int count)
     {
         for (int i = 0; i < count; i++)
@@ -83,5 +80,22 @@ public class ImariDewdrop : PortalcraftCard, IEvolvableCard
             var picked = owner.RunState.Rng.Shuffle.NextItem(skills);
             await CardPileCmd.Add(picked, PileType.Hand);
         }
+    }
+
+    // Evolve: Whenever you play a Skill this turn, add an Imari's Little Buddies
+    // to your hand.
+    public virtual async Task OnEvolve(CardModel card, PlayerChoiceContext choiceContext)
+    {
+        await PowerCmd.Apply<ImariDewdropPower>(Owner.Creature, 1, Owner.Creature, this);
+        if (IsUpgraded)
+        {
+            Owner.Creature.GetPower<ImariDewdropPower>()!.Upgraded = true;
+        }
+    }
+
+    // Super-Evolve: Also draw 2 additional random Skills from the draw pile.
+    public virtual async Task OnSuperEvolve(CardModel card, PlayerChoiceContext choiceContext)
+    {
+        await DrawRandomSkills(Owner, 2);
     }
 }

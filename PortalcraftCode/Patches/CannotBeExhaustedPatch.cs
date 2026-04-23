@@ -33,7 +33,7 @@ public static class CannotBeExhaustedPatch
     public static bool Prefix(CardModel card, ref Task __result)
     {
         if (card == null) return true;
-        if (_bypassDepth.Value > 0) return true;  // scope lifts the keyword
+        if (_bypassDepth.Value > 0) return true; 
         if (!card.Keywords.Contains(CannotBeExhaustedKeyword.CannotBeExhausted)) return true;
 
         __result = Task.CompletedTask;

@@ -1,6 +1,8 @@
+using System.Linq;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.ValueProps;
@@ -13,8 +15,6 @@ public sealed class LiamCrazedCreatorPower : PortalcraftPower
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
 
-    private int _puppetPlayCount;
-
     public override async Task AfterCardPlayed(PlayerChoiceContext context, CardPlay cardPlay)
     {
         var card = cardPlay.Card;
@@ -22,14 +22,15 @@ public sealed class LiamCrazedCreatorPower : PortalcraftPower
         if (!PuppetHelper.IsPuppet(card)) return;
 
         Flash();
-        
-        await CreatureCmd.GainBlock(Owner, Amount, ValueProp.Unpowered, null);
-        
-        _puppetPlayCount++;
-        if (_puppetPlayCount >= 4)
+        await CreatureCmd.GainBlock(Owner, Amount, ValueProp.Move, cardPlay);
+
+        if (card.CombatState == null) return;
+        foreach (Creature enemy in card.CombatState.HittableEnemies.ToList())
         {
-            _puppetPlayCount = 0;
-            await PlayerCmd.GainEnergy(1, card.Owner);
+            await DamageCmd.Attack(Amount)
+                .FromCard(card)
+                .Targeting(enemy)
+                .Execute(context);
         }
     }
 }

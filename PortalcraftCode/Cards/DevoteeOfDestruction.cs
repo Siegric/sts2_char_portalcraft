@@ -40,8 +40,7 @@ public class DevoteeOfDestruction : PortalcraftCard, IEvolvableCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
-
-        // X = number of OTHER cards in hand (measured before exhausting).
+        
         var handCards = PileType.Hand.GetPile(Owner).Cards.Where(c => c != this).ToList();
         int x = handCards.Count;
 

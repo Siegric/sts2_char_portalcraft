@@ -31,7 +31,6 @@ public class LovestruckPuppeteer : PortalcraftCard, IEvolvableCard
     protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
     {
         HoverTipFactory.FromCard<Puppet>(),
-        HoverTipFactory.FromKeyword(EvolutionKeyword.Evolution),
         HoverTipFactory.FromKeyword(EvolveKeyword.Evolve),
     };
 
@@ -63,6 +62,10 @@ public class LovestruckPuppeteer : PortalcraftCard, IEvolvableCard
         DynamicVars.Block.UpgradeValueBy(2m);
     }
     
-    public virtual Task OnEvolve(CardModel card, PlayerChoiceContext choiceContext) => Task.CompletedTask;
+    public virtual async Task OnEvolve(CardModel card, PlayerChoiceContext choiceContext)
+    {
+        await Puppet.CreateInHand(Owner, 1, CombatState);
+    }
+
     public virtual Task OnSuperEvolve(CardModel card, PlayerChoiceContext choiceContext) => Task.CompletedTask;
 }

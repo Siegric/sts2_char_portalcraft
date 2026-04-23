@@ -30,7 +30,6 @@ public class PuppetCat : PortalcraftCard, IEvolvableCard
     protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
     {
         HoverTipFactory.FromCard<Puppet>(),
-        HoverTipFactory.FromKeyword(SuperEvolutionKeyword.SuperEvolution),
     };
 
     public PuppetCat() : this(EvoTier.Base) { }
