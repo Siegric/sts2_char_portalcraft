@@ -46,7 +46,7 @@ public static class FuseRecipes
     private static Type? FindT1FuseResult(IReadOnlyList<CardModel> discardedCards)
     {
         int totalCost = discardedCards.Sum(c => c.EnergyCost.Canonical);
-        if (totalCost <= 0) totalCost = discardedCards.Count;
+        if (totalCost <= 0) return null;
 
         return totalCost switch
         {

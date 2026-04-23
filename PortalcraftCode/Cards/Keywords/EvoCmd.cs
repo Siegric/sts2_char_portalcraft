@@ -3,6 +3,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Godot;
 using MegaCrit.Sts2.Core.CardSelection;
+using MegaCrit.Sts2.Core.Combat;
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -15,6 +17,7 @@ using MegaCrit.Sts2.Core.Nodes.Cards.Holders;
 using MegaCrit.Sts2.Core.Nodes.Combat;
 using MegaCrit.Sts2.Core.Nodes.Rooms;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
+using sts2_char_portalcraft.PortalcraftCode.Audio;
 
 namespace sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
 
@@ -50,49 +53,117 @@ public static class EvoCmd
     public static async Task<bool> TryEvolve(CardModel card, PlayerChoiceContext choiceContext)
     {
         if (!CanEvolve(card)) return false;
-        if (!EvoRuntime.TrySpendEvo(card.Owner!.PlayerCombatState!)) return false;
-        return await DoEvolveInternal(card, choiceContext, playVfx: true);
+        return await DoEvolveInternal(card, choiceContext, playVfx: true, spendPoint: true);
     }
 
     public static async Task<bool> TrySuperEvolve(CardModel card, PlayerChoiceContext choiceContext)
     {
         if (!CanSuperEvolve(card)) return false;
-        if (!EvoRuntime.TrySpendSuperEvo(card.Owner!.PlayerCombatState!)) return false;
-        return await DoSuperEvolveInternal(card, choiceContext, playVfx: true);
+        return await DoSuperEvolveInternal(card, choiceContext, playVfx: true, spendPoint: true);
     }
-    
+
     public static async Task<bool> ForceEvolve(CardModel card, PlayerChoiceContext choiceContext, bool playVfx = true)
     {
         if (!CanForceEvolve(card)) return false;
-        return await DoEvolveInternal(card, choiceContext, playVfx);
+        return await DoEvolveInternal(card, choiceContext, playVfx, spendPoint: false);
     }
 
     public static async Task<bool> ForceSuperEvolve(CardModel card, PlayerChoiceContext choiceContext, bool playVfx = true)
     {
         if (!CanForceSuperEvolve(card)) return false;
-        return await DoSuperEvolveInternal(card, choiceContext, playVfx);
+        return await DoSuperEvolveInternal(card, choiceContext, playVfx, spendPoint: false);
     }
     
-    private static async Task<bool> DoEvolveInternal(CardModel card, PlayerChoiceContext ctx, bool playVfx)
+    private static async Task<bool> DoEvolveInternal(CardModel card, PlayerChoiceContext ctx, bool playVfx, bool spendPoint)
     {
         if (card is not IEvolvableCard evolvable) return false;
-        EvoRuntime.MarkEvolved(card);
-        RefreshHandCardGlow(card);
-        if (playVfx) await PlayEvolveVfx(card);
-        await evolvable.OnEvolve(card, ctx);
+
+        CardModel finalCard = card;
+        if (evolvable.EvolvedType is { } newType)
+        {
+            var created = CreateTransformedCard(card, newType);
+            if (created == null) return false;
+            if (spendPoint && !EvoRuntime.TrySpendEvo(card.Owner!.PlayerCombatState!)) return false;
+            await ReplaceInHand(card, created, ctx);
+            finalCard = created;
+        }
+        else if (spendPoint && !EvoRuntime.TrySpendEvo(card.Owner!.PlayerCombatState!))
+        {
+            return false;
+        }
+
+        EvoRuntime.MarkEvolved(finalCard);
+        RefreshHandCardGlow(finalCard);
+        if (playVfx)
+        {
+            CardPlayAudioManager.PlayForEvolve(card.GetType().Name);
+            await PlayEvolveVfx(finalCard);
+        }
+
+        var hookTarget = finalCard as IEvolvableCard ?? evolvable;
+        await hookTarget.OnEvolve(finalCard, ctx);
         return true;
     }
 
-    private static async Task<bool> DoSuperEvolveInternal(CardModel card, PlayerChoiceContext ctx, bool playVfx)
+    private static async Task<bool> DoSuperEvolveInternal(CardModel card, PlayerChoiceContext ctx, bool playVfx, bool spendPoint)
     {
         if (card is not IEvolvableCard evolvable) return false;
-        EvoRuntime.MarkSuperEvolved(card);
-        RefreshHandCardGlow(card);
-        if (playVfx) await PlaySuperEvolveVfx(card);
-        await evolvable.OnSuperEvolve(card, ctx);
+
+        CardModel finalCard = card;
+        if (evolvable.SuperEvolvedType is { } newType)
+        {
+            var created = CreateTransformedCard(card, newType);
+            if (created == null) return false;
+            if (spendPoint && !EvoRuntime.TrySpendSuperEvo(card.Owner!.PlayerCombatState!)) return false;
+            await ReplaceInHand(card, created, ctx);
+            finalCard = created;
+        }
+        else if (spendPoint && !EvoRuntime.TrySpendSuperEvo(card.Owner!.PlayerCombatState!))
+        {
+            return false;
+        }
+
+        EvoRuntime.MarkSuperEvolved(finalCard);
+        RefreshHandCardGlow(finalCard);
+        if (playVfx)
+        {
+            CardPlayAudioManager.PlayForSuperEvolve(card.GetType().Name);
+            await PlaySuperEvolveVfx(finalCard);
+        }
+        
+        var hookTarget = finalCard as IEvolvableCard ?? evolvable;
+        await hookTarget.OnEvolve(finalCard, ctx);
+        await hookTarget.OnSuperEvolve(finalCard, ctx);
         return true;
     }
     
+    private static CardModel? CreateTransformedCard(CardModel sourceCard, Type newType)
+    {
+        if (!typeof(CardModel).IsAssignableFrom(newType)) return null;
+        var owner = sourceCard.Owner;
+        var combatState = sourceCard.CombatState;
+        if (owner == null || combatState == null) return null;
+
+        var modelDbMethod = typeof(ModelDb).GetMethod(nameof(ModelDb.Card), Type.EmptyTypes);
+        if (modelDbMethod == null) return null;
+        if (modelDbMethod.MakeGenericMethod(newType).Invoke(null, null) is not CardModel canonical) return null;
+        var newCard = combatState.CreateCard(canonical, owner);
+        if (newCard == null) return null;
+
+        int levels = sourceCard.CurrentUpgradeLevel;
+        for (int i = 0; i < levels; i++) newCard.UpgradeInternal();
+        return newCard;
+    }
+    
+    private static async Task ReplaceInHand(CardModel oldCard, CardModel newCard, PlayerChoiceContext ctx)
+    {
+        using (Patches.CannotBeExhaustedPatch.BypassScope())
+        {
+            await CardCmd.Exhaust(ctx, oldCard);
+        }
+        await CardPileCmd.AddGeneratedCardToCombat(newCard, PileType.Hand, addedByPlayer: true);
+    }
+
     private static async Task PlayEvolveVfx(CardModel card)
     {
         var nCard = NCard.FindOnTable(card);
@@ -130,7 +201,7 @@ public static class EvoCmd
             {
                 var flashTimer = tree.CreateTimer(PreBackflightDurationSec);
                 await nCard.ToSignal(flashTimer, SceneTreeTimer.SignalName.Timeout);
-                
+
                 if (GodotObject.IsInstanceValid(vfx) && GodotObject.IsInstanceValid(nCard))
                 {
                     var delta = nCard.GlobalPosition - vfx.GlobalPosition;

@@ -1,24 +1,28 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using BaseLib.Utils;
+using BaseLib.Extensions;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
+using sts2_char_portalcraft.PortalcraftCode.Cards.Evolved;
+using sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Puppets;
-using sts2_char_portalcraft.PortalcraftCode.Character;
+using sts2_char_portalcraft.PortalcraftCode.Cards.SuperEvolved;
+using sts2_char_portalcraft.PortalcraftCode.Extensions;
 
 namespace sts2_char_portalcraft.PortalcraftCode.Cards;
 
-[Pool(typeof(PortalcraftCardPool))]
-public sealed class MedicalGradeAssassin : PortalcraftCard
+public class MedicalGradeAssassin : PortalcraftCard, IEvolvableCard
 {
+    protected readonly EvoTier Tier;
+
     protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]
     {
-        new DamageVar(8m, ValueProp.Move),
+        new DamageVar(4m, ValueProp.Move),
     };
 
     public override IEnumerable<CardKeyword> CanonicalKeywords => new[] { CardKeyword.Exhaust };
@@ -26,9 +30,25 @@ public sealed class MedicalGradeAssassin : PortalcraftCard
     protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
     {
         HoverTipFactory.FromCard<EnhancedPuppet>(),
+        HoverTipFactory.FromKeyword(BaneKeyword.Bane),
     };
 
-    public MedicalGradeAssassin() : base(2, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy) { }
+    public MedicalGradeAssassin() : this(EvoTier.Base) { }
+
+    protected MedicalGradeAssassin(EvoTier tier)
+        : base(1, CardType.Attack, tier.OverrideRarity(CardRarity.Common), TargetType.AnyEnemy,
+               showInCardLibrary: tier == EvoTier.Base)
+    {
+        Tier = tier;
+    }
+
+    public virtual Type? EvolvedType      => Tier == EvoTier.Base ? typeof(MedicalGradeAssassinEvolved)      : null;
+    public virtual Type? SuperEvolvedType => Tier == EvoTier.Base ? typeof(MedicalGradeAssassinSuperEvolved) : null;
+
+    public override bool CanBeGeneratedInCombat => Tier == EvoTier.Base && base.CanBeGeneratedInCombat;
+
+    public override string PortraitPath       => $"{Tier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
+    public override string CustomPortraitPath => $"{Tier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
@@ -38,10 +58,9 @@ public sealed class MedicalGradeAssassin : PortalcraftCard
             .Targeting(cardPlay.Target)
             .Execute(choiceContext);
 
-        // Add an Enhanced Puppet with recast 1
-        var token = CombatState.CreateCard<EnhancedPuppet>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(token, PileType.Hand, addedByPlayer: true);
-        token.BaseReplayCount += 1;
+        var puppet = CombatState.CreateCard<EnhancedPuppet>(Owner);
+        puppet.AddKeyword(BaneKeyword.Bane);
+        await CardPileCmd.AddGeneratedCardToCombat(puppet, PileType.Hand, addedByPlayer: true);
     }
 
     protected override void OnUpgrade()

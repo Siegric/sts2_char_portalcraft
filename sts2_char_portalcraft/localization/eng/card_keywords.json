@@ -60,14 +60,14 @@
   "STS2_CHAR_PORTALCRAFT-SUPEREVOLUTIONPOINT.description": "Points you spend to [gold]Super-Evolve[/gold] followers. You start the match with [gold]2[/gold].",
 
   "EVOLUTION.title": "Evolution",
-  "EVOLUTION.description": "Evolving a follower gives it a flat [gold]+2/+2[/gold] bonus. An evolved follower can't be evolved again. You can spend an [gold]EP[/gold] to evolve a follower once per turn. You can't [gold]Evolve[/gold] and [gold]Super-Evolve[/gold] in the same turn.",
+  "EVOLUTION.description": "Evolving a follower gives it a flat +2 bonus to damage dealt/block gained. An evolved follower can't be evolved again. You can spend an [gold]EP[/gold] to evolve a follower once per turn. You can't [gold]Evolve[/gold] and [gold]Super-Evolve[/gold] in the same turn.",
   "STS2_CHAR_PORTALCRAFT-EVOLUTION.title": "Evolution",
-  "STS2_CHAR_PORTALCRAFT-EVOLUTION.description": "Evolving a follower gives it a flat [gold]+2[/gold] bonus. An evolved follower can't be evolved again. You can spend an [gold]EP[/gold] to evolve a follower once per turn. You can't [gold]Evolve[/gold] and [gold]Super-Evolve[/gold] in the same turn.",
+  "STS2_CHAR_PORTALCRAFT-EVOLUTION.description": "Evolving a follower gives it a flat +2 bonus to damage dealt/block gained. An evolved follower can't be evolved again. You can spend an [gold]EP[/gold] to evolve a follower once per turn. You can't [gold]Evolve[/gold] and [gold]Super-Evolve[/gold] in the same turn.",
 
   "SUPEREVOLUTION.title": "Super-Evolution",
-  "SUPEREVOLUTION.description": "Super-evolving a follower gives it a flat [gold]+3/+3[/gold] bonus and the following: — This follower can't be exhausted. Super-evolved followers are also considered [gold]Evolved[/gold]. You can spend an [gold]SEP[/gold] to super-evolve a follower once per turn. You can't [gold]Evolve[/gold] and [gold]Super-Evolve[/gold] in the same turn.",
+  "SUPEREVOLUTION.description": "Super-evolving a follower gives it a flat +3 bonus to damage dealt/block gained and the following: — This follower can't be exhausted. Super-evolved followers are also considered [gold]Evolved[/gold]. You can spend an [gold]SEP[/gold] to super-evolve a follower once per turn. You can't [gold]Evolve[/gold] and [gold]Super-Evolve[/gold] in the same turn.",
   "STS2_CHAR_PORTALCRAFT-SUPEREVOLUTION.title": "Super-Evolution",
-  "STS2_CHAR_PORTALCRAFT-SUPEREVOLUTION.description": "Super-evolving a follower gives it a flat [gold]+3[/gold] bonus and the following: — This follower can't be exhausted. Super-evolved followers are also considered [gold]Evolved[/gold]. You can spend an [gold]SEP[/gold] to super-evolve a follower once per turn. You can't [gold]Evolve[/gold] and [gold]Super-Evolve[/gold] in the same turn.",
+  "STS2_CHAR_PORTALCRAFT-SUPEREVOLUTION.description": "Super-evolving a follower gives it a flat +3 bonus to damage dealt/block gained and the following: — This follower can't be exhausted. Super-evolved followers are also considered [gold]Evolved[/gold]. You can spend an [gold]SEP[/gold] to super-evolve a follower once per turn. You can't [gold]Evolve[/gold] and [gold]Super-Evolve[/gold] in the same turn.",
 
   "EVOLVE.title": "Evolve",
   "EVOLVE.description": "An ability that activates when the card is evolved (using an [gold]EP[/gold]) or super-evolved.",
@@ -77,5 +77,15 @@
   "SUPEREVOLVE.title": "Super-Evolve",
   "SUPEREVOLVE.description": "An ability that activates when the card is super-evolved.",
   "STS2_CHAR_PORTALCRAFT-SUPEREVOLVE.title": "Super-Evolve",
-  "STS2_CHAR_PORTALCRAFT-SUPEREVOLVE.description": "An ability that activates when the card is super-evolved."
+  "STS2_CHAR_PORTALCRAFT-SUPEREVOLVE.description": "An ability that activates when the card is super-evolved.",
+
+  "BANE.title": "Bane",
+  "BANE.description": "Destroys any enemy [gold]minion[/gold] this card attacks after damage is dealt. Deals double damage to non-minion enemies instead.",
+  "STS2_CHAR_PORTALCRAFT-BANE.title": "Bane",
+  "STS2_CHAR_PORTALCRAFT-BANE.description": "Destroys any enemy [gold]minion[/gold] this card attacks after damage is dealt. Deals double damage to non-minion enemies instead.",
+
+  "CANNOTBEEXHAUSTED.title": "Cannot be Exhausted",
+  "CANNOTBEEXHAUSTED.description": "This card cannot be [gold]Exhausted[/gold] by any means.",
+  "STS2_CHAR_PORTALCRAFT-CANNOTBEEXHAUSTED.title": "Cannot be Exhausted",
+  "STS2_CHAR_PORTALCRAFT-CANNOTBEEXHAUSTED.description": "This card cannot be [gold]Exhausted[/gold] by any means."
 }

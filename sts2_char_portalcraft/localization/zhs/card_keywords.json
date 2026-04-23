@@ -65,17 +65,27 @@
   "STS2_CHAR_PORTALCRAFT-EVOLUTION.description": "强化自己随从的行为。进化后的随从将[gold]+2[/gold]。已进化的随从无法再次进化。每回合1次，可通过消耗1个[gold]进化点[/gold]使1个随从进化。若消耗[gold]进化点[/gold]进化，则无法在同一回合内消耗[gold]超进化点[/gold]进行超进化。",
 
   "SUPEREVOLUTION.title": "超进化",
-  "SUPEREVOLUTION.description": "强化自己随从的行为。超进化后的随从将[gold]+3/+3[/gold]，并获得以下能力。·此随从无法被[gold]消耗[/gold]。超进化后的随从也被视作[gold]进化[/gold]后的随从。每回合1次，可通过消耗1个[gold]超进化点[/gold]使1个随从超进化。若消耗[gold]进化点[/gold]进化，则无法在同一回合内消耗[gold]超进化点[/gold]进行超进化。",
+  "SUPEREVOLUTION.description": "强化自己随从的行为。超进化后的随从将额外造成3点伤害/获得3点防御，并获得以下能力：·此随从无法被[gold]消耗[/gold]。超进化后的随从也被视作[gold]进化[/gold]后的随从。每回合1次，可通过消耗1个[gold]超进化点[/gold]使1个随从超进化。若消耗[gold]进化点[/gold]进化，则无法在同一回合内消耗[gold]超进化点[/gold]进行超进化。",
   "STS2_CHAR_PORTALCRAFT-SUPEREVOLUTION.title": "超进化",
-  "STS2_CHAR_PORTALCRAFT-SUPEREVOLUTION.description": "强化自己随从的行为。超进化后的随从将[gold]+3[/gold]，并获得以下能力。·此随从无法被[gold]消耗[/gold]。超进化后的随从也被视作[gold]进化[/gold]后的随从。每回合1次，可通过消耗1个[gold]超进化点[/gold]使1个随从超进化。若消耗[gold]进化点[/gold]进化，则无法在同一回合内消耗[gold]超进化点[/gold]进行超进化。",
+  "STS2_CHAR_PORTALCRAFT-SUPEREVOLUTION.description": "强化自己随从的行为。超进化后的随从将额外造成3点伤害/获得3点防御，并获得以下能力：·此随从无法被[gold]消耗[/gold]。超进化后的随从也被视作[gold]进化[/gold]后的随从。每回合1次，可通过消耗1个[gold]超进化点[/gold]使1个随从超进化。若消耗[gold]进化点[/gold]进化，则无法在同一回合内消耗[gold]超进化点[/gold]进行超进化。",
 
   "EVOLVE.title": "进化时",
-  "EVOLVE.description": "消耗[gold]进化点[/gold]进化时，或是消耗[gold]超进化点[/gold]超进化时，发动能力。",
+  "EVOLVE.description": "消耗[gold]进化点[/gold]进化后，或是消耗[gold]超进化点[/gold]超进化后，发动能力。",
   "STS2_CHAR_PORTALCRAFT-EVOLVE.title": "进化时",
-  "STS2_CHAR_PORTALCRAFT-EVOLVE.description": "消耗[gold]进化点[/gold]进化时，或是消耗[gold]超进化点[/gold]超进化时，发动能力。",
+  "STS2_CHAR_PORTALCRAFT-EVOLVE.description": "消耗[gold]进化点[/gold]进化后，或是消耗[gold]超进化点[/gold]超进化后，发动能力。",
 
   "SUPEREVOLVE.title": "超进化时",
-  "SUPEREVOLVE.description": "消耗[gold]超进化点[/gold]超进化时，发动能力。",
+  "SUPEREVOLVE.description": "消耗[gold]超进化点[/gold]超进化后，发动能力。",
   "STS2_CHAR_PORTALCRAFT-SUPEREVOLVE.title": "超进化时",
-  "STS2_CHAR_PORTALCRAFT-SUPEREVOLVE.description": "消耗[gold]超进化点[/gold]超进化时，发动能力。"
+  "STS2_CHAR_PORTALCRAFT-SUPEREVOLVE.description": "消耗[gold]超进化点[/gold]超进化后，发动能力。",
+
+  "BANE.title": "毁灭",
+  "BANE.description": "此牌攻击敌方[gold]随从[/gold]时，造成伤害后将其破坏；攻击非随从敌人时，改为造成双倍伤害。",
+  "STS2_CHAR_PORTALCRAFT-BANE.title": "毁灭",
+  "STS2_CHAR_PORTALCRAFT-BANE.description": "此牌攻击敌方[gold]随从[/gold]时，造成伤害后将其破坏；攻击非随从敌人时，改为造成双倍伤害。",
+
+  "CANNOTBEEXHAUSTED.title": "不可消耗",
+  "CANNOTBEEXHAUSTED.description": "此牌无法被[gold]消耗[/gold]。",
+  "STS2_CHAR_PORTALCRAFT-CANNOTBEEXHAUSTED.title": "不可消耗",
+  "STS2_CHAR_PORTALCRAFT-CANNOTBEEXHAUSTED.description": "此牌无法被[gold]消耗[/gold]。"
 }

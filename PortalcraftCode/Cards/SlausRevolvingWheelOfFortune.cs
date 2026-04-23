@@ -18,7 +18,7 @@ public sealed class SlausRevolvingWheelOfFortune : PortalcraftCard
         HoverTipFactory.FromPower<SlausRevolvingWheelPower>(),
     };
 
-    public SlausRevolvingWheelOfFortune() : base(3, CardType.Power, CardRarity.Rare, TargetType.Self) { }
+    public SlausRevolvingWheelOfFortune() : base(1, CardType.Power, CardRarity.Rare, TargetType.Self) { }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

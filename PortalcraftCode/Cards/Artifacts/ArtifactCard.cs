@@ -171,6 +171,15 @@ public abstract class ArtifactCard : PortalcraftCard, IFuseCard
 
                     return;
                 }
+                
+                if (fused)
+                {
+                    foreach (var card in selectedList)
+                    {
+                        await CardCmd.Exhaust(choiceContext, card);
+                    }
+                    return;
+                }
             }
         }
         catch (Exception)

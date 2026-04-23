@@ -23,5 +23,7 @@
   "ACHIM_EXHAUST_PROMPT": "Select a card to exhaust",
   "ACHIM_RETRIEVE_PROMPT": "Select a card to add to your hand",
   "FLOWERING_ARTISAN_PROMPT": "Select a Skill to add to your hand",
-  "DEPTHS_COPY_PROMPT": "Select a card (base cost 2+) to copy"
+  "DEPTHS_COPY_PROMPT": "Select a card (base cost 2+) to copy",
+  "NEW_AGE_CARTOGRAPHER_COPY_PROMPT": "Select an Artifact (cost 2 or less) to copy",
+  "MELODIOUS_MONODY_PROMPT": "Select a card to exhaust"
 }

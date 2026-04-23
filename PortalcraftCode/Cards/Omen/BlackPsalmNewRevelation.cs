@@ -16,7 +16,7 @@ namespace sts2_char_portalcraft.PortalcraftCode.Cards.Omen;
 
 public sealed class BlackPsalmNewRevelation : PortalcraftCard, ICountdownCard, ILastWordsCard
 {
-    private const int BaseDamageAmount = 2;
+    private const int BaseDamageAmount = 4;
     private const int UpgradeDamageAmount = 1;
 
     public int DamageValue => BaseDamageAmount + (CurrentUpgradeLevel > 0 ? UpgradeDamageAmount : 0);

@@ -59,6 +59,9 @@ public static class CardPlayAudioManager
         player.Stream = stream;
         player.Play();
     }
+    
+    public static void PlayForEvolve(string typeName) => PlayForCard(typeName + "Evolve");
+    public static void PlayForSuperEvolve(string typeName) => PlayForCard(typeName + "SuperEvolve");
 
     private static AudioStream GetOrLoadStream(string typeName)
     {

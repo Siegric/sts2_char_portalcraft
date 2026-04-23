@@ -1,313 +1,312 @@
 {
   "STS2_CHAR_PORTALCRAFT-GEAR_OF_AMBITION.title": "未来核心",
   "STS2_CHAR_PORTALCRAFT-GEAR_OF_AMBITION.description": "无效果。\n[gold]融合[/gold]：消耗另一个[gold]未来核心[/gold]以创造[gold]打击创造物[/gold]。",
-
   "STS2_CHAR_PORTALCRAFT-GEAR_OF_REMEMBRANCE.title": "过往核心",
   "STS2_CHAR_PORTALCRAFT-GEAR_OF_REMEMBRANCE.description": "无效果。\n[gold]融合[/gold]：消耗另一个[gold]过往核心[/gold]以创造[gold]城堡创造物[/gold]。",
-
   "STS2_CHAR_PORTALCRAFT-STRIKER_ARTIFACT.title": "打击创造物",
   "STS2_CHAR_PORTALCRAFT-STRIKER_ARTIFACT.description": "造成 {Damage:diff()} 点伤害。\n[gold]融合[/gold]：消耗[gold]创造物[/gold]，根据被融合牌的总费用进行变化。\n1：[gold]毁灭创造物α[/gold]\n2：[gold]毁灭创造物β[/gold]\n3或更多：[gold]毁灭创造物γ[/gold]",
-
   "STS2_CHAR_PORTALCRAFT-FORTIFIER_ARTIFACT.title": "城堡创造物",
   "STS2_CHAR_PORTALCRAFT-FORTIFIER_ARTIFACT.description": "获得 {Block:diff()} 点格挡。\n[gold]融合[/gold]：消耗[gold]创造物[/gold]，根据被融合牌的总费用进行变化。\n1：[gold]毁灭创造物α[/gold]\n2：[gold]毁灭创造物β[/gold]\n3或更多：[gold]毁灭创造物γ[/gold]",
-
   "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_ALPHA.title": "毁灭创造物α",
   "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_ALPHA.description": "造成 {CalculatedDamage:diff()} 点伤害。消耗牌堆中每有一张牌，伤害增加 {ExtraDamage:diff()}。对所有其他敌人造成 {MagicNumber:diff()} 点伤害。\n[gold]融合[/gold]：消耗[gold]毁灭创造物β[/gold]和[gold]毁灭创造物γ[/gold]以生成[gold]卓越的创造物Ω[/gold]。",
-
   "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_BETA.title": "毁灭创造物β",
   "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_BETA.description": "恢复 {Heal:diff()} 点生命。获得 {Block:diff()} 点格挡。获得 {PlatingPower:diff()} 层[gold]覆甲[/gold]。\n[gold]融合[/gold]：消耗[gold]毁灭创造物α[/gold]和[gold]毁灭创造物γ[/gold]以生成[gold]卓越的创造物Ω[/gold]。",
-
   "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_GAMMA.title": "毁灭创造物γ",
   "STS2_CHAR_PORTALCRAFT-OMINOUS_ARTIFACT_GAMMA.description": "抽 {Cards:diff()} 张牌。获得 {Energy:diff()} 点能量。下回合额外抽 {MagicNumber:diff()} 张牌。\n[gold]融合[/gold]：消耗[gold]毁灭创造物α[/gold]和[gold]毁灭创造物β[/gold]以生成[gold]卓越的创造物Ω[/gold]。",
-
   "STS2_CHAR_PORTALCRAFT-MASTERWORK_OMEGA.title": "卓越的创造物Ω",
   "STS2_CHAR_PORTALCRAFT-MASTERWORK_OMEGA.description": "造成 {CalculatedDamage:diff()} 点伤害。消耗牌堆中每有一张牌，伤害增加 {ExtraDamage:diff()}。对所有其他敌人造成 {MagicNumber:diff()} 点伤害。恢复 {Heal:diff()} 点生命。获得 {Block:diff()} 点格挡。获得 {PlatingPower:diff()} 层[gold]覆甲[/gold]。抽 {Cards:diff()} 张牌。获得 {Energy:diff()} 点能量。下回合额外抽 {DrawNextTurn:diff()} 张牌。",
-
   "STS2_CHAR_PORTALCRAFT-STRIKE_PORTALCRAFT.title": "打击",
   "STS2_CHAR_PORTALCRAFT-STRIKE_PORTALCRAFT.description": "造成 {Damage:diff()} 点伤害。",
-
   "STS2_CHAR_PORTALCRAFT-DEFEND_PORTALCRAFT.title": "防御",
   "STS2_CHAR_PORTALCRAFT-DEFEND_PORTALCRAFT.description": "获得 {Block:diff()} 点格挡。",
-
   "STS2_CHAR_PORTALCRAFT-ARTIFACT_RECHARGE.title": "创造物充能",
   "STS2_CHAR_PORTALCRAFT-ARTIFACT_RECHARGE.description": "将1个[gold]过往核心[/gold]和1个[gold]未来核心[/gold]加入手牌。",
-
   "STS2_CHAR_PORTALCRAFT-FLIGHT_OF_ICARUS.title": "伊卡洛斯之翼",
   "STS2_CHAR_PORTALCRAFT-FLIGHT_OF_ICARUS.description": "选择手牌中1个[gold]创造物[/gold]。它本回合费用变为0，并获得\"[gold]谢幕曲[/gold]：抽1张牌。\"",
-
   "STS2_CHAR_PORTALCRAFT-ELISE_ELECTRIFYING_INVENTOR.title": "耀眼的发明家·伊莉斯",
   "STS2_CHAR_PORTALCRAFT-ELISE_ELECTRIFYING_INVENTOR.description": "获得 {Block:diff()} 点格挡。将1个[gold]过往核心[/gold]加入手牌。",
-
   "STS2_CHAR_PORTALCRAFT-IRONHEART_HUNTER.title": "永不停火的枪手",
-  "STS2_CHAR_PORTALCRAFT-IRONHEART_HUNTER.description": "造成 {Damage:diff()} 点伤害。将1个[gold]未来核心[/gold]加入手牌。",
-
+  "STS2_CHAR_PORTALCRAFT-IRONHEART_HUNTER.description": "造成{Damage:diff()}点伤害。将1个[gold]未来核心[/gold]加入手牌。\n[gold]进化时[/gold]：造成3点额外伤害。",
   "STS2_CHAR_PORTALCRAFT-ARTIFACT_CATAPULT.title": "创造物投射器",
   "STS2_CHAR_PORTALCRAFT-ARTIFACT_CATAPULT.description": "将1个[gold]未来核心[/gold]加入手牌。选择手牌中任意1个[gold]创造物[/gold]，将其复制品加入手牌。",
-
   "STS2_CHAR_PORTALCRAFT-BULLET_FROM_BEYOND.title": "来自异次元的枪击",
   "STS2_CHAR_PORTALCRAFT-BULLET_FROM_BEYOND.description": "造成 {Damage:diff()} 点伤害。将1个[gold]未来核心[/gold]和1个[gold]过往核心[/gold]加入手牌。",
-
   "STS2_CHAR_PORTALCRAFT-FIELD_SCIENTIST.title": "现场工程师",
   "STS2_CHAR_PORTALCRAFT-FIELD_SCIENTIST.description": "弃1张牌。抽 {Cards:diff()} 张牌。",
-
   "STS2_CHAR_PORTALCRAFT-DOOMWRIGHT_RESURGENCE.title": "改境的重启",
   "STS2_CHAR_PORTALCRAFT-DOOMWRIGHT_RESURGENCE.description": "选择手牌中至多2张费用1或以下的[gold]创造物[/gold]牌，将其复制品加入手牌。复制品本回合费用为0且具有[gold]虚无[/gold]。",
-
   "STS2_CHAR_PORTALCRAFT-CARNELIA_EMBER_OF_DARKNESS.title": "暗狱的余晖·贾丝珀",
-  "STS2_CHAR_PORTALCRAFT-CARNELIA_EMBER_OF_DARKNESS.description": "将1个[gold]过往核心[/gold]加入手牌。选择手牌中1个[gold]创造物[/gold]消耗，获得等同于其费用+1的能量。",
-
+  "STS2_CHAR_PORTALCRAFT-CARNELIA_EMBER_OF_DARKNESS.description": "将1个[gold]过往核心[/gold]加入手牌。\n[gold]进化时[/gold]：选择手牌中1个[gold]创造物[/gold]，使其获得[gold]不可消耗[/gold]。",
   "STS2_CHAR_PORTALCRAFT-MIRIAM_THE_RESOLUTE.title": "决心之誓·米莉亚姆",
-  "STS2_CHAR_PORTALCRAFT-MIRIAM_THE_RESOLUTE.description": "将2个[gold]过往核心[/gold]和2个[gold]未来核心[/gold]加入手牌。",
-
+  "STS2_CHAR_PORTALCRAFT-MIRIAM_THE_RESOLUTE.description": "将1个[gold]未来核心[/gold]和1个[gold]过往核心[/gold]加入手牌。\n[gold]进化时[/gold]：再次发动此牌效果。",
   "STS2_CHAR_PORTALCRAFT-RUKINA_RESISTANCE_LEADER.title": "抗争领袖·露琪娜",
-  "STS2_CHAR_PORTALCRAFT-RUKINA_RESISTANCE_LEADER.description": "获得 {Block:diff()} 点格挡。将1个[gold]未来核心[/gold]和1个[gold]过往核心[/gold]加入手牌。将1个[gold]打击创造物[/gold]加入手牌。",
-
+  "STS2_CHAR_PORTALCRAFT-RUKINA_RESISTANCE_LEADER.description": "获得{Block:diff()}点格挡。将1个[gold]未来核心[/gold]和1个[gold]过往核心[/gold]加入手牌。\n[gold]进化时[/gold]：将1个[gold]打击创造物[/gold]加入手牌，它本回合费用为0且具有[gold]虚无[/gold]。",
   "STS2_CHAR_PORTALCRAFT-NEW_AGE_CARTOGRAPHER.title": "新时代地理学者",
-  "STS2_CHAR_PORTALCRAFT-NEW_AGE_CARTOGRAPHER.description": "将1个[gold]毁灭创造物β[/gold]加入手牌。它具有[gold]虚无[/gold]且本回合费用为0。",
-
+  "STS2_CHAR_PORTALCRAFT-NEW_AGE_CARTOGRAPHER.description": "将1个[gold]毁灭创造物β[/gold]加入手牌。\n[purple]超进化时[/purple]：选择手牌中1个费用2或以下的[gold]创造物[/gold]，将其完整复制品加入手牌。复制品本回合费用为0且具有[gold]虚无[/gold]。",
   "STS2_CHAR_PORTALCRAFT-ALOUETTE_DOOMWRIGHT_WARD.title": "改境的天宫·阿洛艾特",
   "STS2_CHAR_PORTALCRAFT-ALOUETTE_DOOMWRIGHT_WARD.description": "将1个[gold]未来核心[/gold]和1个[gold]过往核心[/gold]加入手牌。选择手牌中1个[gold]创造物[/gold]，它本回合费用变为0。",
-
   "STS2_CHAR_PORTALCRAFT-SHODDY_PLAYTHING.title": "低劣的玩具",
   "STS2_CHAR_PORTALCRAFT-SHODDY_PLAYTHING.description": "抽 {Cards:diff()} 张牌。将此牌的复制品加入抽牌堆。",
-
   "STS2_CHAR_PORTALCRAFT-ENGINEBLADE_MAVEN.title": "引擎剑士",
   "STS2_CHAR_PORTALCRAFT-ENGINEBLADE_MAVEN.description": "造成 {Damage:diff()} 点伤害。将1个[gold]过往核心[/gold]和1个[gold]打击创造物[/gold]加入手牌。",
-
   "STS2_CHAR_PORTALCRAFT-BRILLIANT_INVENTOR.title": "聪明的创造者",
   "STS2_CHAR_PORTALCRAFT-BRILLIANT_INVENTOR.description": "将1个[gold]毁灭创造物α[/gold]加入手牌。它具有[gold]虚无[/gold]且本回合费用为0。",
-
   "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN.title": "崭新的少女·欧丝",
-  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN.description": "回合结束时，若手牌少于5张，下回合多抽1张牌。若手牌多于6张，下回合获得1点能量。",
-
+  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN.description": "抽1张牌。\n[gold]进化时[/gold]：获得[gold]纹章：崭新的少女·欧丝[/gold]。",
   "STS2_CHAR_PORTALCRAFT-ANCIENT_CANNON.title": "遗产的炮击",
   "STS2_CHAR_PORTALCRAFT-ANCIENT_CANNON.description": "每当你[gold]融合[/gold][gold]创造物[/gold]时，对1个随机敌人造成 {MagicNumber:diff()} 点伤害。",
-
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_BOOM.title": "增幅加速·洛拉米亚",
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_BOOM.description": "选择手牌中至多{IfUpgraded:show:X+1|X}个费用2或以下的[gold]创造物[/gold]，触发它们的效果。",
-
   "STS2_CHAR_PORTALCRAFT-CAMISCILLA_UNFEELING_HEART.title": "恶劣的纯心·卡密希拉",
   "STS2_CHAR_PORTALCRAFT-CAMISCILLA_UNFEELING_HEART.description": "手牌中每有一张[gold]创造物[/gold]，造成 {Damage:diff()} 点伤害。",
-
   "STS2_CHAR_PORTALCRAFT-LUDICROUS_ORDNANCE.title": "愚劣的兵器",
   "STS2_CHAR_PORTALCRAFT-LUDICROUS_ORDNANCE.description": "将此牌的 {Cards:diff()} 份复制品加入手牌。对所有敌人造成 {Damage:diff()} 点伤害，每份手牌中的复制品各造成一次。",
-
   "STS2_CHAR_PORTALCRAFT-SYLVIA_GARDEN_EXECUTIONER.title": "箱庭的断罪者·希尔薇娅",
   "STS2_CHAR_PORTALCRAFT-SYLVIA_GARDEN_EXECUTIONER.description": "选择一个模式发动。\n1. 抽两张牌 \n2. 恢复4点体力",
-
   "STS2_CHAR_PORTALCRAFT-SYLVIA_DRAW_CHOICE.title": "抽牌",
   "STS2_CHAR_PORTALCRAFT-SYLVIA_DRAW_CHOICE.description": "抽 {Cards:diff()} 张牌。",
-
   "STS2_CHAR_PORTALCRAFT-SYLVIA_HEAL_CHOICE.title": "治疗",
   "STS2_CHAR_PORTALCRAFT-SYLVIA_HEAL_CHOICE.description": "恢复 {Heal:diff()} 点生命值。",
-
   "STS2_CHAR_PORTALCRAFT-PUPPET.title": "悬丝傀儡",
   "STS2_CHAR_PORTALCRAFT-PUPPET.description": "造成 {Damage:diff()} 点伤害。",
-
   "STS2_CHAR_PORTALCRAFT-ENHANCED_PUPPET.title": "改良型·悬丝傀儡",
   "STS2_CHAR_PORTALCRAFT-ENHANCED_PUPPET.description": "造成 {Damage:diff()} 点伤害。",
-
   "STS2_CHAR_PORTALCRAFT-DOLL_SLAYER.title": "屠戮人偶",
   "STS2_CHAR_PORTALCRAFT-DOLL_SLAYER.description": "对所有敌人造成 {Damage:diff()} 点伤害。\n[gold]谢幕曲[/gold]：将1张[gold]心灵屠戮者·菲亚[/gold]加入手牌。",
-
   "STS2_CHAR_PORTALCRAFT-PUPPET_CAT.title": "猫偶",
-  "STS2_CHAR_PORTALCRAFT-PUPPET_CAT.description": "将1个[gold]悬丝傀儡[/gold]加入手牌，使其伤害增加 +{BonusDamage:diff()}。",
-
+  "STS2_CHAR_PORTALCRAFT-PUPPET_CAT.description": "造成{Damage:diff()}点伤害。若手牌中有已超进化的卡牌，将1个[gold]悬丝傀儡[/gold]加入手牌，使其伤害增加+{PuppetBonus:diff()}。",
   "STS2_CHAR_PORTALCRAFT-PUPPET_LANCER.title": "人偶长矛手",
   "STS2_CHAR_PORTALCRAFT-PUPPET_LANCER.description": "造成 {Damage:diff()} 点伤害。将1个[gold]改良型·悬丝傀儡[/gold]加入手牌。",
-
   "STS2_CHAR_PORTALCRAFT-LOVESTRUCK_PUPPETEER.title": "依恋的人偶师",
-  "STS2_CHAR_PORTALCRAFT-LOVESTRUCK_PUPPETEER.description": "获得 {Block:diff()} 点格挡。将 {PuppetCount:diff()} 个[gold]悬丝傀儡[/gold]加入手牌。",
-
+  "STS2_CHAR_PORTALCRAFT-LOVESTRUCK_PUPPETEER.description": "获得{Block:diff()}点格挡。将1个[gold]悬丝傀儡[/gold]加入手牌。\n[gold]进化时[/gold]：将1个[gold]悬丝傀儡[/gold]加入手牌。",
   "STS2_CHAR_PORTALCRAFT-VIER_HEART_SLAYER.title": "心灵屠戮者·菲亚",
-  "STS2_CHAR_PORTALCRAFT-VIER_HEART_SLAYER.description": "选择手牌中1个[gold]悬丝傀儡[/gold]，将其变为[gold]屠戮人偶[/gold]。屠戮人偶继承其伤害。",
-
+  "STS2_CHAR_PORTALCRAFT-VIER_HEART_SLAYER.description": "造成{Damage:diff()}点伤害。[gold]必杀[/gold]。可选择手牌中1个[gold]悬丝傀儡[/gold]，将其变为[gold]屠戮人偶[/gold]。屠戮人偶继承其伤害。",
   "STS2_CHAR_PORTALCRAFT-PUPPET_SHIELD.title": "人偶替身",
   "STS2_CHAR_PORTALCRAFT-PUPPET_SHIELD.description": "消耗手牌中至多{IfUpgraded:show:4|3}个[gold]悬丝傀儡[/gold]。每消耗1个获得等同于其伤害的格挡。",
-
   "STS2_CHAR_PORTALCRAFT-WIRED_ASSAULT.title": "丝线突袭",
   "STS2_CHAR_PORTALCRAFT-WIRED_ASSAULT.description": "造成 {Damage:diff()} 点伤害。将2个[gold]悬丝傀儡[/gold]加入手牌。",
-
   "STS2_CHAR_PORTALCRAFT-MEDICAL_GRADE_ASSASSIN.title": "自动机械刺客",
-  "STS2_CHAR_PORTALCRAFT-MEDICAL_GRADE_ASSASSIN.description": "造成 {Damage:diff()} 点伤害。将1个具有[gold]重放[/gold] 1的[gold]改良型·悬丝傀儡[/gold]加入手牌。",
-
+  "STS2_CHAR_PORTALCRAFT-MEDICAL_GRADE_ASSASSIN.description": "造成{Damage:diff()}点伤害。将1个[gold]改良型·悬丝傀儡[/gold]加入手牌，并使其获得[gold]毁灭[/gold]。",
   "STS2_CHAR_PORTALCRAFT-RESURRECTION_TUNER.title": "苏生调律",
   "STS2_CHAR_PORTALCRAFT-RESURRECTION_TUNER.description": "消耗手牌中1张牌。将消耗牌堆中至多2个随机[gold]悬丝傀儡[/gold]加入手牌。",
-
   "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER.title": "人偶剧场",
   "STS2_CHAR_PORTALCRAFT-PUPPET_THEATER.description": "[gold]吟唱[/gold]（{Countdown}）。你的回合开始时，将 {MagicNumber:diff()} 个[gold]悬丝傀儡[/gold]加入手牌。",
-
   "STS2_CHAR_PORTALCRAFT-MARIONETTE_MASTER.title": "舞台缔造者",
   "STS2_CHAR_PORTALCRAFT-MARIONETTE_MASTER.description": "将1个[gold]悬丝傀儡[/gold]和1个[gold]改良型·悬丝傀儡[/gold]加入手牌。",
-
   "STS2_CHAR_PORTALCRAFT-ZWEI_SYMPHONIC_HEART.title": "交响之心·枷薇",
   "STS2_CHAR_PORTALCRAFT-ZWEI_SYMPHONIC_HEART.description": "将1个[gold]维多利亚[/gold]加入手牌。[gold]维多利亚[/gold]获得[gold]重放[/gold] 1。",
-
   "STS2_CHAR_PORTALCRAFT-NOAH_THREAD_OF_DEATH.title": "杀意之丝·诺亚",
   "STS2_CHAR_PORTALCRAFT-NOAH_THREAD_OF_DEATH.description": "这个回合，你的[gold]悬丝傀儡[/gold]造成额外 +{MagicNumber:diff()} 点伤害。",
-
   "STS2_CHAR_PORTALCRAFT-SUBSTANDARD_PUPPET.title": "拙劣的人偶",
   "STS2_CHAR_PORTALCRAFT-SUBSTANDARD_PUPPET.description": "造成 {Damage:diff()} 点伤害。将此牌的1份复制品加入手牌。",
-
   "STS2_CHAR_PORTALCRAFT-SYNCHRONOUS_HEARTS.title": "心有灵犀的共斗",
   "STS2_CHAR_PORTALCRAFT-SYNCHRONOUS_HEARTS.description": "将1个[gold]洛伊德[/gold]和1个[gold]维多利亚[/gold]加入手牌。",
-
   "STS2_CHAR_PORTALCRAFT-LLOYD.title": "洛伊德",
   "STS2_CHAR_PORTALCRAFT-LLOYD.description": "获得 {Block:diff()} 点格挡。",
-
   "STS2_CHAR_PORTALCRAFT-VICTORIA.title": "维多利亚",
   "STS2_CHAR_PORTALCRAFT-VICTORIA.description": "造成 {Damage:diff()} 点伤害。",
-
   "STS2_CHAR_PORTALCRAFT-ORCHIS_NEWFOUND_HEART.title": "迈进之心·奥契丝",
   "STS2_CHAR_PORTALCRAFT-ORCHIS_NEWFOUND_HEART.description": "将1个[gold]洛伊德[/gold]加入手牌。将2个[gold]改良型·悬丝傀儡[/gold]加入手牌。对手牌和消耗牌堆中所有[gold]悬丝傀儡[/gold]施加[gold]重放[/gold] 1。",
-
   "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR.title": "疯狂的创造者·历亚姆",
   "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR.description": "每当你打出[gold]悬丝傀儡[/gold]时，获得 {MagicNumber:diff()} 点格挡。每打出4个[gold]悬丝傀儡[/gold]，获得1点能量。",
-
   "STS2_CHAR_PORTALCRAFT-SUPPLICANT_OF_DESTRUCTION.title": "破坏的祈祷者",
-  "STS2_CHAR_PORTALCRAFT-SUPPLICANT_OF_DESTRUCTION.description": "选择手牌中1张牌并消耗。对1个随机敌人造成 {Damage:diff()} 点伤害。",
-
+  "STS2_CHAR_PORTALCRAFT-SUPPLICANT_OF_DESTRUCTION.description": "选择手牌中1张牌并消耗。对1个随机敌人造成{Damage:diff()}点伤害。\n[gold]进化时[/gold]：再次发动此牌效果。",
   "STS2_CHAR_PORTALCRAFT-DEVOTEE_OF_DESTRUCTION.title": "破坏的肯定者",
-  "STS2_CHAR_PORTALCRAFT-DEVOTEE_OF_DESTRUCTION.description": "消耗手牌中所有牌。获得 {Multiplier:diff()}X 格挡并造成 {Multiplier:diff()}X 伤害。X = 本回合消耗的牌数。",
-
+  "STS2_CHAR_PORTALCRAFT-DEVOTEE_OF_DESTRUCTION.description": "造成X点伤害并获得X点格挡，X为手牌中其他牌的数量。消耗手牌中所有其他牌。",
   "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION.title": "破坏的荒野",
   "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION.description": "选择手牌中的另一张牌。若选中一张，[gold]消耗[/gold]它并抽 {Cards:diff()} 张牌。将1张无法打出的复制品加入手牌。\n[gold]谢幕曲[/gold]：抽1张牌。",
-
   "STS2_CHAR_PORTALCRAFT-CONGREGANT_OF_DESTRUCTION.title": "破坏的团结者",
   "STS2_CHAR_PORTALCRAFT-CONGREGANT_OF_DESTRUCTION.description": "消耗手牌中所有牌。抽X张牌。X = 本回合消耗的牌数。",
-
   "STS2_CHAR_PORTALCRAFT-DEVASTATING_SOPRANO.title": "歼灭的歌声",
   "STS2_CHAR_PORTALCRAFT-DEVASTATING_SOPRANO.description": "选择手牌中1张牌并消耗。将1张[gold]新约·白之章[/gold]加入手牌。",
-
   "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION.title": "破坏的继承者·阿克西娅",
-  "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION.description": "回合结束时，消耗手牌中所有[gold]新约·白之章[/gold]和[gold]新约·黑之章[/gold]。",
-
+  "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION.description": "获得{Block:diff()}点格挡。[gold]不可消耗[/gold]。\n[purple]超进化时[/purple]：对生命最高的敌人造成5X点伤害，X为手牌中其他牌的数量。消耗手牌中所有其他牌。",
+  "STS2_CHAR_PORTALCRAFT-MELODIOUS_MONODY.title": "奏绝的独唱",
+  "STS2_CHAR_PORTALCRAFT-MELODIOUS_MONODY.description": "选择手牌中1张牌并[gold]消耗[/gold]。对1个随机敌人造成{Damage:diff()}点伤害。",
   "STS2_CHAR_PORTALCRAFT-LISHENNA_MELODY_MANIFEST.title": "奏绝的显现·莉洁纳",
-  "STS2_CHAR_PORTALCRAFT-LISHENNA_MELODY_MANIFEST.description": "将2张[gold]新约·白之章[/gold]加入手牌。",
-
+  "STS2_CHAR_PORTALCRAFT-LISHENNA_MELODY_MANIFEST.description": "将1张[gold]奏绝的独唱[/gold]加入手牌。[gold]不可消耗[/gold]。\n[gold]进化时[/gold]：将2张[gold]新约·白之章[/gold]加入手牌。",
   "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING.title": "唯一王者·别西卜",
   "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING.description": "当敌人受到伤害时，多受2点伤害。当你获得格挡时，多获得2点格挡。",
-
   "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.title": "新约·白之章",
   "STS2_CHAR_PORTALCRAFT-WHITE_PSALM_NEW_REVELATION.description": "[gold]吟唱[/gold]（{Countdown}）。\n[gold]谢幕曲[/gold]：获得{PsalmBlock}点格挡。将1张[gold]新约·黑之章[/gold]加入手牌。",
-
   "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.title": "新约·黑之章",
   "STS2_CHAR_PORTALCRAFT-BLACK_PSALM_NEW_REVELATION.description": "[gold]吟唱[/gold]（{Countdown}）。\n[gold]谢幕曲[/gold]：对所有敌人造成{PsalmDamage}点伤害。将1张[gold]新约·白之章[/gold]加入手牌。",
-
   "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.title": "破坏的荒野",
   "STS2_CHAR_PORTALCRAFT-WASTELAND_OF_DESTRUCTION_TOKEN.description": "[gold]谢幕曲[/gold]：抽1张牌。",
-
   "STS2_CHAR_PORTALCRAFT-BIOFABRICATION.title": "生命量产",
   "STS2_CHAR_PORTALCRAFT-BIOFABRICATION.description": "选择手牌中1个[gold]创造物[/gold]，将其费用减少1。将3份复制品加入抽牌堆。",
-
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.title": "音速机关·洛拉米亚",
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER.description": "每[gold]融合[/gold]4次，获得1点能量。",
-
   "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL.title": "机械的解放",
   "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL.description": "直到本回合结束，每当一张[gold]创造物[/gold]牌被打出时，获得1点能量并抽1张牌。",
-
   "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER.title": "天降曙光·蕾德拉菲雅",
   "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER.description": "[gold]结晶[/gold]（1）：[gold]吟唱[/gold]（10）。你的回合内，所有[gold]创造物[/gold]的费用变为0。每当一张[gold]创造物[/gold]被打出时，此护符的[gold]吟唱[/gold]减1。\n[gold]谢幕曲[/gold]：将1张[gold]天降曙光·蕾德拉菲雅[/gold]加入手牌。它本回合费用变为0。\n----------\n对所有敌人造成 {IfUpgraded:show:4|3}X 点伤害。X 等于本场战斗中已被消耗的[gold]创造物[/gold]数量。",
-
   "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER_AMULET.title": "天降曙光·蕾德拉菲雅",
   "STS2_CHAR_PORTALCRAFT-RETRAFIA_DIVINE_MOTHER_AMULET.description": "[gold]吟唱[/gold]（{Countdown}）。你的回合内，所有[gold]创造物[/gold]的费用变为0。每当一张[gold]创造物[/gold]被打出时，[gold]吟唱[/gold]减1。\n[gold]谢幕曲[/gold]：将1张[gold]天降曙光·蕾德拉菲雅[/gold]加入手牌。它本回合费用变为0。",
-
   "STS2_CHAR_PORTALCRAFT-LIGHT_OF_THE_DEWDROP.title": "尽小花的临照",
   "STS2_CHAR_PORTALCRAFT-LIGHT_OF_THE_DEWDROP.description": "抽 {Cards:diff()} 张牌。",
-
   "STS2_CHAR_PORTALCRAFT-STREAM_OF_LIFE.title": "生命的奔流",
   "STS2_CHAR_PORTALCRAFT-STREAM_OF_LIFE.description": "造成 {Damage:diff()} 点伤害。将1个[gold]过往核心[/gold]加入手牌。",
-
   "STS2_CHAR_PORTALCRAFT-ELECTRIC_WHIP_LASS.title": "电鞭手",
   "STS2_CHAR_PORTALCRAFT-ELECTRIC_WHIP_LASS.description": "获得 {Block:diff()} 点格挡。将{MagicNumber:diff()}个[gold]过往核心[/gold]加入手牌。",
-
   "STS2_CHAR_PORTALCRAFT-ADVENT_OF_THE_ELD_AXE.title": "天斧授予",
   "STS2_CHAR_PORTALCRAFT-ADVENT_OF_THE_ELD_AXE.description": "造成 {Damage:diff()} 点伤害。若手牌中有基础费用2或以上的卡牌，抽 {Cards:diff()} 张卡牌。",
-
   "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST.title": "兽性铁人",
   "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST.description": "获得 {Block:diff()} 点格挡。本回合每次被攻击时，反弹 {MagicNumber:diff()} 点伤害。",
-
   "STS2_CHAR_PORTALCRAFT-KITTY_CANNONEER.title": "炮击猫兽人",
-  "STS2_CHAR_PORTALCRAFT-KITTY_CANNONEER.description": "造成 {Damage:diff()} 点伤害。施加 {MagicNumber:diff()} 层[gold]虚弱[/gold]。施加 {MagicNumber:diff()} 层[gold]易伤[/gold]。将1个[gold]未来核心[/gold]加入手牌。",
-
+  "STS2_CHAR_PORTALCRAFT-KITTY_CANNONEER.description": "造成{Damage:diff()}点伤害。施加{MagicNumber:diff()}层[gold]易伤[/gold]。将1个[gold]未来核心[/gold]加入手牌。",
   "STS2_CHAR_PORTALCRAFT-SINCERITY_OF_THE_DEWDROP.title": "诚心的尽小花",
   "STS2_CHAR_PORTALCRAFT-SINCERITY_OF_THE_DEWDROP.description": "将手牌中1张牌变形为{IfUpgraded:show:[gold]伊鞠的小鬼+[/gold]|[gold]伊鞠的小鬼[/gold]}。",
-
   "STS2_CHAR_PORTALCRAFT-ILSA_BRUTAL_DRILL_SERGEANT.title": "严厉的教官·伊尔莎",
   "STS2_CHAR_PORTALCRAFT-ILSA_BRUTAL_DRILL_SERGEANT.description": "选择一个模式发动。\n1. 以下效果重复3次：「对随机1个敌人造成{IfUpgraded:show:16|12}点伤害。」\n2. 对所有敌人造成{IfUpgraded:show:20|16}点伤害。",
-
   "STS2_CHAR_PORTALCRAFT-ILSA_BARRAGE_CHOICE.title": "连射",
   "STS2_CHAR_PORTALCRAFT-ILSA_BARRAGE_CHOICE.description": "对随机敌人造成 {Damage:diff()} 点伤害，共3次。",
-
   "STS2_CHAR_PORTALCRAFT-ILSA_SWEEP_CHOICE.title": "横扫",
   "STS2_CHAR_PORTALCRAFT-ILSA_SWEEP_CHOICE.description": "对所有敌人造成 {Damage:diff()} 点伤害。",
-
   "STS2_CHAR_PORTALCRAFT-ISAAC_CONGENIAL_ENGINEER.title": "报恩工匠·艾萨克",
-  "STS2_CHAR_PORTALCRAFT-ISAAC_CONGENIAL_ENGINEER.description": "将1个[gold]打击创造物[/gold]加入手牌。",
-
+  "STS2_CHAR_PORTALCRAFT-ISAAC_CONGENIAL_ENGINEER.description": "获得{Block:diff()}点格挡。将1个[gold]打击创造物[/gold]加入手牌。",
   "STS2_CHAR_PORTALCRAFT-DIRK_METAL_MERCENARY.title": "钢铁佣兵·迪尔克",
   "STS2_CHAR_PORTALCRAFT-DIRK_METAL_MERCENARY.description": "将1个[gold]城堡创造物[/gold]加入手牌。",
-
   "STS2_CHAR_PORTALCRAFT-STONE_BREAKER.title": "身无长物唯有石",
   "STS2_CHAR_PORTALCRAFT-STONE_BREAKER.description": "对随机敌人造成 {Damage:diff()} 点伤害，共 {Repeat:diff()} 次。",
-
   "STS2_CHAR_PORTALCRAFT-CASSIUS_SKY_YEARNING_ARRIVAL.title": "向往天空的回归者·卡西乌斯",
   "STS2_CHAR_PORTALCRAFT-CASSIUS_SKY_YEARNING_ARRIVAL.description": "选择手牌中1个[gold]创造物[/gold]。对所有敌人造成 {MagicNumber:diff()}X 点伤害。X = 该创造物的费用。将1个[gold]城堡创造物[/gold]加入手牌。",
-
   "STS2_CHAR_PORTALCRAFT-MYRIAD_DESIGNS.title": "平庸的制图",
   "STS2_CHAR_PORTALCRAFT-MYRIAD_DESIGNS.description": "将{IfUpgraded:show:[gold]愚劣的兵器+[/gold]|[gold]愚劣的兵器[/gold]}、{IfUpgraded:show:[gold]低劣的玩具+[/gold]|[gold]低劣的玩具[/gold]}、{IfUpgraded:show:[gold]拙劣的人偶+[/gold]|[gold]拙劣的人偶[/gold]} 各1张加入手牌。本回合其费用变为0。",
-
   "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP.title": "尽小花·伊鞠",
-  "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP.description": "弃1张牌。从抽牌堆中检索1张[gold]技能[/gold]牌加入手牌。本回合每使用1张[gold]技能[/gold]牌，将{IfUpgraded:show:[gold]伊鞠的小鬼+[/gold]|[gold]伊鞠的小鬼[/gold]}加入手牌。",
-
+  "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP.description": "选择手牌中1张牌并弃置。从抽牌堆随机抽1张[gold]技能[/gold]牌。\n[gold]进化时[/gold]：本回合每打出1张[gold]技能[/gold]，将{IfUpgraded:show:[gold]伊鞠的小鬼+[/gold]|[gold]伊鞠的小鬼[/gold]}加入手牌。\n[purple]超进化时[/purple]：额外随机抽2张[gold]技能[/gold]牌。",
   "STS2_CHAR_PORTALCRAFT-UNFEELING_ELD_AXE.title": "恶劣的天斧",
-  "STS2_CHAR_PORTALCRAFT-UNFEELING_ELD_AXE.description": "[gold]手牌效果[/gold]：每打出1张基础费用2或以上的牌，本回合此牌费用减少1。\n选择手牌中1张牌，在本场战斗中永久减少其费用1点。",
-
+  "STS2_CHAR_PORTALCRAFT-UNFEELING_ELD_AXE.description": "[gold]手牌效果[/gold]：每打出1张基础费用2或以上的牌，本回合此牌费用减少1。\n随机选择手牌中1张未进化、基础费用2或以上的牌，使其[gold]进化[/gold]。对1个随机敌人造成{Damage:diff()}点伤害。",
   "STS2_CHAR_PORTALCRAFT-SUPERSONIC_FIGHTER.title": "音速飞行兵",
   "STS2_CHAR_PORTALCRAFT-SUPERSONIC_FIGHTER.description": "将1个[gold]毁灭创造物 γ[/gold]加入手牌。",
-
   "STS2_CHAR_PORTALCRAFT-IMARIS_LITTLE_BUDDIES.title": "伊鞠的小鬼",
   "STS2_CHAR_PORTALCRAFT-IMARIS_LITTLE_BUDDIES.description": "造成 {Damage:diff()} 点伤害。获得 {Block:diff()} 点格挡。",
-
   "STS2_CHAR_PORTALCRAFT-LUNAR_BUNNY.title": "清宵玉兔",
-  "STS2_CHAR_PORTALCRAFT-LUNAR_BUNNY.description": "获得 {Block:diff()} 点格挡。\n[gold]手牌效果[/gold]：每使用1张技能牌，本回合此牌费用减少1。",
-
+  "STS2_CHAR_PORTALCRAFT-LUNAR_BUNNY.description": "获得{Block:diff()}点格挡。若本回合你已打出过[gold]技能[/gold]，使此随从[gold]进化[/gold]。",
   "STS2_CHAR_PORTALCRAFT-YOG_ZENTHA_ELD_AXE.title": "古旧天斧·尤泽塔",
   "STS2_CHAR_PORTALCRAFT-YOG_ZENTHA_ELD_AXE.description": "造成 {Damage:diff()} 点伤害。若手牌中有基础费用2或以上的牌，将1张[gold]天斧深渊[/gold]加入手牌。",
-
   "STS2_CHAR_PORTALCRAFT-DEPTHS_OF_THE_ELD_AXE.title": "天斧深渊",
   "STS2_CHAR_PORTALCRAFT-DEPTHS_OF_THE_ELD_AXE.description": "选择手牌中1张基础费用2或以上的牌。将其复制品加入手牌，并在本场战斗中永久减少复制品费用1点。",
-
   "STS2_CHAR_PORTALCRAFT-SHO_REBORN_NIGHT_KING.title": "夜王再起·翔",
-  "STS2_CHAR_PORTALCRAFT-SHO_REBORN_NIGHT_KING.description": "若本回合已使用{SkillThreshold:diff()}张或以上技能牌，获得 {MagicNumber:diff()} 点能量。",
-
+  "STS2_CHAR_PORTALCRAFT-SHO_REBORN_NIGHT_KING.description": "造成{Damage:diff()}点伤害。若拥有至少1点[gold]SEP[/gold]，获得1层[gold]减伤[/gold]。[gold]消耗[/gold]。",
   "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_OF_FORTUNE.title": "转动的《命运之轮》·斯洛士",
   "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_OF_FORTUNE.description": "每回合开始时，随机发动一个效果（不会连续两回合发动相同效果）：\n1. 手牌中所有牌费用减少1直到回合结束。\n2. 获得2点[gold]力量[/gold]和2点[gold]敏捷[/gold]直到回合结束。\n3. 恢复3点生命。",
-
   "STS2_CHAR_PORTALCRAFT-MECHA_CAVALIER.title": "魔钢骑兵",
   "STS2_CHAR_PORTALCRAFT-MECHA_CAVALIER.description": "获得 {Block:diff()} 点格挡。若此牌费用不为2, 每低于1费，获得额外的4点格挡。",
-
   "STS2_CHAR_PORTALCRAFT-TIMID_PIONEER.title": "胆小鬼先锋",
   "STS2_CHAR_PORTALCRAFT-TIMID_PIONEER.description": "所有敌人失去 {MagicNumber:diff()} 点[gold]力量[/gold]直到其回合结束。",
-
   "STS2_CHAR_PORTALCRAFT-ACHIM_LORD_OF_DESPAIR.title": "绝望之王·阿基姆",
   "STS2_CHAR_PORTALCRAFT-ACHIM_LORD_OF_DESPAIR.description": "选择手牌中1张牌并消耗。从弃牌堆中选择{IfUpgraded:show:2张牌|1张牌}加入手牌。",
-
   "STS2_CHAR_PORTALCRAFT-TSUBASA_BLAZING_GEARCYCLIST.title": "爆燃老大·翼",
-  "STS2_CHAR_PORTALCRAFT-TSUBASA_BLAZING_GEARCYCLIST.description": "随机减少手牌中 {MagicNumber:diff()} 张牌的费用1点，持续到本回合结束。",
-
+  "STS2_CHAR_PORTALCRAFT-TSUBASA_BLAZING_GEARCYCLIST.description": "造成{Damage:diff()}点伤害。手牌中其他所有牌的[gold]奥义[/gold]槽+1。",
   "STS2_CHAR_PORTALCRAFT-EUSTACE_HOWL_OF_THUNDER.title": "轰雷闪狼·尤斯提斯",
   "STS2_CHAR_PORTALCRAFT-EUSTACE_HOWL_OF_THUNDER.description": "造成 {Damage:diff()} 点伤害。若此牌费用不为2，额外造成4点伤害，并随机减少手牌中1张牌的费用1点，持续到本回合结束。",
-
   "STS2_CHAR_PORTALCRAFT-NEURON_DISRUPTER.title": "神经遮蔽者",
   "STS2_CHAR_PORTALCRAFT-NEURON_DISRUPTER.description": "抽 {Cards:diff()} 张牌。获得等同于手牌数量的能量。",
-
   "STS2_CHAR_PORTALCRAFT-FLOWERING_ARTISAN.title": "繁花技师",
   "STS2_CHAR_PORTALCRAFT-FLOWERING_ARTISAN.description": "从抽牌堆中检索1张[gold]技能[/gold]牌。本回合每使用1张技能牌，对所有敌人造成 {MagicNumber:diff()} 点伤害。",
-
   "STS2_CHAR_PORTALCRAFT-LU_WOH_LIGHT_PERSONIFIED.title": "光之法则·龙敖",
   "STS2_CHAR_PORTALCRAFT-LU_WOH_LIGHT_PERSONIFIED.description": "对随机敌人造成1点伤害，共6次。所有敌人失去 {MagicNumber:diff()} 点[gold]力量[/gold]直到其回合结束。若此牌费用不为2，接下来3个敌方回合，意图攻击的敌人在该回合失去4点[gold]力量[/gold]。",
-
   "STS2_CHAR_PORTALCRAFT-CHAOS_LEGION.title": "混沌军势",
-  "STS2_CHAR_PORTALCRAFT-CHAOS_LEGION.description": "对所有敌人造成 {Damage:diff()} 点伤害。"
+  "STS2_CHAR_PORTALCRAFT-CHAOS_LEGION.description": "对所有敌人造成 {Damage:diff()} 点伤害。",
+  "STS2_CHAR_PORTALCRAFT-STRIKE_PORTALCRAFT_EVOLVED.title": "打击",
+  "STS2_CHAR_PORTALCRAFT-STRIKE_PORTALCRAFT_EVOLVED.description": "造成 {Damage:diff()} 点伤害。",
+  "STS2_CHAR_PORTALCRAFT-STRIKE_PORTALCRAFT_SUPER_EVOLVED.title": "打击",
+  "STS2_CHAR_PORTALCRAFT-STRIKE_PORTALCRAFT_SUPER_EVOLVED.description": "造成 {Damage:diff()} 点伤害。",
+  "STS2_CHAR_PORTALCRAFT-DEFEND_PORTALCRAFT_EVOLVED.title": "防御",
+  "STS2_CHAR_PORTALCRAFT-DEFEND_PORTALCRAFT_EVOLVED.description": "获得 {Block:diff()} 点格挡。",
+  "STS2_CHAR_PORTALCRAFT-DEFEND_PORTALCRAFT_SUPER_EVOLVED.title": "防御",
+  "STS2_CHAR_PORTALCRAFT-DEFEND_PORTALCRAFT_SUPER_EVOLVED.description": "获得 {Block:diff()} 点格挡。",
+  "STS2_CHAR_PORTALCRAFT-ELISE_ELECTRIFYING_INVENTOR_EVOLVED.title": "耀眼的发明家·伊莉斯",
+  "STS2_CHAR_PORTALCRAFT-ELISE_ELECTRIFYING_INVENTOR_EVOLVED.description": "获得 {Block:diff()} 点格挡。将1个[gold]过往核心[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-ELISE_ELECTRIFYING_INVENTOR_SUPER_EVOLVED.title": "耀眼的发明家·伊莉斯",
+  "STS2_CHAR_PORTALCRAFT-ELISE_ELECTRIFYING_INVENTOR_SUPER_EVOLVED.description": "获得 {Block:diff()} 点格挡。将1个[gold]过往核心[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-ELECTRIC_WHIP_LASS_EVOLVED.title": "电鞭手",
+  "STS2_CHAR_PORTALCRAFT-ELECTRIC_WHIP_LASS_EVOLVED.description": "获得 {Block:diff()} 点格挡。将{MagicNumber:diff()}个[gold]过往核心[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-ELECTRIC_WHIP_LASS_SUPER_EVOLVED.title": "电鞭手",
+  "STS2_CHAR_PORTALCRAFT-ELECTRIC_WHIP_LASS_SUPER_EVOLVED.description": "获得 {Block:diff()} 点格挡。将{MagicNumber:diff()}个[gold]过往核心[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-IRONHEART_HUNTER_EVOLVED.title": "永不停火的枪手",
+  "STS2_CHAR_PORTALCRAFT-IRONHEART_HUNTER_EVOLVED.description": "造成{Damage:diff()}点伤害。将1个[gold]未来核心[/gold]加入手牌。\n[gold]进化时[/gold]：造成3点额外伤害。",
+  "STS2_CHAR_PORTALCRAFT-IRONHEART_HUNTER_SUPER_EVOLVED.title": "永不停火的枪手",
+  "STS2_CHAR_PORTALCRAFT-IRONHEART_HUNTER_SUPER_EVOLVED.description": "造成{Damage:diff()}点伤害。将1个[gold]未来核心[/gold]加入手牌。\n[gold]进化时[/gold]：造成3点额外伤害。",
+  "STS2_CHAR_PORTALCRAFT-LOVESTRUCK_PUPPETEER_EVOLVED.title": "依恋的人偶师",
+  "STS2_CHAR_PORTALCRAFT-LOVESTRUCK_PUPPETEER_EVOLVED.description": "获得{Block:diff()}点格挡。将1个[gold]悬丝傀儡[/gold]加入手牌。\n[gold]进化时[/gold]：将1个[gold]悬丝傀儡[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-LOVESTRUCK_PUPPETEER_SUPER_EVOLVED.title": "依恋的人偶师",
+  "STS2_CHAR_PORTALCRAFT-LOVESTRUCK_PUPPETEER_SUPER_EVOLVED.description": "获得{Block:diff()}点格挡。将1个[gold]悬丝傀儡[/gold]加入手牌。\n[gold]进化时[/gold]：将1个[gold]悬丝傀儡[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_CAT_EVOLVED.title": "猫偶",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_CAT_EVOLVED.description": "造成{Damage:diff()}点伤害。若手牌中有已超进化的卡牌，将1个[gold]悬丝傀儡[/gold]加入手牌，使其伤害增加+{PuppetBonus:diff()}。",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_CAT_SUPER_EVOLVED.title": "猫偶",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_CAT_SUPER_EVOLVED.description": "造成{Damage:diff()}点伤害。若手牌中有已超进化的卡牌，将1个[gold]悬丝傀儡[/gold]加入手牌，使其伤害增加+{PuppetBonus:diff()}。",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_LANCER_EVOLVED.title": "人偶长矛手",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_LANCER_EVOLVED.description": "造成 {Damage:diff()} 点伤害。将1个[gold]改良型·悬丝傀儡[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_LANCER_SUPER_EVOLVED.title": "人偶长矛手",
+  "STS2_CHAR_PORTALCRAFT-PUPPET_LANCER_SUPER_EVOLVED.description": "造成 {Damage:diff()} 点伤害。将1个[gold]改良型·悬丝傀儡[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-VIER_HEART_SLAYER_EVOLVED.title": "心灵屠戮者·菲亚",
+  "STS2_CHAR_PORTALCRAFT-VIER_HEART_SLAYER_EVOLVED.description": "造成{Damage:diff()}点伤害。[gold]必杀[/gold]。可选择手牌中1个[gold]悬丝傀儡[/gold]，将其变为[gold]屠戮人偶[/gold]。屠戮人偶继承其伤害。",
+  "STS2_CHAR_PORTALCRAFT-VIER_HEART_SLAYER_SUPER_EVOLVED.title": "心灵屠戮者·菲亚",
+  "STS2_CHAR_PORTALCRAFT-VIER_HEART_SLAYER_SUPER_EVOLVED.description": "造成{Damage:diff()}点伤害。[gold]必杀[/gold]。可选择手牌中1个[gold]悬丝傀儡[/gold]，将其变为[gold]屠戮人偶[/gold]。屠戮人偶继承其伤害。",
+  "STS2_CHAR_PORTALCRAFT-CARNELIA_EMBER_OF_DARKNESS_EVOLVED.title": "暗狱的余晖·贾丝珀",
+  "STS2_CHAR_PORTALCRAFT-CARNELIA_EMBER_OF_DARKNESS_EVOLVED.description": "将1个[gold]过往核心[/gold]加入手牌。\n[gold]进化时[/gold]：选择手牌中1个[gold]创造物[/gold]，使其获得[gold]不可消耗[/gold]。",
+  "STS2_CHAR_PORTALCRAFT-CARNELIA_EMBER_OF_DARKNESS_SUPER_EVOLVED.title": "暗狱的余晖·贾丝珀",
+  "STS2_CHAR_PORTALCRAFT-CARNELIA_EMBER_OF_DARKNESS_SUPER_EVOLVED.description": "将1个[gold]过往核心[/gold]加入手牌。\n[gold]进化时[/gold]：选择手牌中1个[gold]创造物[/gold]，使其获得[gold]不可消耗[/gold]。",
+  "STS2_CHAR_PORTALCRAFT-SUPPLICANT_OF_DESTRUCTION_EVOLVED.title": "破坏的祈祷者",
+  "STS2_CHAR_PORTALCRAFT-SUPPLICANT_OF_DESTRUCTION_EVOLVED.description": "选择手牌中1张牌并消耗。对1个随机敌人造成{Damage:diff()}点伤害。\n[gold]进化时[/gold]：再次发动此牌效果。",
+  "STS2_CHAR_PORTALCRAFT-SUPPLICANT_OF_DESTRUCTION_SUPER_EVOLVED.title": "破坏的祈祷者",
+  "STS2_CHAR_PORTALCRAFT-SUPPLICANT_OF_DESTRUCTION_SUPER_EVOLVED.description": "选择手牌中1张牌并消耗。对1个随机敌人造成{Damage:diff()}点伤害。\n[gold]进化时[/gold]：再次发动此牌效果。",
+  "STS2_CHAR_PORTALCRAFT-TSUBASA_BLAZING_GEARCYCLIST_EVOLVED.title": "爆燃老大·翼",
+  "STS2_CHAR_PORTALCRAFT-TSUBASA_BLAZING_GEARCYCLIST_EVOLVED.description": "造成{Damage:diff()}点伤害。手牌中其他所有牌的[gold]奥义[/gold]槽+1。",
+  "STS2_CHAR_PORTALCRAFT-TSUBASA_BLAZING_GEARCYCLIST_SUPER_EVOLVED.title": "爆燃老大·翼",
+  "STS2_CHAR_PORTALCRAFT-TSUBASA_BLAZING_GEARCYCLIST_SUPER_EVOLVED.description": "造成{Damage:diff()}点伤害。手牌中其他所有牌的[gold]奥义[/gold]槽+1。",
+  "STS2_CHAR_PORTALCRAFT-ISAAC_CONGENIAL_ENGINEER_EVOLVED.title": "报恩工匠·艾萨克",
+  "STS2_CHAR_PORTALCRAFT-ISAAC_CONGENIAL_ENGINEER_EVOLVED.description": "获得{Block:diff()}点格挡。将1个[gold]打击创造物[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-ISAAC_CONGENIAL_ENGINEER_SUPER_EVOLVED.title": "报恩工匠·艾萨克",
+  "STS2_CHAR_PORTALCRAFT-ISAAC_CONGENIAL_ENGINEER_SUPER_EVOLVED.description": "获得{Block:diff()}点格挡。将1个[gold]打击创造物[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-LUNAR_BUNNY_EVOLVED.title": "清宵玉兔",
+  "STS2_CHAR_PORTALCRAFT-LUNAR_BUNNY_EVOLVED.description": "获得{Block:diff()}点格挡。若本回合你已打出过[gold]技能[/gold]，使此随从[gold]进化[/gold]。",
+  "STS2_CHAR_PORTALCRAFT-LUNAR_BUNNY_SUPER_EVOLVED.title": "清宵玉兔",
+  "STS2_CHAR_PORTALCRAFT-LUNAR_BUNNY_SUPER_EVOLVED.description": "获得{Block:diff()}点格挡。若本回合你已打出过[gold]技能[/gold]，使此随从[gold]进化[/gold]。",
+  "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_EVOLVED.title": "尽小花·伊鞠",
+  "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_EVOLVED.description": "选择手牌中1张牌并弃置。从抽牌堆随机抽1张[gold]技能[/gold]牌。\n[gold]进化时[/gold]：本回合每打出1张[gold]技能[/gold]，将{IfUpgraded:show:[gold]伊鞠的小鬼+[/gold]|[gold]伊鞠的小鬼[/gold]}加入手牌。\n[purple]超进化时[/purple]：额外随机抽2张[gold]技能[/gold]牌。",
+  "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_SUPER_EVOLVED.title": "尽小花·伊鞠",
+  "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_SUPER_EVOLVED.description": "选择手牌中1张牌并弃置。从抽牌堆随机抽1张[gold]技能[/gold]牌。\n[gold]进化时[/gold]：本回合每打出1张[gold]技能[/gold]，将{IfUpgraded:show:[gold]伊鞠的小鬼+[/gold]|[gold]伊鞠的小鬼[/gold]}加入手牌。\n[purple]超进化时[/purple]：额外随机抽2张[gold]技能[/gold]牌。",
+  "STS2_CHAR_PORTALCRAFT-YOG_ZENTHA_ELD_AXE_EVOLVED.title": "古旧天斧·尤泽塔",
+  "STS2_CHAR_PORTALCRAFT-YOG_ZENTHA_ELD_AXE_EVOLVED.description": "造成 {Damage:diff()} 点伤害。若手牌中有基础费用2或以上的牌，将1张[gold]天斧深渊[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-YOG_ZENTHA_ELD_AXE_SUPER_EVOLVED.title": "古旧天斧·尤泽塔",
+  "STS2_CHAR_PORTALCRAFT-YOG_ZENTHA_ELD_AXE_SUPER_EVOLVED.description": "造成 {Damage:diff()} 点伤害。若手牌中有基础费用2或以上的牌，将1张[gold]天斧深渊[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-KITTY_CANNONEER_EVOLVED.title": "炮击猫兽人",
+  "STS2_CHAR_PORTALCRAFT-KITTY_CANNONEER_EVOLVED.description": "造成{Damage:diff()}点伤害。施加{MagicNumber:diff()}层[gold]易伤[/gold]。将1个[gold]未来核心[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-KITTY_CANNONEER_SUPER_EVOLVED.title": "炮击猫兽人",
+  "STS2_CHAR_PORTALCRAFT-KITTY_CANNONEER_SUPER_EVOLVED.description": "造成{Damage:diff()}点伤害。施加{MagicNumber:diff()}层[gold]易伤[/gold]。将1个[gold]未来核心[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-MEDICAL_GRADE_ASSASSIN_EVOLVED.title": "自动机械刺客",
+  "STS2_CHAR_PORTALCRAFT-MEDICAL_GRADE_ASSASSIN_EVOLVED.description": "造成{Damage:diff()}点伤害。将1个[gold]改良型·悬丝傀儡[/gold]加入手牌，并使其获得[gold]毁灭[/gold]。",
+  "STS2_CHAR_PORTALCRAFT-MEDICAL_GRADE_ASSASSIN_SUPER_EVOLVED.title": "自动机械刺客",
+  "STS2_CHAR_PORTALCRAFT-MEDICAL_GRADE_ASSASSIN_SUPER_EVOLVED.description": "造成{Damage:diff()}点伤害。将1个[gold]改良型·悬丝傀儡[/gold]加入手牌，并使其获得[gold]毁灭[/gold]。",
+  "STS2_CHAR_PORTALCRAFT-MIRIAM_THE_RESOLUTE_EVOLVED.title": "决心之誓·米莉亚姆",
+  "STS2_CHAR_PORTALCRAFT-MIRIAM_THE_RESOLUTE_EVOLVED.description": "将1个[gold]未来核心[/gold]和1个[gold]过往核心[/gold]加入手牌。\n[gold]进化时[/gold]：再次发动此牌效果。",
+  "STS2_CHAR_PORTALCRAFT-MIRIAM_THE_RESOLUTE_SUPER_EVOLVED.title": "决心之誓·米莉亚姆",
+  "STS2_CHAR_PORTALCRAFT-MIRIAM_THE_RESOLUTE_SUPER_EVOLVED.description": "将1个[gold]未来核心[/gold]和1个[gold]过往核心[/gold]加入手牌。\n[gold]进化时[/gold]：再次发动此牌效果。",
+  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_EVOLVED.title": "崭新的少女·欧丝",
+  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_EVOLVED.description": "抽1张牌。\n[gold]进化时[/gold]：获得[gold]纹章：崭新的少女·欧丝[/gold]。",
+  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_SUPER_EVOLVED.title": "崭新的少女·欧丝",
+  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_SUPER_EVOLVED.description": "抽1张牌。\n[gold]进化时[/gold]：获得[gold]纹章：崭新的少女·欧丝[/gold]",
+  "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION_EVOLVED.title": "破坏的继承者·阿克西娅",
+  "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION_EVOLVED.description": "获得{Block:diff()}点格挡。[gold]不可消耗[/gold]。\n[purple]超进化时[/purple]：对生命最高的敌人造成5X点伤害，X为手牌中其他牌的数量。消耗手牌中所有其他牌。",
+  "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION_SUPER_EVOLVED.title": "破坏的继承者·阿克西娅",
+  "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION_SUPER_EVOLVED.description": "获得{Block:diff()}点格挡。[gold]不可消耗[/gold]。\n[purple]超进化时[/purple]：对生命最高的敌人造成5X点伤害，X为手牌中其他牌的数量。消耗手牌中所有其他牌。",
+  "STS2_CHAR_PORTALCRAFT-RUKINA_RESISTANCE_LEADER_EVOLVED.title": "抗争领袖·露琪娜",
+  "STS2_CHAR_PORTALCRAFT-RUKINA_RESISTANCE_LEADER_EVOLVED.description": "获得{Block:diff()}点格挡。将1个[gold]未来核心[/gold]和1个[gold]过往核心[/gold]加入手牌。\n[gold]进化时[/gold]：将1个[gold]打击创造物[/gold]加入手牌，它本回合费用为0且具有[gold]虚无[/gold]。",
+  "STS2_CHAR_PORTALCRAFT-RUKINA_RESISTANCE_LEADER_SUPER_EVOLVED.title": "抗争领袖·露琪娜",
+  "STS2_CHAR_PORTALCRAFT-RUKINA_RESISTANCE_LEADER_SUPER_EVOLVED.description": "获得{Block:diff()}点格挡。将1个[gold]未来核心[/gold]和1个[gold]过往核心[/gold]加入手牌。\n[gold]进化时[/gold]：将1个[gold]打击创造物[/gold]加入手牌，它本回合费用为0且具有[gold]虚无[/gold]。",
+  "STS2_CHAR_PORTALCRAFT-DEVOTEE_OF_DESTRUCTION_EVOLVED.title": "破坏的肯定者",
+  "STS2_CHAR_PORTALCRAFT-DEVOTEE_OF_DESTRUCTION_EVOLVED.description": "造成X点伤害并获得X点格挡，X为手牌中其他牌的数量。消耗手牌中所有其他牌。",
+  "STS2_CHAR_PORTALCRAFT-DEVOTEE_OF_DESTRUCTION_SUPER_EVOLVED.title": "破坏的肯定者",
+  "STS2_CHAR_PORTALCRAFT-DEVOTEE_OF_DESTRUCTION_SUPER_EVOLVED.description": "造成X点伤害并获得X点格挡，X为手牌中其他牌的数量。消耗手牌中所有其他牌。",
+  "STS2_CHAR_PORTALCRAFT-LISHENNA_MELODY_MANIFEST_EVOLVED.title": "奏绝的显现·莉洁纳",
+  "STS2_CHAR_PORTALCRAFT-LISHENNA_MELODY_MANIFEST_EVOLVED.description": "将1张[gold]奏绝的独唱[/gold]加入手牌。[gold]不可消耗[/gold]。\n[gold]进化时[/gold]：将2张[gold]新约·白之章[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-LISHENNA_MELODY_MANIFEST_SUPER_EVOLVED.title": "奏绝的显现·莉洁纳",
+  "STS2_CHAR_PORTALCRAFT-LISHENNA_MELODY_MANIFEST_SUPER_EVOLVED.description": "将1张[gold]奏绝的独唱[/gold]加入手牌。[gold]不可消耗[/gold]。\n[gold]进化时[/gold]：将2张[gold]新约·白之章[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-NEW_AGE_CARTOGRAPHER_EVOLVED.title": "新时代地理学者",
+  "STS2_CHAR_PORTALCRAFT-NEW_AGE_CARTOGRAPHER_EVOLVED.description": "将1个[gold]毁灭创造物β[/gold]加入手牌。\n[purple]超进化时[/purple]：选择手牌中1个费用2或以下的[gold]创造物[/gold]，将其完整复制品加入手牌。复制品本回合费用为0且具有[gold]虚无[/gold]。",
+  "STS2_CHAR_PORTALCRAFT-NEW_AGE_CARTOGRAPHER_SUPER_EVOLVED.title": "新时代地理学者",
+  "STS2_CHAR_PORTALCRAFT-NEW_AGE_CARTOGRAPHER_SUPER_EVOLVED.description": "将1个[gold]毁灭创造物β[/gold]加入手牌。\n[purple]超进化时[/purple]：选择手牌中1个费用2或以下的[gold]创造物[/gold]，将其完整复制品加入手牌。复制品本回合费用为0且具有[gold]虚无[/gold]。"
 }

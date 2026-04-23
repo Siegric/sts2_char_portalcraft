@@ -1,69 +1,64 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BaseLib.Utils;
+using BaseLib.Extensions;
 using MegaCrit.Sts2.Core.Combat;
-using MegaCrit.Sts2.Core.Combat.History.Entries;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
-using sts2_char_portalcraft.PortalcraftCode.Character;
+using sts2_char_portalcraft.PortalcraftCode.Cards.Evolved;
+using sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
+using sts2_char_portalcraft.PortalcraftCode.Cards.SuperEvolved;
+using sts2_char_portalcraft.PortalcraftCode.Extensions;
 
 namespace sts2_char_portalcraft.PortalcraftCode.Cards;
 
-[Pool(typeof(PortalcraftCardPool))]
-public sealed class LunarBunny : PortalcraftCard
+public class LunarBunny : PortalcraftCard, IEvolvableCard
 {
-    protected override bool ShouldGlowGoldInternal
-    {
-        get
-        {
-            if (CombatState == null) return false;
-            return EnergyCost.GetResolved() < EnergyCost.Canonical;
-        }
-    }
+    protected readonly EvoTier Tier;
 
     public override bool GainsBlock => true;
 
     protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]
     {
-        new BlockVar(7m, ValueProp.Move),
+        new BlockVar(9m, ValueProp.Move),
     };
 
-    public LunarBunny() : base(2, CardType.Skill, CardRarity.Uncommon, TargetType.Self) { }
+    public LunarBunny() : this(EvoTier.Base) { }
 
-    public override Task AfterCardEnteredCombat(CardModel card)
+    protected LunarBunny(EvoTier tier)
+        : base(1, CardType.Skill, tier.OverrideRarity(CardRarity.Uncommon), TargetType.Self,
+               showInCardLibrary: tier == EvoTier.Base)
     {
-        if (card != this || IsClone) return Task.CompletedTask;
-
-        int count = CombatManager.Instance.History.CardPlaysFinished
-            .Count(e => e.CardPlay.Card.Type == CardType.Skill
-                     && e.CardPlay.Card.Owner == Owner
-                     && e.CardPlay.Card != this
-                     && e.HappenedThisTurn(CombatState));
-        if (count > 0)
-        {
-            EnergyCost.AddThisTurn(-count);
-        }
-        return Task.CompletedTask;
+        Tier = tier;
     }
 
-    public override Task AfterCardPlayed(PlayerChoiceContext context, CardPlay cardPlay)
-    {
-        if (cardPlay.Card.Owner != Owner) return Task.CompletedTask;
-        if (cardPlay.Card == this) return Task.CompletedTask;
-        if (cardPlay.Card.Type != CardType.Skill) return Task.CompletedTask;
+    public virtual Type? EvolvedType      => Tier == EvoTier.Base ? typeof(LunarBunnyEvolved)      : null;
+    public virtual Type? SuperEvolvedType => Tier == EvoTier.Base ? typeof(LunarBunnySuperEvolved) : null;
 
-        EnergyCost.AddThisTurn(-1);
-        return Task.CompletedTask;
-    }
+    public override bool CanBeGeneratedInCombat => Tier == EvoTier.Base && base.CanBeGeneratedInCombat;
+
+    public override string PortraitPath       => $"{Tier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
+    public override string CustomPortraitPath => $"{Tier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, cardPlay);
+
+        // Auto-evolve: if any Skill other than this was played this turn, transform.
+        bool playedSkillThisTurn = CombatManager.Instance.History.CardPlaysFinished.Any(e =>
+            e.CardPlay.Card.Type == CardType.Skill
+            && e.CardPlay.Card.Owner == Owner
+            && e.CardPlay.Card != this
+            && e.HappenedThisTurn(CombatState));
+
+        if (playedSkillThisTurn && EvoCmd.CanForceEvolve(this))
+        {
+            await EvoCmd.ForceEvolve(this, choiceContext, playVfx: false);
+        }
     }
 
     protected override void OnUpgrade()

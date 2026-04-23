@@ -1,70 +1,67 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BaseLib.Utils;
-using MegaCrit.Sts2.Core.Combat;
+using BaseLib.Extensions;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
-using sts2_char_portalcraft.PortalcraftCode.Character;
+using sts2_char_portalcraft.PortalcraftCode.Cards.Evolved;
+using sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
+using sts2_char_portalcraft.PortalcraftCode.Cards.SuperEvolved;
+using sts2_char_portalcraft.PortalcraftCode.Extensions;
 
 namespace sts2_char_portalcraft.PortalcraftCode.Cards;
 
-[Pool(typeof(PortalcraftCardPool))]
-public sealed class DevoteeOfDestruction : PortalcraftCard
+public class DevoteeOfDestruction : PortalcraftCard, IEvolvableCard
 {
+    protected readonly EvoTier Tier;
+
     public override bool GainsBlock => true;
 
-    protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]
-    {
-        new IntVar("Multiplier", 2m),
-    };
+    public DevoteeOfDestruction() : this(EvoTier.Base) { }
 
-    public DevoteeOfDestruction() : base(2, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy) { }
+    protected DevoteeOfDestruction(EvoTier tier)
+        : base(2, CardType.Attack, tier.OverrideRarity(CardRarity.Common), TargetType.AnyEnemy,
+               showInCardLibrary: tier == EvoTier.Base)
+    {
+        Tier = tier;
+    }
+
+    public virtual Type? EvolvedType      => Tier == EvoTier.Base ? typeof(DevoteeOfDestructionEvolved)      : null;
+    public virtual Type? SuperEvolvedType => Tier == EvoTier.Base ? typeof(DevoteeOfDestructionSuperEvolved) : null;
+
+    public override bool CanBeGeneratedInCombat => Tier == EvoTier.Base && base.CanBeGeneratedInCombat;
+
+    public override string PortraitPath       => $"{Tier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
+    public override string CustomPortraitPath => $"{Tier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        System.ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
-        
-        var handCards = PileType.Hand.GetPile(Owner).Cards
-            .Where(c => c != this)
-            .ToList();
+        ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
 
-        int exhaustedCount = 0;
-        foreach (var card in handCards)
+        // X = number of OTHER cards in hand (measured before exhausting).
+        var handCards = PileType.Hand.GetPile(Owner).Cards.Where(c => c != this).ToList();
+        int x = handCards.Count;
+
+        if (x > 0)
         {
-            await CardCmd.Exhaust(choiceContext, card);
-            exhaustedCount++;
-        }
-
-        int totalExhausted = exhaustedCount;
-
-        int multiplier = (int)DynamicVars["Multiplier"].BaseValue;
-        int x = totalExhausted;
-
-        // Gain 2X (or 3X) Block
-        int blockAmount = multiplier * x;
-        if (blockAmount > 0)
-        {
-            await CreatureCmd.GainBlock(Owner.Creature, blockAmount, ValueProp.Move, cardPlay);
-        }
-
-        // Deal 2X (or 3X) damage
-        int damageAmount = multiplier * x;
-        if (damageAmount > 0)
-        {
-            await DamageCmd.Attack(damageAmount)
+            await CreatureCmd.GainBlock(Owner.Creature, x, ValueProp.Move, cardPlay);
+            await DamageCmd.Attack(x)
                 .FromCard(this)
                 .Targeting(cardPlay.Target)
                 .Execute(choiceContext);
+        }
+
+        foreach (var card in handCards)
+        {
+            await CardCmd.Exhaust(choiceContext, card);
         }
     }
 
     protected override void OnUpgrade()
     {
-        DynamicVars["Multiplier"].UpgradeValueBy(1m);
+        EnergyCost.UpgradeBy(-1);
     }
 }

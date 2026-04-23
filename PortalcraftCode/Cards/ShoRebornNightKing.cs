@@ -1,13 +1,14 @@
-using System.Linq;
+using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using BaseLib.Utils;
-using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models;
-using System.Collections.Generic;
+using MegaCrit.Sts2.Core.Models.Powers;
+using MegaCrit.Sts2.Core.ValueProps;
+using sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
 using sts2_char_portalcraft.PortalcraftCode.Character;
 
 namespace sts2_char_portalcraft.PortalcraftCode.Cards;
@@ -15,44 +16,32 @@ namespace sts2_char_portalcraft.PortalcraftCode.Cards;
 [Pool(typeof(PortalcraftCardPool))]
 public sealed class ShoRebornNightKing : PortalcraftCard
 {
-    protected override bool ShouldGlowGoldInternal
-    {
-        get
-        {
-            if (CombatState == null) return false;
-            int skillsPlayed = CombatManager.Instance.History.CardPlaysFinished
-                .Count(e => e.CardPlay.Card.Type == CardType.Skill
-                         && e.CardPlay.Card.Owner == Owner
-                         && e.CardPlay.Card != this
-                         && e.HappenedThisTurn(CombatState));
-            return skillsPlayed >= (int)DynamicVars["SkillThreshold"].BaseValue;
-        }
-    }
-
     protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]
     {
-        new IntVar("MagicNumber", 3m),
-        new IntVar("SkillThreshold", 3m),
+        new DamageVar(6m, ValueProp.Move),
     };
 
-    public ShoRebornNightKing() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self) { }
+    public override IEnumerable<CardKeyword> CanonicalKeywords => new[] { CardKeyword.Exhaust };
+
+    public ShoRebornNightKing() : base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy) { }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        int skillsPlayed = CombatManager.Instance.History.CardPlaysFinished
-            .Count(e => e.CardPlay.Card.Type == CardType.Skill
-                     && e.CardPlay.Card.Owner == Owner
-                     && e.CardPlay.Card != this
-                     && e.HappenedThisTurn(CombatState));
+        ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
+        await DamageCmd.Attack(DynamicVars.Damage.BaseValue)
+            .FromCard(this)
+            .Targeting(cardPlay.Target)
+            .Execute(choiceContext);
 
-        if (skillsPlayed >= (int)DynamicVars["SkillThreshold"].BaseValue)
+        var pcs = Owner.PlayerCombatState;
+        if (pcs != null && EvoRuntime.SuperEvoPoints(pcs) >= 1)
         {
-            await PlayerCmd.GainEnergy(DynamicVars["MagicNumber"].BaseValue, Owner);
+            await PowerCmd.Apply<BufferPower>(Owner.Creature, 1, Owner.Creature, this);
         }
     }
 
     protected override void OnUpgrade()
     {
-        EnergyCost.UpgradeBy(-1);
+        DynamicVars.Damage.UpgradeValueBy(3m);
     }
 }

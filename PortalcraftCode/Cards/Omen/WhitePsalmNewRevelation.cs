@@ -15,7 +15,7 @@ namespace sts2_char_portalcraft.PortalcraftCode.Cards.Omen;
 
 public sealed class WhitePsalmNewRevelation : PortalcraftCard, ICountdownCard, ILastWordsCard
 {
-    private const int BaseBlockAmount = 2;
+    private const int BaseBlockAmount = 4;
     private const int UpgradeBlockAmount = 1;
 
     public int BlockValue => BaseBlockAmount + (CurrentUpgradeLevel > 0 ? UpgradeBlockAmount : 0);
