@@ -32,6 +32,6 @@ public sealed class BrilliantInventor : PortalcraftCard
 
     protected override void OnUpgrade()
     {
-        RemoveKeyword(CardKeyword.Exhaust);
+        EnergyCost.UpgradeBy(-1);
     }
 }

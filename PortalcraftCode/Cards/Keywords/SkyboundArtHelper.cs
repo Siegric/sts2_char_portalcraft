@@ -13,10 +13,7 @@ public static class SkyboundArtHelper
         if (!card.DynamicVars.ContainsKey(SkyboundArtVarName)) return;
         card.DynamicVars[SkyboundArtVarName].BaseValue = SkyboundArtRuntime.CurrentGauge(card);
     }
-
-    // Mass-refresh the displayed gauge var on every Skybound Art card in the
-    // player's hand. Call after any change to the global Skybound Art counter
-    // so the counter value shown on each card stays in sync.
+    
     public static void RefreshAllInHand(Player owner)
     {
         foreach (var card in PileType.Hand.GetPile(owner).Cards)

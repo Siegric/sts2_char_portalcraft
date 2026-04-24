@@ -42,7 +42,7 @@ public class AxiaHeirToDestruction : PortalcraftCard, IEvolvableCard
     public AxiaHeirToDestruction() : this(EvoTier.Base) { }
 
     protected AxiaHeirToDestruction(EvoTier tier)
-        : base(2, CardType.Skill, tier.OverrideRarity(CardRarity.Uncommon), TargetType.Self,
+        : base(1, CardType.Skill, tier.OverrideRarity(CardRarity.Uncommon), TargetType.Self,
                showInCardLibrary: tier == EvoTier.Base)
     {
         Tier = tier;

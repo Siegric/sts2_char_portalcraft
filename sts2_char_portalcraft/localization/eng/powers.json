@@ -27,9 +27,9 @@
   "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR_POWER.description": "Whenever a Puppet is played, gain Block and deal damage to ALL enemies.",
   "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR_POWER.smartDescription": "Whenever a Puppet is played, gain {Amount} Block and deal {Amount} damage to ALL enemies.",
 
-  "STS2_CHAR_PORTALCRAFT-ORCHIS_NEWFOUND_HEART_POWER.title": "Crest: Orchis, Newfound Heart",
-  "STS2_CHAR_PORTALCRAFT-ORCHIS_NEWFOUND_HEART_POWER.description": "Whenever a Puppet is added to your hand, give it [gold]Replay[/gold] 1 and [gold]Bane[/gold].",
-  "STS2_CHAR_PORTALCRAFT-ORCHIS_NEWFOUND_HEART_POWER.smartDescription": "Whenever a Puppet is added to your hand, give it [gold]Replay[/gold] 1 and [gold]Bane[/gold].",
+  "STS2_CHAR_PORTALCRAFT-ORCHIS_NEWFOUND_HEART_POWER.title": "Orchis, Newfound Heart",
+  "STS2_CHAR_PORTALCRAFT-ORCHIS_NEWFOUND_HEART_POWER.description": "This turn, every [gold]Puppet[/gold] added to your hand gets [gold]Replay[/gold] 1 and [gold]Bane[/gold].",
+  "STS2_CHAR_PORTALCRAFT-ORCHIS_NEWFOUND_HEART_POWER.smartDescription": "This turn, every [gold]Puppet[/gold] added to your hand gets [gold]Replay[/gold] 1 and [gold]Bane[/gold].",
 
   "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION_POWER.title": "Heir to Destruction",
   "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION_POWER.description": "At end of turn, Exhaust all [gold]White Psalm, New Revelation[/gold] and [gold]Black Psalm, New Revelation[/gold] in your hand.",

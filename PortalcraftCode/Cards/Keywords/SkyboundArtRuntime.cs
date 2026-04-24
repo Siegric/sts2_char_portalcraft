@@ -4,19 +4,13 @@ using MegaCrit.Sts2.Core.Models;
 
 namespace sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
 
-// Skybound Art gauge. Single global counter per combat:
-//   Gauge = RoundNumber + GlobalBonus(combatState)
-// All Skybound Art cards in a combat display the same value. Bumped by
-// evolutions (via EvoCmd) and by cards like Tsubasa.
 public static class SkyboundArtRuntime
 {
-    public const int SkyboundArtThreshold = 5;
-    public const int SuperSkyboundArtThreshold = 7;
+    // Adjust Thrresholds here
+    public const int SkyboundArtThreshold = 10;
+    public const int SuperSkyboundArtThreshold = 15;
 
     private sealed class Counter { public int Value; }
-
-    // Global bonus is keyed by CombatState so it naturally resets between
-    // combats (the table entry gets GC'd with the old CombatState).
     private static readonly ConditionalWeakTable<CombatState, Counter> _globalBonus = new();
 
     public static int GlobalBonus(CombatState? combatState) =>

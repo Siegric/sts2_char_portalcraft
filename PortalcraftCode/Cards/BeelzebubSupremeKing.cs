@@ -10,6 +10,7 @@ using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.MonsterMoves.Intents;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Evolved;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
 using sts2_char_portalcraft.PortalcraftCode.Cards.SuperEvolved;
@@ -31,7 +32,7 @@ public class BeelzebubSupremeKing : PortalcraftCard, IEvolvableCard
 
     public BeelzebubSupremeKing() : this(EvoTier.Base) { }
     protected BeelzebubSupremeKing(EvoTier tier)
-        : base(3, CardType.Skill, tier.OverrideRarity(CardRarity.Rare), TargetType.Self,
+        : base(3, CardType.Power, tier.OverrideRarity(CardRarity.Rare), TargetType.Self,
                showInCardLibrary: tier == EvoTier.Base)
     {
         Tier = tier;

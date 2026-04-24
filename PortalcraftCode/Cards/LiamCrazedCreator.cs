@@ -32,7 +32,7 @@ public class LiamCrazedCreator : PortalcraftCard, IEvolvableCard
 
     public LiamCrazedCreator() : this(EvoTier.Base) { }
     protected LiamCrazedCreator(EvoTier tier)
-        : base(3, CardType.Skill, tier.OverrideRarity(CardRarity.Rare), TargetType.Self,
+        : base(3, CardType.Power, tier.OverrideRarity(CardRarity.Rare), TargetType.Self,
                showInCardLibrary: tier == EvoTier.Base)
     {
         Tier = tier;

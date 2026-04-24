@@ -18,7 +18,7 @@ public sealed class AugmentationBestowal : PortalcraftCard
         HoverTipFactory.FromPower<AugmentationBestowalPower>(),
     };
 
-    public AugmentationBestowal() : base(3, CardType.Skill, CardRarity.Ancient, TargetType.Self) { }
+    public AugmentationBestowal() : base(2, CardType.Skill, CardRarity.Ancient, TargetType.Self) { }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

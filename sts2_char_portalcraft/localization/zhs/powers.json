@@ -27,15 +27,15 @@
   "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR_POWER.description": "每当打出悬丝傀儡时，获得格挡并对所有敌人造成伤害。",
   "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR_POWER.smartDescription": "每当打出悬丝傀儡时，获得 {Amount} 点格挡并对所有敌人造成 {Amount} 点伤害。",
 
-  "STS2_CHAR_PORTALCRAFT-ORCHIS_NEWFOUND_HEART_POWER.title": "纹章：奥丘斯·新生之心",
-  "STS2_CHAR_PORTALCRAFT-ORCHIS_NEWFOUND_HEART_POWER.description": "每当悬丝傀儡加入你的手牌时，使其获得[gold]重放[/gold]1和[gold]剧毒[/gold]。",
-  "STS2_CHAR_PORTALCRAFT-ORCHIS_NEWFOUND_HEART_POWER.smartDescription": "每当悬丝傀儡加入你的手牌时，使其获得[gold]重放[/gold]1和[gold]剧毒[/gold]。",
+  "STS2_CHAR_PORTALCRAFT-ORCHIS_NEWFOUND_HEART_POWER.title": "迈进之心·奥契丝",
+  "STS2_CHAR_PORTALCRAFT-ORCHIS_NEWFOUND_HEART_POWER.description": "本回合，加入你手牌的每个[gold]悬丝傀儡[/gold]获得[gold]重放[/gold]1和[gold]剧毒[/gold]。",
+  "STS2_CHAR_PORTALCRAFT-ORCHIS_NEWFOUND_HEART_POWER.smartDescription": "本回合，加入你手牌的每个[gold]悬丝傀儡[/gold]获得[gold]重放[/gold]1和[gold]剧毒[/gold]。",
 
   "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION_POWER.title": "破坏的继承者",
   "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION_POWER.description": "回合结束时，消耗手牌中所有[gold]新约·白之章[/gold]和[gold]新约·黑之章[/gold]。",
   "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION_POWER.smartDescription": "回合结束时，消耗手牌中所有[gold]新约·白之章[/gold]和[gold]新约·黑之章[/gold] {Amount} 次。",
 
-  "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING_POWER.title": "纹章：别西卜·至高王",
+  "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING_POWER.title": "纹章：唯一王者·别西卜",
   "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING_POWER.description": "每当你对敌人造成伤害时，对其额外造成伤害。",
   "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING_POWER.smartDescription": "每当你对敌人造成伤害时，对其额外造成 {Amount} 点伤害。",
 

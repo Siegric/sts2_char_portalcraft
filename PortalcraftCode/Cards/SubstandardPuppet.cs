@@ -25,9 +25,6 @@ public class SubstandardPuppet : PortalcraftCard, IEvolvableCard
     {
         new DamageVar(14m, ValueProp.Move),
     };
-
-    public override IEnumerable<CardKeyword> CanonicalKeywords => new[] { CardKeyword.Retain };
-
     public SubstandardPuppet() : this(EvoTier.Base) { }
     protected SubstandardPuppet(EvoTier tier)
         : base(2, CardType.Attack, tier.OverrideRarity(CardRarity.Uncommon), TargetType.AnyEnemy,
