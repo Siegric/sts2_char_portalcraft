@@ -9,6 +9,7 @@ using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.ValueProps;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Artifacts;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
@@ -135,11 +136,33 @@ public sealed class KeywordDispatcherPower : PortalcraftPower
     {
         if (cardSource == null) return 0m;
         if (cardSource.Owner?.Creature != Owner) return 0m;
-        if (!props.IsPoweredAttack()) return 0m;
 
-        if (EvoRuntime.IsSuperEvolved(cardSource)) return EvoRuntime.SuperEvolveDamageBonus;
-        if (EvoRuntime.IsEvolved(cardSource)) return EvoRuntime.EvolveDamageBonus;
-        return 0m;
+        decimal bonus = 0m;
+
+        // Evolve / super-evolve stat bonus — only on powered attacks.
+        if (props.IsPoweredAttack())
+        {
+            if (EvoRuntime.IsSuperEvolved(cardSource)) bonus += EvoRuntime.SuperEvolveDamageBonus;
+            else if (EvoRuntime.IsEvolved(cardSource)) bonus += EvoRuntime.EvolveDamageBonus;
+        }
+
+        // Bane: +10 vs non-minions, lethal vs minions. Handled here so both
+        // cases flow through the game's normal damage pipeline — which fires
+        // the proper death hooks (Died event, AfterDeath, removal from combat)
+        // when the minion hits 0 HP.
+        if (target != null && cardSource.Keywords.Contains(BaneKeyword.Bane))
+        {
+            if (target.HasPower<MinionPower>())
+            {
+                bonus += 9999m;
+            }
+            else
+            {
+                bonus += 10m;
+            }
+        }
+
+        return bonus;
     }
 
     public override decimal ModifyBlockAdditive(Creature target, decimal block, ValueProp props, CardModel? cardSource, CardPlay? cardPlay)

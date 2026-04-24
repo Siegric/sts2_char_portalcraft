@@ -80,9 +80,9 @@
   "STS2_CHAR_PORTALCRAFT-SUPEREVOLVE.description": "消耗[gold]超进化点[/gold]超进化后，发动能力。",
 
   "BANE.title": "毁灭",
-  "BANE.description": "此牌攻击敌方[gold]随从[/gold]时，造成伤害后将其破坏；攻击非随从敌人时，改为造成双倍伤害。",
+  "BANE.description": "此牌攻击敌方[gold]爪牙[/gold]时，造成伤害后将其破坏；攻击非爪牙敌人时，改为造成双倍伤害。",
   "STS2_CHAR_PORTALCRAFT-BANE.title": "毁灭",
-  "STS2_CHAR_PORTALCRAFT-BANE.description": "此牌攻击敌方[gold]随从[/gold]时，造成伤害后将其破坏；攻击非随从敌人时，改为造成双倍伤害。",
+  "STS2_CHAR_PORTALCRAFT-BANE.description": "此牌攻击敌方[gold]爪牙[/gold]时，造成伤害后将其破坏；攻击非爪牙敌人时，改为造成+10伤害。",
 
   "CANNOTBEEXHAUSTED.title": "不可消耗",
   "CANNOTBEEXHAUSTED.description": "此牌无法被[gold]消耗[/gold]。",
