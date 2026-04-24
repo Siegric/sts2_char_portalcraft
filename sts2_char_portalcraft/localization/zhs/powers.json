@@ -23,7 +23,7 @@
   "STS2_CHAR_PORTALCRAFT-REPLAY_NEXT_PUPPET_POWER.description": "你打出的下一个悬丝傀儡会被重新打出。",
   "STS2_CHAR_PORTALCRAFT-REPLAY_NEXT_PUPPET_POWER.smartDescription": "你打出的下一个悬丝傀儡会被重新打出 {Amount} 次。",
 
-  "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR_POWER.title": "纹章：利亚姆·狂乱的创造者",
+  "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR_POWER.title": "纹章：疯狂的创造者·历亚姆",
   "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR_POWER.description": "每当打出悬丝傀儡时，获得格挡并对所有敌人造成伤害。",
   "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR_POWER.smartDescription": "每当打出悬丝傀儡时，获得 {Amount} 点格挡并对所有敌人造成 {Amount} 点伤害。",
 

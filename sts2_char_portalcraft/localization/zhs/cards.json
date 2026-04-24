@@ -1,8 +1,8 @@
 {
   "STS2_CHAR_PORTALCRAFT-GEAR_OF_AMBITION.title": "未来核心",
-  "STS2_CHAR_PORTALCRAFT-GEAR_OF_AMBITION.description": "[gold]融合[/gold]：:创造物·护符与本卡牌[gold]融合[/gold]时，本卡牌变身为gold]攻击创造物[/gold]。\n无效果。",
+  "STS2_CHAR_PORTALCRAFT-GEAR_OF_AMBITION.description": "[gold]融合[/gold]：:创造物·护符与本卡牌[gold]融合[/gold]时，本卡牌变身为[gold]攻击创造物[/gold]。\n无效果。",
   "STS2_CHAR_PORTALCRAFT-GEAR_OF_REMEMBRANCE.title": "过往核心",
-  "STS2_CHAR_PORTALCRAFT-GEAR_OF_REMEMBRANCE.description": "[gold]融合[/gold]：:创造物·护符与本卡牌[gold]融合[/gold]时，本卡牌变身为gold]城堡创造物[/gold]。\n无效果。",
+  "STS2_CHAR_PORTALCRAFT-GEAR_OF_REMEMBRANCE.description": "[gold]融合[/gold]：:创造物·护符与本卡牌[gold]融合[/gold]时，本卡牌变身为[gold]城堡创造物[/gold]。\n无效果。",
   "STS2_CHAR_PORTALCRAFT-STRIKER_ARTIFACT.title": "打击创造物",
   "STS2_CHAR_PORTALCRAFT-STRIKER_ARTIFACT.description": "造成 {Damage:diff()} 点伤害。\n[gold]融合[/gold]：消耗[gold]创造物[/gold]，根据被融合牌的总费用进行变化。\n1：[gold]毁灭创造物α[/gold]\n2：[gold]毁灭创造物β[/gold]\n3或更多：[gold]毁灭创造物γ[/gold]",
   "STS2_CHAR_PORTALCRAFT-FORTIFIER_ARTIFACT.title": "城堡创造物",
