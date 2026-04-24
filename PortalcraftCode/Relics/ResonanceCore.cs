@@ -30,12 +30,5 @@ public sealed class ResonanceCore : PortalcraftRelic
         if (player.Creature.CombatState.RoundNumber > 1) return;
 
         Flash();
-
-        var combatState = player.Creature.CombatState;
-        var gear1 = combatState.CreateCard<GearOfAmbition>(player);
-        await CardPileCmd.AddGeneratedCardToCombat(gear1, PileType.Hand, addedByPlayer: true);
-
-        var gear2 = combatState.CreateCard<GearOfRemembrance>(player);
-        await CardPileCmd.AddGeneratedCardToCombat(gear2, PileType.Hand, addedByPlayer: true);
     }
 }

@@ -239,14 +239,14 @@ public static class EvoCmd
         holder?.UpdateCard();
     }
 
+    // Counter bump + display refresh live in EvoRuntime.MarkEvolved/MarkSuperEvolved
+    // so every evolution path (including direct flag-set) feeds the global
+    // Skybound Art counter. This method just fires the threshold hooks for any
+    // Skybound Art card in hand whose gauge has reached its threshold.
     private static async Task NotifySkyboundArtOfEvolution(CardModel evolvedCard, PlayerChoiceContext ctx)
     {
         var owner = evolvedCard.Owner;
         if (owner == null) return;
-
-        // Bump the single global counter once. Every Skybound Art card shares it.
-        SkyboundArtRuntime.AddGlobalBonus(evolvedCard.CombatState, 1);
-        SkyboundArtHelper.RefreshAllInHand(owner);
 
         var handCards = PileType.Hand.GetPile(owner).Cards.ToList();
         foreach (var card in handCards)

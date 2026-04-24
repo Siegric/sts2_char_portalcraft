@@ -14,9 +14,12 @@ public sealed class LuWohIntentDebuffPower : PortalcraftPower
 
     private const int StrengthReduction = 4;
 
-    public override async Task BeforeSideTurnStart(PlayerChoiceContext choiceContext, CombatSide side, CombatState combatState)
+    public override async Task BeforeTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
     {
-        if (side != CombatSide.Enemy) return;
+        if (side != CombatSide.Player) return;
+
+        var combatState = Owner.CombatState;
+        if (combatState == null) return;
 
         bool flashed = false;
         foreach (Creature enemy in combatState.HittableEnemies)

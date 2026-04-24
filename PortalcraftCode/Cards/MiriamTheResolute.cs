@@ -23,7 +23,6 @@ public class MiriamTheResolute : PortalcraftCard, IEvolvableCard
     {
         HoverTipFactory.FromCard<GearOfRemembrance>(),
         HoverTipFactory.FromCard<GearOfAmbition>(),
-        HoverTipFactory.FromKeyword(EvolutionKeyword.Evolution),
         HoverTipFactory.FromKeyword(EvolveKeyword.Evolve),
     };
 

@@ -51,11 +51,32 @@ public static class EvoRuntime
     public static bool IsSuperEvolved(CardModel card) =>
         _evoTier.TryGetValue(card, out var tier) && tier == Tier.SuperEvolved;
 
-    public static void MarkEvolved(CardModel card) => _evoTier[card] = Tier.Evolved;
+    public static void MarkEvolved(CardModel card)
+    {
+        _evoTier[card] = Tier.Evolved;
+        BumpSkyboundArtCounter(card);
+    }
 
-    public static void MarkSuperEvolved(CardModel card) => _evoTier[card] = Tier.SuperEvolved;
+    public static void MarkSuperEvolved(CardModel card)
+    {
+        _evoTier[card] = Tier.SuperEvolved;
+        BumpSkyboundArtCounter(card);
+    }
 
     public static void ClearTier(CardModel card) => _evoTier.Remove(card);
+
+    // Every evolution — regular, super, or force — increments the global
+    // Skybound Art counter by 1 and refreshes the displayed counter on every
+    // Skybound Art card in the player's hand. Revert-after-play does NOT
+    // decrement.
+    private static void BumpSkyboundArtCounter(CardModel card)
+    {
+        SkyboundArtRuntime.AddGlobalBonus(card.CombatState, 1);
+        if (card.Owner != null)
+        {
+            SkyboundArtHelper.RefreshAllInHand(card.Owner);
+        }
+    }
 
     public static int EvoPoints(PlayerCombatState pcs) => Get(pcs).EvoPoints;
 
