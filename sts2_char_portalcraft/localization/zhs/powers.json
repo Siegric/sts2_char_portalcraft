@@ -48,7 +48,7 @@
   "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_POWER.smartDescription": "回合结束时，若自己的手牌的张数为5张或以下，下回合多抽1张牌。若为6张或以上，下回合获得1点能量。",
 
   "STS2_CHAR_PORTALCRAFT-ANCIENT_CANNON_POWER.title": "遗产的炮击",
-  "STS2_CHAR_PORTALCRAFT-ANCIENT_CANNON_POWER.description": "每当你融合创造物时，对1个随机敌人造成伤害。",
+  "STS2_CHAR_PORTALCRAFT-ANCIENT_CANNON_POWER.description": "每当你融合创造物时，对1个随机敌人造成5点伤害。",
   "STS2_CHAR_PORTALCRAFT-ANCIENT_CANNON_POWER.smartDescription": "每当你融合创造物时，对1个随机敌人造成 {Amount} 点伤害。",
 
   "STS2_CHAR_PORTALCRAFT-REPLAY_NEXT_PUPPET_POWER.title": "操线术",
@@ -56,7 +56,7 @@
   "STS2_CHAR_PORTALCRAFT-REPLAY_NEXT_PUPPET_POWER.smartDescription": "你打出的下一个悬丝傀儡会被重新打出 {Amount} 次。",
 
   "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR_POWER.title": "纹章：疯狂的创造者·历亚姆",
-  "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR_POWER.description": "每当打出悬丝傀儡时，获得格挡并对所有敌人造成伤害。",
+  "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR_POWER.description": "每当打出悬丝傀儡时，获得4点格挡并对所有敌人造成4点伤害。",
   "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR_POWER.smartDescription": "每当打出悬丝傀儡时，获得 {Amount} 点格挡并对所有敌人造成 {Amount} 点伤害。",
 
   "STS2_CHAR_PORTALCRAFT-ORCHIS_NEWFOUND_HEART_POWER.title": "迈进之心·奥契丝",
@@ -68,7 +68,7 @@
   "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION_POWER.smartDescription": "回合结束时，消耗手牌中所有[gold]新约·白之章[/gold]和[gold]新约·黑之章[/gold] {Amount} 次。",
 
   "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING_POWER.title": "纹章：唯一王者·别西卜",
-  "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING_POWER.description": "每当你对敌人造成伤害时，对其额外造成伤害。",
+  "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING_POWER.description": "每当你对敌人造成伤害时，对其额外造成2点伤害。",
   "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING_POWER.smartDescription": "每当你对敌人造成伤害时，对其额外造成 {Amount} 点伤害。",
 
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER_POWER.title": "音速机关",
@@ -76,7 +76,7 @@
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER_POWER.smartDescription": "每融合4次，获得 {Amount} 点能量。",
 
   "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST_POWER.title": "兽性铁人",
-  "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST_POWER.description": "被攻击时反弹伤害。下回合开始时消失。",
+  "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST_POWER.description": "被攻击时反弹6点伤害。下回合开始时消失。",
   "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST_POWER.smartDescription": "被攻击时反弹 {Amount} 点伤害。下回合开始时消失。",
 
   "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_POWER.title": "尽小花的祝福",
@@ -92,7 +92,7 @@
   "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_POWER.smartDescription": "回合开始时，随机发动一个效果：手牌费用减少1、获得2点力量和2点敏捷直到回合结束、或恢复3点生命。不会连续两回合发动相同效果。",
 
   "STS2_CHAR_PORTALCRAFT-FLOWERING_ARTISAN_POWER.title": "繁花技师",
-  "STS2_CHAR_PORTALCRAFT-FLOWERING_ARTISAN_POWER.description": "本回合每使用1张技能牌，对所有敌人造成伤害。",
+  "STS2_CHAR_PORTALCRAFT-FLOWERING_ARTISAN_POWER.description": "本回合每使用1张技能牌，对所有敌人造成5点伤害。",
   "STS2_CHAR_PORTALCRAFT-FLOWERING_ARTISAN_POWER.smartDescription": "本回合每使用1张技能牌，对所有敌人造成 {Amount} 点伤害。",
 
   "STS2_CHAR_PORTALCRAFT-LU_WOH_INTENT_DEBUFF_POWER.title": "纹章：光之法则·龙敖",
@@ -100,6 +100,6 @@
   "STS2_CHAR_PORTALCRAFT-LU_WOH_INTENT_DEBUFF_POWER.smartDescription": "接下来 {Amount} 个敌方回合，意图攻击的敌人在该回合失去4点[gold]力量[/gold]。",
 
   "STS2_CHAR_PORTALCRAFT-ZWEI_SYMPHONIC_HEART_POWER.title": "交响之心",
-  "STS2_CHAR_PORTALCRAFT-ZWEI_SYMPHONIC_HEART_POWER.description": "本回合每打出1张悬丝傀儡，获得格挡。",
+  "STS2_CHAR_PORTALCRAFT-ZWEI_SYMPHONIC_HEART_POWER.description": "本回合每打出1张悬丝傀儡，获得4点格挡。",
   "STS2_CHAR_PORTALCRAFT-ZWEI_SYMPHONIC_HEART_POWER.smartDescription": "本回合每打出1张[gold]悬丝傀儡[/gold]，获得{Amount}点格挡。"
 }

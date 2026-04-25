@@ -27,6 +27,6 @@ public sealed class SlausRevolvingWheelOfFortune : PortalcraftCard
 
     protected override void OnUpgrade()
     {
-        EnergyCost.UpgradeBy(-1);
+        AddKeyword(CardKeyword.Innate);
     }
 }

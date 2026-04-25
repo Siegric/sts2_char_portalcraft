@@ -56,7 +56,7 @@
   "STS2_CHAR_PORTALCRAFT-REPLAY_NEXT_PUPPET_POWER.smartDescription": "The next Puppet you play is replayed {Amount} time(s).",
 
   "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR_POWER.title": "Crest: Liam, Crazed Creator",
-  "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR_POWER.description": "Whenever a Puppet is played, gain Block and deal damage to ALL enemies.",
+  "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR_POWER.description": "Whenever a Puppet is played, gain 4 Block and deal 4 damage to ALL enemies.",
   "STS2_CHAR_PORTALCRAFT-LIAM_CRAZED_CREATOR_POWER.smartDescription": "Whenever a Puppet is played, gain {Amount} Block and deal {Amount} damage to ALL enemies.",
 
   "STS2_CHAR_PORTALCRAFT-ORCHIS_NEWFOUND_HEART_POWER.title": "Orchis, Newfound Heart",
@@ -68,7 +68,7 @@
   "STS2_CHAR_PORTALCRAFT-AXIA_HEIR_TO_DESTRUCTION_POWER.smartDescription": "At end of turn, Exhaust all [gold]White Psalm, New Revelation[/gold] and [gold]Black Psalm, New Revelation[/gold] in your hand {Amount} time(s).",
 
   "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING_POWER.title": "Crest: Beelzebub, Supreme King",
-  "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING_POWER.description": "Whenever you deal damage to an enemy, deal additional damage to it.",
+  "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING_POWER.description": "Whenever you deal damage to an enemy, deal 2 additional damage to it.",
   "STS2_CHAR_PORTALCRAFT-BEELZEBUB_SUPREME_KING_POWER.smartDescription": "Whenever you deal damage to an enemy, deal {Amount} additional damage to it.",
 
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER_POWER.title": "Sonic Racer",
@@ -76,7 +76,7 @@
   "STS2_CHAR_PORTALCRAFT-RALMIA_SONIC_RACER_POWER.smartDescription": "For every 4 Fusions, gain {Amount} Energy.",
 
   "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST_POWER.title": "Mechanized Beast",
-  "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST_POWER.description": "When attacked, deal damage back. Expires next turn.",
+  "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST_POWER.description": "When attacked, deal 6 damage back. Expires next turn.",
   "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST_POWER.smartDescription": "When attacked, deal {Amount} damage back. Expires next turn.",
 
   "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_POWER.title": "Dewdrop's Blessing",
@@ -100,6 +100,6 @@
   "STS2_CHAR_PORTALCRAFT-LU_WOH_INTENT_DEBUFF_POWER.smartDescription": "For the next {Amount} enemy turn(s), enemies that intend to attack lose 4 [gold]Strength[/gold] for that turn.",
 
   "STS2_CHAR_PORTALCRAFT-ZWEI_SYMPHONIC_HEART_POWER.title": "Symphonic Heart",
-  "STS2_CHAR_PORTALCRAFT-ZWEI_SYMPHONIC_HEART_POWER.description": "This turn, whenever a Puppet is played, gain Block.",
+  "STS2_CHAR_PORTALCRAFT-ZWEI_SYMPHONIC_HEART_POWER.description": "This turn, whenever a Puppet is played, gain 4 Block.",
   "STS2_CHAR_PORTALCRAFT-ZWEI_SYMPHONIC_HEART_POWER.smartDescription": "This turn, whenever a [gold]Puppet[/gold] is played, gain {Amount} Block."
 }
