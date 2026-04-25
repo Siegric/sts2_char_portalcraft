@@ -65,7 +65,7 @@ public class CarneliaEmberOfDarkness : PortalcraftCard, IEvolvableCard
             minCount: 0,
             maxCount: 1);
 
-        var selected = (await CardSelectCmd.FromHand(choiceContext, Owner, prefs, Filter, this)).ToList();
+        var selected = (await CardSelectCmd.FromHand(choiceContext, Owner, prefs, Filter, null!)).ToList();
         if (selected.Count == 0) return;
 
         selected[0].AddKeyword(CannotBeExhaustedKeyword.CannotBeExhausted);

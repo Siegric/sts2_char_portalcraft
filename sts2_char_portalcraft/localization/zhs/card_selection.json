@@ -1,7 +1,7 @@
 {
   "ARTIFACT_FUSE_PROMPT": "选择要融合的创造物（或确认以直接打出）",
   "CATALYST_PROMPT": "选择1个T2创造物加入手牌",
-  "CARNELIA_PROMPT": "选择要消耗的创造物以获得能量",
+  "CARNELIA_PROMPT": "选择一个创造物并给予其‘不可被消耗’",
   "ALOUETTE_PROMPT": "选择本回合费用变为0的创造物",
   "FLIGHT_OF_ICARUS_PROMPT": "选择要强化的创造物",
   "ARTIFACT_CATAPULT_PROMPT": "选择要复制的创造物",

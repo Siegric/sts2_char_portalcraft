@@ -169,6 +169,10 @@ public abstract class ArtifactCard : PortalcraftCard, IFuseCard
                         }
                     }
 
+                    using (Patches.CannotBeExhaustedPatch.BypassScope())
+                    {
+                        await CardCmd.Exhaust(choiceContext, this);
+                    }
                     return;
                 }
                 
@@ -177,6 +181,14 @@ public abstract class ArtifactCard : PortalcraftCard, IFuseCard
                     foreach (var card in selectedList)
                     {
                         await CardCmd.Exhaust(choiceContext, card);
+                    }
+                    // Fuse intent didn't produce a result — return played card to hand
+                    // and refund its energy cost since no fuse transform occurred.
+                    await CardPileCmd.Add(this, PileType.Hand, CardPilePosition.Bottom);
+                    int unfusedRefund = EnergyCost.GetResolved();
+                    if (unfusedRefund > 0)
+                    {
+                        await PlayerCmd.GainEnergy(unfusedRefund, Owner);
                     }
                     return;
                 }
