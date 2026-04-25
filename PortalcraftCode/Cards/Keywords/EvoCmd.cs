@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Godot;
+using HarmonyLib;
 using MegaCrit.Sts2.Core.CardSelection;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
@@ -157,7 +158,24 @@ public static class EvoCmd
 
         int levels = sourceCard.CurrentUpgradeLevel;
         for (int i = 0; i < levels; i++) newCard.UpgradeInternal();
+        CopyTempCostModifiers(sourceCard, newCard);
         return newCard;
+    }
+
+    private static void CopyTempCostModifiers(CardModel source, CardModel target)
+    {
+        var field = AccessTools.Field(typeof(CardEnergyCost), "_localModifiers");
+        if (field.GetValue(source.EnergyCost) is not System.Collections.IList sourceMods) return;
+        if (field.GetValue(target.EnergyCost) is not System.Collections.IList targetMods) return;
+
+        foreach (var mod in sourceMods)
+        {
+            var cloneMethod = mod.GetType().GetMethod("Clone");
+            if (cloneMethod == null) continue;
+            var clone = cloneMethod.Invoke(mod, null);
+            if (clone != null) targetMods.Add(clone);
+        }
+        target.InvokeEnergyCostChanged();
     }
     
     private static async Task ReplaceInHand(CardModel oldCard, CardModel newCard, PlayerChoiceContext ctx)

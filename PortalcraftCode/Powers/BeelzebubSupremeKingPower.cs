@@ -30,14 +30,13 @@ public sealed class BeelzebubSupremeKingPower : PortalcraftPower
         if (dealer.Side != Owner.Side) return;
         if (target.Side != CombatSide.Enemy) return;
         if (!target.IsHittable) return;
+        if (cardSource == null) return;
 
         _inBonusDamage = true;
         try
         {
             Flash();
-            var cmd = DamageCmd.Attack(Amount).Targeting(target);
-            if (cardSource != null) cmd = cmd.FromCard(cardSource);
-            await cmd.Execute(choiceContext);
+            await DamageCmd.Attack(Amount).Targeting(target).FromCard(cardSource).Execute(choiceContext);
         }
         finally
         {
