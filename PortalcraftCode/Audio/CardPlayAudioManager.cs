@@ -52,6 +52,13 @@ public static class CardPlayAudioManager
         if (_volumeDb <= -20f) return;
 
         var stream = GetOrLoadStream(typeName);
+        if (stream == null)
+        {
+            if (typeName.EndsWith("SuperEvolved"))
+                stream = GetOrLoadStream(typeName[..^"SuperEvolved".Length]);
+            else if (typeName.EndsWith("Evolved"))
+                stream = GetOrLoadStream(typeName[..^"Evolved".Length]);
+        }
         if (stream == null) return;
 
         var player = _players[_nextPlayer];
@@ -62,7 +69,52 @@ public static class CardPlayAudioManager
     
     public static void PlayForEvolve(string typeName) => PlayForCard(typeName + "Evolve");
     public static void PlayForSuperEvolve(string typeName) => PlayForCard(typeName + "SuperEvolve");
-    public static void PlayForEffect(string typeName) => PlayForCard(typeName + "Effect");
+
+    private static readonly Queue<AudioStream> _effectQueue = new();
+    private static bool _effectTimerActive;
+
+    public static void PlayForEffect(string typeName)
+    {
+        if (!_initialized || NonInteractiveMode.IsActive) return;
+        if (_volumeDb <= -20f) return;
+
+        var stream = GetOrLoadStream(typeName + "Effect");
+        if (stream == null) return;
+
+        _effectQueue.Enqueue(stream);
+        if (!_effectTimerActive) ScheduleNextEffect();
+    }
+
+    private static void ScheduleNextEffect()
+    {
+        _effectTimerActive = true;
+        var tree = (SceneTree)Engine.GetMainLoop();
+        var timer = tree.CreateTimer(0.5);
+        timer.Timeout += OnEffectTimerFired;
+    }
+
+    private static void OnEffectTimerFired()
+    {
+        if (_effectQueue.Count == 0)
+        {
+            _effectTimerActive = false;
+            return;
+        }
+
+        var stream = _effectQueue.Dequeue();
+        if (_volumeDb > -20f)
+        {
+            var player = _players[_nextPlayer];
+            _nextPlayer = (_nextPlayer + 1) % _players.Length;
+            player.Stream = stream;
+            player.Play();
+        }
+
+        if (_effectQueue.Count > 0)
+            ScheduleNextEffect();
+        else
+            _effectTimerActive = false;
+    }
 
     private static AudioStream GetOrLoadStream(string typeName)
     {
