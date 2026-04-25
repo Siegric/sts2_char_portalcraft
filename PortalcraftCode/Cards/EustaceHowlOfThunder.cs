@@ -42,7 +42,6 @@ public class EustaceHowlOfThunder : PortalcraftCard, IEvolvableCard, ISkyboundAr
     protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
     {
         HoverTipFactory.FromKeyword(SkyboundArtKeyword.SkyboundArt),
-        HoverTipFactory.FromKeyword(EvolutionKeyword.Evolution),
     };
 
     public EustaceHowlOfThunder() : this(EvoTier.Base) { }

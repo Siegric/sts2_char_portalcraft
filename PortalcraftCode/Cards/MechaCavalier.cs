@@ -31,9 +31,7 @@ public class MechaCavalier : PortalcraftCard, IEvolvableCard
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
     {
-        HoverTipFactory.FromKeyword(EvolutionKeyword.Evolution),
         HoverTipFactory.FromKeyword(EvolveKeyword.Evolve),
-        HoverTipFactory.FromKeyword(SuperEvolutionKeyword.SuperEvolution),
         HoverTipFactory.FromKeyword(SuperEvolveKeyword.SuperEvolve),
         HoverTipFactory.FromKeyword(SummonKeyword.Summon),
     };

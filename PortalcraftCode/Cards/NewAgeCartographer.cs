@@ -29,7 +29,6 @@ public class NewAgeCartographer : PortalcraftCard, IEvolvableCard
     protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
     {
         HoverTipFactory.FromCard<OminousArtifactBeta>(),
-        HoverTipFactory.FromKeyword(SuperEvolutionKeyword.SuperEvolution),
         HoverTipFactory.FromKeyword(SuperEvolveKeyword.SuperEvolve),
         HoverTipFactory.FromKeyword(SummonKeyword.Summon),
     };

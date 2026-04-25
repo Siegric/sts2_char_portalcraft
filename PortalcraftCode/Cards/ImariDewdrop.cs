@@ -29,9 +29,7 @@ public class ImariDewdrop : PortalcraftCard, IEvolvableCard
     {
         HoverTipFactory.FromCard<ImarisLittleBuddies>(),
         HoverTipFactory.FromPower<ImariDewdropPower>(),
-        HoverTipFactory.FromKeyword(EvolutionKeyword.Evolution),
         HoverTipFactory.FromKeyword(EvolveKeyword.Evolve),
-        HoverTipFactory.FromKeyword(SuperEvolutionKeyword.SuperEvolution),
         HoverTipFactory.FromKeyword(SuperEvolveKeyword.SuperEvolve),
     };
 

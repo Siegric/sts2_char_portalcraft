@@ -26,7 +26,6 @@ public class ZweiSymphonicHeart : PortalcraftCard, IEvolvableCard
     {
         HoverTipFactory.FromCard<Victoria>(),
         HoverTipFactory.FromPower<ZweiSymphonicHeartPower>(),
-        HoverTipFactory.FromKeyword(EvolutionKeyword.Evolution),
         HoverTipFactory.FromKeyword(EvolveKeyword.Evolve),
         HoverTipFactory.FromKeyword(SummonKeyword.Summon),
     };

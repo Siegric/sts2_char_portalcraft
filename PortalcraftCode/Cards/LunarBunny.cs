@@ -8,12 +8,14 @@ using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Evolved;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
 using sts2_char_portalcraft.PortalcraftCode.Cards.SuperEvolved;
 using sts2_char_portalcraft.PortalcraftCode.Extensions;
+using sts2_char_portalcraft.PortalcraftCode.Powers;
 
 namespace sts2_char_portalcraft.PortalcraftCode.Cards;
 
@@ -28,7 +30,10 @@ public class LunarBunny : PortalcraftCard, IEvolvableCard
     {
         new BlockVar(9m, ValueProp.Move),
     };
-
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
+    {
+        HoverTipFactory.FromKeyword(EvolveKeyword.Evolve),
+    };
     public LunarBunny() : this(EvoTier.Base) { }
 
     protected LunarBunny(EvoTier tier)

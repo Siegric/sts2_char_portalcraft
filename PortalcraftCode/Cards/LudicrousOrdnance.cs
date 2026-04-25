@@ -9,9 +9,11 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
+using sts2_char_portalcraft.PortalcraftCode.Audio;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Evolved;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
 using sts2_char_portalcraft.PortalcraftCode.Cards.SuperEvolved;
@@ -29,6 +31,12 @@ public class LudicrousOrdnance : PortalcraftCard, IEvolvableCard, IOnTurnEndCard
     protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]
     {
         new DamageVar(12m, ValueProp.Move),
+    };
+    
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
+    {
+        HoverTipFactory.FromKeyword(EvolveKeyword.Evolve),
+        HoverTipFactory.FromCard<LudicrousOrdnance>(),
     };
 
     public LudicrousOrdnance() : this(EvoTier.Base) { }
@@ -65,6 +73,15 @@ public class LudicrousOrdnance : PortalcraftCard, IEvolvableCard, IOnTurnEndCard
     public virtual async Task OnEvolve(CardModel card, PlayerChoiceContext choiceContext)
     {
         await DealToRandomEnemy(choiceContext);
+
+        var others = PileType.Hand.GetPile(Owner).Cards
+            .OfType<LudicrousOrdnance>()
+            .Where(c => c != this)
+            .ToList();
+        foreach (var other in others)
+        {
+            await other.DealToRandomEnemy(choiceContext);
+        }
     }
 
     public virtual Task OnSuperEvolve(CardModel card, PlayerChoiceContext choiceContext) => Task.CompletedTask;
@@ -75,6 +92,7 @@ public class LudicrousOrdnance : PortalcraftCard, IEvolvableCard, IOnTurnEndCard
         if (enemies.Count == 0) return;
 
         Creature target = Owner.RunState.Rng.Shuffle.NextItem(enemies);
+        CardPlayAudioManager.PlayForEffect(nameof(LudicrousOrdnance));
         await DamageCmd.Attack(DynamicVars.Damage.BaseValue)
             .FromCard(this)
             .Targeting(target)

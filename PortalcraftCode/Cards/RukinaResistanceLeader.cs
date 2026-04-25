@@ -35,7 +35,6 @@ public class RukinaResistanceLeader : PortalcraftCard, IEvolvableCard
         HoverTipFactory.FromCard<GearOfAmbition>(),
         HoverTipFactory.FromCard<GearOfRemembrance>(),
         HoverTipFactory.FromCard<StrikerArtifact>(),
-        HoverTipFactory.FromKeyword(EvolutionKeyword.Evolution),
         HoverTipFactory.FromKeyword(EvolveKeyword.Evolve),
         HoverTipFactory.FromKeyword(SummonKeyword.Summon),
     };

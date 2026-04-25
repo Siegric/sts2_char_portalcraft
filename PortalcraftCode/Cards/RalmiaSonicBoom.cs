@@ -9,6 +9,7 @@ using MegaCrit.Sts2.Core.CardSelection;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Models;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Artifacts;
@@ -27,6 +28,11 @@ public class RalmiaSonicBoom : PortalcraftCard, IEvolvableCard
     public EvoTier sts2_char_portalcraft_CurrentTier { get; set; }
 
     protected override bool HasEnergyCostX => true;
+    
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
+    {
+        HoverTipFactory.FromKeyword(SuperEvolveKeyword.SuperEvolve),
+    };
 
     public RalmiaSonicBoom() : this(EvoTier.Base) { }
     protected RalmiaSonicBoom(EvoTier tier)

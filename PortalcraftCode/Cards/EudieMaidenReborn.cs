@@ -24,7 +24,6 @@ public class EudieMaidenReborn : PortalcraftCard, IEvolvableCard
     protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
     {
         HoverTipFactory.FromPower<EudieMaidenRebornPower>(),
-        HoverTipFactory.FromKeyword(EvolutionKeyword.Evolution),
         HoverTipFactory.FromKeyword(EvolveKeyword.Evolve),
     };
 

@@ -26,7 +26,8 @@ public class SubstandardPuppet : PortalcraftCard, IEvolvableCard
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
     {
-        HoverTipFactory.FromKeyword(SummonKeyword.Summon)
+        HoverTipFactory.FromKeyword(SummonKeyword.Summon),
+        HoverTipFactory.FromKeyword(EvolveKeyword.Evolve),
     };
 
     protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]

@@ -31,7 +31,6 @@ public class LishennaMelodyManifest : PortalcraftCard, IEvolvableCard
         HoverTipFactory.FromCard<MelodiousMonody>(),
         HoverTipFactory.FromCard<WhitePsalmNewRevelation>(),
         HoverTipFactory.FromKeyword(CannotBeExhaustedKeyword.CannotBeExhausted),
-        HoverTipFactory.FromKeyword(EvolutionKeyword.Evolution),
         HoverTipFactory.FromKeyword(EvolveKeyword.Evolve),
     };
 

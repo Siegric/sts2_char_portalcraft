@@ -29,6 +29,7 @@ public class LiamCrazedCreator : PortalcraftCard, IEvolvableCard
     {
         HoverTipFactory.FromCard<EnhancedPuppet>(),
         HoverTipFactory.FromPower<LiamCrazedCreatorPower>(),
+        HoverTipFactory.FromKeyword(EvolveKeyword.Evolve),
         HoverTipFactory.FromKeyword(SummonKeyword.Summon),
     };
 

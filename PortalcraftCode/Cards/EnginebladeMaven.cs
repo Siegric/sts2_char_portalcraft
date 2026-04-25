@@ -36,6 +36,7 @@ public class EnginebladeMaven : PortalcraftCard, IEvolvableCard
         HoverTipFactory.FromCard<GearOfRemembrance>(),
         HoverTipFactory.FromCard<StrikerArtifact>(),
         HoverTipFactory.FromKeyword(SummonKeyword.Summon),
+        HoverTipFactory.FromKeyword(EvolveKeyword.Evolve), 
     };
 
     public EnginebladeMaven() : this(EvoTier.Base) { }
