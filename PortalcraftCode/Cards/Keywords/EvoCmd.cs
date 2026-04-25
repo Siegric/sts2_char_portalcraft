@@ -291,7 +291,7 @@ public static class EvoCmd
     public static async Task<bool> EvolveFromHandWithArrow(Player player, PlayerChoiceContext choiceContext, Vector2 arrowStart)
     {
         if (!CanEvolveAny(player)) return false;
-        var selected = await SelectWithArrow(superEvolve: false, arrowStart);
+        var selected = await SelectEvolveTargetWithArrow(superEvolve: false, arrowStart);
         if (selected == null) return false;
         return await TryEvolve(selected, choiceContext);
     }
@@ -299,12 +299,12 @@ public static class EvoCmd
     public static async Task<bool> SuperEvolveFromHandWithArrow(Player player, PlayerChoiceContext choiceContext, Vector2 arrowStart)
     {
         if (!CanSuperEvolveAny(player)) return false;
-        var selected = await SelectWithArrow(superEvolve: true, arrowStart);
+        var selected = await SelectEvolveTargetWithArrow(superEvolve: true, arrowStart);
         if (selected == null) return false;
         return await TrySuperEvolve(selected, choiceContext);
     }
 
-    private static async Task<CardModel?> SelectWithArrow(bool superEvolve, Vector2 arrowStart)
+    public static async Task<CardModel?> SelectEvolveTargetWithArrow(bool superEvolve, Vector2 arrowStart)
     {
         var tm = NTargetManager.Instance;
         if (tm == null) return null;

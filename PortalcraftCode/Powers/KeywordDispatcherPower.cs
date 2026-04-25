@@ -114,38 +114,20 @@ public sealed class KeywordDispatcherPower : PortalcraftPower
         if (cardSource == null) return 0m;
         if (cardSource.Owner?.Creature != Owner) return 0m;
 
-        decimal bonus = 0m;
-        
-        if (props.IsPoweredAttack())
-        {
-            if (EvoRuntime.IsSuperEvolved(cardSource)) bonus += EvoRuntime.SuperEvolveDamageBonus;
-            else if (EvoRuntime.IsEvolved(cardSource)) bonus += EvoRuntime.EvolveDamageBonus;
-        }
-        
+        // Evolve / super-evolve damage bonuses are baked into each evolved
+        // variant's CanonicalVars (e.g. EustaceHowlOfThunderEvolved declares
+        // DamageVar(20m) directly). Class identity drives the stat — fully
+        // synced across clients.
+
         if (target != null && cardSource.Keywords.Contains(BaneKeyword.Bane))
         {
             if (target.HasPower<MinionPower>())
             {
-                bonus += 9999m;
+                return 9999m;
             }
-            else
-            {
-                bonus += 10m;
-            }
+            return 10m;
         }
 
-        return bonus;
-    }
-
-    public override decimal ModifyBlockAdditive(Creature target, decimal block, ValueProp props, CardModel? cardSource, CardPlay? cardPlay)
-    {
-        if (cardSource == null) return 0m;
-        if (cardSource.Owner?.Creature != Owner) return 0m;
-        if (!props.IsPoweredCardOrMonsterMoveBlock()) return 0m;
-
-        if (EvoRuntime.IsSuperEvolved(cardSource)) return EvoRuntime.SuperEvolveBlockBonus;
-        if (EvoRuntime.IsEvolved(cardSource)) return EvoRuntime.EvolveBlockBonus;
         return 0m;
     }
-    
 }

@@ -3,6 +3,38 @@
   "STS2_CHAR_PORTALCRAFT-KEYWORD_DISPATCHER_POWER.description": "内部使用。调度自定义关键字效果。",
   "STS2_CHAR_PORTALCRAFT-KEYWORD_DISPATCHER_POWER.smartDescription": "内部使用。调度自定义关键字效果。",
 
+  "STS2_CHAR_PORTALCRAFT-EVO_POINTS_POWER.title": "Evo Points",
+  "STS2_CHAR_PORTALCRAFT-EVO_POINTS_POWER.description": "Internal. Tracks remaining evolve points this combat.",
+  "STS2_CHAR_PORTALCRAFT-EVO_POINTS_POWER.smartDescription": "Internal. Tracks remaining evolve points this combat.",
+
+  "STS2_CHAR_PORTALCRAFT-SUPER_EVO_POINTS_POWER.title": "Super Evo Points",
+  "STS2_CHAR_PORTALCRAFT-SUPER_EVO_POINTS_POWER.description": "Internal. Tracks remaining super-evolve points this combat.",
+  "STS2_CHAR_PORTALCRAFT-SUPER_EVO_POINTS_POWER.smartDescription": "Internal. Tracks remaining super-evolve points this combat.",
+
+  "STS2_CHAR_PORTALCRAFT-EVO_USED_THIS_TURN_POWER.title": "Evo Used This Turn",
+  "STS2_CHAR_PORTALCRAFT-EVO_USED_THIS_TURN_POWER.description": "Internal. Locks out further evolve/super-evolve for the rest of this turn.",
+  "STS2_CHAR_PORTALCRAFT-EVO_USED_THIS_TURN_POWER.smartDescription": "Internal. Locks out further evolve/super-evolve for the rest of this turn.",
+
+  "STS2_CHAR_PORTALCRAFT-SKYBOUND_ART_GAUGE_POWER.title": "奥义槽",
+  "STS2_CHAR_PORTALCRAFT-SKYBOUND_ART_GAUGE_POWER.description": "奥义槽是指“现在的回合数”和“在手牌中时自己的随从的进化次数”的合计。",
+  "STS2_CHAR_PORTALCRAFT-SKYBOUND_ART_GAUGE_POWER.smartDescription": "奥义槽是指“现在的回合数”和“在手牌中时自己的随从的进化次数”的合计。",
+
+  "STS2_CHAR_PORTALCRAFT-SKYBOUND_ART_POWER.title": "Skybound Art Active",
+  "STS2_CHAR_PORTALCRAFT-SKYBOUND_ART_POWER.description": "Internal. Whenever a Skybound Art card is drawn, its effect fires.",
+  "STS2_CHAR_PORTALCRAFT-SKYBOUND_ART_POWER.smartDescription": "Internal. Whenever a Skybound Art card is drawn, its effect fires.",
+
+  "STS2_CHAR_PORTALCRAFT-SUPER_SKYBOUND_ART_POWER.title": "Super Skybound Art Active",
+  "STS2_CHAR_PORTALCRAFT-SUPER_SKYBOUND_ART_POWER.description": "Internal. Whenever a Super Skybound Art card is drawn, its effect fires.",
+  "STS2_CHAR_PORTALCRAFT-SUPER_SKYBOUND_ART_POWER.smartDescription": "Internal. Whenever a Super Skybound Art card is drawn, its effect fires.",
+
+  "STS2_CHAR_PORTALCRAFT-SKYBOUND_ART_AUTO_PLAYING_POWER.title": "Skybound Auto-Play",
+  "STS2_CHAR_PORTALCRAFT-SKYBOUND_ART_AUTO_PLAYING_POWER.description": "Internal. Signals that a Skybound Art card is being auto-played; its OnPlay runs the art effect only.",
+  "STS2_CHAR_PORTALCRAFT-SKYBOUND_ART_AUTO_PLAYING_POWER.smartDescription": "Internal. Signals that a Skybound Art card is being auto-played; its OnPlay runs the art effect only.",
+
+  "STS2_CHAR_PORTALCRAFT-ARTIFACTS_EXHAUSTED_POWER.title": "Artifacts Exhausted",
+  "STS2_CHAR_PORTALCRAFT-ARTIFACTS_EXHAUSTED_POWER.description": "Internal. Counts how many Artifact cards have been exhausted this combat.",
+  "STS2_CHAR_PORTALCRAFT-ARTIFACTS_EXHAUSTED_POWER.smartDescription": "Internal. Counts how many Artifact cards have been exhausted this combat.",
+
   "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL_POWER.title": "机械的解放",
   "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL_POWER.description": "每当你打出[gold]创造物[/gold]时，获得1点能量并抽1张牌。回合结束时失效。",
   "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL_POWER.smartDescription": "每当你打出[gold]创造物[/gold]时，获得1点能量并抽1张牌。回合结束时失效。",

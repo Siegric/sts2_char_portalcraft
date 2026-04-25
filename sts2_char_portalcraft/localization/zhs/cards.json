@@ -150,7 +150,7 @@
   "STS2_CHAR_PORTALCRAFT-STREAM_OF_LIFE.title": "生命的奔流",
   "STS2_CHAR_PORTALCRAFT-STREAM_OF_LIFE.description": "造成 {Damage:diff()} 点伤害。将1个[gold]过往核心[/gold]加入手牌。",
   "STS2_CHAR_PORTALCRAFT-ELECTRIC_WHIP_LASS.title": "电鞭手",
-  "STS2_CHAR_PORTALCRAFT-ELECTRIC_WHIP_LASS.description": "获得 {Block:diff()} 点格挡。将{MagicNumber:diff()}个[gold]过往核心[/gold]加入手牌。",
+  "STS2_CHAR_PORTALCRAFT-ELECTRIC_WHIP_LASS.description": "获得 {Block:diff()} 点格挡。将1个[gold]过往核心[/gold]加入手牌。",
   "STS2_CHAR_PORTALCRAFT-ADVENT_OF_THE_ELD_AXE.title": "天斧授予",
   "STS2_CHAR_PORTALCRAFT-ADVENT_OF_THE_ELD_AXE.description": "造成 {Damage:diff()} 点伤害。若手牌中有基础费用2或以上的卡牌，抽 {Cards:diff()} 张卡牌。",
   "STS2_CHAR_PORTALCRAFT-MECHANIZED_BEAST.title": "兽性铁人",

@@ -1,12 +1,14 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Godot;
 using MegaCrit.Sts2.Core.Context;
+using MegaCrit.Sts2.Core.Entities.Multiplayer;
 using MegaCrit.Sts2.Core.Entities.Players;
-using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Helpers;
 using MegaCrit.Sts2.Core.Runs;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
+using sts2_char_portalcraft.PortalcraftCode.GameActions;
 
 namespace sts2_char_portalcraft.PortalcraftCode.UI;
 
@@ -169,11 +171,21 @@ public static class NEvoHolder
         if (!canUse) return;
 
         var arrowStart = root.GlobalPosition + root.Size * 0.5f;
-        var ctx = new BlockingPlayerChoiceContext();
+        TaskHelper.RunSafely(StartEvolveFlow(player, state.IsSuperEvolve, arrowStart));
+    }
 
-        TaskHelper.RunSafely(state.IsSuperEvolve
-            ? EvoCmd.SuperEvolveFromHandWithArrow(player, ctx, arrowStart)
-            : EvoCmd.EvolveFromHandWithArrow(player, ctx, arrowStart));
+    private static async Task StartEvolveFlow(Player player, bool isSuper, Vector2 arrowStart)
+    {
+        // Local arrow target selection — UI-only is fine. The chosen card's
+        // NetCombatCard index gets dispatched through ActionQueueSynchronizer
+        // so both clients deterministically run the same evolve.
+        var target = await EvoCmd.SelectEvolveTargetWithArrow(isSuper, arrowStart);
+        if (target == null) return;
+        if (target.Owner != player) return;
+
+        var netCard = NetCombatCard.FromModel(target);
+        var action = new Sts2CharPortalcraft_EvolveAction(player, isSuper, netCard);
+        RunManager.Instance.ActionQueueSynchronizer.RequestEnqueue(action);
     }
 
     private static Player? GetLocalPlayer()
