@@ -40,6 +40,6 @@ public static class StringExtensions
 
     public static string CharacterUiPath(this string path)
     {
-        return "res://" + Path.Join(MainFile.ModId, "images", "charui", path);
+        return $"res://{MainFile.ModId}/images/charui/{path}";
     }
 }
