@@ -1,4 +1,5 @@
 using System;
+using MegaCrit.Sts2.Core.Saves.Runs;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,18 +19,19 @@ using sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
 using sts2_char_portalcraft.PortalcraftCode.Cards.SuperEvolved;
 using sts2_char_portalcraft.PortalcraftCode.Character;
 using sts2_char_portalcraft.PortalcraftCode.Extensions;
+using sts2_char_portalcraft.PortalcraftCode.Powers;
 
 namespace sts2_char_portalcraft.PortalcraftCode.Cards;
 
 [Pool(typeof(PortalcraftCardPool))]
 public class EustaceHowlOfThunder : PortalcraftCard, IEvolvableCard, ISkyboundArtCard
 {
-    protected readonly EvoTier Tier;
+    [SavedProperty]
+    public EvoTier sts2_char_portalcraft_CurrentTier { get; set; }
 
     protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]
     {
         new DamageVar(18m, ValueProp.Move),
-        new IntVar(SkyboundArtHelper.SkyboundArtVarName, 0m),
     };
 
     public override IEnumerable<CardKeyword> CanonicalKeywords => new[]
@@ -48,19 +50,25 @@ public class EustaceHowlOfThunder : PortalcraftCard, IEvolvableCard, ISkyboundAr
         : base(2, CardType.Attack, tier.OverrideRarity(CardRarity.Uncommon), TargetType.AnyEnemy,
                showInCardLibrary: tier == EvoTier.Base)
     {
-        Tier = tier;
+        sts2_char_portalcraft_CurrentTier = tier;
     }
 
-    public virtual Type? EvolvedType      => Tier == EvoTier.Base ? typeof(EustaceHowlOfThunderEvolved)      : null;
-    public virtual Type? SuperEvolvedType => Tier == EvoTier.Base ? typeof(EustaceHowlOfThunderSuperEvolved) : null;
+    public virtual Type? EvolvedType      => sts2_char_portalcraft_CurrentTier == EvoTier.Base ? typeof(EustaceHowlOfThunderEvolved)      : null;
+    public virtual Type? SuperEvolvedType => sts2_char_portalcraft_CurrentTier == EvoTier.Base ? typeof(EustaceHowlOfThunderSuperEvolved) : null;
 
-    public override bool CanBeGeneratedInCombat => Tier == EvoTier.Base && base.CanBeGeneratedInCombat;
+    public override bool CanBeGeneratedInCombat => sts2_char_portalcraft_CurrentTier == EvoTier.Base && base.CanBeGeneratedInCombat;
 
-    public override string PortraitPath       => $"{Tier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
-    public override string CustomPortraitPath => $"{Tier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
+    public override string PortraitPath       => $"{sts2_char_portalcraft_CurrentTier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
+    public override string CustomPortraitPath => $"{sts2_char_portalcraft_CurrentTier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
+        if (Owner.Creature.HasPower<SkyboundArtAutoPlayingPower>())
+        {
+            await OnSkyboundArt(this, choiceContext);
+            return;
+        }
+
         ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
         await DamageCmd.Attack(DynamicVars.Damage.BaseValue)
             .FromCard(this)
@@ -89,10 +97,9 @@ public class EustaceHowlOfThunder : PortalcraftCard, IEvolvableCard, ISkyboundAr
             }
         }
 
-        if (EvoRuntime.GetTier(this) == null)
+        if (EvoCmd.CanForceEvolve(this))
         {
-            await EvoCmd.PlayEvolveVfx(this);
-            EvoRuntime.MarkEvolved(this);
+            await EvoCmd.ForceEvolve(this, choiceContext, playVfx: true);
         }
     }
 

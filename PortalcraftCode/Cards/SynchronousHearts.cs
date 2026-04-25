@@ -26,10 +26,10 @@ public sealed class SynchronousHearts : PortalcraftCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         var lloyd = CombatState.CreateCard<Lloyd>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(lloyd, PileType.Hand, addedByPlayer: true);
+        await CardPileCmd.AddGeneratedCardToCombat(lloyd, PileType.Hand, Owner);
 
         var victoria = CombatState.CreateCard<Victoria>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(victoria, PileType.Hand, addedByPlayer: true);
+        await CardPileCmd.AddGeneratedCardToCombat(victoria, PileType.Hand, Owner);
     }
 
     protected override void OnUpgrade()

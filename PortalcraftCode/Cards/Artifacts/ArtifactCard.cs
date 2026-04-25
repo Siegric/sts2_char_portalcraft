@@ -145,7 +145,7 @@ public abstract class ArtifactCard : PortalcraftCard, IFuseCard
                         .MakeGenericMethod(resultType)
                         .Invoke(null, null)!;
                     var resultCard = CombatState.CreateCard(canonicalCard, Owner);
-                    await CardPileCmd.AddGeneratedCardToCombat(resultCard, PileType.Hand, addedByPlayer: true);
+                    await CardPileCmd.AddGeneratedCardToCombat(resultCard, PileType.Hand, Owner);
 
                     int refund = fused ? 0 : EnergyCost.GetResolved();
                     if (refund > 0)

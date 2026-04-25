@@ -25,10 +25,10 @@ public sealed class ArtifactRecharge : PortalcraftCard, ITranscendenceCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         var gear1 = CombatState.CreateCard<GearOfRemembrance>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(gear1, PileType.Hand, addedByPlayer: true);
+        await CardPileCmd.AddGeneratedCardToCombat(gear1, PileType.Hand, Owner);
 
         var gear2 = CombatState.CreateCard<GearOfAmbition>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(gear2, PileType.Hand, addedByPlayer: true);
+        await CardPileCmd.AddGeneratedCardToCombat(gear2, PileType.Hand, Owner);
     }
 
     protected override void OnUpgrade()

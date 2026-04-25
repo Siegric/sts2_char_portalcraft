@@ -12,8 +12,8 @@
   "STS2_CHAR_PORTALCRAFT-RETRAFIA_AMULET_POWER.smartDescription": "所有[gold]创造物[/gold]的费用变为0。",
 
   "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_POWER.title": "纹章：崭新的少女",
-  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_POWER.description": "回合结束时，若手牌少于5张，下回合多抽1张牌。若手牌多于6张，下回合获得1点能量。",
-  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_POWER.smartDescription": "回合结束时，若手牌少于5张，下回合多抽 {Amount} 张牌。若手牌多于6张，下回合获得 {Amount} 点能量。",
+  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_POWER.description": "回合结束时，若自己的手牌的张数为5张或以下，下回合多抽1张牌。若为6张或以上，下回合获得1点能量。",
+  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_POWER.smartDescription": "回合结束时，若自己的手牌的张数为5张或以下，下回合多抽1张牌。若为6张或以上，下回合获得1点能量。",
 
   "STS2_CHAR_PORTALCRAFT-ANCIENT_CANNON_POWER.title": "遗产的炮击",
   "STS2_CHAR_PORTALCRAFT-ANCIENT_CANNON_POWER.description": "每当你融合创造物时，对1个随机敌人造成伤害。",

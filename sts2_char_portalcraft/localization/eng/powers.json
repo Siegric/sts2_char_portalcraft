@@ -3,6 +3,38 @@
   "STS2_CHAR_PORTALCRAFT-KEYWORD_DISPATCHER_POWER.description": "Internal. Dispatches custom keyword effects.",
   "STS2_CHAR_PORTALCRAFT-KEYWORD_DISPATCHER_POWER.smartDescription": "Internal. Dispatches custom keyword effects.",
 
+  "STS2_CHAR_PORTALCRAFT-EVO_POINTS_POWER.title": "Evo Points",
+  "STS2_CHAR_PORTALCRAFT-EVO_POINTS_POWER.description": "Internal. Tracks remaining evolve points this combat.",
+  "STS2_CHAR_PORTALCRAFT-EVO_POINTS_POWER.smartDescription": "Internal. Tracks remaining evolve points this combat.",
+
+  "STS2_CHAR_PORTALCRAFT-SUPER_EVO_POINTS_POWER.title": "Super Evo Points",
+  "STS2_CHAR_PORTALCRAFT-SUPER_EVO_POINTS_POWER.description": "Internal. Tracks remaining super-evolve points this combat.",
+  "STS2_CHAR_PORTALCRAFT-SUPER_EVO_POINTS_POWER.smartDescription": "Internal. Tracks remaining super-evolve points this combat.",
+
+  "STS2_CHAR_PORTALCRAFT-EVO_USED_THIS_TURN_POWER.title": "Evo Used This Turn",
+  "STS2_CHAR_PORTALCRAFT-EVO_USED_THIS_TURN_POWER.description": "Internal. Locks out further evolve/super-evolve for the rest of this turn.",
+  "STS2_CHAR_PORTALCRAFT-EVO_USED_THIS_TURN_POWER.smartDescription": "Internal. Locks out further evolve/super-evolve for the rest of this turn.",
+
+  "STS2_CHAR_PORTALCRAFT-SKYBOUND_ART_GAUGE_POWER.title": "Skybound Art Gauge",
+  "STS2_CHAR_PORTALCRAFT-SKYBOUND_ART_GAUGE_POWER.description": "Your Skybound Gauge. +1 at the start of each turn and +1 per evolution. At [gold]10[/gold], [gold]Skybound Art[/gold] triggers fire. At [gold]15[/gold], [gold]Super Skybound Art[/gold] fires.",
+  "STS2_CHAR_PORTALCRAFT-SKYBOUND_ART_GAUGE_POWER.smartDescription": "Your Skybound Gauge. +1 at the start of each turn and +1 per evolution. At [gold]10[/gold], [gold]Skybound Art[/gold] triggers fire. At [gold]15[/gold], [gold]Super Skybound Art[/gold] fires.",
+
+  "STS2_CHAR_PORTALCRAFT-SKYBOUND_ART_POWER.title": "Skybound Art Active",
+  "STS2_CHAR_PORTALCRAFT-SKYBOUND_ART_POWER.description": "Internal. Whenever a Skybound Art card is drawn, its effect fires.",
+  "STS2_CHAR_PORTALCRAFT-SKYBOUND_ART_POWER.smartDescription": "Internal. Whenever a Skybound Art card is drawn, its effect fires.",
+
+  "STS2_CHAR_PORTALCRAFT-SUPER_SKYBOUND_ART_POWER.title": "Super Skybound Art Active",
+  "STS2_CHAR_PORTALCRAFT-SUPER_SKYBOUND_ART_POWER.description": "Internal. Whenever a Super Skybound Art card is drawn, its effect fires.",
+  "STS2_CHAR_PORTALCRAFT-SUPER_SKYBOUND_ART_POWER.smartDescription": "Internal. Whenever a Super Skybound Art card is drawn, its effect fires.",
+
+  "STS2_CHAR_PORTALCRAFT-SKYBOUND_ART_AUTO_PLAYING_POWER.title": "Skybound Auto-Play",
+  "STS2_CHAR_PORTALCRAFT-SKYBOUND_ART_AUTO_PLAYING_POWER.description": "Internal. Signals that a Skybound Art card is being auto-played; its OnPlay runs the art effect only.",
+  "STS2_CHAR_PORTALCRAFT-SKYBOUND_ART_AUTO_PLAYING_POWER.smartDescription": "Internal. Signals that a Skybound Art card is being auto-played; its OnPlay runs the art effect only.",
+
+  "STS2_CHAR_PORTALCRAFT-ARTIFACTS_EXHAUSTED_POWER.title": "Artifacts Exhausted",
+  "STS2_CHAR_PORTALCRAFT-ARTIFACTS_EXHAUSTED_POWER.description": "Internal. Counts how many Artifact cards have been exhausted this combat.",
+  "STS2_CHAR_PORTALCRAFT-ARTIFACTS_EXHAUSTED_POWER.smartDescription": "Internal. Counts how many Artifact cards have been exhausted this combat.",
+
   "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL_POWER.title": "Augmentation Bestowal",
   "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL_POWER.description": "Whenever you play an [gold]Artifact[/gold], gain 1 Energy and draw 1 card. Expires at end of turn.",
   "STS2_CHAR_PORTALCRAFT-AUGMENTATION_BESTOWAL_POWER.smartDescription": "Whenever you play an [gold]Artifact[/gold], gain 1 Energy and draw 1 card. Expires at end of turn.",
@@ -12,8 +44,8 @@
   "STS2_CHAR_PORTALCRAFT-RETRAFIA_AMULET_POWER.smartDescription": "All [gold]Artifact[/gold] cards cost 0 to play.",
 
   "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_POWER.title": "Crest: Eudie, Maiden Reborn",
-  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_POWER.description": "At end of turn, if your hand has fewer than 5 cards, draw 1 additional card next turn. If your hand has more than 6 cards, gain 1 Energy next turn.",
-  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_POWER.smartDescription": "At end of turn, if your hand has fewer than 5 cards, draw {Amount} additional card next turn. If your hand has more than 6 cards, gain {Amount} Energy next turn.",
+  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_POWER.description": "At end of turn, if your hand has 5 or fewer cards, draw 1 additional card next turn. If your hand has 6 or more cards, gain 1 Energy next turn.",
+  "STS2_CHAR_PORTALCRAFT-EUDIE_MAIDEN_REBORN_POWER.smartDescription": "At end of turn, if your hand has 5 or fewer cards, draw 1 additional card next turn. If your hand has 6 or more cards, gain 1 Energy next turn.",
 
   "STS2_CHAR_PORTALCRAFT-ANCIENT_CANNON_POWER.title": "Ancient Cannon",
   "STS2_CHAR_PORTALCRAFT-ANCIENT_CANNON_POWER.description": "Whenever you fuse an Artifact, deal damage to a random enemy.",

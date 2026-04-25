@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
+using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
@@ -12,9 +13,6 @@ using sts2_char_portalcraft.PortalcraftCode.Cards.Puppets;
 
 namespace sts2_char_portalcraft.PortalcraftCode.Powers;
 
-// Turn-scoped: on apply, gives Replay 1 + Bane to every puppet currently in
-// hand. Also applies to puppets added to hand later this turn (draw or
-// generated). Removes itself at end of the player's turn.
 public sealed class OrchisNewfoundHeartPower : PortalcraftPower
 {
     public override PowerType Type => PowerType.Buff;
@@ -38,7 +36,7 @@ public sealed class OrchisNewfoundHeartPower : PortalcraftPower
         return Task.CompletedTask;
     }
 
-    public override Task AfterCardGeneratedForCombat(CardModel card, bool addedByPlayer)
+    public override Task AfterCardGeneratedForCombat(CardModel card, Player? creator)
     {
         ApplyIfPuppet(card);
         return Task.CompletedTask;

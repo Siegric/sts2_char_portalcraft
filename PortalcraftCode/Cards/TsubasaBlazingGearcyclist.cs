@@ -1,4 +1,5 @@
 using System;
+using MegaCrit.Sts2.Core.Saves.Runs;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,7 +19,8 @@ namespace sts2_char_portalcraft.PortalcraftCode.Cards;
 
 public class TsubasaBlazingGearcyclist : PortalcraftCard, IEvolvableCard
 {
-    protected readonly EvoTier Tier;
+    [SavedProperty]
+    public EvoTier sts2_char_portalcraft_CurrentTier { get; set; }
 
     protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]
     {
@@ -35,16 +37,16 @@ public class TsubasaBlazingGearcyclist : PortalcraftCard, IEvolvableCard
         : base(1, CardType.Attack, tier.OverrideRarity(CardRarity.Common), TargetType.AnyEnemy,
                showInCardLibrary: tier == EvoTier.Base)
     {
-        Tier = tier;
+        sts2_char_portalcraft_CurrentTier = tier;
     }
 
-    public virtual Type? EvolvedType      => Tier == EvoTier.Base ? typeof(TsubasaBlazingGearcyclistEvolved)      : null;
-    public virtual Type? SuperEvolvedType => Tier == EvoTier.Base ? typeof(TsubasaBlazingGearcyclistSuperEvolved) : null;
+    public virtual Type? EvolvedType      => sts2_char_portalcraft_CurrentTier == EvoTier.Base ? typeof(TsubasaBlazingGearcyclistEvolved)      : null;
+    public virtual Type? SuperEvolvedType => sts2_char_portalcraft_CurrentTier == EvoTier.Base ? typeof(TsubasaBlazingGearcyclistSuperEvolved) : null;
 
-    public override bool CanBeGeneratedInCombat => Tier == EvoTier.Base && base.CanBeGeneratedInCombat;
+    public override bool CanBeGeneratedInCombat => sts2_char_portalcraft_CurrentTier == EvoTier.Base && base.CanBeGeneratedInCombat;
 
-    public override string PortraitPath       => $"{Tier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
-    public override string CustomPortraitPath => $"{Tier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
+    public override string PortraitPath       => $"{sts2_char_portalcraft_CurrentTier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
+    public override string CustomPortraitPath => $"{sts2_char_portalcraft_CurrentTier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
@@ -54,8 +56,7 @@ public class TsubasaBlazingGearcyclist : PortalcraftCard, IEvolvableCard
             .Targeting(cardPlay.Target)
             .Execute(choiceContext);
         
-        SkyboundArtRuntime.AddGlobalBonus(CombatState, 1);
-        SkyboundArtHelper.RefreshAllInHand(Owner);
+        await SkyboundArtRuntime.AddGaugeBonus(Owner, 1, choiceContext);
     }
 
     protected override void OnUpgrade()

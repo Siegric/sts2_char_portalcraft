@@ -36,10 +36,10 @@ public sealed class BulletFromBeyond : PortalcraftCard
             .Execute(choiceContext);
 
         var gear1 = CombatState.CreateCard<GearOfAmbition>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(gear1, PileType.Hand, addedByPlayer: true);
+        await CardPileCmd.AddGeneratedCardToCombat(gear1, PileType.Hand, Owner);
 
         var gear2 = CombatState.CreateCard<GearOfRemembrance>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(gear2, PileType.Hand, addedByPlayer: true);
+        await CardPileCmd.AddGeneratedCardToCombat(gear2, PileType.Hand, Owner);
     }
 
     protected override void OnUpgrade()

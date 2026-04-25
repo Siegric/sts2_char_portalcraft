@@ -4,6 +4,7 @@ using BaseLib.Abstracts;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Unlocks;
+using sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
 using sts2_char_portalcraft.PortalcraftCode.Extensions;
 using Godot;
 
@@ -38,4 +39,16 @@ public class PortalcraftCardPool : CustomCardPoolModel
     public override Color DeckEntryCardColor => new("ffffff");
 
     public override bool IsColorless => false;
+
+    // Exclude Evolved / SuperEvolved subclasses from card pool enumeration
+    protected override IEnumerable<CardModel> FilterThroughEpochs(UnlockState unlockState, IEnumerable<CardModel> cards)
+    {
+        return base.FilterThroughEpochs(unlockState, cards)
+            .Where(c =>
+            {
+                if (c is not IEvolvableCard) return true;
+                var parent = c.GetType().BaseType;
+                return parent == null || !typeof(IEvolvableCard).IsAssignableFrom(parent);
+            });
+    }
 }

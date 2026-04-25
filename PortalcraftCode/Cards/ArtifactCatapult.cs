@@ -29,7 +29,7 @@ public sealed class ArtifactCatapult : PortalcraftCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         var gear = CombatState.CreateCard<GearOfAmbition>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(gear, PileType.Hand, addedByPlayer: true);
+        await CardPileCmd.AddGeneratedCardToCombat(gear, PileType.Hand, Owner);
         
         var prefs = new CardSelectorPrefs(
             new LocString("card_selection", "ARTIFACT_CATAPULT_PROMPT"),
@@ -45,7 +45,7 @@ public sealed class ArtifactCatapult : PortalcraftCard
         if (card != null)
         {
             var copy = ArtifactHelper.CreateByType(card.GetType(), CombatState, Owner);
-            await CardPileCmd.AddGeneratedCardToCombat(copy, PileType.Hand, addedByPlayer: true);
+            await CardPileCmd.AddGeneratedCardToCombat(copy, PileType.Hand, Owner);
         }
     }
 

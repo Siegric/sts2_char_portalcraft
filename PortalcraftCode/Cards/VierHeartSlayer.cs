@@ -1,4 +1,5 @@
 using System;
+using MegaCrit.Sts2.Core.Saves.Runs;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -22,7 +23,8 @@ namespace sts2_char_portalcraft.PortalcraftCode.Cards;
 
 public class VierHeartSlayer : PortalcraftCard, IEvolvableCard
 {
-    protected readonly EvoTier Tier;
+    [SavedProperty]
+    public EvoTier sts2_char_portalcraft_CurrentTier { get; set; }
 
     protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]
     {
@@ -47,16 +49,16 @@ public class VierHeartSlayer : PortalcraftCard, IEvolvableCard
         : base(1, CardType.Skill, tier.OverrideRarity(CardRarity.Common), TargetType.AnyEnemy,
                showInCardLibrary: tier == EvoTier.Base)
     {
-        Tier = tier;
+        sts2_char_portalcraft_CurrentTier = tier;
     }
 
-    public virtual Type? EvolvedType      => Tier == EvoTier.Base ? typeof(VierHeartSlayerEvolved)      : null;
-    public virtual Type? SuperEvolvedType => Tier == EvoTier.Base ? typeof(VierHeartSlayerSuperEvolved) : null;
+    public virtual Type? EvolvedType      => sts2_char_portalcraft_CurrentTier == EvoTier.Base ? typeof(VierHeartSlayerEvolved)      : null;
+    public virtual Type? SuperEvolvedType => sts2_char_portalcraft_CurrentTier == EvoTier.Base ? typeof(VierHeartSlayerSuperEvolved) : null;
 
-    public override bool CanBeGeneratedInCombat => Tier == EvoTier.Base && base.CanBeGeneratedInCombat;
+    public override bool CanBeGeneratedInCombat => sts2_char_portalcraft_CurrentTier == EvoTier.Base && base.CanBeGeneratedInCombat;
 
-    public override string PortraitPath       => $"{Tier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
-    public override string CustomPortraitPath => $"{Tier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
+    public override string PortraitPath       => $"{sts2_char_portalcraft_CurrentTier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
+    public override string CustomPortraitPath => $"{sts2_char_portalcraft_CurrentTier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
@@ -87,7 +89,7 @@ public class VierHeartSlayer : PortalcraftCard, IEvolvableCard
             await CardCmd.Exhaust(choiceContext, puppet);
             var dollSlayer = CombatState.CreateCard<DollSlayer>(Owner);
             dollSlayer.DynamicVars.Damage.BaseValue = puppetDamage;
-            await CardPileCmd.AddGeneratedCardToCombat(dollSlayer, PileType.Hand, addedByPlayer: true);
+            await CardPileCmd.AddGeneratedCardToCombat(dollSlayer, PileType.Hand, Owner);
         }
     }
 

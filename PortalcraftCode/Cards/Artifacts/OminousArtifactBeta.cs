@@ -41,7 +41,7 @@ public sealed class OminousArtifactBeta : ArtifactCard
         await CreatureCmd.Heal(Owner.Creature, DynamicVars.Heal.BaseValue);
         await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, cardPlay);
         await PowerCmd.Apply<PlatingPower>(
-            Owner.Creature, DynamicVars["PlatingPower"].BaseValue, Owner.Creature, this);
+            choiceContext, Owner.Creature, DynamicVars["PlatingPower"].BaseValue, Owner.Creature, this);
     }
 
     public override async Task ActivateEffect(PlayerChoiceContext choiceContext)
@@ -49,6 +49,6 @@ public sealed class OminousArtifactBeta : ArtifactCard
         await CreatureCmd.Heal(Owner.Creature, DynamicVars.Heal.BaseValue);
         await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block.BaseValue, ValueProp.Move, null);
         await PowerCmd.Apply<PlatingPower>(
-            Owner.Creature, DynamicVars["PlatingPower"].BaseValue, Owner.Creature, this);
+            choiceContext, Owner.Creature, DynamicVars["PlatingPower"].BaseValue, Owner.Creature, this);
     }
 }

@@ -81,13 +81,13 @@ public sealed class MasterworkOmega : ArtifactCard
         await CreatureCmd.Heal(Owner.Creature, DynamicVars.Heal.BaseValue);
         await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, cardPlay);
         await PowerCmd.Apply<PlatingPower>(
-            Owner.Creature, DynamicVars["PlatingPower"].BaseValue, Owner.Creature, this);
+            choiceContext, Owner.Creature, DynamicVars["PlatingPower"].BaseValue, Owner.Creature, this);
 
         // --- Processor portion ---
         await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.BaseValue, Owner);
         await PlayerCmd.GainEnergy(DynamicVars.Energy.BaseValue, Owner);
         await PowerCmd.Apply<DrawCardsNextTurnPower>(
-            Owner.Creature, DynamicVars["DrawNextTurn"].BaseValue, Owner.Creature, this);
+            choiceContext, Owner.Creature, DynamicVars["DrawNextTurn"].BaseValue, Owner.Creature, this);
     }
 
     public override async Task ActivateEffect(PlayerChoiceContext choiceContext)
@@ -116,11 +116,11 @@ public sealed class MasterworkOmega : ArtifactCard
         await CreatureCmd.Heal(Owner.Creature, DynamicVars.Heal.BaseValue);
         await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block.BaseValue, ValueProp.Move, null);
         await PowerCmd.Apply<PlatingPower>(
-            Owner.Creature, DynamicVars["PlatingPower"].BaseValue, Owner.Creature, this);
+            choiceContext, Owner.Creature, DynamicVars["PlatingPower"].BaseValue, Owner.Creature, this);
 
         await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.BaseValue, Owner);
         await PlayerCmd.GainEnergy(DynamicVars.Energy.BaseValue, Owner);
         await PowerCmd.Apply<DrawCardsNextTurnPower>(
-            Owner.Creature, DynamicVars["DrawNextTurn"].BaseValue, Owner.Creature, this);
+            choiceContext, Owner.Creature, DynamicVars["DrawNextTurn"].BaseValue, Owner.Creature, this);
     }
 }

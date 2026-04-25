@@ -19,16 +19,16 @@ public sealed class EudieMaidenRebornPower : PortalcraftPower
 
         var handCount = PileType.Hand.GetPile(Owner.Player).Cards.Count;
 
-        if (handCount < 5)
+        switch (handCount)
         {
-            Flash();
-            await PowerCmd.Apply<DrawCardsNextTurnPower>(Owner, Amount, Owner, null);
-        }
-
-        if (handCount > 6)
-        {
-            Flash();
-            await PowerCmd.Apply<EnergyNextTurnPower>(Owner, Amount, Owner, null);
+            case <= 5:
+                Flash();
+                await PowerCmd.Apply<DrawCardsNextTurnPower>(choiceContext, Owner, Amount, Owner, null);
+                break;
+            case >= 6:
+                Flash();
+                await PowerCmd.Apply<EnergyNextTurnPower>(choiceContext, Owner, Amount, Owner, null);
+                break;
         }
     }
 }

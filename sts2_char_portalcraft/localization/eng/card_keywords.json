@@ -82,7 +82,7 @@
   "BANE.title": "Bane",
   "BANE.description": "Destroys any enemy [gold]minion[/gold] this card attacks after damage is dealt. Deals +10 damage to non-minion enemies instead.",
   "STS2_CHAR_PORTALCRAFT-BANE.title": "Bane",
-  "STS2_CHAR_PORTALCRAFT-BANE.description": "Destroys any enemy [gold]minion[/gold] this card attacks after damage is dealt. Deals double damage to non-minion enemies instead.",
+  "STS2_CHAR_PORTALCRAFT-BANE.description": "Destroys any enemy [gold]minion[/gold] this card attacks after damage is dealt. Deals +10 damage to non-minion enemies instead.",
 
   "CANNOTBEEXHAUSTED.title": "Cannot be Exhausted",
   "CANNOTBEEXHAUSTED.description": "This card cannot be [gold]Exhausted[/gold] by any means.",

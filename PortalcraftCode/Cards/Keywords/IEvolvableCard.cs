@@ -8,10 +8,12 @@ namespace sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
 public interface IEvolvableCard
 {
     Type? EvolvedType => null;
-    
+
     Type? SuperEvolvedType => null;
-    
+
+    EvoTier sts2_char_portalcraft_CurrentTier { get; set; }
+
     Task OnEvolve(CardModel card, PlayerChoiceContext choiceContext) => Task.CompletedTask;
-    
+
     Task OnSuperEvolve(CardModel card, PlayerChoiceContext choiceContext) => Task.CompletedTask;
 }

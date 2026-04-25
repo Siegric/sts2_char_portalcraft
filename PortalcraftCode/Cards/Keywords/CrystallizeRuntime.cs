@@ -31,7 +31,7 @@ public static class CrystallizeRuntime
             .MakeGenericMethod(cc.AmuletFormType)
             .Invoke(null, null)!;
         var amulet = combatState.CreateCard(canonicalAmulet, card.Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(amulet, PileType.Hand, addedByPlayer: true);
+        await CardPileCmd.AddGeneratedCardToCombat(amulet, PileType.Hand, card.Owner);
 
         await cc.OnAmuletSpawned(choiceContext, amulet);
         return true;

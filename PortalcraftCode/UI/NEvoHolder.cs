@@ -21,7 +21,7 @@ public static class NEvoHolder
         public bool IsSuperEvolve;
         public TextureRect IconRect = null!;
         public Texture2D?[] StageTextures = null!; 
-        public Action<PlayerCombatState> ChangedHandler = null!;
+        public Action<Player> ChangedHandler = null!;
     }
 
     private static readonly Dictionary<ulong, State> _states = new();
@@ -131,11 +131,11 @@ public static class NEvoHolder
         int max = state.IsSuperEvolve ? EvoRuntime.MaxSuperEvoPoints : EvoRuntime.MaxEvoPoints;
         var player = GetLocalPlayer();
         
-        int count = player?.PlayerCombatState == null
+        int count = player == null
             ? max
             : state.IsSuperEvolve
-                ? EvoRuntime.SuperEvoPoints(player.PlayerCombatState)
-                : EvoRuntime.EvoPoints(player.PlayerCombatState);
+                ? EvoRuntime.SuperEvoPoints(player)
+                : EvoRuntime.EvoPoints(player);
 
         int clamped = Math.Clamp(count, 0, state.StageTextures.Length - 1);
         var tex = state.StageTextures[clamped];
