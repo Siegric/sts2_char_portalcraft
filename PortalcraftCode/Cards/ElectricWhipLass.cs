@@ -55,12 +55,8 @@ public class ElectricWhipLass : PortalcraftCard, IEvolvableCard
     {
         await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, cardPlay);
 
-        int gearCount = (int)DynamicVars["MagicNumber"].BaseValue;
-        for (int i = 0; i < gearCount; i++)
-        {
-            var gear = CombatState.CreateCard<GearOfRemembrance>(Owner);
-            await CardPileCmd.AddGeneratedCardToCombat(gear, PileType.Hand, Owner);
-        }
+        var gear = CombatState.CreateCard<GearOfRemembrance>(Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(gear, PileType.Hand, Owner);
     }
 
     protected override void OnUpgrade()

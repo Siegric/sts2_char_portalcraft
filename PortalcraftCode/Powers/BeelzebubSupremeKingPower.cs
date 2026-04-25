@@ -1,4 +1,3 @@
-using System.Threading;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
@@ -16,7 +15,7 @@ public sealed class BeelzebubSupremeKingPower : PortalcraftPower
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
 
-    private static readonly AsyncLocal<bool> _inBonusDamage = new();
+    private static bool _inBonusDamage;
 
     public override async Task AfterDamageGiven(
         PlayerChoiceContext choiceContext,
@@ -26,12 +25,13 @@ public sealed class BeelzebubSupremeKingPower : PortalcraftPower
         Creature target,
         CardModel? cardSource)
     {
-        if (_inBonusDamage.Value) return;
-        if (dealer != Owner) return;
+        if (_inBonusDamage) return;
+        if (dealer == null) return;
+        if (dealer.Side != Owner.Side) return;
         if (target.Side != CombatSide.Enemy) return;
         if (!target.IsHittable) return;
 
-        _inBonusDamage.Value = true;
+        _inBonusDamage = true;
         try
         {
             Flash();
@@ -41,7 +41,7 @@ public sealed class BeelzebubSupremeKingPower : PortalcraftPower
         }
         finally
         {
-            _inBonusDamage.Value = false;
+            _inBonusDamage = false;
         }
     }
 }
