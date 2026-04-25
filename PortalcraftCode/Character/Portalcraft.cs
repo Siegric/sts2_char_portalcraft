@@ -52,7 +52,7 @@ public class Portalcraft : PlaceholderCharacterModel
     public override string CustomCharacterSelectBg => "res://sts2_char_portalcraft/scenes/char_select_bg.tscn";
     //public override string? CustomRestSiteAnimPath => "res://sts2_char_portalcraft/scenes/portalcraft.tscn";
     public override string CustomMerchantAnimPath => "res://sts2_char_portalcraft/scenes/portalcraft_merchant.tscn";
-    public override string CustomIconPath => "res://sts2_char_portalcraft/scenes/portcalcraft_icon.tscn";
+    public override string CustomIconPath => "res://sts2_char_portalcraft/scenes/portalcraft_icon.tscn";
     public override string CustomIconTexturePath => "character_icon_portalcraft.png".CharacterUiPath();
     public override string CustomCharacterSelectIconPath => "char_select_portalcraft.png".CharacterUiPath();
     public override string CustomCharacterSelectLockedIconPath => "char_select_portalcraft_locked.png".CharacterUiPath();
