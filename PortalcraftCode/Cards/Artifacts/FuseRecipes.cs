@@ -55,6 +55,24 @@ public static class FuseRecipes
             _ => typeof(OminousArtifactGamma),
         };
     }
+
+#if FALSE
+    // Alternative
+    private static Type? FindT1FuseResult_Alt(IReadOnlyList<CardModel> discardedCards)
+    {
+        if (discardedCards.Count == 0) return null;
+
+        var artifacts = discardedCards.OfType<ArtifactCard>().ToList();
+        bool allT0 = artifacts.All(c => c.Tier == ArtifactTier.T0);
+
+        return (allT0, artifacts.Count) switch
+        {
+            (true, 1) => typeof(OminousArtifactAlpha),
+            (true, 2) => typeof(OminousArtifactBeta),
+            _         => typeof(OminousArtifactGamma),
+        };
+    }
+#endif
     
     public static HashSet<Type> GetValidDiscardTypes(Type playedType, ArtifactTier tier)
     {

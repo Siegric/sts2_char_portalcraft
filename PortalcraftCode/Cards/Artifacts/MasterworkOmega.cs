@@ -21,7 +21,7 @@ public sealed class MasterworkOmega : ArtifactCard
     protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]
     {
         new CalculationBaseVar(14m),
-        new ExtraDamageVar(1m),
+        new ExtraDamageVar(3m),
         new CalculatedDamageVar(ValueProp.Move)
             .WithMultiplier((CardModel card, Creature? _) =>
                 card.Owner != null ? PileType.Exhaust.GetPile(card.Owner).Cards.Count : 0),
