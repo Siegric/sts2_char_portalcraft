@@ -46,6 +46,6 @@ public sealed class RetrafiaDivineMotherAmulet : PortalcraftCard, ICountdownCard
 
         var retrafia = CombatState.CreateCard<RetrafiaDivineMother>(Owner);
         retrafia.EnergyCost.SetThisTurnOrUntilPlayed(0, reduceOnly: true);
-        await CardPileCmd.AddGeneratedCardToCombat(retrafia, PileType.Hand, addedByPlayer: true);
+        await CardPileCmd.AddGeneratedCardToCombat(retrafia, PileType.Hand, Owner);
     }
 }

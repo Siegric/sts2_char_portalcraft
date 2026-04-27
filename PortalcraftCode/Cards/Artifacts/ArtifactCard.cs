@@ -145,7 +145,7 @@ public abstract class ArtifactCard : PortalcraftCard, IFuseCard
                         .MakeGenericMethod(resultType)
                         .Invoke(null, null)!;
                     var resultCard = CombatState.CreateCard(canonicalCard, Owner);
-                    await CardPileCmd.AddGeneratedCardToCombat(resultCard, PileType.Hand, addedByPlayer: true);
+                    await CardPileCmd.AddGeneratedCardToCombat(resultCard, PileType.Hand, Owner);
 
                     int refund = fused ? 0 : EnergyCost.GetResolved();
                     if (refund > 0)
@@ -169,6 +169,10 @@ public abstract class ArtifactCard : PortalcraftCard, IFuseCard
                         }
                     }
 
+                    using (Patches.CannotBeExhaustedPatch.BypassScope())
+                    {
+                        await CardCmd.Exhaust(choiceContext, this);
+                    }
                     return;
                 }
                 
@@ -177,6 +181,12 @@ public abstract class ArtifactCard : PortalcraftCard, IFuseCard
                     foreach (var card in selectedList)
                     {
                         await CardCmd.Exhaust(choiceContext, card);
+                    }
+                    await CardPileCmd.Add(this, PileType.Hand, CardPilePosition.Bottom);
+                    int unfusedRefund = EnergyCost.GetResolved();
+                    if (unfusedRefund > 0)
+                    {
+                        await PlayerCmd.GainEnergy(unfusedRefund, Owner);
                     }
                     return;
                 }

@@ -8,7 +8,7 @@ using sts2_char_portalcraft.PortalcraftCode.Cards.Omen;
 namespace sts2_char_portalcraft.PortalcraftCode.Cards.Artifacts;
 public sealed class GearOfRemembrance : ArtifactCard
 {
-    public override IEnumerable<CardKeyword> CanonicalKeywords => new[] { CardKeyword.Exhaust };
+    public override IEnumerable<CardKeyword> CanonicalKeywords => new[] { CardKeyword.Retain, CardKeyword.Exhaust };
     public override ArtifactTier Tier => ArtifactTier.T0;
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]

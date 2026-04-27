@@ -29,7 +29,7 @@ public sealed class AncientCannon : PortalcraftCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await PowerCmd.Apply<AncientCannonPower>(
-            Owner.Creature, DynamicVars["MagicNumber"].BaseValue, Owner.Creature, this);
+            choiceContext, Owner.Creature, DynamicVars["MagicNumber"].BaseValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

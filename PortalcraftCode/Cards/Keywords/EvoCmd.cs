@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Godot;
+using HarmonyLib;
 using MegaCrit.Sts2.Core.CardSelection;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
@@ -26,13 +27,13 @@ public static class EvoCmd
     public static bool CanEvolve(CardModel card)
     {
         if (!CanForceEvolve(card)) return false;
-        return EvoRuntime.CanEvolve(card.Owner!.PlayerCombatState!);
+        return EvoRuntime.CanEvolve(card.Owner!);
     }
 
     public static bool CanSuperEvolve(CardModel card)
     {
         if (!CanForceSuperEvolve(card)) return false;
-        return EvoRuntime.CanSuperEvolve(card.Owner!.PlayerCombatState!);
+        return EvoRuntime.CanSuperEvolve(card.Owner!);
     }
     
     public static bool CanForceEvolve(CardModel card)
@@ -83,16 +84,20 @@ public static class EvoCmd
         {
             var created = CreateTransformedCard(card, newType);
             if (created == null) return false;
-            if (spendPoint && !EvoRuntime.TrySpendEvo(card.Owner!.PlayerCombatState!)) return false;
+            if (spendPoint && !await EvoRuntime.TrySpendEvo(card.Owner!, ctx)) return false;
+            // Set tier on the new mutable card BEFORE it is added via the networked
+            // AddGeneratedCardToCombat. Since sts2_char_portalcraft_CurrentTier is a SavedProperty it rides
+            // the card's serialization to all clients, so both ends agree on the tier.
+            if (created is IEvolvableCard createdEv) createdEv.sts2_char_portalcraft_CurrentTier = EvoTier.Evolved;
             await ReplaceInHand(card, created, ctx);
             finalCard = created;
         }
-        else if (spendPoint && !EvoRuntime.TrySpendEvo(card.Owner!.PlayerCombatState!))
+        else if (spendPoint && !await EvoRuntime.TrySpendEvo(card.Owner!, ctx))
         {
             return false;
         }
 
-        EvoRuntime.MarkEvolved(finalCard);
+        await EvoRuntime.MarkEvolved(finalCard, ctx);
         RefreshHandCardGlow(finalCard);
         if (playVfx)
         {
@@ -102,7 +107,6 @@ public static class EvoCmd
 
         var hookTarget = finalCard as IEvolvableCard ?? evolvable;
         await hookTarget.OnEvolve(finalCard, ctx);
-        await NotifySkyboundArtOfEvolution(finalCard, ctx);
         return true;
     }
 
@@ -115,16 +119,17 @@ public static class EvoCmd
         {
             var created = CreateTransformedCard(card, newType);
             if (created == null) return false;
-            if (spendPoint && !EvoRuntime.TrySpendSuperEvo(card.Owner!.PlayerCombatState!)) return false;
+            if (spendPoint && !await EvoRuntime.TrySpendSuperEvo(card.Owner!, ctx)) return false;
+            if (created is IEvolvableCard createdEv) createdEv.sts2_char_portalcraft_CurrentTier = EvoTier.SuperEvolved;
             await ReplaceInHand(card, created, ctx);
             finalCard = created;
         }
-        else if (spendPoint && !EvoRuntime.TrySpendSuperEvo(card.Owner!.PlayerCombatState!))
+        else if (spendPoint && !await EvoRuntime.TrySpendSuperEvo(card.Owner!, ctx))
         {
             return false;
         }
 
-        EvoRuntime.MarkSuperEvolved(finalCard);
+        await EvoRuntime.MarkSuperEvolved(finalCard, ctx);
         RefreshHandCardGlow(finalCard);
         if (playVfx)
         {
@@ -135,7 +140,6 @@ public static class EvoCmd
         var hookTarget = finalCard as IEvolvableCard ?? evolvable;
         await hookTarget.OnEvolve(finalCard, ctx);
         await hookTarget.OnSuperEvolve(finalCard, ctx);
-        await NotifySkyboundArtOfEvolution(finalCard, ctx);
         return true;
     }
     
@@ -154,7 +158,24 @@ public static class EvoCmd
 
         int levels = sourceCard.CurrentUpgradeLevel;
         for (int i = 0; i < levels; i++) newCard.UpgradeInternal();
+        CopyTempCostModifiers(sourceCard, newCard);
         return newCard;
+    }
+
+    private static void CopyTempCostModifiers(CardModel source, CardModel target)
+    {
+        var field = AccessTools.Field(typeof(CardEnergyCost), "_localModifiers");
+        if (field.GetValue(source.EnergyCost) is not System.Collections.IList sourceMods) return;
+        if (field.GetValue(target.EnergyCost) is not System.Collections.IList targetMods) return;
+
+        foreach (var mod in sourceMods)
+        {
+            var cloneMethod = mod.GetType().GetMethod("Clone");
+            if (cloneMethod == null) continue;
+            var clone = cloneMethod.Invoke(mod, null);
+            if (clone != null) targetMods.Add(clone);
+        }
+        target.InvokeEnergyCostChanged();
     }
     
     private static async Task ReplaceInHand(CardModel oldCard, CardModel newCard, PlayerChoiceContext ctx)
@@ -163,7 +184,7 @@ public static class EvoCmd
         {
             await CardCmd.Exhaust(ctx, oldCard);
         }
-        await CardPileCmd.AddGeneratedCardToCombat(newCard, PileType.Hand, addedByPlayer: true);
+        await CardPileCmd.AddGeneratedCardToCombat(newCard, PileType.Hand, newCard.Owner);
     }
 
     public static async Task PlayEvolveVfx(CardModel card)
@@ -239,49 +260,17 @@ public static class EvoCmd
         holder?.UpdateCard();
     }
 
-    // Counter bump + display refresh live in EvoRuntime.MarkEvolved/MarkSuperEvolved
-    // so every evolution path (including direct flag-set) feeds the global
-    // Skybound Art counter. This method just fires the threshold hooks for any
-    // Skybound Art card in hand whose gauge has reached its threshold.
-    private static async Task NotifySkyboundArtOfEvolution(CardModel evolvedCard, PlayerChoiceContext ctx)
-    {
-        var owner = evolvedCard.Owner;
-        if (owner == null) return;
-
-        var handCards = PileType.Hand.GetPile(owner).Cards.ToList();
-        foreach (var card in handCards)
-        {
-            if (card is not ISkyboundArtCard skyCard) continue;
-
-            int gauge = SkyboundArtRuntime.CurrentGauge(card);
-
-            if (gauge >= SkyboundArtRuntime.SuperSkyboundArtThreshold &&
-                !SkyboundArtRuntime.HasFiredSuperSkyboundArt(card))
-            {
-                SkyboundArtRuntime.MarkSuperSkyboundArtFired(card);
-                await skyCard.OnSuperSkyboundArt(card, ctx);
-            }
-
-            if (gauge >= SkyboundArtRuntime.SkyboundArtThreshold &&
-                !SkyboundArtRuntime.HasFiredSkyboundArt(card))
-            {
-                SkyboundArtRuntime.MarkSkyboundArtFired(card);
-                await skyCard.OnSkyboundArt(card, ctx);
-            }
-        }
-    }
-    
     public static bool CanEvolveAny(Player player)
     {
         if (player.PlayerCombatState == null) return false;
-        if (!EvoRuntime.CanEvolve(player.PlayerCombatState)) return false;
+        if (!EvoRuntime.CanEvolve(player)) return false;
         return PileType.Hand.GetPile(player).Cards.Any(CanEvolve);
     }
 
     public static bool CanSuperEvolveAny(Player player)
     {
         if (player.PlayerCombatState == null) return false;
-        if (!EvoRuntime.CanSuperEvolve(player.PlayerCombatState)) return false;
+        if (!EvoRuntime.CanSuperEvolve(player)) return false;
         return PileType.Hand.GetPile(player).Cards.Any(CanSuperEvolve);
     }
     
@@ -320,7 +309,7 @@ public static class EvoCmd
     public static async Task<bool> EvolveFromHandWithArrow(Player player, PlayerChoiceContext choiceContext, Vector2 arrowStart)
     {
         if (!CanEvolveAny(player)) return false;
-        var selected = await SelectWithArrow(superEvolve: false, arrowStart);
+        var selected = await SelectEvolveTargetWithArrow(superEvolve: false, arrowStart);
         if (selected == null) return false;
         return await TryEvolve(selected, choiceContext);
     }
@@ -328,12 +317,12 @@ public static class EvoCmd
     public static async Task<bool> SuperEvolveFromHandWithArrow(Player player, PlayerChoiceContext choiceContext, Vector2 arrowStart)
     {
         if (!CanSuperEvolveAny(player)) return false;
-        var selected = await SelectWithArrow(superEvolve: true, arrowStart);
+        var selected = await SelectEvolveTargetWithArrow(superEvolve: true, arrowStart);
         if (selected == null) return false;
         return await TrySuperEvolve(selected, choiceContext);
     }
 
-    private static async Task<CardModel?> SelectWithArrow(bool superEvolve, Vector2 arrowStart)
+    public static async Task<CardModel?> SelectEvolveTargetWithArrow(bool superEvolve, Vector2 arrowStart)
     {
         var tm = NTargetManager.Instance;
         if (tm == null) return null;

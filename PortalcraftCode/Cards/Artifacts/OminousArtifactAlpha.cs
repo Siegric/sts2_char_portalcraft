@@ -19,7 +19,7 @@ public sealed class OminousArtifactAlpha : ArtifactCard
     protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]
     {
         new CalculationBaseVar(14m),
-        new ExtraDamageVar(2m),
+        new ExtraDamageVar(1m),
         new CalculatedDamageVar(ValueProp.Move)
             .WithMultiplier((CardModel card, Creature? _) =>
                 card.Owner != null ? PileType.Exhaust.GetPile(card.Owner).Cards.Count : 0),

@@ -1,12 +1,14 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Godot;
 using MegaCrit.Sts2.Core.Context;
+using MegaCrit.Sts2.Core.Entities.Multiplayer;
 using MegaCrit.Sts2.Core.Entities.Players;
-using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Helpers;
 using MegaCrit.Sts2.Core.Runs;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
+using sts2_char_portalcraft.PortalcraftCode.GameActions;
 
 namespace sts2_char_portalcraft.PortalcraftCode.UI;
 
@@ -21,7 +23,7 @@ public static class NEvoHolder
         public bool IsSuperEvolve;
         public TextureRect IconRect = null!;
         public Texture2D?[] StageTextures = null!; 
-        public Action<PlayerCombatState> ChangedHandler = null!;
+        public Action<Player> ChangedHandler = null!;
     }
 
     private static readonly Dictionary<ulong, State> _states = new();
@@ -131,11 +133,11 @@ public static class NEvoHolder
         int max = state.IsSuperEvolve ? EvoRuntime.MaxSuperEvoPoints : EvoRuntime.MaxEvoPoints;
         var player = GetLocalPlayer();
         
-        int count = player?.PlayerCombatState == null
+        int count = player == null
             ? max
             : state.IsSuperEvolve
-                ? EvoRuntime.SuperEvoPoints(player.PlayerCombatState)
-                : EvoRuntime.EvoPoints(player.PlayerCombatState);
+                ? EvoRuntime.SuperEvoPoints(player)
+                : EvoRuntime.EvoPoints(player);
 
         int clamped = Math.Clamp(count, 0, state.StageTextures.Length - 1);
         var tex = state.StageTextures[clamped];
@@ -169,11 +171,21 @@ public static class NEvoHolder
         if (!canUse) return;
 
         var arrowStart = root.GlobalPosition + root.Size * 0.5f;
-        var ctx = new BlockingPlayerChoiceContext();
+        TaskHelper.RunSafely(StartEvolveFlow(player, state.IsSuperEvolve, arrowStart));
+    }
 
-        TaskHelper.RunSafely(state.IsSuperEvolve
-            ? EvoCmd.SuperEvolveFromHandWithArrow(player, ctx, arrowStart)
-            : EvoCmd.EvolveFromHandWithArrow(player, ctx, arrowStart));
+    private static async Task StartEvolveFlow(Player player, bool isSuper, Vector2 arrowStart)
+    {
+        // Local arrow target selection — UI-only is fine. The chosen card's
+        // NetCombatCard index gets dispatched through ActionQueueSynchronizer
+        // so both clients deterministically run the same evolve.
+        var target = await EvoCmd.SelectEvolveTargetWithArrow(isSuper, arrowStart);
+        if (target == null) return;
+        if (target.Owner != player) return;
+
+        var netCard = NetCombatCard.FromModel(target);
+        var action = new Sts2CharPortalcraft_EvolveAction(player, isSuper, netCard);
+        RunManager.Instance.ActionQueueSynchronizer.RequestEnqueue(action);
     }
 
     private static Player? GetLocalPlayer()

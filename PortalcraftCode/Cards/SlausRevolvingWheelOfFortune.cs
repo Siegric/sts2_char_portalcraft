@@ -22,11 +22,11 @@ public sealed class SlausRevolvingWheelOfFortune : PortalcraftCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<SlausRevolvingWheelPower>(Owner.Creature, 1, Owner.Creature, this);
+        await PowerCmd.Apply<SlausRevolvingWheelPower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()
     {
-        EnergyCost.UpgradeBy(-1);
+        AddKeyword(CardKeyword.Innate);
     }
 }

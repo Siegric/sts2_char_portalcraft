@@ -1,4 +1,5 @@
 using System;
+using MegaCrit.Sts2.Core.Saves.Runs;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,8 @@ namespace sts2_char_portalcraft.PortalcraftCode.Cards;
 
 public class DevoteeOfDestruction : PortalcraftCard, IEvolvableCard
 {
-    protected readonly EvoTier Tier;
+    [SavedProperty]
+    public EvoTier sts2_char_portalcraft_CurrentTier { get; set; }
 
     public override bool GainsBlock => true;
 
@@ -26,16 +28,16 @@ public class DevoteeOfDestruction : PortalcraftCard, IEvolvableCard
         : base(2, CardType.Attack, tier.OverrideRarity(CardRarity.Common), TargetType.AnyEnemy,
                showInCardLibrary: tier == EvoTier.Base)
     {
-        Tier = tier;
+        sts2_char_portalcraft_CurrentTier = tier;
     }
 
-    public virtual Type? EvolvedType      => Tier == EvoTier.Base ? typeof(DevoteeOfDestructionEvolved)      : null;
-    public virtual Type? SuperEvolvedType => Tier == EvoTier.Base ? typeof(DevoteeOfDestructionSuperEvolved) : null;
+    public virtual Type? EvolvedType      => sts2_char_portalcraft_CurrentTier == EvoTier.Base ? typeof(DevoteeOfDestructionEvolved)      : null;
+    public virtual Type? SuperEvolvedType => sts2_char_portalcraft_CurrentTier == EvoTier.Base ? typeof(DevoteeOfDestructionSuperEvolved) : null;
 
-    public override bool CanBeGeneratedInCombat => Tier == EvoTier.Base && base.CanBeGeneratedInCombat;
+    public override bool CanBeGeneratedInCombat => sts2_char_portalcraft_CurrentTier == EvoTier.Base && base.CanBeGeneratedInCombat;
 
-    public override string PortraitPath       => $"{Tier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
-    public override string CustomPortraitPath => $"{Tier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
+    public override string PortraitPath       => $"{sts2_char_portalcraft_CurrentTier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
+    public override string CustomPortraitPath => $"{sts2_char_portalcraft_CurrentTier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
@@ -46,8 +48,8 @@ public class DevoteeOfDestruction : PortalcraftCard, IEvolvableCard
 
         if (x > 0)
         {
-            await CreatureCmd.GainBlock(Owner.Creature, x, ValueProp.Move, cardPlay);
-            await DamageCmd.Attack(x)
+            await CreatureCmd.GainBlock(Owner.Creature, 2*x, ValueProp.Move, cardPlay);
+            await DamageCmd.Attack(2*x)
                 .FromCard(this)
                 .Targeting(cardPlay.Target)
                 .Execute(choiceContext);

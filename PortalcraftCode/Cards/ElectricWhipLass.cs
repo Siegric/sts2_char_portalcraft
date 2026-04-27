@@ -1,4 +1,5 @@
 using System;
+using MegaCrit.Sts2.Core.Saves.Runs;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using BaseLib.Extensions;
@@ -18,14 +19,14 @@ namespace sts2_char_portalcraft.PortalcraftCode.Cards;
 
 public class ElectricWhipLass : PortalcraftCard, IEvolvableCard
 {
-    protected readonly EvoTier Tier;
+    [SavedProperty]
+    public EvoTier sts2_char_portalcraft_CurrentTier { get; set; }
 
     public override bool GainsBlock => true;
 
     protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]
     {
-        new BlockVar(12m, ValueProp.Move),
-        new IntVar("MagicNumber", 1m),
+        new BlockVar(6m, ValueProp.Move),
     };
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
@@ -36,35 +37,30 @@ public class ElectricWhipLass : PortalcraftCard, IEvolvableCard
     public ElectricWhipLass() : this(EvoTier.Base) { }
 
     protected ElectricWhipLass(EvoTier tier)
-        : base(2, CardType.Skill, tier.OverrideRarity(CardRarity.Common), TargetType.Self,
+        : base(1, CardType.Skill, tier.OverrideRarity(CardRarity.Common), TargetType.Self,
                showInCardLibrary: tier == EvoTier.Base)
     {
-        Tier = tier;
+        sts2_char_portalcraft_CurrentTier = tier;
     }
 
-    public virtual Type? EvolvedType      => Tier == EvoTier.Base ? typeof(ElectricWhipLassEvolved)      : null;
-    public virtual Type? SuperEvolvedType => Tier == EvoTier.Base ? typeof(ElectricWhipLassSuperEvolved) : null;
+    public virtual Type? EvolvedType      => sts2_char_portalcraft_CurrentTier == EvoTier.Base ? typeof(ElectricWhipLassEvolved)      : null;
+    public virtual Type? SuperEvolvedType => sts2_char_portalcraft_CurrentTier == EvoTier.Base ? typeof(ElectricWhipLassSuperEvolved) : null;
 
-    public override bool CanBeGeneratedInCombat => Tier == EvoTier.Base && base.CanBeGeneratedInCombat;
+    public override bool CanBeGeneratedInCombat => sts2_char_portalcraft_CurrentTier == EvoTier.Base && base.CanBeGeneratedInCombat;
 
-    public override string PortraitPath       => $"{Tier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
-    public override string CustomPortraitPath => $"{Tier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
+    public override string PortraitPath       => $"{sts2_char_portalcraft_CurrentTier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
+    public override string CustomPortraitPath => $"{sts2_char_portalcraft_CurrentTier.PortraitSubfolder()}{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, cardPlay);
 
-        int gearCount = (int)DynamicVars["MagicNumber"].BaseValue;
-        for (int i = 0; i < gearCount; i++)
-        {
-            var gear = CombatState.CreateCard<GearOfRemembrance>(Owner);
-            await CardPileCmd.AddGeneratedCardToCombat(gear, PileType.Hand, addedByPlayer: true);
-        }
+        var gear = CombatState.CreateCard<GearOfRemembrance>(Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(gear, PileType.Hand, Owner);
     }
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Block.UpgradeValueBy(4m);
-        DynamicVars["MagicNumber"].UpgradeValueBy(1m);
+        DynamicVars.Block.UpgradeValueBy(3m);
     }
 }

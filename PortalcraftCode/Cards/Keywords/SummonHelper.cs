@@ -28,10 +28,10 @@ public static class SummonHelper
             card.AddKeyword(CardKeyword.Exhaust);
         }
         card.EnergyCost.SetThisTurnOrUntilPlayed(0, reduceOnly: true);
-        await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, addedByPlayer: true);
+        await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, owner);
     }
     
-    public static async Task Summon<T>(Player owner, CombatState combatState) where T : CardModel
+    public static async Task Summon<T>(Player owner, ICombatState combatState) where T : CardModel
     {
         var card = combatState.CreateCard<T>(owner);
         await Summon(card, owner);

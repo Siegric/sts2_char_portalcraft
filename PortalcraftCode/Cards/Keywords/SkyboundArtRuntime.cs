@@ -1,52 +1,91 @@
-using System.Runtime.CompilerServices;
-using MegaCrit.Sts2.Core.Combat;
+using System.Linq;
+using System.Threading.Tasks;
+using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Players;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
+using sts2_char_portalcraft.PortalcraftCode.Powers;
 
 namespace sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
 
+// Gauge lives on the player's creature as SkyboundArtGaugePower.Amount.
+// All mutations go through networked PowerCmd.* so both clients stay in sync.
+// Threshold crossings apply invisible signal powers (SkyboundArtPower /
+// SuperSkyboundArtPower) whose presence gates per-card firing.
 public static class SkyboundArtRuntime
 {
-    // Adjust Thrresholds here
     public const int SkyboundArtThreshold = 10;
     public const int SuperSkyboundArtThreshold = 15;
 
-    private sealed class Counter { public int Value; }
-    private static readonly ConditionalWeakTable<CombatState, Counter> _globalBonus = new();
+    public static int CurrentGauge(Player player) =>
+        (int)(player.Creature.GetPower<SkyboundArtGaugePower>()?.Amount ?? 0m);
 
-    public static int GlobalBonus(CombatState? combatState) =>
-        combatState != null && _globalBonus.TryGetValue(combatState, out var c) ? c.Value : 0;
+    public static bool IsActive(Player player) =>
+        player.Creature.HasPower<SkyboundArtPower>();
 
-    public static void AddGlobalBonus(CombatState? combatState, int amount)
+    public static bool IsSuperActive(Player player) =>
+        player.Creature.HasPower<SuperSkyboundArtPower>();
+
+    public static async Task AddGaugeBonus(Player player, int amount, PlayerChoiceContext ctx)
     {
-        if (combatState == null) return;
-        var counter = _globalBonus.GetValue(combatState, _ => new Counter());
-        counter.Value += amount;
+        var gauge = player.Creature.GetPower<SkyboundArtGaugePower>();
+        if (gauge == null) return;
+        await PowerCmd.ModifyAmount(ctx, gauge, amount, null, null, silent: true);
+        await CheckThresholds(player, ctx);
     }
 
-    public static int CurrentGauge(CardModel card)
+    private static async Task CheckThresholds(Player player, PlayerChoiceContext ctx)
     {
-        int round = card.CombatState?.RoundNumber ?? 0;
-        return round + GlobalBonus(card.CombatState);
+        int gauge = CurrentGauge(player);
+        var creature = player.Creature;
+
+        if (gauge >= SkyboundArtThreshold && !creature.HasPower<SkyboundArtPower>())
+        {
+            await PowerCmd.Apply<SkyboundArtPower>(ctx, creature, 1m, creature, null, silent: true);
+            await FireHandSkyboundArt(player, ctx, isSuper: false);
+        }
+        if (gauge >= SuperSkyboundArtThreshold && !creature.HasPower<SuperSkyboundArtPower>())
+        {
+            await PowerCmd.Apply<SuperSkyboundArtPower>(ctx, creature, 1m, creature, null, silent: true);
+            await FireHandSkyboundArt(player, ctx, isSuper: true);
+        }
     }
 
-    public static bool IsActive(CardModel card) =>
-        CurrentGauge(card) >= SkyboundArtThreshold;
-
-    public static bool IsSuperActive(CardModel card) =>
-        CurrentGauge(card) >= SuperSkyboundArtThreshold;
-
-    private static readonly ConditionalWeakTable<CardModel, object> _firedSa = new();
-    private static readonly ConditionalWeakTable<CardModel, object> _firedSuperSa = new();
-
-    public static bool HasFiredSkyboundArt(CardModel card) => _firedSa.TryGetValue(card, out _);
-    public static void MarkSkyboundArtFired(CardModel card)
+    private static async Task FireHandSkyboundArt(Player player, PlayerChoiceContext ctx, bool isSuper)
     {
-        if (!_firedSa.TryGetValue(card, out _)) _firedSa.Add(card, new object());
+        CardKeyword targetKeyword = isSuper
+            ? SuperSkyboundArtKeyword.SuperSkyboundArt
+            : SkyboundArtKeyword.SkyboundArt;
+
+        var cards = PileType.Hand.GetPile(player).Cards
+            .Where(c => c is ISkyboundArtCard && c.Keywords.Contains(targetKeyword))
+            .ToList();
+        foreach (var card in cards)
+        {
+            await FireAsAutoPlay(card, ctx);
+        }
     }
 
-    public static bool HasFiredSuperSkyboundArt(CardModel card) => _firedSuperSa.TryGetValue(card, out _);
-    public static void MarkSuperSkyboundArtFired(CardModel card)
+    // Auto-plays the card through the game's normal play pipeline so the visuals
+    // and consume-on-play behaviour match a real play. OnPlay on the card checks
+    // for SkyboundArtAutoPlayingPower and short-circuits to the art effect rather
+    // than running the regular play effect. Both the apply and remove of the flag
+    // go through networked PowerCmd so both clients take the same branch.
+    public static async Task FireAsAutoPlay(CardModel card, PlayerChoiceContext ctx)
     {
-        if (!_firedSuperSa.TryGetValue(card, out _)) _firedSuperSa.Add(card, new object());
+        if (card.Owner == null) return;
+        var creature = card.Owner.Creature;
+
+        await PowerCmd.Apply<SkyboundArtAutoPlayingPower>(ctx, creature, 1m, creature, null, silent: true);
+        try
+        {
+            await CardCmd.AutoPlay(ctx, card, null);
+        }
+        finally
+        {
+            var flag = creature.GetPower<SkyboundArtAutoPlayingPower>();
+            if (flag != null) await PowerCmd.Remove(flag);
+        }
     }
 }

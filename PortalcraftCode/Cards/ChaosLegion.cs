@@ -11,6 +11,7 @@ using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
 using sts2_char_portalcraft.PortalcraftCode.Cards.Keywords;
 using sts2_char_portalcraft.PortalcraftCode.Character;
+using sts2_char_portalcraft.PortalcraftCode.Powers;
 
 namespace sts2_char_portalcraft.PortalcraftCode.Cards;
 
@@ -21,7 +22,6 @@ public sealed class ChaosLegion : PortalcraftCard, ISkyboundArtCard
     {
         new DamageVar(18m, ValueProp.Move),
         new IntVar("SuperDamage", 36m),
-        new IntVar(SkyboundArtHelper.SkyboundArtVarName, 0m),
     };
 
     public override IEnumerable<CardKeyword> CanonicalKeywords => new[]
@@ -38,6 +38,12 @@ public sealed class ChaosLegion : PortalcraftCard, ISkyboundArtCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
+        if (Owner.Creature.HasPower<SkyboundArtAutoPlayingPower>())
+        {
+            await OnSuperSkyboundArt(this, choiceContext);
+            return;
+        }
+
         foreach (Creature enemy in CombatState.HittableEnemies)
         {
             await DamageCmd.Attack(DynamicVars.Damage.BaseValue)

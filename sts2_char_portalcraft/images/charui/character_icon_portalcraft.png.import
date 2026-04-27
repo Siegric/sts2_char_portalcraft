@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0e76age1uei2"
-path="res://.godot/imported/char_select_char_name.png-30e8051a61637ae64cf1e81ba5e57101.ctex"
+uid="uid://bgfb8vr3nvbvx"
+path="res://.godot/imported/character_icon_portalcraft.png-08d7265f861ac03a151ad890d1b2ebd1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sts2_char_portalcraft/images/charui/char_select_char_name.png"
-dest_files=["res://.godot/imported/char_select_char_name.png-30e8051a61637ae64cf1e81ba5e57101.ctex"]
+source_file="res://sts2_char_portalcraft/images/charui/character_icon_portalcraft.png"
+dest_files=["res://.godot/imported/character_icon_portalcraft.png-08d7265f861ac03a151ad890d1b2ebd1.ctex"]
 
 [params]
 

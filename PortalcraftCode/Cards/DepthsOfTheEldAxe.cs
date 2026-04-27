@@ -37,7 +37,7 @@ public sealed class DepthsOfTheEldAxe : PortalcraftCard
         var original = selected[0];
         await CardCmd.Exhaust(choiceContext, original);
         var copy = CombatState.CloneCard(original);
-        await CardPileCmd.AddGeneratedCardToCombat(copy, PileType.Hand, addedByPlayer: true);
+        await CardPileCmd.AddGeneratedCardToCombat(copy, PileType.Hand, Owner);
         copy.EnergyCost.AddThisCombat(-1);
     }
 

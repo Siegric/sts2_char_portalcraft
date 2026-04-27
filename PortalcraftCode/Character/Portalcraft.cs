@@ -18,7 +18,7 @@ public class Portalcraft : PlaceholderCharacterModel
     public static readonly Color Color = new("ffffff");
 
     public override Color NameColor => Color;
-    public override CharacterGender Gender => CharacterGender.Neutral;
+    public override CharacterGender Gender => CharacterGender.Feminine;
     public override int StartingHp => 70;
 
     public override IEnumerable<CardModel> StartingDeck =>
@@ -52,9 +52,9 @@ public class Portalcraft : PlaceholderCharacterModel
     public override string CustomCharacterSelectBg => "res://sts2_char_portalcraft/scenes/char_select_bg.tscn";
     //public override string? CustomRestSiteAnimPath => "res://sts2_char_portalcraft/scenes/portalcraft.tscn";
     public override string CustomMerchantAnimPath => "res://sts2_char_portalcraft/scenes/portalcraft_merchant.tscn";
-    public override string CustomIconPath => "res://sts2_char_portalcraft/scenes/portcalcraft_icon.tscn";
-    public override string CustomIconTexturePath => "character_icon_char_name.png".CharacterUiPath();
-    public override string CustomCharacterSelectIconPath => "char_select_char_name.png".CharacterUiPath();
-    public override string CustomCharacterSelectLockedIconPath => "char_select_char_name_locked.png".CharacterUiPath();
-    public override string CustomMapMarkerPath => "map_marker_char_name.png".CharacterUiPath();
+    public override string CustomIconPath => "res://sts2_char_portalcraft/scenes/portalcraft_icon.tscn";
+    public override string CustomIconTexturePath => "character_icon_portalcraft.png".CharacterUiPath();
+    public override string CustomCharacterSelectIconPath => "char_select_portalcraft.png".CharacterUiPath();
+    public override string CustomCharacterSelectLockedIconPath => "char_select_portalcraft_locked.png".CharacterUiPath();
+    public override string CustomMapMarkerPath => "map_marker_portalcraft.png".CharacterUiPath();
 }

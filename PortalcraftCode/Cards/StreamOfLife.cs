@@ -35,7 +35,7 @@ public sealed class StreamOfLife : PortalcraftCard
             .Execute(choiceContext);
 
         var gear = CombatState.CreateCard<GearOfRemembrance>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(gear, PileType.Hand, addedByPlayer: true);
+        await CardPileCmd.AddGeneratedCardToCombat(gear, PileType.Hand, Owner);
     }
 
     protected override void OnUpgrade()

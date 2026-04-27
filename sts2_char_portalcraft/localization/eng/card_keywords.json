@@ -70,19 +70,19 @@
   "STS2_CHAR_PORTALCRAFT-SUPEREVOLUTION.description": "Super-evolving a follower gives it a flat +3 bonus to damage dealt/block gained and the following: — This follower can't be exhausted. Super-evolved followers are also considered [gold]Evolved[/gold]. You can spend an [gold]SEP[/gold] to super-evolve a follower once per turn. You can't [gold]Evolve[/gold] and [gold]Super-Evolve[/gold] in the same turn.",
 
   "EVOLVE.title": "Evolve",
-  "EVOLVE.description": "An ability that activates when the card is evolved (using an [gold]EP[/gold]) or super-evolved.",
+  "EVOLVE.description": "An ability that activates when the card is [gold]evolved[/gold] or [purple]super-evolved[/purple].",
   "STS2_CHAR_PORTALCRAFT-EVOLVE.title": "Evolve",
-  "STS2_CHAR_PORTALCRAFT-EVOLVE.description": "An ability that activates when the card is evolved (using an [gold]EP[/gold]) or super-evolved.",
+  "STS2_CHAR_PORTALCRAFT-EVOLVE.description": "An ability that activates when the card is [gold]evolved[/gold] or [purple]super-evolved[/purple].",
 
   "SUPEREVOLVE.title": "Super-Evolve",
-  "SUPEREVOLVE.description": "An ability that activates when the card is super-evolved.",
+  "SUPEREVOLVE.description": "An ability that activates when the card is [purple]super-evolved[/purple].",
   "STS2_CHAR_PORTALCRAFT-SUPEREVOLVE.title": "Super-Evolve",
-  "STS2_CHAR_PORTALCRAFT-SUPEREVOLVE.description": "An ability that activates when the card is super-evolved.",
+  "STS2_CHAR_PORTALCRAFT-SUPEREVOLVE.description": "An ability that activates when the card is [purple]super-evolved[/purple].",
 
   "BANE.title": "Bane",
   "BANE.description": "Destroys any enemy [gold]minion[/gold] this card attacks after damage is dealt. Deals +10 damage to non-minion enemies instead.",
   "STS2_CHAR_PORTALCRAFT-BANE.title": "Bane",
-  "STS2_CHAR_PORTALCRAFT-BANE.description": "Destroys any enemy [gold]minion[/gold] this card attacks after damage is dealt. Deals double damage to non-minion enemies instead.",
+  "STS2_CHAR_PORTALCRAFT-BANE.description": "Destroys any enemy [gold]minion[/gold] this card attacks after damage is dealt. Deals +10 damage to non-minion enemies instead.",
 
   "CANNOTBEEXHAUSTED.title": "Cannot be Exhausted",
   "CANNOTBEEXHAUSTED.description": "This card cannot be [gold]Exhausted[/gold] by any means.",

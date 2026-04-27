@@ -40,7 +40,7 @@ public sealed class OminousArtifactGamma : ArtifactCard
         await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.BaseValue, Owner);
         await PlayerCmd.GainEnergy(DynamicVars.Energy.BaseValue, Owner);
         await PowerCmd.Apply<DrawCardsNextTurnPower>(
-            Owner.Creature, DynamicVars["MagicNumber"].BaseValue, Owner.Creature, this);
+            choiceContext, Owner.Creature, DynamicVars["MagicNumber"].BaseValue, Owner.Creature, this);
     }
 
     public override async Task ActivateEffect(PlayerChoiceContext choiceContext)
@@ -48,6 +48,6 @@ public sealed class OminousArtifactGamma : ArtifactCard
         await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.BaseValue, Owner);
         await PlayerCmd.GainEnergy(DynamicVars.Energy.BaseValue, Owner);
         await PowerCmd.Apply<DrawCardsNextTurnPower>(
-            Owner.Creature, DynamicVars["MagicNumber"].BaseValue, Owner.Creature, this);
+            choiceContext, Owner.Creature, DynamicVars["MagicNumber"].BaseValue, Owner.Creature, this);
     }
 }
