@@ -83,11 +83,7 @@
   "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_POWER.description": "This turn, whenever you play a Skill, add Imari's Little Buddies to your hand.",
   "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_POWER.smartDescription": "This turn, whenever you play a Skill, add Imari's Little Buddies to your hand.",
 
-  "STS2_CHAR_PORTALCRAFT-NOAH_DAMAGE_BONUS_POWER.title": "Thread of Death",
-  "STS2_CHAR_PORTALCRAFT-NOAH_DAMAGE_BONUS_POWER.description": "Your Puppets deal additional damage.",
-  "STS2_CHAR_PORTALCRAFT-NOAH_DAMAGE_BONUS_POWER.smartDescription": "Your Puppets deal +{Amount} additional damage.",
-
-  "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_POWER.title": "Crest: Slaus, Revolving Wheel of Fortune",
+"STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_POWER.title": "Crest: Slaus, Revolving Wheel of Fortune",
   "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_POWER.description": "At start of turn, activate a random ability: reduce all hand costs by 1, gain Strength and Dexterity, or heal. Cannot repeat the previous turn's effect.",
   "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_POWER.smartDescription": "At start of turn, activate a random ability: reduce all hand costs by 1 until end of turn, gain 2 Strength and 2 Dexterity until end of turn, or heal 3 HP. Cannot repeat the previous turn's effect.",
 

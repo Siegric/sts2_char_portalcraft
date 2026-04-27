@@ -47,11 +47,7 @@
   "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_POWER.description": "このターン、スキルをプレイするたび、イマリの小鬼を手札に加える。",
   "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_POWER.smartDescription": "このターン、スキルをプレイするたび、イマリの小鬼を手札に加える。",
 
-  "STS2_CHAR_PORTALCRAFT-NOAH_DAMAGE_BONUS_POWER.title": "殺意の糸",
-  "STS2_CHAR_PORTALCRAFT-NOAH_DAMAGE_BONUS_POWER.description": "パペットはダメージを追加する。",
-  "STS2_CHAR_PORTALCRAFT-NOAH_DAMAGE_BONUS_POWER.smartDescription": "パペットは {Amount} ダメージを追加する。",
-
-  "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_POWER.title": "紋章：廻る《運命の輪》・スロース",
+"STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_POWER.title": "紋章：廻る《運命の輪》・スロース",
   "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_POWER.description": "このターン、以下の効果をランダムで発動する：手札のカードのコストを減少する、筋力と敏捷を得る、またはHPを回復する。同じ効果はターンごとに連続して発動しない。",
   "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_POWER.smartDescription": "このターン、以下の効果をランダムで発動する：手札のカードのコストを1減少する、筋力2と敏捷2を得る、またはHPを3回復する。同じ効果はターンごとに連続して発動しない。",
 

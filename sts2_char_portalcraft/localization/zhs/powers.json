@@ -83,11 +83,7 @@
   "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_POWER.description": "本回合每使用1张技能牌，将伊鞠的小鬼加入手牌。",
   "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_POWER.smartDescription": "本回合每使用1张技能牌，将伊鞠的小鬼加入手牌。",
 
-  "STS2_CHAR_PORTALCRAFT-NOAH_DAMAGE_BONUS_POWER.title": "杀意之丝",
-  "STS2_CHAR_PORTALCRAFT-NOAH_DAMAGE_BONUS_POWER.description": "你的悬丝傀儡造成额外伤害。",
-  "STS2_CHAR_PORTALCRAFT-NOAH_DAMAGE_BONUS_POWER.smartDescription": "你的悬丝傀儡造成额外 +{Amount} 点伤害。",
-
-  "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_POWER.title": "纹章：转动的《命运之轮》·斯洛士",
+"STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_POWER.title": "纹章：转动的《命运之轮》·斯洛士",
   "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_POWER.description": "回合开始时，随机发动一个效果：减少手牌费用、获得力量与敏捷、或恢复生命。不会连续两回合发动相同效果。",
   "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_POWER.smartDescription": "回合开始时，随机发动一个效果：手牌费用减少1、获得2点力量和2点敏捷直到回合结束、或恢复3点生命。不会连续两回合发动相同效果。",
 

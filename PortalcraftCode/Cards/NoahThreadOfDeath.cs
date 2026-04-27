@@ -6,8 +6,9 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Models;
+using sts2_char_portalcraft.PortalcraftCode.Cards.Puppets;
 using sts2_char_portalcraft.PortalcraftCode.Character;
-using sts2_char_portalcraft.PortalcraftCode.Powers;
 
 namespace sts2_char_portalcraft.PortalcraftCode.Cards;
 
@@ -16,24 +17,39 @@ public sealed class NoahThreadOfDeath : PortalcraftCard
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]
     {
-        new IntVar("MagicNumber", 7m),
+        new IntVar("MagicNumber", 4m),
     };
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
     {
-        HoverTipFactory.FromPower<NoahDamageBonusPower>(),
+        HoverTipFactory.FromCard<Puppet>(),
+        HoverTipFactory.FromKeyword(CardKeyword.Retain),
     };
 
-    public NoahThreadOfDeath() : base(0, CardType.Skill, CardRarity.Uncommon, TargetType.Self) { }
+    public override IEnumerable<CardKeyword> CanonicalKeywords => new[] { CardKeyword.Exhaust };
+
+    public NoahThreadOfDeath() : base(2, CardType.Skill, CardRarity.Uncommon, TargetType.Self) { }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        int damageBonus = (int)DynamicVars["MagicNumber"].BaseValue;
-        await PowerCmd.Apply<NoahDamageBonusPower>(choiceContext, Owner.Creature, damageBonus, Owner.Creature, this);
+        int bonus = (int)DynamicVars["MagicNumber"].BaseValue;
+
+        var puppets = new List<CardModel>();
+        for (int i = 0; i < 3; i++)
+            puppets.Add(CombatState.CreateCard<Puppet>(Owner));
+        await CardPileCmd.AddGeneratedCardsToCombat(puppets, PileType.Hand, Owner);
+
+        foreach (var card in PileType.Hand.GetPile(Owner).Cards)
+        {
+            if (!PuppetHelper.IsPuppet(card)) continue;
+            card.AddKeyword(CardKeyword.Retain);
+            if (card is Lloyd) continue;
+            card.DynamicVars.Damage.BaseValue += bonus;
+        }
     }
 
     protected override void OnUpgrade()
     {
-        DynamicVars["MagicNumber"].UpgradeValueBy(3m);
+        RemoveKeyword(CardKeyword.Exhaust);
     }
 }

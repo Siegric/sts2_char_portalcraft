@@ -47,11 +47,7 @@
   "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_POWER.description": "이번 턴, 스킬을 플레이할 때마다, 이마리의 꼬마 도깨비를 패에 넣는다.",
   "STS2_CHAR_PORTALCRAFT-IMARI_DEWDROP_POWER.smartDescription": "이번 턴, 스킬을 플레이할 때마다, 이마리의 꼬마 도깨비를 패에 넣는다.",
 
-  "STS2_CHAR_PORTALCRAFT-NOAH_DAMAGE_BONUS_POWER.title": "살의의 실",
-  "STS2_CHAR_PORTALCRAFT-NOAH_DAMAGE_BONUS_POWER.description": "꼭두각시 인형은 피해를 추가한다.",
-  "STS2_CHAR_PORTALCRAFT-NOAH_DAMAGE_BONUS_POWER.smartDescription": "꼭두각시 인형은 {Amount} 의 피해를 추가한다.",
-
-  "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_POWER.title": "문장: 도는 《운명의 수레바퀴》 슬로스",
+"STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_POWER.title": "문장: 도는 《운명의 수레바퀴》 슬로스",
   "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_POWER.description": "이번 턴, 이하의 효과를 무작위로 발동한다: 패의 카드 비용을 감소시킨다, 근력과 민첩을 얻는다, 또는 HP를 회복한다. 동일한 효과는 턴마다 연속해서 발동하지 않는다.",
   "STS2_CHAR_PORTALCRAFT-SLAUS_REVOLVING_WHEEL_POWER.smartDescription": "이번 턴, 이하의 효과를 무작위로 발동한다: 패의 카드 비용을 1 감소시킨다, 근력 2와 민첩 2를 얻는다, 또는 HP를 3 회복한다. 동일한 효과는 턴마다 연속해서 발동하지 않는다.",
 
