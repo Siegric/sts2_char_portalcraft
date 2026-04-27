@@ -51,7 +51,7 @@ public class CarneliaEmberOfDarkness : PortalcraftCard, IEvolvableCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         var token = CombatState.CreateCard<GearOfRemembrance>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(token, PileType.Hand, Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(token, PileType.Hand, true);
     }
     
     public virtual async Task OnEvolve(CardModel card, PlayerChoiceContext choiceContext)

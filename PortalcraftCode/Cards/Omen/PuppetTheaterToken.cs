@@ -50,12 +50,12 @@ public sealed class PuppetTheaterToken : PortalcraftCard, ICountdownCard, IOnTur
         DynamicVars["MagicNumber"].UpgradeValueBy(1m);
     }
 
-    public static async Task<CardModel> CreateInHand(Player owner, ICombatState combatState, bool upgraded)
+    public static async Task<CardModel> CreateInHand(Player owner, CombatState combatState, bool upgraded)
     {
         if (CombatManager.Instance.IsOverOrEnding) return null;
         var token = combatState.CreateCard<PuppetTheaterToken>(owner);
         if (upgraded) token.UpgradeInternal();
-        await CardPileCmd.AddGeneratedCardToCombat(token, PileType.Hand, owner);
+        await CardPileCmd.AddGeneratedCardToCombat(token, PileType.Hand, true);
         return token;
     }
 }

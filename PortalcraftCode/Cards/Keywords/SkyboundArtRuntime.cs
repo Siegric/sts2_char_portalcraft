@@ -31,7 +31,7 @@ public static class SkyboundArtRuntime
     {
         var gauge = player.Creature.GetPower<SkyboundArtGaugePower>();
         if (gauge == null) return;
-        await PowerCmd.ModifyAmount(ctx, gauge, amount, null, null, silent: true);
+        await PowerCmd.ModifyAmount(gauge, amount, null, null, silent: true);
         await CheckThresholds(player, ctx);
     }
 
@@ -42,12 +42,12 @@ public static class SkyboundArtRuntime
 
         if (gauge >= SkyboundArtThreshold && !creature.HasPower<SkyboundArtPower>())
         {
-            await PowerCmd.Apply<SkyboundArtPower>(ctx, creature, 1m, creature, null, silent: true);
+            await PowerCmd.Apply<SkyboundArtPower>(creature, 1m, creature, null, silent: true);
             await FireHandSkyboundArt(player, ctx, isSuper: false);
         }
         if (gauge >= SuperSkyboundArtThreshold && !creature.HasPower<SuperSkyboundArtPower>())
         {
-            await PowerCmd.Apply<SuperSkyboundArtPower>(ctx, creature, 1m, creature, null, silent: true);
+            await PowerCmd.Apply<SuperSkyboundArtPower>(creature, 1m, creature, null, silent: true);
             await FireHandSkyboundArt(player, ctx, isSuper: true);
         }
     }
@@ -77,7 +77,7 @@ public static class SkyboundArtRuntime
         if (card.Owner == null) return;
         var creature = card.Owner.Creature;
 
-        await PowerCmd.Apply<SkyboundArtAutoPlayingPower>(ctx, creature, 1m, creature, null, silent: true);
+        await PowerCmd.Apply<SkyboundArtAutoPlayingPower>(creature, 1m, creature, null, silent: true);
         try
         {
             await CardCmd.AutoPlay(ctx, card, null);

@@ -61,12 +61,12 @@ public class BeelzebubSupremeKing : PortalcraftCard, IEvolvableCard
                 .Execute(choiceContext);
             if (target.IsAlive)
             {
-                await PowerCmd.Apply<BeelzebubSupremeKingStrengthPower>(choiceContext, target, 9m, Owner.Creature, this);
+                await PowerCmd.Apply<BeelzebubSupremeKingStrengthPower>(target, 9m, Owner.Creature, this);
             }
             enemies = CombatState.HittableEnemies.ToList();
         }
 
-        await PowerCmd.Apply<BeelzebubSupremeKingPower>(choiceContext, Owner.Creature, 2, Owner.Creature, this);
+        await PowerCmd.Apply<BeelzebubSupremeKingPower>(Owner.Creature, 2, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

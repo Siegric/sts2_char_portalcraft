@@ -57,7 +57,7 @@ public class MechanizedBeast : PortalcraftCard, IEvolvableCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, cardPlay);
-        await PowerCmd.Apply<MechanizedBeastPower>(choiceContext, Owner.Creature, DynamicVars["MagicNumber"].BaseValue, Owner.Creature, this);
+        await PowerCmd.Apply<MechanizedBeastPower>(Owner.Creature, DynamicVars["MagicNumber"].BaseValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

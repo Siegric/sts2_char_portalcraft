@@ -29,7 +29,7 @@ public sealed class ImariDewdropPower : PortalcraftPower
             {
                 CardCmd.Upgrade(token);
             }
-            await CardPileCmd.AddGeneratedCardToCombat(token, PileType.Hand, cardPlay.Card.Owner);
+            await CardPileCmd.AddGeneratedCardToCombat(token, PileType.Hand, true);
         }
     }
 

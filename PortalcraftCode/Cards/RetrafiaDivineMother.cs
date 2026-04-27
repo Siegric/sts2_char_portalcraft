@@ -68,7 +68,7 @@ public sealed class RetrafiaDivineMother : PortalcraftCard, ICrystallizeCard
 
     public async Task OnAmuletSpawned(PlayerChoiceContext choiceContext, CardModel amulet)
     {
-        await PowerCmd.Apply<RetrafiaAmuletPower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);
+        await PowerCmd.Apply<RetrafiaAmuletPower>(Owner.Creature, 1, Owner.Creature, this);
     }
 
     protected override void OnUpgrade() { }

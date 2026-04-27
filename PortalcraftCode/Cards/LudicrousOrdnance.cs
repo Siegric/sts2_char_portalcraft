@@ -60,7 +60,7 @@ public class LudicrousOrdnance : PortalcraftCard, IEvolvableCard, IOnTurnEndCard
         for (int i = 0; i < 2; i++)
         {
             var copy = CombatState.CreateCard<LudicrousOrdnance>(Owner);
-            await CardPileCmd.AddGeneratedCardToCombat(copy, PileType.Hand, Owner);
+            await CardPileCmd.AddGeneratedCardToCombat(copy, PileType.Hand, true);
         }
     }
     

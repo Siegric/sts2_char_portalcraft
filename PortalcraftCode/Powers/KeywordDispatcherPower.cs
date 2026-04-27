@@ -93,7 +93,7 @@ public sealed class KeywordDispatcherPower : PortalcraftPower
 
         if (card is ArtifactCard)
         {
-            await PowerCmd.Apply<ArtifactsExhaustedPower>(choiceContext, Owner, 1, Owner, null, silent: true);
+            await PowerCmd.Apply<ArtifactsExhaustedPower>(Owner, 1, Owner, null, silent: true);
         }
 
         if (card is ILastWordsCard lastWords)

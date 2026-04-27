@@ -82,7 +82,7 @@ public class LuWohLightPersonified : PortalcraftCard, IEvolvableCard, ISkyboundA
     
     public async Task OnSkyboundArt(CardModel card, PlayerChoiceContext choiceContext)
     {
-        await PowerCmd.Apply<LuWohIntentDebuffPower>(choiceContext, Owner.Creature, 3m, Owner.Creature, this);
+        await PowerCmd.Apply<LuWohIntentDebuffPower>(Owner.Creature, 3m, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

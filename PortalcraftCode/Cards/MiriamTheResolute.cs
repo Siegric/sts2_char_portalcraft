@@ -53,10 +53,10 @@ public class MiriamTheResolute : PortalcraftCard, IEvolvableCard
     protected async Task RunEffect()
     {
         var ambition = CombatState.CreateCard<GearOfAmbition>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(ambition, PileType.Hand, Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(ambition, PileType.Hand, true);
 
         var remembrance = CombatState.CreateCard<GearOfRemembrance>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(remembrance, PileType.Hand, Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(remembrance, PileType.Hand, true);
     }
     public virtual async Task OnEvolve(CardModel card, PlayerChoiceContext choiceContext)
     {

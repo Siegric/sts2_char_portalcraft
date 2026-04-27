@@ -40,7 +40,7 @@ public sealed class Puppet : PortalcraftCard
         DynamicVars.Damage.UpgradeValueBy(2m);
     }
 
-    public static async Task<IEnumerable<CardModel>> CreateInHand(Player owner, int count, ICombatState combatState)
+    public static async Task<IEnumerable<CardModel>> CreateInHand(Player owner, int count, CombatState combatState)
     {
         if (count == 0 || CombatManager.Instance.IsOverOrEnding)
             return Array.Empty<CardModel>();
@@ -50,7 +50,7 @@ public sealed class Puppet : PortalcraftCard
         {
             puppets.Add(combatState.CreateCard<Puppet>(owner));
         }
-        await CardPileCmd.AddGeneratedCardsToCombat(puppets, PileType.Hand, owner);
+        await CardPileCmd.AddGeneratedCardsToCombat(puppets, PileType.Hand, true);
         return puppets;
     }
 }

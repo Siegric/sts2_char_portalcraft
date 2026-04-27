@@ -17,10 +17,10 @@ public sealed class ResonanceCore : PortalcraftRelic
     public override async Task BeforeCombatStart()
     {
         var ctx = new ThrowingPlayerChoiceContext();
-        await PowerCmd.Apply<KeywordDispatcherPower>(ctx, Owner.Creature, 1, Owner.Creature, null);
-        await PowerCmd.Apply<EvoPointsPower>(ctx, Owner.Creature, EvoRuntime.MaxEvoPoints, Owner.Creature, null);
-        await PowerCmd.Apply<SuperEvoPointsPower>(ctx, Owner.Creature, EvoRuntime.MaxSuperEvoPoints, Owner.Creature, null);
-        await PowerCmd.Apply<SkyboundArtGaugePower>(ctx, Owner.Creature, 1, Owner.Creature, null);
+        await PowerCmd.Apply<KeywordDispatcherPower>(Owner.Creature, 1, Owner.Creature, null);
+        await PowerCmd.Apply<EvoPointsPower>(Owner.Creature, EvoRuntime.MaxEvoPoints, Owner.Creature, null);
+        await PowerCmd.Apply<SuperEvoPointsPower>(Owner.Creature, EvoRuntime.MaxSuperEvoPoints, Owner.Creature, null);
+        await PowerCmd.Apply<SkyboundArtGaugePower>(Owner.Creature, 1, Owner.Creature, null);
     }
 
     public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)

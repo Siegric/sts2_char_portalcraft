@@ -32,7 +32,7 @@ public sealed class TimidPioneer : PortalcraftCard
     {
         foreach (Creature enemy in CombatState.HittableEnemies)
         {
-            await PowerCmd.Apply<TimidPioneerPower>(choiceContext, enemy, DynamicVars["MagicNumber"].BaseValue, Owner.Creature, this);
+            await PowerCmd.Apply<TimidPioneerPower>(enemy, DynamicVars["MagicNumber"].BaseValue, Owner.Creature, this);
         }
     }
 

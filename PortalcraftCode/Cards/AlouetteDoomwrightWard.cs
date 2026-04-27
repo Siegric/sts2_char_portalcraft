@@ -52,10 +52,10 @@ public class AlouetteDoomwrightWard : PortalcraftCard, IEvolvableCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         var ambition = CombatState.CreateCard<GearOfAmbition>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(ambition, PileType.Hand, Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(ambition, PileType.Hand, true);
 
         var remembrance = CombatState.CreateCard<GearOfRemembrance>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(remembrance, PileType.Hand, Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(remembrance, PileType.Hand, true);
     }
     
     public virtual async Task OnEvolve(CardModel card, PlayerChoiceContext choiceContext)

@@ -61,10 +61,10 @@ public class RukinaResistanceLeader : PortalcraftCard, IEvolvableCard
         await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, cardPlay);
 
         var ambition = CombatState.CreateCard<GearOfAmbition>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(ambition, PileType.Hand, Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(ambition, PileType.Hand, true);
 
         var remembrance = CombatState.CreateCard<GearOfRemembrance>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(remembrance, PileType.Hand, Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(remembrance, PileType.Hand, true);
     }
     
     public virtual async Task OnEvolve(CardModel card, PlayerChoiceContext choiceContext)

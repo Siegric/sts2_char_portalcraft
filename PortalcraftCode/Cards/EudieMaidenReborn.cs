@@ -51,7 +51,7 @@ public class EudieMaidenReborn : PortalcraftCard, IEvolvableCard
     
     public virtual async Task OnEvolve(CardModel card, PlayerChoiceContext choiceContext)
     {
-        await PowerCmd.Apply<EudieMaidenRebornPower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);
+        await PowerCmd.Apply<EudieMaidenRebornPower>(Owner.Creature, 1, Owner.Creature, this);
     }
 
     public virtual Task OnSuperEvolve(CardModel card, PlayerChoiceContext choiceContext) => Task.CompletedTask;

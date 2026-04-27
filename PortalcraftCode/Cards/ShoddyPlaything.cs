@@ -26,7 +26,7 @@ public sealed class ShoddyPlaything : PortalcraftCard
 
         var copyDraw = CombatState.CloneCard(this);
         copyDraw.EnergyCost.ClearLocalCostModifiers();
-        await CardPileCmd.AddGeneratedCardToCombat(copyDraw, PileType.Draw, Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(copyDraw, PileType.Draw, true);
     }
 
     protected override void OnUpgrade()

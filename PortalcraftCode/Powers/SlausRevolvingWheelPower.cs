@@ -45,8 +45,8 @@ public sealed class SlausRevolvingWheelPower : PortalcraftPower
 
             case 1:
                 var amount = 2m * Amount;
-                await PowerCmd.Apply<SlausRevolvingWheelStrengthPower>(choiceContext, Owner, amount, Owner, null);
-                await PowerCmd.Apply<SlausRevolvingWheelDexterityPower>(choiceContext, Owner, amount, Owner, null);
+                await PowerCmd.Apply<SlausRevolvingWheelStrengthPower>(Owner, amount, Owner, null);
+                await PowerCmd.Apply<SlausRevolvingWheelDexterityPower>(Owner, amount, Owner, null);
                 break;
 
             case 2:

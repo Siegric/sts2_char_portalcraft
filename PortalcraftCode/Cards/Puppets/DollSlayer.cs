@@ -42,6 +42,6 @@ public sealed class DollSlayer : PortalcraftCard, ILastWordsCard
     public async Task OnLastWords(PlayerChoiceContext choiceContext)
     {
         var vier = CombatState.CreateCard<VierHeartSlayer>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(vier, PileType.Hand, Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(vier, PileType.Hand, true);
     }
 }

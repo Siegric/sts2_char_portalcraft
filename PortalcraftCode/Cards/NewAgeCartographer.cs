@@ -53,7 +53,7 @@ public class NewAgeCartographer : PortalcraftCard, IEvolvableCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         var artifact = CombatState.CreateCard<OminousArtifactBeta>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(artifact, PileType.Hand, Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(artifact, PileType.Hand, true);
     }
 
     public virtual Task OnEvolve(CardModel card, PlayerChoiceContext choiceContext) => Task.CompletedTask;

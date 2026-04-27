@@ -23,11 +23,11 @@ public sealed class EudieMaidenRebornPower : PortalcraftPower
         {
             case <= 5:
                 Flash();
-                await PowerCmd.Apply<DrawCardsNextTurnPower>(choiceContext, Owner, Amount, Owner, null);
+                await PowerCmd.Apply<DrawCardsNextTurnPower>(Owner, Amount, Owner, null);
                 break;
             case >= 6:
                 Flash();
-                await PowerCmd.Apply<EnergyNextTurnPower>(choiceContext, Owner, Amount, Owner, null);
+                await PowerCmd.Apply<EnergyNextTurnPower>(Owner, Amount, Owner, null);
                 break;
         }
     }

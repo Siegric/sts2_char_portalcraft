@@ -35,13 +35,13 @@ public sealed class WastelandOfDestructionToken : PortalcraftCard, ILastWordsCar
         await CardPileCmd.Draw(choiceContext, 1, Owner);
     }
 
-    public static async Task<CardModel> CreateInHand(Player owner, ICombatState combatState)
+    public static async Task<CardModel> CreateInHand(Player owner, CombatState combatState)
     {
         if (CombatManager.Instance.IsOverOrEnding)
             return null;
 
         var token = combatState.CreateCard<WastelandOfDestructionToken>(owner);
-        await CardPileCmd.AddGeneratedCardToCombat(token, PileType.Hand, owner);
+        await CardPileCmd.AddGeneratedCardToCombat(token, PileType.Hand, true);
         return token;
     }
 }

@@ -61,7 +61,7 @@ public class IlsaBrutalDrillSergeant : PortalcraftCard, IEvolvableCard
 
         if (chosen != null)
         {
-            await CardPileCmd.AddGeneratedCardToCombat(chosen, PileType.Hand, Owner);
+            await CardPileCmd.AddGeneratedCardToCombat(chosen, PileType.Hand, true);
             await CardCmd.AutoPlay(choiceContext, chosen, null);
         }
     }

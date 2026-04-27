@@ -61,7 +61,7 @@ public class FloweringArtisan : PortalcraftCard, IEvolvableCard
         }
 
         int damage = (int)DynamicVars["MagicNumber"].BaseValue;
-        await PowerCmd.Apply<FloweringArtisanPower>(choiceContext, Owner.Creature, damage, Owner.Creature, this);
+        await PowerCmd.Apply<FloweringArtisanPower>(Owner.Creature, damage, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

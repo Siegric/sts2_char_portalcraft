@@ -61,7 +61,7 @@ public class IronheartHunter : PortalcraftCard, IEvolvableCard
             .Execute(choiceContext);
 
         var token = CombatState.CreateCard<GearOfAmbition>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(token, PileType.Hand, Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(token, PileType.Hand, true);
     }
     protected async Task RunEffect(PlayerChoiceContext choiceContext)
     {

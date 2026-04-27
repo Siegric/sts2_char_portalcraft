@@ -15,7 +15,7 @@ public static class PuppetHelper
             .Count(c => c.Tags.Contains(PuppetTag.Puppet));
     }
     
-    public static int CountPuppetsPlayedThisTurn(Player owner, ICombatState combatState)
+    public static int CountPuppetsPlayedThisTurn(Player owner, CombatState combatState)
     {
         return CombatManager.Instance.History.CardPlaysStarted
             .Count(e => e.HappenedThisTurn(combatState)

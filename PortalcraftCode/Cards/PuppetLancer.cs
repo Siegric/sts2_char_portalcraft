@@ -58,7 +58,7 @@ public class PuppetLancer : PortalcraftCard, IEvolvableCard
             .Execute(choiceContext);
 
         var token = CombatState.CreateCard<EnhancedPuppet>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(token, PileType.Hand, Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(token, PileType.Hand, true);
     }
 
     protected override void OnUpgrade()

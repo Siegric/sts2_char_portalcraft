@@ -64,7 +64,7 @@ public class YogZenthaEldAxe : PortalcraftCard, IEvolvableCard
         if (hasExpensiveCard)
         {
             var token = CombatState.CreateCard<DepthsOfTheEldAxe>(Owner);
-            await CardPileCmd.AddGeneratedCardToCombat(token, PileType.Hand, Owner);
+            await CardPileCmd.AddGeneratedCardToCombat(token, PileType.Hand, true);
         }
     }
 

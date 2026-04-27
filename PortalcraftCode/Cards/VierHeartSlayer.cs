@@ -89,7 +89,7 @@ public class VierHeartSlayer : PortalcraftCard, IEvolvableCard
             await CardCmd.Exhaust(choiceContext, puppet);
             var dollSlayer = CombatState.CreateCard<DollSlayer>(Owner);
             dollSlayer.DynamicVars.Damage.BaseValue = puppetDamage;
-            await CardPileCmd.AddGeneratedCardToCombat(dollSlayer, PileType.Hand, Owner);
+            await CardPileCmd.AddGeneratedCardToCombat(dollSlayer, PileType.Hand, true);
         }
     }
 

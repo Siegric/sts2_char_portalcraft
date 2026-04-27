@@ -55,16 +55,16 @@ public sealed class WhitePsalmNewRevelation : PortalcraftCard, ICountdownCard, I
         await CreatureCmd.GainBlock(Owner.Creature, block, ValueProp.Unpowered, null);
 
         var black = CombatState.CreateCard<BlackPsalmNewRevelation>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(black, PileType.Hand, Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(black, PileType.Hand, true);
     }
 
-    public static async Task<CardModel> CreateInHand(Player owner, ICombatState combatState)
+    public static async Task<CardModel> CreateInHand(Player owner, CombatState combatState)
     {
         if (CombatManager.Instance.IsOverOrEnding)
             return null;
 
         var psalm = combatState.CreateCard<WhitePsalmNewRevelation>(owner);
-        await CardPileCmd.AddGeneratedCardToCombat(psalm, PileType.Hand, owner);
+        await CardPileCmd.AddGeneratedCardToCombat(psalm, PileType.Hand, true);
         return psalm;
     }
 }

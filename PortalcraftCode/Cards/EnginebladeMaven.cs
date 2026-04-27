@@ -65,14 +65,14 @@ public class EnginebladeMaven : PortalcraftCard, IEvolvableCard
         await SummonHelper.Summon<StrikerArtifact>(Owner, CombatState);
 
         var gear = CombatState.CreateCard<GearOfRemembrance>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(gear, PileType.Hand, Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(gear, PileType.Hand, true);
     }
 
     public virtual async Task OnEvolve(CardModel card, PlayerChoiceContext choiceContext)
     {
         await SummonHelper.Summon<StrikerArtifact>(Owner, CombatState);
         var gear = CombatState.CreateCard<GearOfRemembrance>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(gear, PileType.Hand, Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(gear, PileType.Hand, true);
     }
 
     public virtual Task OnSuperEvolve(CardModel card, PlayerChoiceContext choiceContext) => Task.CompletedTask;

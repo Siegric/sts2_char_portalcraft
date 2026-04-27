@@ -35,7 +35,7 @@ public sealed class ShoRebornNightKing : PortalcraftCard
 
         if (EvoRuntime.SuperEvoPoints(Owner) >= 1)
         {
-            await PowerCmd.Apply<BufferPower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);
+            await PowerCmd.Apply<BufferPower>(Owner.Creature, 1, Owner.Creature, this);
         }
     }
 

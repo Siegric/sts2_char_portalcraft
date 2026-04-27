@@ -50,10 +50,10 @@ public class ZweiSymphonicHeart : PortalcraftCard, IEvolvableCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         var victoria = CombatState.CreateCard<Victoria>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(victoria, PileType.Hand, Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(victoria, PileType.Hand, true);
         victoria.BaseReplayCount += 1;
         
-        await PowerCmd.Apply<ZweiSymphonicHeartPower>(choiceContext, Owner.Creature, 4, Owner.Creature, this);
+        await PowerCmd.Apply<ZweiSymphonicHeartPower>(Owner.Creature, 4, Owner.Creature, this);
     }
     
     public virtual async Task OnEvolve(CardModel card, PlayerChoiceContext choiceContext)

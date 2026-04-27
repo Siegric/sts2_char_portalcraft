@@ -55,7 +55,7 @@ public class OrchisNewfoundHeart : PortalcraftCard, IEvolvableCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await SummonHelper.Summon<Lloyd>(Owner, CombatState);
-        await PowerCmd.Apply<OrchisNewfoundHeartPower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);
+        await PowerCmd.Apply<OrchisNewfoundHeartPower>(Owner.Creature, 1, Owner.Creature, this);
     }
 
     public virtual Task OnEvolve(CardModel card, PlayerChoiceContext choiceContext) => Task.CompletedTask;

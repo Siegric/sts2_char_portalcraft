@@ -29,7 +29,7 @@ public sealed class NoahThreadOfDeath : PortalcraftCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         int damageBonus = (int)DynamicVars["MagicNumber"].BaseValue;
-        await PowerCmd.Apply<NoahDamageBonusPower>(choiceContext, Owner.Creature, damageBonus, Owner.Creature, this);
+        await PowerCmd.Apply<NoahDamageBonusPower>(Owner.Creature, damageBonus, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

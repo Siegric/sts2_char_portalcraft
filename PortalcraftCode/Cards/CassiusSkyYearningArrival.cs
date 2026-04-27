@@ -91,13 +91,13 @@ public class CassiusSkyYearningArrival : PortalcraftCard, IEvolvableCard, ILastW
         }
 
         var fortifier = CombatState.CreateCard<FortifierArtifact>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(fortifier, PileType.Hand, Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(fortifier, PileType.Hand, true);
     }
     
     public async Task OnLastWords(PlayerChoiceContext choiceContext)
     {
         var fortifier = CombatState.CreateCard<FortifierArtifact>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(fortifier, PileType.Hand, Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(fortifier, PileType.Hand, true);
     }
 
     protected override void OnUpgrade()

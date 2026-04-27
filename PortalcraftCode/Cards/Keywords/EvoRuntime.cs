@@ -90,8 +90,8 @@ public static class EvoRuntime
         var creature = player.Creature;
         var power = creature.GetPower<EvoPointsPower>();
         if (power == null) return false;
-        await PowerCmd.ModifyAmount(ctx, power, -1m, null, null, silent: true);
-        await PowerCmd.Apply<EvoUsedThisTurnPower>(ctx, creature, 1m, creature, null, silent: true);
+        await PowerCmd.ModifyAmount(power, -1m, null, null, silent: true);
+        await PowerCmd.Apply<EvoUsedThisTurnPower>(creature, 1m, creature, null, silent: true);
         Changed?.Invoke(player);
         return true;
     }
@@ -102,8 +102,8 @@ public static class EvoRuntime
         var creature = player.Creature;
         var power = creature.GetPower<SuperEvoPointsPower>();
         if (power == null) return false;
-        await PowerCmd.ModifyAmount(ctx, power, -1m, null, null, silent: true);
-        await PowerCmd.Apply<EvoUsedThisTurnPower>(ctx, creature, 1m, creature, null, silent: true);
+        await PowerCmd.ModifyAmount(power, -1m, null, null, silent: true);
+        await PowerCmd.Apply<EvoUsedThisTurnPower>(creature, 1m, creature, null, silent: true);
         Changed?.Invoke(player);
         return true;
     }

@@ -56,7 +56,7 @@ public class IsaacCongenialEngineer : PortalcraftCard, IEvolvableCard
         await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, cardPlay);
 
         var striker = CombatState.CreateCard<StrikerArtifact>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(striker, PileType.Hand, Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(striker, PileType.Hand, true);
     }
 
     protected override void OnUpgrade()

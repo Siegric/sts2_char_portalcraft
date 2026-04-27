@@ -59,10 +59,10 @@ public class KittyCannoneer : PortalcraftCard, IEvolvableCard
             .Execute(choiceContext);
 
         int debuffStacks = (int)DynamicVars["MagicNumber"].BaseValue;
-        await PowerCmd.Apply<VulnerablePower>(choiceContext, cardPlay.Target!, debuffStacks, Owner.Creature, this);
+        await PowerCmd.Apply<VulnerablePower>(cardPlay.Target!, debuffStacks, Owner.Creature, this);
 
         var gear = CombatState.CreateCard<GearOfAmbition>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(gear, PileType.Hand, Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(gear, PileType.Hand, true);
     }
 
     protected override void OnUpgrade()

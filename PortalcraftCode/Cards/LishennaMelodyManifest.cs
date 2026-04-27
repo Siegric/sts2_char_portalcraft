@@ -54,7 +54,7 @@ public class LishennaMelodyManifest : PortalcraftCard, IEvolvableCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         var monody = CombatState.CreateCard<MelodiousMonody>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(monody, PileType.Hand, Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(monody, PileType.Hand, true);
     }
     
     public virtual async Task OnEvolve(CardModel card, PlayerChoiceContext choiceContext)

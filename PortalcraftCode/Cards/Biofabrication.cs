@@ -39,7 +39,7 @@ public sealed class Biofabrication : PortalcraftCard
         {
             var copy = ArtifactHelper.CreateByType(chosen.GetType(), CombatState, Owner);
             copy.EnergyCost.AddThisCombat(-1);
-            await CardPileCmd.AddGeneratedCardToCombat(copy, PileType.Draw, Owner);
+            await CardPileCmd.AddGeneratedCardToCombat(copy, PileType.Draw, true);
         }
     }
 

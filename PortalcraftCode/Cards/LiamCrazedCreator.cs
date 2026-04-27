@@ -59,7 +59,7 @@ public class LiamCrazedCreator : PortalcraftCard, IEvolvableCard
     
     public virtual async Task OnEvolve(CardModel card, PlayerChoiceContext choiceContext)
     {
-        await PowerCmd.Apply<LiamCrazedCreatorPower>(choiceContext, Owner.Creature, 4, Owner.Creature, this);
+        await PowerCmd.Apply<LiamCrazedCreatorPower>(Owner.Creature, 4, Owner.Creature, this);
     }
 
     public virtual Task OnSuperEvolve(CardModel card, PlayerChoiceContext choiceContext) => Task.CompletedTask;

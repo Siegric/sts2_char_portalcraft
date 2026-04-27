@@ -61,7 +61,7 @@ public class EliseElectrifyingInventor : PortalcraftCard, IEvolvableCard
     public async Task OnLastWords(PlayerChoiceContext choiceContext)
     {
         var token = CombatState.CreateCard<GearOfRemembrance>(Owner);
-        await CardPileCmd.AddGeneratedCardToCombat(token, PileType.Hand, Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(token, PileType.Hand, true);
     }
 
     protected override void OnUpgrade()

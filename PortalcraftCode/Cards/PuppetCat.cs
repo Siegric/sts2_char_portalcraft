@@ -64,7 +64,7 @@ public class PuppetCat : PortalcraftCard, IEvolvableCard
 
         var puppet = CombatState.CreateCard<Puppet>(Owner);
         puppet.DynamicVars.Damage.BaseValue += DynamicVars["PuppetBonus"].BaseValue;
-        await CardPileCmd.AddGeneratedCardToCombat(puppet, PileType.Hand, Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(puppet, PileType.Hand, true);
     }
 
     protected override void OnUpgrade()

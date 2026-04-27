@@ -184,7 +184,7 @@ public static class EvoCmd
         {
             await CardCmd.Exhaust(ctx, oldCard);
         }
-        await CardPileCmd.AddGeneratedCardToCombat(newCard, PileType.Hand, newCard.Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(newCard, PileType.Hand, true);
     }
 
     public static async Task PlayEvolveVfx(CardModel card)

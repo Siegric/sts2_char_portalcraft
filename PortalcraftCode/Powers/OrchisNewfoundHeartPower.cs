@@ -36,7 +36,7 @@ public sealed class OrchisNewfoundHeartPower : PortalcraftPower
         return Task.CompletedTask;
     }
 
-    public override Task AfterCardGeneratedForCombat(CardModel card, Player? creator)
+    public override Task AfterCardGeneratedForCombat(CardModel card, bool addedByPlayer)
     {
         ApplyIfPuppet(card);
         return Task.CompletedTask;

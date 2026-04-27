@@ -62,7 +62,7 @@ public class MedicalGradeAssassin : PortalcraftCard, IEvolvableCard
 
         var puppet = CombatState.CreateCard<EnhancedPuppet>(Owner);
         puppet.AddKeyword(BaneKeyword.Bane);
-        await CardPileCmd.AddGeneratedCardToCombat(puppet, PileType.Hand, Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(puppet, PileType.Hand, true);
     }
 
     protected override void OnUpgrade()

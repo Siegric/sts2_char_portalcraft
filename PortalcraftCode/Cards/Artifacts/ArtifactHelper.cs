@@ -21,7 +21,7 @@ public static class ArtifactHelper
     public static readonly Type[] T2Types =
         { typeof(OminousArtifactAlpha), typeof(OminousArtifactBeta), typeof(OminousArtifactGamma) };
 
-    public static CardModel CreateByType(Type type, ICombatState combatState, Player owner)
+    public static CardModel CreateByType(Type type, CombatState combatState, Player owner)
     {
         var canonicalCard = (CardModel)typeof(ModelDb)
             .GetMethod(nameof(ModelDb.Card), System.Type.EmptyTypes)!
@@ -30,13 +30,13 @@ public static class ArtifactHelper
         return combatState.CreateCard(canonicalCard, owner);
     }
 
-    public static async Task AddRandomArtifacts(Type[] pool, int count, ICombatState combatState, Player owner, Rng rng)
+    public static async Task AddRandomArtifacts(Type[] pool, int count, CombatState combatState, Player owner, Rng rng)
     {
         for (int i = 0; i < count; i++)
         {
             var type = rng.NextItem(pool);
             var card = CreateByType(type, combatState, owner);
-            await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, owner);
+            await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, true);
         }
     }
 

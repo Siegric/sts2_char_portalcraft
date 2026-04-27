@@ -86,7 +86,7 @@ public class ImariDewdrop : PortalcraftCard, IEvolvableCard
     // to your hand.
     public virtual async Task OnEvolve(CardModel card, PlayerChoiceContext choiceContext)
     {
-        await PowerCmd.Apply<ImariDewdropPower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);
+        await PowerCmd.Apply<ImariDewdropPower>(Owner.Creature, 1, Owner.Creature, this);
         if (IsUpgraded)
         {
             Owner.Creature.GetPower<ImariDewdropPower>()!.Upgraded = true;
