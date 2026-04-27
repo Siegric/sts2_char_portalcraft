@@ -37,7 +37,7 @@ public class PuppetCat : PortalcraftCard, IEvolvableCard
     public PuppetCat() : this(EvoTier.Base) { }
 
     protected PuppetCat(EvoTier tier)
-        : base(1, CardType.Attack, tier.OverrideRarity(CardRarity.Basic), TargetType.AnyEnemy,
+        : base(0, CardType.Attack, tier.OverrideRarity(CardRarity.Basic), TargetType.AnyEnemy,
                showInCardLibrary: tier == EvoTier.Base)
     {
         sts2_char_portalcraft_CurrentTier = tier;
@@ -69,6 +69,6 @@ public class PuppetCat : PortalcraftCard, IEvolvableCard
 
     protected override void OnUpgrade()
     {
-        EnergyCost.UpgradeBy(-1);
+        DynamicVars.Damage.UpgradeValueBy(3m);
     }
 }

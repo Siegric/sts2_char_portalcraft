@@ -76,7 +76,7 @@ public class AxiaHeirToDestruction : PortalcraftCard, IEvolvableCard
 
         if (x > 0 && target != null)
         {
-            await DamageCmd.Attack(5m * x)
+            await DamageCmd.Attack(10m * x)
                 .FromCard(this)
                 .Targeting(target)
                 .Execute(choiceContext);

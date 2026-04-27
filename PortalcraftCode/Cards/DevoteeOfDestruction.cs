@@ -48,8 +48,8 @@ public class DevoteeOfDestruction : PortalcraftCard, IEvolvableCard
 
         if (x > 0)
         {
-            await CreatureCmd.GainBlock(Owner.Creature, x, ValueProp.Move, cardPlay);
-            await DamageCmd.Attack(x)
+            await CreatureCmd.GainBlock(Owner.Creature, 2*x, ValueProp.Move, cardPlay);
+            await DamageCmd.Attack(2*x)
                 .FromCard(this)
                 .Targeting(cardPlay.Target)
                 .Execute(choiceContext);

@@ -18,7 +18,7 @@ public class Portalcraft : PlaceholderCharacterModel
     public static readonly Color Color = new("ffffff");
 
     public override Color NameColor => Color;
-    public override CharacterGender Gender => CharacterGender.Neutral;
+    public override CharacterGender Gender => CharacterGender.Feminine;
     public override int StartingHp => 70;
 
     public override IEnumerable<CardModel> StartingDeck =>
