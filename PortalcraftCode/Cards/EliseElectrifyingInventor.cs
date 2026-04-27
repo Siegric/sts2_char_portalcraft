@@ -17,7 +17,7 @@ using sts2_char_portalcraft.PortalcraftCode.Extensions;
 
 namespace sts2_char_portalcraft.PortalcraftCode.Cards;
 
-public class EliseElectrifyingInventor : PortalcraftCard, IEvolvableCard
+public class EliseElectrifyingInventor : PortalcraftCard, IEvolvableCard, ILastWordsCard
 {
     [SavedProperty]
     public EvoTier sts2_char_portalcraft_CurrentTier { get; set; }

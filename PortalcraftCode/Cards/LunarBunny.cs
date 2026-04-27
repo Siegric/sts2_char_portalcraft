@@ -54,18 +54,17 @@ public class LunarBunny : PortalcraftCard, IEvolvableCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, cardPlay);
+    }
 
-        // Auto-evolve: if any Skill other than this was played this turn, transform.
-        bool playedSkillThisTurn = CombatManager.Instance.History.CardPlaysFinished.Any(e =>
-            e.CardPlay.Card.Type == CardType.Skill
-            && e.CardPlay.Card.Owner == Owner
-            && e.CardPlay.Card != this
-            && e.HappenedThisTurn(CombatState));
+    public override async Task AfterCardPlayed(PlayerChoiceContext context, CardPlay cardPlay)
+    {
+        if (cardPlay.Card == this) return;
+        if (cardPlay.Card.Owner != Owner) return;
+        if (cardPlay.Card.Type != CardType.Skill) return;
+        if (!PileType.Hand.GetPile(Owner).Cards.Contains(this)) return;
+        if (!EvoCmd.CanForceEvolve(this)) return;
 
-        if (playedSkillThisTurn && EvoCmd.CanForceEvolve(this))
-        {
-            await EvoCmd.ForceEvolve(this, choiceContext, playVfx: false);
-        }
+        await EvoCmd.ForceEvolve(this, context, playVfx: true);
     }
 
     protected override void OnUpgrade()
