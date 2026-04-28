@@ -9,4 +9,6 @@ public class BeelzebubSupremeKingStrengthPower : TemporaryStrengthPower
     public override AbstractModel OriginModel => ModelDb.Card<BeelzebubSupremeKing>();
 
     protected override bool IsPositive => false;
+
+    protected override bool IsVisibleInternal => false;
 }

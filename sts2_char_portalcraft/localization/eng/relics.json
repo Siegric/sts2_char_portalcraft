@@ -5,5 +5,10 @@
 
   "STS2_CHAR_PORTALCRAFT-FUSION_PLATING.title": "Fusion Plating",
   "STS2_CHAR_PORTALCRAFT-FUSION_PLATING.description": "Whenever you [gold]Fuse[/gold] an Artifact, gain 2 Block.",
-  "STS2_CHAR_PORTALCRAFT-FUSION_PLATING.flavor": "PLACEHOLDER TEXT"
+  "STS2_CHAR_PORTALCRAFT-FUSION_PLATING.flavor": "PLACEHOLDER TEXT",
+
+  "STS2_CHAR_PORTALCRAFT-MULLIGAN.title": "Mulligan",
+  "STS2_CHAR_PORTALCRAFT-MULLIGAN.description": "At the start of your first turn, choose up to 4 cards in your hand and return them to your draw pile. Draw a card for each card returned this way.",
+  "STS2_CHAR_PORTALCRAFT-MULLIGAN.flavor": "PLACEHOLDER TEXT",
+  "STS2_CHAR_PORTALCRAFT-MULLIGAN.selectionScreenPrompt": "Return cards to your draw pile."
 }

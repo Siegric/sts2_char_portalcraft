@@ -9,4 +9,6 @@ public class LuWohStrengthPower : TemporaryStrengthPower
     public override AbstractModel OriginModel => ModelDb.Card<LuWohLightPersonified>();
 
     protected override bool IsPositive => false;
+
+    protected override bool IsVisibleInternal => false;
 }

@@ -26,12 +26,20 @@ public abstract class ArtifactCard : PortalcraftCard, IFuseCard
 
         var handCards = PileType.Hand.GetPile(Owner).Cards;
         var validDiscardTypes = FuseRecipes.GetValidDiscardTypes(GetType(), Tier);
-        
+
         if (Tier == ArtifactTier.T2)
         {
             return validDiscardTypes.All(rt => handCards.Any(c => c != this && c.GetType() == rt));
         }
-        
+
+        if (Tier == ArtifactTier.T1)
+        {
+            return handCards.Any(c =>
+                c != this && c is ArtifactCard &&
+                validDiscardTypes.Contains(c.GetType()) &&
+                c.EnergyCost.Canonical > 0);
+        }
+
         return handCards.Any(c => c != this && c is ArtifactCard && validDiscardTypes.Contains(c.GetType()));
     }
 
@@ -102,7 +110,8 @@ public abstract class ArtifactCard : PortalcraftCard, IFuseCard
         bool Filter(CardModel c) =>
             c != this &&
             c is ArtifactCard &&
-            validDiscardTypes.Contains(c.GetType());
+            validDiscardTypes.Contains(c.GetType()) &&
+            (Tier != ArtifactTier.T1 || c.EnergyCost.Canonical > 0);
 
         try
         {
@@ -182,7 +191,6 @@ public abstract class ArtifactCard : PortalcraftCard, IFuseCard
                     {
                         await CardCmd.Exhaust(choiceContext, card);
                     }
-                    await CardPileCmd.Add(this, PileType.Hand, CardPilePosition.Bottom);
                     int unfusedRefund = EnergyCost.GetResolved();
                     if (unfusedRefund > 0)
                     {

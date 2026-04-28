@@ -5,5 +5,10 @@
 
   "STS2_CHAR_PORTALCRAFT-FUSION_PLATING.title": "融合装甲",
   "STS2_CHAR_PORTALCRAFT-FUSION_PLATING.description": "每当你[gold]融合[/gold]创造物时，获得2点格挡。",
-  "STS2_CHAR_PORTALCRAFT-FUSION_PLATING.flavor": "PLACEHOLDER TEXT"
+  "STS2_CHAR_PORTALCRAFT-FUSION_PLATING.flavor": "PLACEHOLDER TEXT",
+
+  "STS2_CHAR_PORTALCRAFT-MULLIGAN.title": "换牌",
+  "STS2_CHAR_PORTALCRAFT-MULLIGAN.description": "在你的第一个回合，可以选择至多4个手牌并让其返回抽牌堆中。每以这种方式使一张手牌返回抽牌堆，抽一张牌。",
+  "STS2_CHAR_PORTALCRAFT-MULLIGAN.flavor": "PLACEHOLDER TEXT",
+  "STS2_CHAR_PORTALCRAFT-MULLIGAN.selectionScreenPrompt": "选择要替换的手牌："
 }

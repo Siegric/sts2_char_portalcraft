@@ -10,4 +10,6 @@ public class TimidPioneerPower : TemporaryStrengthPower
     public override AbstractModel OriginModel => ModelDb.Card<TimidPioneer>();
 
     protected override bool IsPositive => false;
+
+    protected override bool IsVisibleInternal => false;
 }
