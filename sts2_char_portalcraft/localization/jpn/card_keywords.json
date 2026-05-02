@@ -1,13 +1,13 @@
 {
   "ARTIFACT.title": "アーティファクト",
-  "ARTIFACT.description": "[gold]保留[/gold]。[gold]廃棄[/gold]。手札にある他のアーティファクトと[gold]融合[/gold]し、より上位のアーティファクトを無料で生成できる。",
+  "ARTIFACT.description": "[gold]保留[/gold]。[gold]廃棄[/gold]。手札にある他のアーティファクトを【[gold]融合[/gold]】し、より強力なアーティファクトを作成できる。",
   "STS2_CHAR_PORTALCRAFT-ARTIFACT.title": "アーティファクト",
-  "STS2_CHAR_PORTALCRAFT-ARTIFACT.description": "[gold]保留[/gold]。[gold]廃棄[/gold]。手札にある他のアーティファクトと[gold]融合[/gold]し、より上位のアーティファクトを無料で生成できる。",
+  "STS2_CHAR_PORTALCRAFT-ARTIFACT.description": "[gold]保留[/gold]。[gold]廃棄[/gold]。手札にある他のアーティファクトを【[gold]融合[/gold]】し、より強力なアーティファクトを作成できる。",
 
   "PUPPET.title": "操り人形",
-  "PUPPET.description": "[gold]廃棄[/gold]。使い切りのトークンカード。ダメージを与えるために使用する。操り人形関連のカードとシナジー効果を持つ。",
+  "PUPPET.description": "[gold]廃棄[/gold]。使い切りのトークンカード。ダメージを与えるために使用する。人形関連のカードとシナジー効果を持つ。",
   "STS2_CHAR_PORTALCRAFT-PUPPET.title": "操り人形",
-  "STS2_CHAR_PORTALCRAFT-PUPPET.description": "[gold]廃棄[/gold]。使い切りのトークンカード。ダメージを与えるために使用する。操り人形関連のカードとシナジー効果を持つ。",
+  "STS2_CHAR_PORTALCRAFT-PUPPET.description": "[gold]廃棄[/gold]。使い切りのトークンカード。ダメージを与えるために使用する。人形関連のカードとシナジー効果を持つ。",
 
   "AMULET.title": "アミュレット",
   "AMULET.description": "プレイ不可。ターン終了時か廃棄された時に効果を発動する。",
@@ -20,9 +20,9 @@
   "STS2_CHAR_PORTALCRAFT-WASTELAND_TOKEN.description": "プレイ不可。廃棄された時、カード1枚を引く。",
 
   "FUSE.title": "融合",
-  "FUSE.description": "プレイ時、手札にある他のアーティファクトを選んで廃棄し、より上位のアーティファクトを生成できる。融合後、消費したエナジーを返還する。",
+  "FUSE.description": "プレイ時、手札にある他のアーティファクトを選んで廃棄し、より上位のアーティファクトを生成できる。エナジーは消費されない。",
   "STS2_CHAR_PORTALCRAFT-FUSE.title": "融合",
-  "STS2_CHAR_PORTALCRAFT-FUSE.description": "プレイ時、手札にある他のアーティファクトを選んで廃棄し、より上位のアーティファクトを生成できる。融合後、消費したエナジーを返還する。",
+  "STS2_CHAR_PORTALCRAFT-FUSE.description": "プレイ時、手札にある他のアーティファクトを選んで廃棄し、より上位のアーティファクトを生成できる。エナジーは消費されない。",
 
   "CRYSTALLIZE.title": "結晶",
   "CRYSTALLIZE.description": "このカードをプレイするためのエナジーが不足している場合、代わりに[gold]結晶[/gold]のコストを消費し、結晶効果のみ発動して、[gold]アミュレット[/gold]に変化する。",
@@ -46,7 +46,7 @@
 
   "SUPERSKYBOUNDART.title": "解放奥義",
   "SUPERSKYBOUNDART.description": "自身の[gold]奥義[/gold]ゲージが15以上なら働く能力。奥義ゲージは、現在のターン数と自分のフォロワーが進化した回数の合計。",
-  "STS2_CHAR_PORTALCRAFT-SUPERSKYBOUNDART.title": "開放奥義",
+  "STS2_CHAR_PORTALCRAFT-SUPERSKYBOUNDART.title": "解放奥義",
   "STS2_CHAR_PORTALCRAFT-SUPERSKYBOUNDART.description": "自身の[gold]奥義[/gold]ゲージが15以上なら働く能力。奥義ゲージは、現在のターン数と自分のフォロワーが進化した回数の合計。",
 
   "EVOLUTIONPOINT.title": "EP",
@@ -60,14 +60,14 @@
   "STS2_CHAR_PORTALCRAFT-SUPEREVOLUTIONPOINT.description": "消費することで手札のフォロワーを[gold]超進化[/gold]させることができるポイント。戦闘開始時に[gold]2[/gold]個得られる。",
 
   "EVOLUTION.title": "進化",
-  "EVOLUTION.description": "進化したフォロワーのダメージ/ブロックの数値は+2される。進化後のフォロワーは再び進化できない。[gold]EP[/gold]/[gold]SEP[/gold]を消費できるのは、ターン毎に合わせて1度まで。",
+  "EVOLUTION.description": "進化したフォロワーのダメージ/ブロックの数値は+2される。進化/超進化後のフォロワーは進化できない。[gold]EP[/gold]/[gold]SEP[/gold]を消費できるのは、ターン毎に合わせて1度まで。",
   "STS2_CHAR_PORTALCRAFT-EVOLUTION.title": "進化",
-  "STS2_CHAR_PORTALCRAFT-EVOLUTION.description": "進化したフォロワーのダメージ/ブロックの数値は+2される。進化後のフォロワーは再び進化できない。[gold]EP[/gold]/[gold]SEP[/gold]を消費できるのは、ターン毎に合わせて1度まで。",
+  "STS2_CHAR_PORTALCRAFT-EVOLUTION.description": "進化したフォロワーのダメージ/ブロックの数値は+2される。進化/超進化後のフォロワーは進化できない。[gold]EP[/gold]/[gold]SEP[/gold]を消費できるのは、ターン毎に合わせて1度まで。",
 
   "SUPEREVOLUTION.title": "超進化",
-  "SUPEREVOLUTION.description": "超進化したフォロワーのダメージ/ブロックの数値は+3される。進化後のフォロワーは再び進化できない。[gold]EP[/gold]/[gold]SEP[/gold]を消費できるのは、ターン毎に合わせて1度まで。",
+  "SUPEREVOLUTION.description": "超進化したフォロワーのダメージ/ブロックの数値は+3される。進化/超進化後のフォロワーは超進化できない。[gold]EP[/gold]/[gold]SEP[/gold]を消費できるのは、ターン毎に合わせて1度まで。",
   "STS2_CHAR_PORTALCRAFT-SUPEREVOLUTION.title": "超進化",
-  "STS2_CHAR_PORTALCRAFT-SUPEREVOLUTION.description": "超進化したフォロワーのダメージ/ブロックの数値は+3される。進化後のフォロワーは再び進化できない。[gold]EP[/gold]/[gold]SEP[/gold]を消費できるのは、ターン毎に合わせて1度まで。",
+  "STS2_CHAR_PORTALCRAFT-SUPEREVOLUTION.description": "超進化したフォロワーのダメージ/ブロックの数値は+3される。進化/超進化後のフォロワーは超進化できない。[gold]EP[/gold]/[gold]SEP[/gold]を消費できるのは、ターン毎に合わせて1度まで。",
 
   "EVOLVE.title": "進化時",
   "EVOLVE.description": "フォロワーが[gold]進化[/gold]もしくは[gold]超進化[/gold]したときに働く能力。",
